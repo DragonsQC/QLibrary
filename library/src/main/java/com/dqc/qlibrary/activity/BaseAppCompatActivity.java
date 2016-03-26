@@ -17,6 +17,7 @@
 package com.dqc.qlibrary.activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.inputmethod.InputMethodManager;
@@ -115,6 +116,82 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+    }
+
+    /**
+     * startActivity
+     *
+     * @param clazz
+     */
+    protected void goTo(Class<?> clazz) {
+        Intent intent = new Intent(this, clazz);
+        startActivity(intent);
+    }
+
+    /**
+     * startActivity with bundle
+     *
+     * @param clazz
+     * @param bundle
+     */
+    protected void goTo(Class<?> clazz, Bundle bundle) {
+        Intent intent = new Intent(this, clazz);
+        if (null != bundle) {
+            intent.putExtras(bundle);
+        }
+        startActivity(intent);
+    }
+
+    /**
+     * startActivity then finish
+     *
+     * @param clazz
+     */
+    protected void goToThenKill(Class<?> clazz) {
+        Intent intent = new Intent(this, clazz);
+        startActivity(intent);
+        finish();
+    }
+
+    /**
+     * startActivity with bundle then finish
+     *
+     * @param clazz
+     * @param bundle
+     */
+    protected void goToThenKill(Class<?> clazz, Bundle bundle) {
+        Intent intent = new Intent(this, clazz);
+        if (null != bundle) {
+            intent.putExtras(bundle);
+        }
+        startActivity(intent);
+        finish();
+    }
+
+    /**
+     * startActivityForResult
+     *
+     * @param clazz
+     * @param requestCode
+     */
+    protected void goToForResult(Class<?> clazz, int requestCode) {
+        Intent intent = new Intent(this, clazz);
+        startActivityForResult(intent, requestCode);
+    }
+
+    /**
+     * startActivityForResult with bundle
+     *
+     * @param clazz
+     * @param requestCode
+     * @param bundle
+     */
+    protected void goToForResult(Class<?> clazz, int requestCode, Bundle bundle) {
+        Intent intent = new Intent(this, clazz);
+        if (null != bundle) {
+            intent.putExtras(bundle);
+        }
+        startActivityForResult(intent, requestCode);
     }
 
     /**
