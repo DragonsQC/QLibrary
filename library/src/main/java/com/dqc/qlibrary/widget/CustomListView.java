@@ -5,7 +5,7 @@ import android.util.AttributeSet;
 import android.widget.ListView;
 
 /**
- * 解决 ScrollView 中嵌套 ListView 显示不正常的问题
+ * 解决 ScrollView 等控件中嵌套 ListView 显示不正常的问题
  */
 public class CustomListView extends ListView {
 

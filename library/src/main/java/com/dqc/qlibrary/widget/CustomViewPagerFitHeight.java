@@ -9,7 +9,7 @@ import com.rey.material.widget.Slider;
 import com.rey.material.widget.Switch;
 
 /**
- * ViewPager 自动适应高度
+ * 自动适应高度 ViewPager
  */
 public class CustomViewPagerFitHeight extends ViewPager {
 

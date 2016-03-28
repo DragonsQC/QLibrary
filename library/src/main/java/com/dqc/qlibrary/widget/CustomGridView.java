@@ -5,7 +5,7 @@ import android.util.AttributeSet;
 import android.widget.GridView;
 
 /**
- * 解决 ScrollView、ListView 中嵌套 GridView 显示不正常的问题
+ * 解决 ScrollView 等控件中嵌套 GridView 显示不正常的问题
  */
 public class CustomGridView extends GridView {
     public CustomGridView(Context context, AttributeSet attrs) {
