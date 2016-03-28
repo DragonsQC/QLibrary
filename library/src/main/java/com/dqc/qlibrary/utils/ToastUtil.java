@@ -10,6 +10,8 @@ import com.github.johnpersano.supertoasts.SuperToast;
  * Android Toast 工具类
  * <p/>
  * require https://github.com/JohnPersano/SuperToasts <br/>
+ *
+ * @author DragonsQC
  */
 public class ToastUtil {
 

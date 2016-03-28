@@ -8,6 +8,9 @@ import android.view.inputmethod.InputMethodManager;
 
 import com.dqc.qlibrary.R;
 
+/**
+ * BaseAppCompatActivity
+ */
 public abstract class BaseAppCompatActivity extends AppCompatActivity {
 
     @Override

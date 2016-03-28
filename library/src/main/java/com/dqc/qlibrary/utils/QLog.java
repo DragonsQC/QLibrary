@@ -6,6 +6,9 @@ import com.orhanobut.logger.Logger;
  * Android 日志工具类
  * <p/>
  * require https://github.com/orhanobut/logger
+ * <p/>
+ *
+ * @author DragonsQC
  */
 public class QLog {
     public static boolean DEBUG_MODE = true;

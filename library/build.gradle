@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.DragonsQC'
+group = 'com.github.DragonsQC'
 
 android {
     compileSdkVersion 23
@@ -12,6 +12,12 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
     }
 
 }
@@ -28,7 +34,7 @@ dependencies {
     compile 'com.nineoldandroids:library:2.4.0'
 
     //xUtils [https://github.com/wyouflf/xUtils3]
-    compile 'org.xutils:xutils:3.3.16'
+    compile 'org.xutils:xutils:3.3.25'
 
     //Retrofit [https://github.com/square/retrofit]
     compile 'com.squareup.retrofit2:retrofit:2.0.0'
@@ -74,7 +80,7 @@ dependencies {
     compile 'com.github.orhanobut:logger:1.12'//[https://jitpack.io/#orhanobut/logger/1.12]
 
     //MaterialDrawer [https://github.com/mikepenz/MaterialDrawer] [http://www.mvnrepository.com/artifact/com.mikepenz/materialdrawer]
-    compile('com.mikepenz:materialdrawer:5.1.3@aar') {
+    compile('com.mikepenz:materialdrawer:5.1.6@aar') {
         transitive = true
     }
 
@@ -91,7 +97,7 @@ dependencies {
     compile 'com.github.ksoichiro:android-observablescrollview:1.6.0'
 
     //Material Dialogs [https://github.com/afollestad/material-dialogs] [maven { url "https://jitpack.io" }]
-    compile('com.github.afollestad.material-dialogs:core:0.8.5.6@aar') {
+    compile('com.github.afollestad.material-dialogs:core:0.8.5.7@aar') {
         transitive = true
     }
 
@@ -102,7 +108,7 @@ dependencies {
     compile 'com.beardedhen:androidbootstrap:2.1.0'
 
     //SlideAndDragListView [https://github.com/yydcdut/SlideAndDragListView]
-    compile 'com.yydcdut.sdlv:sdlv:0.4.1@aar'
+    compile 'com.yydcdut.sdlv:sdlv:0.4.2@aar'
 
     //下拉刷新 ChromeLikeSwipeLayout [https://github.com/ashqal/ChromeLikeSwipeLayout]
     compile 'com.github.ashqal:ChromeLikeSwipeLayout:0.4'
@@ -136,4 +142,28 @@ repositories {
     maven { url "https://jitpack.io" }
     //maven { url 'http://maven.oschina.net/content/groups/public' }
     //maven { url 'https://jcenter.bintray.com' }
+}
+
+// build a jar with source files
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    failOnError false
+    source = android.sourceSets.main.java.sourceFiles
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    classpath += configurations.compile
+}
+
+// build a jar with javadoc
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
 }

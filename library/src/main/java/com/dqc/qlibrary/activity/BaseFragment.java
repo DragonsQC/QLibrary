@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import butterknife.ButterKnife;
 
 /**
+ * BaseFragment
  */
 public abstract class BaseFragment extends Fragment {
 

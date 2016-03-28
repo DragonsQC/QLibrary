@@ -11,6 +11,8 @@ import java.util.TimerTask;
 
 /**
  * 键盘工具类
+ *
+ * @author DragonsQC
  */
 public class KeyboardTool {
 
