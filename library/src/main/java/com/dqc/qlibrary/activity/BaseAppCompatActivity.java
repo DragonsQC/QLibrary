@@ -1,4 +1,3 @@
-
 package com.dqc.qlibrary.activity;
 
 import android.content.Context;
@@ -106,7 +105,7 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     /**
      * startActivity
      *
-     * @param clazz
+     * @param clazz Activity.class
      */
     protected void goTo(Class<?> clazz) {
         Intent intent = new Intent(this, clazz);
@@ -114,10 +113,22 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     }
 
     /**
+     * startActivity with flags
+     *
+     * @param clazz Activity.class
+     * @param flags FLAG_ACTIVITY
+     */
+    protected void goTo(Class<?> clazz, int flags) {
+        Intent intent = new Intent(this, clazz);
+        intent.addFlags(flags);
+        startActivity(intent);
+    }
+
+    /**
      * startActivity with bundle
      *
-     * @param clazz
-     * @param bundle
+     * @param clazz  Activity.class
+     * @param bundle data
      */
     protected void goTo(Class<?> clazz, Bundle bundle) {
         Intent intent = new Intent(this, clazz);
@@ -128,9 +139,25 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     }
 
     /**
+     * startActivity with bundle and flags
+     *
+     * @param clazz  Activity.class
+     * @param bundle data
+     * @param flags  FLAG_ACTIVITY
+     */
+    protected void goTo(Class<?> clazz, Bundle bundle, int flags) {
+        Intent intent = new Intent(this, clazz);
+        if (null != bundle) {
+            intent.putExtras(bundle);
+        }
+        intent.addFlags(flags);
+        startActivity(intent);
+    }
+
+    /**
      * startActivity then finish
      *
-     * @param clazz
+     * @param clazz Activity.class
      */
     protected void goToThenKill(Class<?> clazz) {
         Intent intent = new Intent(this, clazz);
@@ -139,10 +166,23 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     }
 
     /**
+     * startActivity with flags then finish
+     *
+     * @param clazz Activity.class
+     * @param flags FLAG_ACTIVITY
+     */
+    protected void goToThenKill(Class<?> clazz, int flags) {
+        Intent intent = new Intent(this, clazz);
+        intent.addFlags(flags);
+        startActivity(intent);
+        finish();
+    }
+
+    /**
      * startActivity with bundle then finish
      *
-     * @param clazz
-     * @param bundle
+     * @param clazz  Activity.class
+     * @param bundle data
      */
     protected void goToThenKill(Class<?> clazz, Bundle bundle) {
         Intent intent = new Intent(this, clazz);
@@ -154,10 +194,27 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     }
 
     /**
+     * startActivity with bundle and flags then finish
+     *
+     * @param clazz  Activity.class
+     * @param bundle data
+     * @param flags  FLAG_ACTIVITY
+     */
+    protected void goToThenKill(Class<?> clazz, Bundle bundle, int flags) {
+        Intent intent = new Intent(this, clazz);
+        if (null != bundle) {
+            intent.putExtras(bundle);
+        }
+        intent.addFlags(flags);
+        startActivity(intent);
+        finish();
+    }
+
+    /**
      * startActivityForResult
      *
-     * @param clazz
-     * @param requestCode
+     * @param clazz       Activity.class
+     * @param requestCode RequestCode
      */
     protected void goToForResult(Class<?> clazz, int requestCode) {
         Intent intent = new Intent(this, clazz);
@@ -165,17 +222,47 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     }
 
     /**
+     * startActivityForResult with bundle flags
+     *
+     * @param clazz       Activity.class
+     * @param requestCode RequestCode
+     * @param flags       FLAG_ACTIVITY
+     */
+    protected void goToForResult(Class<?> clazz, int requestCode, int flags) {
+        Intent intent = new Intent(this, clazz);
+        intent.addFlags(flags);
+        startActivityForResult(intent, requestCode);
+    }
+
+    /**
      * startActivityForResult with bundle
      *
-     * @param clazz
-     * @param requestCode
-     * @param bundle
+     * @param clazz       Activity.class
+     * @param requestCode RequestCode
+     * @param bundle      data
      */
     protected void goToForResult(Class<?> clazz, int requestCode, Bundle bundle) {
         Intent intent = new Intent(this, clazz);
         if (null != bundle) {
             intent.putExtras(bundle);
         }
+        startActivityForResult(intent, requestCode);
+    }
+
+    /**
+     * startActivityForResult with bundle and flags
+     *
+     * @param clazz       Activity.class
+     * @param requestCode RequestCode
+     * @param bundle      data
+     * @param flags       FLAG_ACTIVITY
+     */
+    protected void goToForResult(Class<?> clazz, int requestCode, Bundle bundle, int flags) {
+        Intent intent = new Intent(this, clazz);
+        if (null != bundle) {
+            intent.putExtras(bundle);
+        }
+        intent.addFlags(flags);
         startActivityForResult(intent, requestCode);
     }
 
