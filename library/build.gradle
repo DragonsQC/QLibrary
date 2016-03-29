@@ -138,6 +138,12 @@ dependencies {
     //状态栏 StatusBarUtil [https://github.com/laobie/StatusBarUtil]
     compile 'com.jaeger.statusbaruitl:library:1.0.0'
 
+    //RxJava [https://github.com/ReactiveX/RxJava][http://www.mvnrepository.com/artifact/io.reactivex/rxjava]
+    compile 'io.reactivex:rxjava:1.1.2'
+
+    //RxAndroid [https://github.com/ReactiveX/RxAndroid][http://www.mvnrepository.com/artifact/io.reactivex/rxandroid]
+    compile 'io.reactivex:rxandroid:1.1.0'
+
 
 }
 repositories {

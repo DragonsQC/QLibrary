@@ -58,6 +58,8 @@ AndroidTagGroup                     标签
 DropDownMenu                        下拉菜单
 RichText                            富文本
 StatusBarUtil                       StatusBarUtil
+RxJava                              RxJava
+RxAndroid                           RxAndroid
 
 ========================= 其他 Lib =========================
 com.dqc.qlibrary.library.codec              Apache Commons codec library
