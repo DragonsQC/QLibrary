@@ -84,7 +84,7 @@ dependencies {
         transitive = true
     }
 
-    //Material effect [https://github.com/balysv/material-ripple] [http://www.mvnrepository.com/artifact/com.balysv/material-ripple]
+    //Material Ripple [https://github.com/balysv/material-ripple] [http://www.mvnrepository.com/artifact/com.balysv/material-ripple]
     compile 'com.balysv:material-ripple:1.0.2'
 
     //Material Design Library [https://github.com/rey5137/Material] [http://www.mvnrepository.com/artifact/com.github.rey5137/material]
