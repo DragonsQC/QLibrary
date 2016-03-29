@@ -135,6 +135,10 @@ dependencies {
     //TextView 富文本显示 RichText [https://github.com/zzhoujay/RichText]
     compile 'zhou.widget:richtext:1.0.4'
 
+    //状态栏 StatusBarUtil [https://github.com/laobie/StatusBarUtil]
+    compile 'com.jaeger.statusbaruitl:library:1.0.0'
+
+
 }
 repositories {
     jcenter()
