@@ -4,7 +4,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        //[http://www.mvnrepository.com/artifact/com.android.tools.build/gradle]
+        //[https://jcenter.bintray.com/com/android/tools/build/gradle/]
         classpath 'com.android.tools.build:gradle:1.5.0'
 
         //[http://mvnrepository.com/artifact/com.github.dcendents/android-maven-gradle-plugin]
