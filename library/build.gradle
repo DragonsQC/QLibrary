@@ -132,6 +132,9 @@ dependencies {
     //Menu DropDownMenu [https://github.com/dongjunkun/DropDownMenu]
     compile 'com.github.dongjunkun:DropDownMenu:1.0.3'
 
+    //Material Bottom Navigation [https://github.com/armcha/LuseenBottomNavigation]
+    compile 'com.github.armcha:LuseenBottomNavigation:1.6.1'
+
     //TextView 富文本显示 RichText [https://github.com/zzhoujay/RichText]
     compile 'zhou.widget:richtext:1.0.4'
 
