@@ -12,6 +12,7 @@ import com.orhanobut.logger.Logger;
  */
 public class QLog {
     public static boolean DEBUG_MODE = true;
+    public static int DEF_METHOD_COUNT =2;
 
     /**
      * com.orhanobut.logger.Logger 日志工具
@@ -22,7 +23,7 @@ public class QLog {
      */
     public static void v(String msg) {
         if (DEBUG_MODE) {
-            Logger.init().methodCount(1).hideThreadInfo();
+            Logger.init().methodCount(DEF_METHOD_COUNT).hideThreadInfo();
             Logger.v(msg);
         }
     }
@@ -36,7 +37,7 @@ public class QLog {
      */
     public static void d(String msg) {
         if (DEBUG_MODE) {
-            Logger.init().methodCount(1).hideThreadInfo();
+            Logger.init().methodCount(DEF_METHOD_COUNT).hideThreadInfo();
             Logger.d(msg);
         }
     }
@@ -50,7 +51,7 @@ public class QLog {
      */
     public static void i(String msg) {
         if (DEBUG_MODE) {
-            Logger.init().methodCount(1).hideThreadInfo();
+            Logger.init().methodCount(DEF_METHOD_COUNT).hideThreadInfo();
             Logger.i(msg);
         }
     }
@@ -64,7 +65,7 @@ public class QLog {
      */
     public static void w(String msg) {
         if (DEBUG_MODE) {
-            Logger.init().methodCount(1).hideThreadInfo();
+            Logger.init().methodCount(DEF_METHOD_COUNT).hideThreadInfo();
             Logger.w(msg);
         }
     }
@@ -78,7 +79,7 @@ public class QLog {
      */
     public static void e(String msg) {
         if (DEBUG_MODE) {
-            Logger.init().methodCount(1).hideThreadInfo();
+            Logger.init().methodCount(DEF_METHOD_COUNT).hideThreadInfo();
             Logger.e(msg);
         }
     }
@@ -92,7 +93,7 @@ public class QLog {
      */
     public static void json(String json) {
         if (DEBUG_MODE) {
-            Logger.init().methodCount(1).hideThreadInfo();
+            Logger.init().methodCount(DEF_METHOD_COUNT).hideThreadInfo();
             Logger.json(json);
         }
     }
