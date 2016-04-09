@@ -37,10 +37,10 @@ dependencies {
     compile 'org.xutils:xutils:3.3.25'
 
     //网络请求 Retrofit2 [https://github.com/square/retrofit]
-    compile 'com.squareup.retrofit2:retrofit:2.0.0'
+    compile 'com.squareup.retrofit2:retrofit:2.0.1'
 
     //Converter: Gson [http://www.mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson]
-    compile 'com.squareup.retrofit2:converter-gson:2.0.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.1'
 
     //okhttp logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
     compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
