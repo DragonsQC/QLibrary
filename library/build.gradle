@@ -26,6 +26,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     //android support
     compile 'com.android.support:support-v4:23.3.0'
+    compile 'com.android.support:percent:23.3.0'
     //compile 'com.android.support:appcompat-v7:23.1.1'  //com.mikepenz:materialdrawer 已包含
     //compile 'com.android.support:recyclerview-v7:23.2.0'
     //compile 'com.android.support:cardview-v7:23.1.1'
@@ -37,10 +38,10 @@ dependencies {
     compile 'org.xutils:xutils:3.3.32'
 
     //网络请求 Retrofit2 [https://github.com/square/retrofit]
-    compile 'com.squareup.retrofit2:retrofit:2.0.1'
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
 
     //Converter: Gson [http://www.mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson]
-    compile 'com.squareup.retrofit2:converter-gson:2.0.1'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
 
     //okhttp logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
     compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
@@ -80,7 +81,7 @@ dependencies {
     compile 'com.github.orhanobut:logger:1.12'//[https://jitpack.io/#orhanobut/logger/1.12]
 
     //MaterialDrawer [https://github.com/mikepenz/MaterialDrawer] [http://www.mvnrepository.com/artifact/com.mikepenz/materialdrawer]
-    compile('com.mikepenz:materialdrawer:5.1.9@aar') {
+    compile('com.mikepenz:materialdrawer:5.2.0@aar') {
         transitive = true
     }
 
@@ -97,7 +98,7 @@ dependencies {
     compile 'com.github.ksoichiro:android-observablescrollview:1.6.0'
 
     //Material Dialogs [https://github.com/afollestad/material-dialogs] [maven { url "https://jitpack.io" }]
-    compile('com.github.afollestad.material-dialogs:core:0.8.5.7@aar') {
+    compile('com.github.afollestad.material-dialogs:core:0.8.5.8@aar') {
         transitive = true
     }
 
@@ -105,7 +106,7 @@ dependencies {
     compile 'it.sephiroth.android.library.viewrevealanimator:view-reveal-animator:1.1.4'
 
     //Android-Bootstrap [https://github.com/Bearded-Hen/Android-Bootstrap]
-    compile 'com.beardedhen:androidbootstrap:2.1.0'
+    compile 'com.beardedhen:androidbootstrap:2.2.0'
 
     //SlideAndDragListView [https://github.com/yydcdut/SlideAndDragListView]
     compile 'com.yydcdut.sdlv:sdlv:0.4.2@aar'
@@ -132,6 +133,9 @@ dependencies {
     //Menu DropDownMenu [https://github.com/dongjunkun/DropDownMenu]
     compile 'com.github.dongjunkun:DropDownMenu:1.0.3'
 
+    //Menu BoomMenu [https://github.com/Nightonke/BoomMenu]
+    compile 'com.nightonke:boommenu:1.0.7'
+
     //Material Bottom Navigation [https://github.com/armcha/LuseenBottomNavigation]
     compile 'com.github.armcha:LuseenBottomNavigation:1.6.1'
 
@@ -146,6 +150,7 @@ dependencies {
 
     //RxAndroid [https://github.com/ReactiveX/RxAndroid][http://www.mvnrepository.com/artifact/io.reactivex/rxandroid]
     compile 'io.reactivex:rxandroid:1.1.0'
+
 
 
 }
