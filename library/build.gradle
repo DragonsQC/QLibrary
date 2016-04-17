@@ -106,7 +106,7 @@ dependencies {
     compile 'it.sephiroth.android.library.viewrevealanimator:view-reveal-animator:1.1.4'
 
     //Android-Bootstrap [https://github.com/Bearded-Hen/Android-Bootstrap]
-    compile 'com.beardedhen:androidbootstrap:2.2.0'
+    compile 'com.beardedhen:androidbootstrap:2.1.0'
 
     //SlideAndDragListView [https://github.com/yydcdut/SlideAndDragListView]
     compile 'com.yydcdut.sdlv:sdlv:0.4.2@aar'
