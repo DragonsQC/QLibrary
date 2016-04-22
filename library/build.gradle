@@ -151,6 +151,9 @@ dependencies {
     //RxAndroid [https://github.com/ReactiveX/RxAndroid][http://www.mvnrepository.com/artifact/io.reactivex/rxandroid]
     compile 'io.reactivex:rxandroid:1.1.0'
 
+    //数据库 Realm[https://jcenter.bintray.com/io/realm/realm-android/]
+    compile 'io.realm:realm-android:0.87.5'
+
 
 
 }
