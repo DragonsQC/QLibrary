@@ -143,6 +143,38 @@ public class QUtils {
 
         }
 
+        /**
+         * 格式化文件大小
+         *
+         * @param size 文件 length
+         * @return
+         */
+        public static String formatFileSize(double size) {
+            double kiloByte = size / 1024;
+            if (kiloByte < 1) {
+                return size + "Byte";
+            }
+            double megaByte = kiloByte / 1024;
+            if (megaByte < 1) {
+                BigDecimal result1 = new BigDecimal(Double.toString(kiloByte));
+                return result1.setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString() + "KB";
+            }
+
+            double gigaByte = megaByte / 1024;
+            if (gigaByte < 1) {
+                BigDecimal result2 = new BigDecimal(Double.toString(megaByte));
+                return result2.setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString() + "MB";
+            }
+
+            double teraBytes = gigaByte / 1024;
+            if (teraBytes < 1) {
+                BigDecimal result3 = new BigDecimal(Double.toString(gigaByte));
+                return result3.setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString() + "GB";
+            }
+            BigDecimal result4 = new BigDecimal(teraBytes);
+            return result4.setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString() + "TB";
+        }
+
     }
 
 
@@ -168,26 +200,6 @@ public class QUtils {
             return r.nextInt(max) % (max - min + 1) + min;
         }
 
-        /**
-         * 格式化文件大小
-         *
-         * @param size 文件 length
-         * @return
-         */
-        public static String formatDataSize(long size) {
-            DecimalFormat df = new DecimalFormat("#.00");
-            String fileSizeString;
-            if (size < 1024) {
-                fileSizeString = df.format((double) size) + "B";
-            } else if (size < 1048576) {
-                fileSizeString = df.format((double) size / 1024) + "K";
-            } else if (size < 1073741824) {
-                fileSizeString = df.format((double) size / 1048576) + "M";
-            } else {
-                fileSizeString = df.format((double) size / 1073741824) + "G";
-            }
-            return fileSizeString;
-        }
 
         /**
          * 格式化距离，传入距离单位为 m，根据长度格式化为显示为 m、km

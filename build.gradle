@@ -5,7 +5,7 @@ buildscript {
     }
     dependencies {
         //[https://jcenter.bintray.com/com/android/tools/build/gradle/]
-        classpath 'com.android.tools.build:gradle:2.1.0-beta1'
+        classpath 'com.android.tools.build:gradle:2.1.0-rc1'
 
         //Java8 特性支持 [http://www.mvnrepository.com/artifact/me.tatarka/gradle-retrolambda]
         classpath 'me.tatarka:gradle-retrolambda:3.2.5'
