@@ -35,6 +35,7 @@
  * Glide                               图片加载
  * Android-Universal-Image-Loader      图片加载
  * FastJson                            数据相关
+ * Realm                               数据库相关
  * CircleImageView                     圆形 ImageView
  * AndroidImageSlider                  轮播图
  * UCrop                               图片剪切工具
@@ -60,6 +61,7 @@
  * StatusBarUtil                       StatusBarUtil
  * RxJava                              RxJava
  * RxAndroid                           RxAndroid
+ * AndroidSwipeLayout                  Swipe Layout
 
 ## 其他 Lib
  * com.dqc.qlibrary.library.codec              Apache Commons codec library
