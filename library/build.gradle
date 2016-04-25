@@ -4,7 +4,7 @@ group = 'com.github.DragonsQC'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    buildToolsVersion "23.0.3"
     compileOptions.encoding = 'UTF-8'
 
     defaultConfig {
@@ -168,6 +168,9 @@ dependencies {
 
     //AndroidSwipeLayout [https://github.com/daimajia/AndroidSwipeLayout]
     compile "com.daimajia.swipelayout:library:1.2.0@aar"
+
+    //NavigationTabBar [https://github.com/DevLight-Mobile-Agency/NavigationTabBar]
+    compile 'com.github.devlight.navigationtabbar:library:1.1.5'
 
 }
 repositories {

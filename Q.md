@@ -27,41 +27,42 @@
  * res/values/styles.xml   预定义常用样式
 
 ## Android Lib
- * NineOldAndroids                     Animations 相关
- * AndroidViewAnimations               Animations 相关
- * xUtils                              网络请求相关
- * Retrofit2                           网络请求相关
- * Picasso                             图片加载
- * Glide                               图片加载
- * Android-Universal-Image-Loader      图片加载
- * FastJson                            数据相关
- * Realm                               数据库相关
- * CircleImageView                     圆形 ImageView
- * AndroidImageSlider                  轮播图
- * UCrop                               图片剪切工具
- * logger                              日志工具
- * SuperToasts                         Toasts
- * Material Dialogs                    Material Dialogs
- * MaterialDrawer                      MaterialDrawer
- * Material Ripple                     Material Ripple
- * Material Design Library             Material Design Library
- * KenBurnsView                        KenBurnsView
- * ObservableScrollView                ObservableScrollView
- * ViewRevealAnimator                  ViewRevealAnimator
- * SlideAndDragListView                侧滑、拖动的 ListView
- * Android-Bootstrap                   Android-Bootstrap
- * ChromeLikeSwipeLayout               下拉刷新
- * MaterialRefreshLayout               下拉刷新、上拉加载
- * Butterknife                         视图注入
- * JazzyListView、JazzyGridView        带加载动画的ListView、GridView
- * Android-SnappingStepper             数字加减
- * AndroidTagGroup                     标签
- * DropDownMenu                        下拉菜单
- * RichText                            富文本
- * StatusBarUtil                       StatusBarUtil
- * RxJava                              RxJava
- * RxAndroid                           RxAndroid
- * AndroidSwipeLayout                  Swipe Layout
+ * NineOldAndroids                      Animations 相关
+ * AndroidViewAnimations                Animations 相关
+ * xUtils                               网络请求相关
+ * Retrofit2                            网络请求相关
+ * Picasso                              图片加载
+ * Glide                                图片加载
+ * Android-Universal-Image-Loader       图片加载
+ * FastJson                             数据相关
+ * Realm                                数据库相关
+ * CircleImageView                      圆形 ImageView
+ * AndroidImageSlider                   轮播图
+ * UCrop                                图片剪切工具
+ * logger                               日志工具
+ * SuperToasts                          Toasts
+ * Material Dialogs                     Material Dialogs
+ * MaterialDrawer                       MaterialDrawer
+ * Material Ripple                      Material Ripple
+ * Material Design Library              Material Design Library
+ * KenBurnsView                         KenBurnsView
+ * ObservableScrollView                 ObservableScrollView
+ * ViewRevealAnimator                   ViewRevealAnimator
+ * SlideAndDragListView                 侧滑、拖动的 ListView
+ * Android-Bootstrap                    Android-Bootstrap
+ * ChromeLikeSwipeLayout                下拉刷新
+ * MaterialRefreshLayout                下拉刷新、上拉加载
+ * Butterknife                          视图注入
+ * JazzyListView、JazzyGridView         带加载动画的ListView、GridView
+ * Android-SnappingStepper              数字加减
+ * AndroidTagGroup                      标签
+ * DropDownMenu                         下拉菜单
+ * RichText                             富文本
+ * StatusBarUtil                        StatusBarUtil
+ * RxJava                               RxJava
+ * RxAndroid                            RxAndroid
+ * AndroidSwipeLayout                   Swipe Layout
+ * NavigationTabBar                     NavigationTabBar
 
 ## 其他 Lib
  * com.dqc.qlibrary.library.codec              Apache Commons codec library
