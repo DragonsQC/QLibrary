@@ -172,6 +172,9 @@ dependencies {
     //NavigationTabBar [https://github.com/DevLight-Mobile-Agency/NavigationTabBar]
     compile 'com.github.devlight.navigationtabbar:library:1.1.5'
 
+    //Badge BGABadgeView-Android [https://github.com/bingoogolapple/BGABadgeView-Android]
+    compile 'cn.bingoogolapple:bga-badgeview:1.1.1@aar'
+
 }
 repositories {
     jcenter()

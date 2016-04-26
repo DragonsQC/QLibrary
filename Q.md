@@ -63,6 +63,7 @@
  * RxAndroid                            RxAndroid
  * AndroidSwipeLayout                   Swipe Layout
  * NavigationTabBar                     NavigationTabBar
+ * BGABadgeView                         Badge
 
 ## 其他 Lib
  * com.dqc.qlibrary.library.codec              Apache Commons codec library
