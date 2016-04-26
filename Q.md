@@ -64,7 +64,6 @@
  * AndroidSwipeLayout                   Swipe Layout
  * NavigationTabBar                     NavigationTabBar
  * BGABadgeView                         Badge
- * DragIndicatorView                    Badge //com/dqc/qlibrary/library/dragindicator
 
 ## 其他 Lib
  * com.dqc.qlibrary.library.codec              Apache Commons codec library
