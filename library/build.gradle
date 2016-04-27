@@ -142,9 +142,6 @@ dependencies {
     //标签 AndroidTagGroup [https://github.com/2dxgujun/AndroidTagGroup]
     compile 'me.gujun.android.taggroup:library:1.4@aar'
 
-    //Menu DropDownMenu [https://github.com/dongjunkun/DropDownMenu]
-    compile 'com.github.dongjunkun:DropDownMenu:1.0.3'
-
     //Menu BoomMenu [https://github.com/Nightonke/BoomMenu]
     compile 'com.nightonke:boommenu:1.0.7'
 

@@ -56,7 +56,6 @@
  * JazzyListView、JazzyGridView         带加载动画的ListView、GridView
  * Android-SnappingStepper              数字加减
  * AndroidTagGroup                      标签
- * DropDownMenu                         下拉菜单
  * RichText                             富文本
  * StatusBarUtil                        StatusBarUtil
  * RxJava                               RxJava
