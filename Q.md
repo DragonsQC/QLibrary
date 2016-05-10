@@ -61,7 +61,8 @@
  * RxJava                               RxJava
  * RxAndroid                            RxAndroid
  * AndroidSwipeLayout                   Swipe Layout
- * NavigationTabBar                     NavigationTabBar
+ * NavigationTabBar                     Navigation
+ * AHBottomNavigation                   Navigation
  * BGABadgeView                         Badge
 
 ## 其他 Lib
