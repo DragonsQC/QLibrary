@@ -176,6 +176,9 @@ dependencies {
     //Badge BGABadgeView-Android [https://github.com/bingoogolapple/BGABadgeView-Android]
     compile 'cn.bingoogolapple:bga-badgeview:1.1.1@aar'
 
+    //ExpandableLayout [https://github.com/cachapa/ExpandableLayout]
+    compile 'com.github.cachapa:expandablelayout:1.1'
+
 }
 repositories {
     jcenter()
