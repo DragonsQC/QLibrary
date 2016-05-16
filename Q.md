@@ -27,6 +27,11 @@
  * res/values/styles.xml   预定义常用样式
 
 ## Android Lib
+** com.android.support:support-v4
+** com.android.support:percent
+** com.android.support:recyclerview-v7
+** com.android.support:palette-v7
+
  * NineOldAndroids                      Animations 相关
  * AndroidViewAnimations                Animations 相关
  * xUtils                               网络请求相关
@@ -48,11 +53,11 @@
  * KenBurnsView                         KenBurnsView
  * ObservableScrollView                 ObservableScrollView
  * ViewRevealAnimator                   ViewRevealAnimator
- * SlideAndDragListView                 侧滑、拖动的 ListView
  * Android-Bootstrap                    Android-Bootstrap
  * ChromeLikeSwipeLayout                下拉刷新
  * MaterialRefreshLayout                下拉刷新、上拉加载
- * Butterknife                          视图注入
+ * Advanced RecyclerView                拖拽排序
+ * Butterknife                          注解
  * JazzyListView、JazzyGridView         带加载动画的ListView、GridView
  * Android-SnappingStepper              数字加减
  * AndroidTagGroup                      标签
@@ -61,7 +66,6 @@
  * RxJava                               RxJava
  * RxAndroid                            RxAndroid
  * AndroidSwipeLayout                   Swipe Layout
- * NavigationTabBar                     Navigation
  * AHBottomNavigation                   Navigation
  * BGABadgeView                         Badge
 
