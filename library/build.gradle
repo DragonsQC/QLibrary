@@ -47,112 +47,121 @@ dependencies {
 
     compile 'com.nineoldandroids:library:2.4.0'
 
-    //网络请求 xUtils [https://github.com/wyouflf/xUtils3]
+    //【网络请求】xUtils [https://github.com/wyouflf/xUtils3]
     compile 'org.xutils:xutils:3.3.32'
 
-    //网络请求 Retrofit2 [https://github.com/square/retrofit]
+    //【网络请求】Retrofit2 [https://github.com/square/retrofit]
     compile 'com.squareup.retrofit2:retrofit:2.0.2'
 
-    //Converter: Gson [http://www.mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson]
+    //【Converter】Gson [http://www.mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson]
     compile 'com.squareup.retrofit2:converter-gson:2.0.2'
 
-    //okhttp logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
+    //【okhttp】logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
     compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
 
-    //fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
+    //【图片加载】Picasso [https://github.com/square/picasso] [http://www.mvnrepository.com/artifact/com.squareup.picasso/picasso]
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    //【图片加载】Glide [https://github.com/bumptech/glide] [http://www.mvnrepository.com/artifact/com.github.bumptech.glide/glide]
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    //【图片加载】Android-Universal-Image-Loader [https://github.com/nostra13/Android-Universal-Image-Loader] [http://www.mvnrepository.com/artifact/com.nostra13.universalimageloader/universal-image-loader]
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+    //【JSON】fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
     compile 'com.alibaba:fastjson:1.1.48.android'
 
-    //圆形ImageView [https://github.com/hdodenhof/CircleImageView] [http://www.mvnrepository.com/artifact/de.hdodenhof/circleimageview]
-    compile 'de.hdodenhof:circleimageview:2.0.0'
+    //【Toast】SuperToasts [https://github.com/JohnPersano/SuperToasts] [http://www.mvnrepository.com/artifact/com.github.johnpersano/supertoasts] [http://maven.oschina.net/content/groups/public/com/github/johnpersano/supertoasts/]
+    compile 'com.github.johnpersano:supertoasts:1.3.4@aar'
 
-    //带数字进度的进度条 [https://github.com/daimajia/NumberProgressBar] [http://www.mvnrepository.com/artifact/com.daimajia.numberprogressbar/library]
-    //compile 'com.daimajia.numberprogressbar:library:1.2@aar'
-
-    //“YoYo” 动画效果 AndroidViewAnimations [https://github.com/daimajia/AndroidViewAnimations]
+    //【Animation】"YoYo" 动画效果 AndroidViewAnimations [https://github.com/daimajia/AndroidViewAnimations]
     compile 'com.daimajia.easing:library:1.0.1@aar'
     compile 'com.daimajia.androidanimations:library:1.1.3@aar'
 
-    //轮播图 AndroidImageSlider [https://github.com/daimajia/AndroidImageSlider]
+    //【Animation】KenBurnsView [https://github.com/flavioarfaria/KenBurnsView] [http://www.mvnrepository.com/artifact/com.flaviofaria/kenburnsview]
+    compile 'com.flaviofaria:kenburnsview:1.0.7'
+
+    //【Animator】ViewRevealAnimator [https://github.com/sephiroth74/ViewRevealAnimator][http://www.mvnrepository.com/artifact/it.sephiroth.android.library.viewrevealanimator/view-reveal-animator]
+    compile 'it.sephiroth.android.library.viewrevealanimator:view-reveal-animator:1.1.4'
+
+    //【轮播图】 AndroidImageSlider [https://github.com/daimajia/AndroidImageSlider]
     compile 'com.daimajia.slider:library:1.1.5@aar'
 
-    //SuperToasts [https://github.com/JohnPersano/SuperToasts] [http://www.mvnrepository.com/artifact/com.github.johnpersano/supertoasts] [http://maven.oschina.net/content/groups/public/com/github/johnpersano/supertoasts/]
-    compile 'com.github.johnpersano:supertoasts:1.3.4@aar'
-
-    //图片 - Picasso [https://github.com/square/picasso] [http://www.mvnrepository.com/artifact/com.squareup.picasso/picasso]
-    compile 'com.squareup.picasso:picasso:2.5.2'
-
-    //图片 - Glide [https://github.com/bumptech/glide] [http://www.mvnrepository.com/artifact/com.github.bumptech.glide/glide]
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-
-    //图片 - Android-Universal-Image-Loader[https://github.com/nostra13/Android-Universal-Image-Loader] [http://www.mvnrepository.com/artifact/com.nostra13.universalimageloader/universal-image-loader]
-    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
-
-    //图片剪切工具 UCrop [https://github.com/Yalantis/uCrop][http://www.mvnrepository.com/artifact/com.yalantis/ucrop]
+    //【图片剪切工具】 UCrop [https://github.com/Yalantis/uCrop][http://www.mvnrepository.com/artifact/com.yalantis/ucrop]
     compile 'com.yalantis:ucrop:1.4.0'
 
-    //日志工具 logger [https://github.com/orhanobut/logger]
+    //【Log】日志工具 logger [https://github.com/orhanobut/logger]
     compile 'com.github.orhanobut:logger:1.12'//[https://jitpack.io/#orhanobut/logger/1.12]
 
-    //MaterialDrawer [https://github.com/mikepenz/MaterialDrawer] [http://www.mvnrepository.com/artifact/com.mikepenz/materialdrawer]
+    //【Drawer】MaterialDrawer [https://github.com/mikepenz/MaterialDrawer] [http://www.mvnrepository.com/artifact/com.mikepenz/materialdrawer]
     compile('com.mikepenz:materialdrawer:5.2.0@aar') {
         transitive = true
     }
 
-    //Material Ripple [https://github.com/balysv/material-ripple] [http://www.mvnrepository.com/artifact/com.balysv/material-ripple]
-    compile 'com.balysv:material-ripple:1.0.2'
+    //【ImageView】CircleImageView [https://github.com/hdodenhof/CircleImageView] [http://www.mvnrepository.com/artifact/de.hdodenhof/circleimageview]
+    compile 'de.hdodenhof:circleimageview:2.0.0'
 
-    //Material Design Library [https://github.com/rey5137/Material] [http://www.mvnrepository.com/artifact/com.github.rey5137/material]
-    compile 'com.github.rey5137:material:1.2.2'
+    //【Progress】带数字进度的进度条 [https://github.com/daimajia/NumberProgressBar] [http://www.mvnrepository.com/artifact/com.daimajia.numberprogressbar/library]
+    //compile 'com.daimajia.numberprogressbar:library:1.2@aar'
 
-    //KenBurnsView [https://github.com/flavioarfaria/KenBurnsView] [http://www.mvnrepository.com/artifact/com.flaviofaria/kenburnsview]
-    compile 'com.flaviofaria:kenburnsview:1.0.7'
-
-    //ObservableScrollView [https://github.com/ksoichiro/Android-ObservableScrollView] [http://www.mvnrepository.com/artifact/com.github.ksoichiro/android-observablescrollview]
+    //【ScrollView】ObservableScrollView [https://github.com/ksoichiro/Android-ObservableScrollView] [http://www.mvnrepository.com/artifact/com.github.ksoichiro/android-observablescrollview]
     compile 'com.github.ksoichiro:android-observablescrollview:1.6.0'
 
-    //Material Dialogs [https://github.com/afollestad/material-dialogs] [maven { url "https://jitpack.io" }]
+    //【SwipeLayout】AndroidSwipeLayout [https://github.com/daimajia/AndroidSwipeLayout]
+    compile "com.daimajia.swipelayout:library:1.2.0@aar"
+
+    //【Badge】BGABadgeView-Android [https://github.com/bingoogolapple/BGABadgeView-Android]
+    compile 'cn.bingoogolapple:bga-badgeview:1.1.1@aar'
+
+    //【ExpandableLayout】 ExpandableLayout[https://github.com/cachapa/ExpandableLayout]
+    compile 'com.github.cachapa:expandablelayout:1.1'
+
+    //【Material】Material Ripple [https://github.com/balysv/material-ripple] [http://www.mvnrepository.com/artifact/com.balysv/material-ripple]
+    compile 'com.balysv:material-ripple:1.0.2'
+
+    //【Material】Material Design Library [https://github.com/rey5137/Material] [http://www.mvnrepository.com/artifact/com.github.rey5137/material]
+    compile 'com.github.rey5137:material:1.2.2'
+
+    //【Material】Material Dialogs [https://github.com/afollestad/material-dialogs] [maven { url "https://jitpack.io" }]
     compile('com.github.afollestad.material-dialogs:core:0.8.5.8@aar') {
         transitive = true
     }
 
-    //ViewRevealAnimator [https://github.com/sephiroth74/ViewRevealAnimator][http://www.mvnrepository.com/artifact/it.sephiroth.android.library.viewrevealanimator/view-reveal-animator]
-    compile 'it.sephiroth.android.library.viewrevealanimator:view-reveal-animator:1.1.4'
+    //【Navigation】AHBottomNavigation [https://github.com/aurelhubert/ahbottomnavigation]
+    compile 'com.aurelhubert:ahbottomnavigation:1.1.8'
 
-    //Android-Bootstrap [https://github.com/Bearded-Hen/Android-Bootstrap]
+    //【Bootstrap】Android-Bootstrap [https://github.com/Bearded-Hen/Android-Bootstrap]
     compile 'com.beardedhen:androidbootstrap:2.1.0'
 
-    //SlideAndDragListView [https://github.com/yydcdut/SlideAndDragListView]
-    compile 'com.yydcdut.sdlv:sdlv:0.4.2@aar'
+    //【拖拽排序】DragDropListView [https://github.com/Solartisan/DragDropListView]
+    compile 'cc.solart:dragdrop:1.1.0'
 
-    //下拉刷新 ChromeLikeSwipeLayout [https://github.com/ashqal/ChromeLikeSwipeLayout]
+    //【下拉刷新】ChromeLikeSwipeLayout [https://github.com/ashqal/ChromeLikeSwipeLayout]
     compile 'com.github.ashqal:ChromeLikeSwipeLayout:0.4'
 
-    //下拉刷新、上拉加载 MaterialRefreshLayout [https://github.com/android-cjj/Android-MaterialRefreshLayout]
+    //【下拉刷新、上拉加载】MaterialRefreshLayout [https://github.com/android-cjj/Android-MaterialRefreshLayout]
     compile 'com.cjj.materialrefeshlayout:library:1.3.0'
 
-    //butterknife [https://github.com/JakeWharton/butterknife]
+    //【注解】butterknife [https://github.com/JakeWharton/butterknife]
     compile 'com.jakewharton:butterknife:7.0.1'
 
-    //ListView、GridView、RecyclerView 载入特效 [https://github.com/twotoasters/JazzyListView]
+    //【Views】ListView、GridView、RecyclerView 载入特效 [https://github.com/twotoasters/JazzyListView]
     compile 'com.twotoasters.jazzylistview:library:1.2.1'
     compile 'com.twotoasters.jazzylistview:library-recyclerview:1.2.1'
 
-    //Android-SnappingStepper [https://github.com/saiwu-bigkoo/Android-SnappingStepper]
+    //【SnappingStepper】Android-SnappingStepper [https://github.com/saiwu-bigkoo/Android-SnappingStepper]
     compile 'com.bigkoo:snappingstepper:1.0.2'
 
-    //标签 AndroidTagGroup [https://github.com/2dxgujun/AndroidTagGroup]
+    //【标签】AndroidTagGroup [https://github.com/2dxgujun/AndroidTagGroup]
     compile 'me.gujun.android.taggroup:library:1.4@aar'
 
-    //Menu BoomMenu [https://github.com/Nightonke/BoomMenu]
+    //【Menu】BoomMenu [https://github.com/Nightonke/BoomMenu]
     compile 'com.nightonke:boommenu:1.0.7'
 
-    //Material Bottom Navigation [https://github.com/armcha/LuseenBottomNavigation]
-    compile 'com.github.armcha:LuseenBottomNavigation:1.6.1'
-
-    //TextView 富文本显示 RichText [https://github.com/zzhoujay/RichText]
+    //【TextView】富文本显示 RichText [https://github.com/zzhoujay/RichText]
     compile 'zhou.widget:richtext:1.0.4'
 
-    //状态栏 StatusBarUtil [https://github.com/laobie/StatusBarUtil]
+    //【状态栏】StatusBarUtil [https://github.com/laobie/StatusBarUtil]
     compile 'com.jaeger.statusbaruitl:library:1.0.0'
 
     //RxJava [https://github.com/ReactiveX/RxJava][http://www.mvnrepository.com/artifact/io.reactivex/rxjava]
@@ -161,23 +170,9 @@ dependencies {
     //RxAndroid [https://github.com/ReactiveX/RxAndroid][http://www.mvnrepository.com/artifact/io.reactivex/rxandroid]
 //    compile 'io.reactivex:rxandroid:1.1.0'
 
-    //数据库 Realm[https://jcenter.bintray.com/io/realm/realm-android/]
+    //【数据库】Realm[https://jcenter.bintray.com/io/realm/realm-android/]
     compile 'io.realm:realm-android:0.87.5'
 
-    //AndroidSwipeLayout [https://github.com/daimajia/AndroidSwipeLayout]
-    compile "com.daimajia.swipelayout:library:1.2.0@aar"
-
-    //Navigation - NavigationTabBar [https://github.com/DevLight-Mobile-Agency/NavigationTabBar]
-    compile 'com.github.devlight.navigationtabbar:library:1.1.5'
-
-    //Navigation - AHBottomNavigation [https://github.com/aurelhubert/ahbottomnavigation]
-    compile 'com.aurelhubert:ahbottomnavigation:1.1.8'
-
-    //Badge BGABadgeView-Android [https://github.com/bingoogolapple/BGABadgeView-Android]
-    compile 'cn.bingoogolapple:bga-badgeview:1.1.1@aar'
-
-    //ExpandableLayout [https://github.com/cachapa/ExpandableLayout]
-    compile 'com.github.cachapa:expandablelayout:1.1'
 
 }
 repositories {
