@@ -73,12 +73,21 @@ dependencies {
     compile 'com.balysv:material-ripple:1.0.2'
     //【Material】Material Design Library [https://github.com/rey5137/Material]
     compile 'com.github.rey5137:material:1.2.2'
-
+    //【Material】Material Dialogs [https://github.com/afollestad/material-dialogs] [maven { url "https://jitpack.io" }]
+    compile('com.github.afollestad.material-dialogs:core:0.8.5.8@aar') {
+        transitive = true
+    }
+    //【Animation】KenBurnsView [https://github.com/flavioarfaria/KenBurnsView]
+    compile 'com.flaviofaria:kenburnsview:1.0.7'
+    //【Bootstrap】Android-Bootstrap [https://github.com/Bearded-Hen/Android-Bootstrap]
+    compile 'com.beardedhen:androidbootstrap:2.1.0'
+    //【Views】ListView、GridView、RecyclerView 载入特效 [https://github.com/twotoasters/JazzyListView]
+    compile 'com.twotoasters.jazzylistview:library:1.2.1'
+    compile 'com.twotoasters.jazzylistview:library-recyclerview:1.2.1'
+    //【ImageView】CircleImageView [https://github.com/hdodenhof/CircleImageView] [http://www.mvnrepository.com/artifact/de.hdodenhof/circleimageview]
+    compile 'de.hdodenhof:circleimageview:2.0.0'
 //    //【图片加载】Android-Universal-Image-Loader [https://github.com/nostra13/Android-Universal-Image-Loader] [http://www.mvnrepository.com/artifact/com.nostra13.universalimageloader/universal-image-loader]
 //    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
-//
-//    //【Animation】KenBurnsView [https://github.com/flavioarfaria/KenBurnsView] [http://www.mvnrepository.com/artifact/com.flaviofaria/kenburnsview]
-//    compile 'com.flaviofaria:kenburnsview:1.0.7'
 //
 //    //【Animator】ViewRevealAnimator [https://github.com/sephiroth74/ViewRevealAnimator][http://www.mvnrepository.com/artifact/it.sephiroth.android.library.viewrevealanimator/view-reveal-animator]
 //    compile 'it.sephiroth.android.library.viewrevealanimator:view-reveal-animator:1.1.4'
@@ -92,9 +101,6 @@ dependencies {
 //        transitive = true
 //    }
 //
-//    //【ImageView】CircleImageView [https://github.com/hdodenhof/CircleImageView] [http://www.mvnrepository.com/artifact/de.hdodenhof/circleimageview]
-//    compile 'de.hdodenhof:circleimageview:2.0.0'
-//
 //    //【Progress】带数字进度的进度条 [https://github.com/daimajia/NumberProgressBar] [http://www.mvnrepository.com/artifact/com.daimajia.numberprogressbar/library]
 //    //compile 'com.daimajia.numberprogressbar:library:1.2@aar'
 //
@@ -107,18 +113,8 @@ dependencies {
 //    //【Badge】BGABadgeView-Android [https://github.com/bingoogolapple/BGABadgeView-Android]
 //    compile 'cn.bingoogolapple:bga-badgeview:1.1.1@aar'
 //
-
-//
-//    //【Material】Material Dialogs [https://github.com/afollestad/material-dialogs] [maven { url "https://jitpack.io" }]
-//    compile('com.github.afollestad.material-dialogs:core:0.8.5.8@aar') {
-//        transitive = true
-//    }
-//
 //    //【Navigation】AHBottomNavigation [https://github.com/aurelhubert/ahbottomnavigation]
 //    compile 'com.aurelhubert:ahbottomnavigation:1.1.8'
-//
-//    //【Bootstrap】Android-Bootstrap [https://github.com/Bearded-Hen/Android-Bootstrap]
-//    compile 'com.beardedhen:androidbootstrap:2.1.0'
 //
 //    //【拖拽排序】Advanced RecyclerView [https://github.com/h6ah4i/android-advancedrecyclerview]
 //    compile('com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.9.0@aar') {
