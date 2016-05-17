@@ -41,7 +41,7 @@ dependencies {
     compile 'com.android.support:percent:23.4.0'
     compile 'com.android.support:recyclerview-v7:23.4.0'
     compile 'com.android.support:palette-v7:23.4.0'
-    //compile 'com.android.support:appcompat-v7:23.1.1'  //com.mikepenz:materialdrawer 已包含
+    compile 'com.android.support:appcompat-v7:23.4.0'  //com.mikepenz:materialdrawer 已包含
     //compile 'com.android.support:cardview-v7:23.1.1'
     //compile 'com.android.support:design:23.1.1'
     //NineoldAndroids
@@ -86,23 +86,25 @@ dependencies {
     compile 'com.twotoasters.jazzylistview:library-recyclerview:1.2.1'
     //【ImageView】CircleImageView [https://github.com/hdodenhof/CircleImageView] [http://www.mvnrepository.com/artifact/de.hdodenhof/circleimageview]
     compile 'de.hdodenhof:circleimageview:2.0.0'
+    //【Navigation】AHBottomNavigation [https://github.com/aurelhubert/ahbottomnavigation]
+    compile 'com.aurelhubert:ahbottomnavigation:1.1.8'
+    //【轮播图】 AndroidImageSlider [https://github.com/daimajia/AndroidImageSlider]
+    compile 'com.daimajia.slider:library:1.1.5@aar'
+    //【Drawer】MaterialDrawer [https://github.com/mikepenz/MaterialDrawer] [http://www.mvnrepository.com/artifact/com.mikepenz/materialdrawer]
+    compile('com.mikepenz:materialdrawer:5.2.6@aar') {
+        transitive = true
+    }
+    //【SnappingStepper】Android-SnappingStepper [https://github.com/saiwu-bigkoo/Android-SnappingStepper]
+    compile 'com.bigkoo:snappingstepper:1.0.2'
+    //【拖拽排序】Advanced RecyclerView [https://github.com/h6ah4i/android-advancedrecyclerview]
+    compile('com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.9.0@aar') {
+        transitive = true
+    }
 //    //【图片加载】Android-Universal-Image-Loader [https://github.com/nostra13/Android-Universal-Image-Loader] [http://www.mvnrepository.com/artifact/com.nostra13.universalimageloader/universal-image-loader]
 //    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
 //
 //    //【Animator】ViewRevealAnimator [https://github.com/sephiroth74/ViewRevealAnimator][http://www.mvnrepository.com/artifact/it.sephiroth.android.library.viewrevealanimator/view-reveal-animator]
 //    compile 'it.sephiroth.android.library.viewrevealanimator:view-reveal-animator:1.1.4'
-//
-//    //【轮播图】 AndroidImageSlider [https://github.com/daimajia/AndroidImageSlider]
-//    compile 'com.daimajia.slider:library:1.1.5@aar'
-//
-//
-//    //【Drawer】MaterialDrawer [https://github.com/mikepenz/MaterialDrawer] [http://www.mvnrepository.com/artifact/com.mikepenz/materialdrawer]
-//    compile('com.mikepenz:materialdrawer:5.2.6@aar') {
-//        transitive = true
-//    }
-//
-//    //【Progress】带数字进度的进度条 [https://github.com/daimajia/NumberProgressBar] [http://www.mvnrepository.com/artifact/com.daimajia.numberprogressbar/library]
-//    //compile 'com.daimajia.numberprogressbar:library:1.2@aar'
 //
 //    //【ScrollView】ObservableScrollView [https://github.com/ksoichiro/Android-ObservableScrollView] [http://www.mvnrepository.com/artifact/com.github.ksoichiro/android-observablescrollview]
 //    compile 'com.github.ksoichiro:android-observablescrollview:1.6.0'
@@ -112,14 +114,6 @@ dependencies {
 //
 //    //【Badge】BGABadgeView-Android [https://github.com/bingoogolapple/BGABadgeView-Android]
 //    compile 'cn.bingoogolapple:bga-badgeview:1.1.1@aar'
-//
-//    //【Navigation】AHBottomNavigation [https://github.com/aurelhubert/ahbottomnavigation]
-//    compile 'com.aurelhubert:ahbottomnavigation:1.1.8'
-//
-//    //【拖拽排序】Advanced RecyclerView [https://github.com/h6ah4i/android-advancedrecyclerview]
-//    compile('com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.9.0@aar') {
-//        transitive = true
-//    }
 //
 //    //【下拉刷新】ChromeLikeSwipeLayout [https://github.com/ashqal/ChromeLikeSwipeLayout]
 //    compile 'com.github.ashqal:ChromeLikeSwipeLayout:0.4'
@@ -137,14 +131,8 @@ dependencies {
 //    //【SnappingStepper】Android-SnappingStepper [https://github.com/saiwu-bigkoo/Android-SnappingStepper]
 //    compile 'com.bigkoo:snappingstepper:1.0.2'
 //
-//    //【标签】AndroidTagGroup [https://github.com/2dxgujun/AndroidTagGroup]
-//    compile 'me.gujun.android.taggroup:library:1.4@aar'
-//
 //    //【Menu】BoomMenu [https://github.com/Nightonke/BoomMenu]
 //    compile 'com.nightonke:boommenu:1.0.7'
-//
-//    //【TextView】富文本显示 RichText [https://github.com/zzhoujay/RichText]
-//    compile 'zhou.widget:richtext:1.0.4'
 //
 //    //【状态栏】StatusBarUtil [https://github.com/laobie/StatusBarUtil]
 //    compile 'com.jaeger.statusbaruitl:library:1.0.0'
