@@ -107,7 +107,7 @@ dependencies {
     //【ScrollView】ObservableScrollView [https://github.com/ksoichiro/Android-ObservableScrollView] [http://www.mvnrepository.com/artifact/com.github.ksoichiro/android-observablescrollview]
     compile 'com.github.ksoichiro:android-observablescrollview:1.6.0'
 
-    //【侧滑返回】AndroidSwipeLayout [https://github.com/daimajia/AndroidSwipeLayout]
+    //【Swipe Layout】AndroidSwipeLayout [https://github.com/daimajia/AndroidSwipeLayout]
     compile "com.daimajia.swipelayout:library:1.2.0@aar"
 
     //【Badge】BGABadgeView-Android [https://github.com/bingoogolapple/BGABadgeView-Android]
