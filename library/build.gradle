@@ -55,7 +55,7 @@ dependencies {
     //logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
     compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
     //fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
-    compile 'com.alibaba:fastjson:1.1.48.android'
+    compile 'com.alibaba:fastjson:1.1.51.android'
 
 //【图片加载】***************************************************************************************
     //Picasso [https://github.com/square/picasso]
@@ -116,6 +116,17 @@ dependencies {
     compile 'com.github.ksoichiro:android-observablescrollview:1.6.0'
     //【Badge】BGABadgeView-Android [https://github.com/bingoogolapple/BGABadgeView-Android]
     compile 'cn.bingoogolapple:bga-badgeview:1.1.1@aar'
+
+
+//    //【Animator】ViewRevealAnimator [https://github.com/sephiroth74/ViewRevealAnimator]
+//    compile 'it.sephiroth.android.library.viewrevealanimator:view-reveal-animator:1.1.4'
+//    //【Swipe Layout】AndroidSwipeLayout [https://github.com/daimajia/AndroidSwipeLayout]
+//    compile "com.daimajia.swipelayout:library:1.2.0@aar"
+//    //【下拉刷新】ChromeLikeSwipeLayout [https://github.com/ashqal/ChromeLikeSwipeLayout]
+//    compile 'com.github.ashqal:ChromeLikeSwipeLayout:0.4'
+//    //【下拉刷新、上拉加载】MaterialRefreshLayout [https://github.com/android-cjj/Android-MaterialRefreshLayout]
+//    compile 'com.cjj.materialrefeshlayout:library:1.3.0'
+
 
 }
 repositories {
