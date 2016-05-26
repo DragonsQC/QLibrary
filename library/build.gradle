@@ -99,7 +99,7 @@ dependencies {
         transitive = true
     }
     //Menu [https://github.com/Nightonke/BoomMenu]
-    compile 'com.nightonke:boommenu:1.0.7'
+    compile 'com.nightonke:boommenu:1.0.9'
     //SuperToasts [https://github.com/JohnPersano/SuperToasts]
     compile 'com.github.johnpersano:supertoasts:1.3.4@aar'
     //【Navigation】AHBottomNavigation [https://github.com/aurelhubert/ahbottomnavigation]
