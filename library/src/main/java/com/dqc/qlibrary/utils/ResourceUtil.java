@@ -51,8 +51,8 @@ public class ResourceUtil {
      */
     public static Bitmap getBitmap4Assets(Context context, String fileName) {
 
-        Bitmap bitmap = null;
-        BitmapFactory.Options opt = new BitmapFactory.Options();
+        Bitmap                bitmap = null;
+        BitmapFactory.Options opt    = new BitmapFactory.Options();
         opt.inPreferredConfig = Bitmap.Config.RGB_565;
         if (android.os.Build.VERSION.SDK_INT < 21) {
             opt.inPurgeable = true;
@@ -77,8 +77,8 @@ public class ResourceUtil {
      */
     public static Bitmap getBitmap4Res(Context context, int resId) {
 
-        Bitmap bitmap = null;
-        BitmapFactory.Options opt = new BitmapFactory.Options();
+        Bitmap                bitmap = null;
+        BitmapFactory.Options opt    = new BitmapFactory.Options();
         opt.inPreferredConfig = Bitmap.Config.RGB_565;
         if (android.os.Build.VERSION.SDK_INT < 21) {
             opt.inPurgeable = true;
@@ -102,13 +102,13 @@ public class ResourceUtil {
      * @param targetPathString
      */
     public static void copyAssetsFile(Context context, String sourcePath, String targetPathString) {
-        InputStream inputStream;
+        InputStream  inputStream;
         OutputStream outputStream;
         try {
             outputStream = new FileOutputStream(targetPathString);
             inputStream = context.getApplicationContext().getAssets().open(sourcePath);
             byte[] buffer = new byte[1024];
-            int length = inputStream.read(buffer);
+            int    length = inputStream.read(buffer);
             while (length > 0) {
                 outputStream.write(buffer, 0, length);
                 length = inputStream.read(buffer);
@@ -162,7 +162,7 @@ public class ResourceUtil {
      * @param context
      */
     private static synchronized void initDisplayMetrics(Context context) {
-        sDisplayMetrics = context.getApplicationContext().getResources().getDisplayMetrics();
+        sDisplayMetrics = context.getResources().getDisplayMetrics();
     }
 
     /**
