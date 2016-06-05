@@ -34,8 +34,8 @@ public class NetStateUtil {
      */
     public static boolean isNetworkConnected(Context context) {
         if (context != null) {
-            ConnectivityManager mConnectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-            NetworkInfo mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
+            ConnectivityManager mConnectivityManager = (ConnectivityManager) context.getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo         mNetworkInfo         = mConnectivityManager.getActiveNetworkInfo();
             if (mNetworkInfo != null) {
                 return mNetworkInfo.isAvailable();
             }
@@ -50,8 +50,8 @@ public class NetStateUtil {
      */
     public static boolean isWifiConnected(Context context) {
         if (context != null) {
-            ConnectivityManager mConnectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-            NetworkInfo mWiFiNetworkInfo = mConnectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+            ConnectivityManager mConnectivityManager = (ConnectivityManager) context.getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo         mWiFiNetworkInfo     = mConnectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
             if (mWiFiNetworkInfo != null && mWiFiNetworkInfo.getState() == NetworkInfo.State.CONNECTED) {
                 return true;
             }
@@ -66,8 +66,8 @@ public class NetStateUtil {
      */
     public static boolean isMobileConnected(Context context) {
         if (context != null) {
-            ConnectivityManager mConnectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-            NetworkInfo mMobileNetworkInfo = mConnectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+            ConnectivityManager mConnectivityManager = (ConnectivityManager) context.getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo         mMobileNetworkInfo   = mConnectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
             if (mMobileNetworkInfo != null) {
                 return mMobileNetworkInfo.isAvailable();
             }
@@ -83,8 +83,8 @@ public class NetStateUtil {
      */
     public static int getConnectedType(Context context) {
         if (context != null) {
-            ConnectivityManager mConnectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-            NetworkInfo mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
+            ConnectivityManager mConnectivityManager = (ConnectivityManager) context.getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo         mNetworkInfo         = mConnectivityManager.getActiveNetworkInfo();
             if (mNetworkInfo != null && mNetworkInfo.isAvailable()) {
                 return mNetworkInfo.getType();
             }
@@ -97,7 +97,7 @@ public class NetStateUtil {
      */
     public static void setNetwork(final Context context) {
 
-        final AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        final AlertDialog.Builder builder = new AlertDialog.Builder(context.getApplicationContext());
         builder.setTitle(R.string.net_state_dialog_title);
         builder.setMessage(R.string.net_state_dialog_msg);
         builder.setCancelable(false);
@@ -117,7 +117,7 @@ public class NetStateUtil {
                     intent.setComponent(component);
                     intent.setAction("android.intent.action.VIEW");
                 }
-                context.startActivity(intent);
+                context.getApplicationContext().startActivity(intent);
             }
         });
 
@@ -146,8 +146,8 @@ public class NetStateUtil {
      * @return
      */
     public static boolean isGpsEnabled(Context context) {
-        LocationManager lm = ((LocationManager) context.getSystemService(Context.LOCATION_SERVICE));
-        List<String> accessibleProviders = lm.getProviders(true);
-        return accessibleProviders != null && accessibleProviders.size() > 0;
+        LocationManager lm        = ((LocationManager) context.getApplicationContext().getSystemService(Context.LOCATION_SERVICE));
+        List<String>    providers = lm.getProviders(true);
+        return providers != null && providers.size() > 0;
     }
 }

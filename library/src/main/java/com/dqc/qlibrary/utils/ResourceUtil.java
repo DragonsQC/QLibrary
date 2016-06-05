@@ -33,7 +33,7 @@ public class ResourceUtil {
     public static Drawable getAssets4Drawable(Context context, String fileName) {
         Drawable drawable = null;
         try {
-            InputStream is = context.getAssets().open(fileName);
+            InputStream is = context.getApplicationContext().getAssets().open(fileName);
             drawable = Drawable.createFromStream(is, null);
             is.close();
         } catch (IOException e) {
@@ -59,7 +59,7 @@ public class ResourceUtil {
             opt.inInputShareable = true;
         }
         try {
-            InputStream is = context.getAssets().open(fileName);
+            InputStream is = context.getApplicationContext().getAssets().open(fileName);
             bitmap = BitmapFactory.decodeStream(is, null, opt);
             is.close();
         } catch (IOException e) {
@@ -85,7 +85,7 @@ public class ResourceUtil {
             opt.inInputShareable = true;
         }
         try {
-            InputStream is = context.getResources().openRawResource(resId);
+            InputStream is = context.getApplicationContext().getResources().openRawResource(resId);
             bitmap = BitmapFactory.decodeStream(is, null, opt);
             is.close();
         } catch (IOException e) {
@@ -106,7 +106,7 @@ public class ResourceUtil {
         OutputStream outputStream;
         try {
             outputStream = new FileOutputStream(targetPathString);
-            inputStream = context.getAssets().open(sourcePath);
+            inputStream = context.getApplicationContext().getAssets().open(sourcePath);
             byte[] buffer = new byte[1024];
             int length = inputStream.read(buffer);
             while (length > 0) {
@@ -131,7 +131,7 @@ public class ResourceUtil {
      */
     public static Bitmap getBitmap4Uri(Context context, Uri uri) {
         try {
-            return MediaStore.Images.Media.getBitmap(context.getContentResolver(), uri);
+            return MediaStore.Images.Media.getBitmap(context.getApplicationContext().getContentResolver(), uri);
         } catch (Exception e) {
             Log.e("[Android]", e.getMessage());
             Log.e("[Android]", "目录为：" + uri);
@@ -162,7 +162,7 @@ public class ResourceUtil {
      * @param context
      */
     private static synchronized void initDisplayMetrics(Context context) {
-        sDisplayMetrics = context.getResources().getDisplayMetrics();
+        sDisplayMetrics = context.getApplicationContext().getResources().getDisplayMetrics();
     }
 
     /**
@@ -172,7 +172,7 @@ public class ResourceUtil {
      * @return
      */
     public static int getDisplayWidth(Context context) {
-        initDisplayMetrics(context);
+        initDisplayMetrics(context.getApplicationContext());
         return sDisplayMetrics.widthPixels;
     }
 
@@ -183,7 +183,7 @@ public class ResourceUtil {
      * @return
      */
     public static int getDisplayHeight(Context context) {
-        initDisplayMetrics(context);
+        initDisplayMetrics(context.getApplicationContext());
         return sDisplayMetrics.heightPixels;
     }
 
@@ -194,7 +194,7 @@ public class ResourceUtil {
      * @return
      */
     public static float getDensity(Context context) {
-        initDisplayMetrics(context);
+        initDisplayMetrics(context.getApplicationContext());
         return sDisplayMetrics.density;
     }
 }

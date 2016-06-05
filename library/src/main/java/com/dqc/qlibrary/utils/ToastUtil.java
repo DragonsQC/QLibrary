@@ -23,7 +23,7 @@ public class ToastUtil {
      * @param duration     时长
      */
     public static void showDefault(Context context, CharSequence charSequence, int duration) {
-        Toast.makeText(context, charSequence, duration).show();
+        Toast.makeText(context.getApplicationContext(), charSequence, duration).show();
     }
 
     /**
@@ -34,7 +34,7 @@ public class ToastUtil {
      * @param duration 时长
      */
     public static void showDefault(Context context, int rseId, int duration) {
-        Toast.makeText(context, rseId, duration).show();
+        Toast.makeText(context.getApplicationContext(), rseId, duration).show();
     }
 
     /**
@@ -45,7 +45,7 @@ public class ToastUtil {
      * @param duration     时长
      */
     public static void showCenter(Context context, CharSequence charSequence, int duration) {
-        Toast toast = Toast.makeText(context, charSequence, duration);
+        Toast toast = Toast.makeText(context.getApplicationContext(), charSequence, duration);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
     }
@@ -58,7 +58,7 @@ public class ToastUtil {
      * @param duration 时长
      */
     public static void showCenter(Context context, int rseId, int duration) {
-        Toast toast = Toast.makeText(context, rseId, duration);
+        Toast toast = Toast.makeText(context.getApplicationContext(), rseId, duration);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
     }
@@ -79,7 +79,7 @@ public class ToastUtil {
             background = Background._BG_DEFAULT;
         }
         SuperToast.cancelAllSuperToasts();
-        SuperToast superToast = new SuperToast(context);
+        SuperToast superToast = new SuperToast(context.getApplicationContext());
         superToast.setDuration(duration);
         superToast.setText(charSequence);
         superToast.setTextSize(SuperToast.TextSize.SMALL);
@@ -104,7 +104,7 @@ public class ToastUtil {
             background = Background._BG_DEFAULT;
         }
         SuperToast.cancelAllSuperToasts();
-        SuperToast superToast = new SuperToast(context);
+        SuperToast superToast = new SuperToast(context.getApplicationContext());
         superToast.setDuration(duration);
         superToast.setText(context.getString(resId));
         superToast.setTextSize(SuperToast.TextSize.SMALL);
@@ -130,7 +130,7 @@ public class ToastUtil {
             background = Background._BG_DEFAULT;
         }
         SuperToast.cancelAllSuperToasts();
-        SuperToast superToast = new SuperToast(context);
+        SuperToast superToast = new SuperToast(context.getApplicationContext());
         superToast.setDuration(duration);
         superToast.setText(charSequence);
         superToast.setTextSize(SuperToast.TextSize.SMALL);
@@ -156,9 +156,9 @@ public class ToastUtil {
             background = Background._BG_DEFAULT;
         }
         SuperToast.cancelAllSuperToasts();
-        SuperToast superToast = new SuperToast(context);
+        SuperToast superToast = new SuperToast(context.getApplicationContext());
         superToast.setDuration(duration);
-        superToast.setText(context.getResources().getString(resId));
+        superToast.setText(context.getApplicationContext().getResources().getString(resId));
         superToast.setTextSize(SuperToast.TextSize.SMALL);
         superToast.setAnimations(Animations._DEFAULT);
         superToast.setBackground(background);
