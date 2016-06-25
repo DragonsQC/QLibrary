@@ -254,9 +254,9 @@ public class ToastUtil {
      * 初始化SuperToast 设置Animations，Duration，Background
      */
     public static void initSuperToast(SuperToast.Animations animations, int duration, int background) {
-        defaultAnimations = animations;
-        defaultDuration = duration;
-        defaultBackground = background;
+        ToastUtil.defaultAnimations = animations;
+        ToastUtil.defaultDuration = duration;
+        ToastUtil.defaultBackground = background;
     }
 
     /**
