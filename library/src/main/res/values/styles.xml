@@ -21,15 +21,4 @@
         <item name="android:layout_height">@dimen/space_small</item>
         <item name="android:background">@color/divider</item>
     </style>
-    <!-- material ripple 效果-->
-    <style name="default_material_ripple_layout">
-        <item name="mrl_rippleOverlay">true</item>
-        <item name="mrl_rippleAlpha">0.2</item>
-        <item name="mrl_rippleHover">true</item>
-        <item name="mrl_rippleColor">#888888</item>
-    </style>
-    <!-- material ripple 效果 adapter优化-->
-    <style name="material_ripple_layout_in_adapter" parent="default_material_ripple_layout">
-        <item name="mrl_rippleInAdapter">true</item>
-    </style>
 </resources>
