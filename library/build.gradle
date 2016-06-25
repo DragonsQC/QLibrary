@@ -52,7 +52,7 @@ dependencies {
     //converter-gson [http://www.mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson]
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     //logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
-    compile 'com.squareup.okhttp3:logging-interceptor:3.2.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
     //fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
     compile 'com.alibaba:fastjson:1.1.52.android'
 
