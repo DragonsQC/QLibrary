@@ -246,33 +246,18 @@ public class ToastUtil {
         superToast.show();
     }
 
-    /**
-     * 初始化SuperToast 设置Animations，Duration，Background
-     */
-    public static class InitSuperToast {
-        private static SuperToast.Animations defaultAnimations = null;
-        private static int                   defaultDuration   = -1;
-        private static int                   defaultBackground = -1;
-
-        public InitSuperToast animations(SuperToast.Animations animations) {
-            this.defaultAnimations = animations;
-            return this;
-        }
-
-        public InitSuperToast duration(int duration) {
-            this.defaultDuration = duration;
-            return this;
-        }
-
-        public InitSuperToast background(int background) {
-            this.defaultBackground = background;
-            return this;
-        }
-    }
-
     private static SuperToast.Animations defaultAnimations = SuperToast.Animations.SCALE;   //所有SuperToast的默认动画效果
     private static int                   defaultDuration   = 2000;
     private static int                   defaultBackground = SuperToast.Background.BLUE; //默认背景颜色
+
+    /**
+     * 初始化SuperToast 设置Animations，Duration，Background
+     */
+    public static void initSuperToast(SuperToast.Animations animations, int duration, int background) {
+        defaultAnimations = animations;
+        defaultDuration = duration;
+        defaultBackground = background;
+    }
 
     /**
      * SuperToast 动画
