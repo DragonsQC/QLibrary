@@ -76,7 +76,7 @@ dependencies {
 
 //【Widget】******************************************************************************************
     //Bootstrap [https://github.com/Bearded-Hen/Android-Bootstrap]
-    compile 'com.beardedhen:androidbootstrap:2.2.0'
+    compile 'com.beardedhen:androidbootstrap:2.1.0'
     //CircleImageView [https://github.com/hdodenhof/CircleImageView]
     compile 'de.hdodenhof:circleimageview:2.0.0'
     //KenBurnsView [https://github.com/flavioarfaria/KenBurnsView]
@@ -88,10 +88,6 @@ dependencies {
     compile 'com.afollestad.material-dialogs:core:0.8.6.1'
     //Material Design Library [https://github.com/rey5137/Material]
     compile 'com.github.rey5137:material:1.2.4'
-    //MaterialDrawer [https://github.com/mikepenz/MaterialDrawer]
-    compile('com.mikepenz:materialdrawer:5.3.1@aar') {
-        transitive = true
-    }
     //SuperToasts [https://github.com/JohnPersano/SuperToasts]
     compile 'com.github.johnpersano:supertoasts:1.3.4@aar'
     //【SnappingStepper】Android-SnappingStepper [https://github.com/saiwu-bigkoo/Android-SnappingStepper]
