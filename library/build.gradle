@@ -28,7 +28,6 @@ android {
         exclude 'META-INF/NOTICE.txt'
         exclude 'META-INF/notice.txt'
         exclude 'META-INF/ASL2.0'
-        exclude 'META-INF/services/javax.annotation.processing.Processor'
     }
 
 }
@@ -77,7 +76,7 @@ dependencies {
 
 //【Widget】******************************************************************************************
     //Bootstrap [https://github.com/Bearded-Hen/Android-Bootstrap]
-    compile 'com.beardedhen:androidbootstrap:2.2.0'
+    compile 'com.beardedhen:androidbootstrap:2.1.0'
     //CircleImageView [https://github.com/hdodenhof/CircleImageView]
     compile 'de.hdodenhof:circleimageview:2.0.0'
     //KenBurnsView [https://github.com/flavioarfaria/KenBurnsView]
