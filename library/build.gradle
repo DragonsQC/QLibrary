@@ -65,7 +65,7 @@ dependencies {
     //logger [https://github.com/orhanobut/logger]
     compile 'com.orhanobut:logger:1.13'
     //UCrop [https://github.com/Yalantis/uCrop]
-    compile 'com.yalantis:ucrop:1.5.0'
+    compile 'com.yalantis:ucrop:2.1.1'
 
 //【Animation】*************************************************************************************
     //NineoldAndroids [https://github.com/JakeWharton/NineOldAndroids]
@@ -76,7 +76,7 @@ dependencies {
 
 //【Widget】******************************************************************************************
     //Bootstrap [https://github.com/Bearded-Hen/Android-Bootstrap]
-    compile 'com.beardedhen:androidbootstrap:2.1.0'
+    compile 'com.beardedhen:androidbootstrap:2.3.0'
     //CircleImageView [https://github.com/hdodenhof/CircleImageView]
     compile 'de.hdodenhof:circleimageview:2.0.0'
     //KenBurnsView [https://github.com/flavioarfaria/KenBurnsView]
