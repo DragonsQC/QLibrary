@@ -90,7 +90,7 @@ public class NetStateUtil {
      */
     public static void setNetwork(final Context context) {
 
-        final AlertDialog.Builder builder = new AlertDialog.Builder(context.getApplicationContext());
+        final AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle(R.string.net_state_dialog_title);
         builder.setMessage(R.string.net_state_dialog_msg);
         builder.setCancelable(false);
