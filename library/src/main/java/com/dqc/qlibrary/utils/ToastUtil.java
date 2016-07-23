@@ -4,7 +4,9 @@ import android.content.Context;
 import android.view.Gravity;
 import android.widget.Toast;
 
-import com.github.johnpersano.supertoasts.SuperToast;
+import com.github.johnpersano.supertoasts.library.Style;
+import com.github.johnpersano.supertoasts.library.SuperToast;
+import com.github.johnpersano.supertoasts.library.utils.PaletteUtils;
 
 /**
  * Android Toast 工具类
@@ -68,43 +70,45 @@ public class ToastUtil {
      * 时长默认值(ToastUtil.Duration)，
      * Toast颜色默认值(ToastUtil.Background)
      *
-     * @param context      context
-     * @param charSequence 字符串
+     * @param context context
+     * @param s       字符串
      */
-    public static void superToastAdvanced(Context context, CharSequence charSequence) {
+    public static void superToastAdvanced(Context context, String s) {
         SuperToast.cancelAllSuperToasts();
-        SuperToast superToast = new SuperToast(context.getApplicationContext());
-        superToast.setDuration(defaultDuration);
-        superToast.setText(charSequence);
-        superToast.setTextSize(SuperToast.TextSize.SMALL);
-        superToast.setAnimations(defaultAnimations);
-        superToast.setBackground(defaultBackground);
-        superToast.show();
+        new SuperToast(context.getApplicationContext())
+                .setText(s)
+                .setTextSize(Style.TEXTSIZE_SMALL)
+                .setColor(defaultColor)
+                .setFrame(defaultFrame)
+                .setDuration(defaultDuration)
+                .setAnimations(defaultAnimations)
+                .show();
     }
 
     /**
      * SuperToast 显示在默认位置
      *
-     * @param context      context
-     * @param charSequence 字符串
-     * @param duration     时长(ToastUtil.Duration)，-1为默认值
-     * @param background   Toast颜色(ToastUtil.Background)，-1为默认值
+     * @param context  context
+     * @param s        字符串
+     * @param duration 时长(ToastUtil.Duration)，-1为默认值
+     * @param color    Toast颜色(ToastUtil.Background)，-1为默认值
      */
-    public static void superToastAdvanced(Context context, CharSequence charSequence, int duration, int background) {
+    public static void superToastAdvanced(Context context, String s, int duration, int color) {
         if (duration == -1) {
             duration = defaultDuration;
         }
-        if (background == -1) {
-            background = defaultBackground;
+        if (color == -1) {
+            color = defaultColor;
         }
         SuperToast.cancelAllSuperToasts();
-        SuperToast superToast = new SuperToast(context.getApplicationContext());
-        superToast.setDuration(duration);
-        superToast.setText(charSequence);
-        superToast.setTextSize(SuperToast.TextSize.SMALL);
-        superToast.setAnimations(defaultAnimations);
-        superToast.setBackground(background);
-        superToast.show();
+        new SuperToast(context.getApplicationContext())
+                .setText(s)
+                .setTextSize(Style.TEXTSIZE_SMALL)
+                .setColor(color)
+                .setFrame(defaultFrame)
+                .setDuration(duration)
+                .setAnimations(defaultAnimations)
+                .show();
     }
 
     /**
@@ -117,39 +121,40 @@ public class ToastUtil {
      */
     public static void superToastAdvanced(Context context, int resId) {
         SuperToast.cancelAllSuperToasts();
-        SuperToast superToast = new SuperToast(context.getApplicationContext());
-        superToast.setDuration(defaultDuration);
-        superToast.setText(context.getString(resId));
-        superToast.setTextSize(SuperToast.TextSize.SMALL);
-        superToast.setAnimations(defaultAnimations);
-        superToast.setBackground(defaultBackground);
-        superToast.show();
+        new SuperToast(context.getApplicationContext())
+                .setText(context.getApplicationContext().getString(resId))
+                .setTextSize(Style.TEXTSIZE_SMALL)
+                .setColor(defaultColor)
+                .setFrame(defaultFrame)
+                .setDuration(defaultDuration)
+                .setAnimations(defaultAnimations)
+                .show();
 
     }
 
     /**
      * SuperToast 显示在默认位置
      *
-     * @param context    context
-     * @param resId      资源id
-     * @param duration   时长(ToastUtil.Duration)，-1为默认值
-     * @param background Toast颜色(ToastUtil.Background)，-1为默认值
+     * @param context  context
+     * @param resId    资源id
+     * @param duration 时长(ToastUtil.Duration)，-1为默认值
+     * @param color    Toast颜色(ToastUtil.Background)，-1为默认值
      */
-    public static void superToastAdvanced(Context context, int resId, int duration, int background) {
+    public static void superToastAdvanced(Context context, int resId, int duration, int color) {
         if (duration == -1) {
             duration = defaultDuration;
         }
-        if (background == -1) {
-            background = defaultBackground;
+        if (color == -1) {
+            color = defaultColor;
         }
-        SuperToast.cancelAllSuperToasts();
-        SuperToast superToast = new SuperToast(context.getApplicationContext());
-        superToast.setDuration(duration);
-        superToast.setText(context.getString(resId));
-        superToast.setTextSize(SuperToast.TextSize.SMALL);
-        superToast.setAnimations(defaultAnimations);
-        superToast.setBackground(background);
-        superToast.show();
+        new SuperToast(context.getApplicationContext())
+                .setText(context.getApplicationContext().getString(resId))
+                .setTextSize(Style.TEXTSIZE_SMALL)
+                .setColor(color)
+                .setFrame(defaultFrame)
+                .setDuration(duration)
+                .setAnimations(defaultAnimations)
+                .show();
 
     }
 
@@ -158,46 +163,48 @@ public class ToastUtil {
      * 时长默认值(ToastUtil.Duration)，
      * Toast颜色默认值(ToastUtil.Background)
      *
-     * @param context      context
-     * @param charSequence 字符串
+     * @param context context
+     * @param s       字符串
      */
-    public static void superToastAdvanced4Center(Context context, CharSequence charSequence) {
+    public static void superToastAdvanced4Center(Context context, String s) {
         SuperToast.cancelAllSuperToasts();
-        SuperToast superToast = new SuperToast(context.getApplicationContext());
-        superToast.setDuration(defaultDuration);
-        superToast.setText(charSequence);
-        superToast.setTextSize(SuperToast.TextSize.SMALL);
-        superToast.setAnimations(defaultAnimations);
-        superToast.setBackground(defaultBackground);
-        superToast.setGravity(Gravity.CENTER, 0, 0);
-        superToast.show();
+        new SuperToast(context.getApplicationContext())
+                .setText(s)
+                .setTextSize(Style.TEXTSIZE_SMALL)
+                .setGravity(Gravity.CENTER, 0, 0)
+                .setColor(defaultColor)
+                .setFrame(defaultFrame)
+                .setDuration(defaultDuration)
+                .setAnimations(defaultAnimations)
+                .show();
     }
 
 
     /**
      * SuperToast 显示在屏幕中间
      *
-     * @param context      context
-     * @param charSequence 字符串
-     * @param duration     时长(ToastUtil.Duration)，-1为默认值
-     * @param background   Toast颜色(ToastUtil.Background)，-1为默认值
+     * @param context    context
+     * @param s          字符串
+     * @param duration   时长(ToastUtil.Duration)，-1为默认值
+     * @param background Toast颜色(ToastUtil.Background)，-1为默认值
      */
-    public static void superToastAdvanced4Center(Context context, CharSequence charSequence, int duration, int background) {
+    public static void superToastAdvanced4Center(Context context, String s, int duration, int background) {
         if (duration == -1) {
             duration = defaultDuration;
         }
         if (background == -1) {
-            background = defaultBackground;
+            background = defaultColor;
         }
         SuperToast.cancelAllSuperToasts();
-        SuperToast superToast = new SuperToast(context.getApplicationContext());
-        superToast.setDuration(duration);
-        superToast.setText(charSequence);
-        superToast.setTextSize(SuperToast.TextSize.SMALL);
-        superToast.setAnimations(defaultAnimations);
-        superToast.setBackground(background);
-        superToast.setGravity(Gravity.CENTER, 0, 0);
-        superToast.show();
+        new SuperToast(context.getApplicationContext())
+                .setText(s)
+                .setTextSize(Style.TEXTSIZE_SMALL)
+                .setGravity(Gravity.CENTER, 0, 0)
+                .setColor(background)
+                .setFrame(defaultFrame)
+                .setDuration(duration)
+                .setAnimations(defaultAnimations)
+                .show();
     }
 
     /**
@@ -210,86 +217,67 @@ public class ToastUtil {
      */
     public static void superToastAdvanced4Center(Context context, int resId) {
         SuperToast.cancelAllSuperToasts();
-        SuperToast superToast = new SuperToast(context.getApplicationContext());
-        superToast.setDuration(defaultDuration);
-        superToast.setText(context.getApplicationContext().getResources().getString(resId));
-        superToast.setTextSize(SuperToast.TextSize.SMALL);
-        superToast.setAnimations(defaultAnimations);
-        superToast.setBackground(defaultBackground);
-        superToast.setGravity(Gravity.CENTER, 0, 0);
-        superToast.show();
+        new SuperToast(context.getApplicationContext())
+                .setText(context.getApplicationContext().getString(resId))
+                .setTextSize(Style.TEXTSIZE_SMALL)
+                .setGravity(Gravity.CENTER, 0, 0)
+                .setColor(defaultColor)
+                .setFrame(defaultFrame)
+                .setDuration(defaultDuration)
+                .setAnimations(defaultAnimations)
+                .show();
     }
 
     /**
      * SuperToast 显示在屏幕中间
      *
-     * @param context    context
-     * @param resId      资源id
-     * @param duration   时长(ToastUtil.Duration)，-1为默认值
-     * @param background Toast颜色(ToastUtil.Background)，-1为默认值
+     * @param context  context
+     * @param resId    资源id
+     * @param duration 时长(ToastUtil.Duration)，-1为默认值
+     * @param color    Toast颜色(ToastUtil.Background)，-1为默认值
      */
-    public static void superToastAdvanced4Center(Context context, int resId, int duration, int background) {
+    public static void superToastAdvanced4Center(Context context, int resId, int duration, int color) {
         if (duration == -1) {
             duration = defaultDuration;
         }
-        if (background == -1) {
-            background = defaultBackground;
+        if (color == -1) {
+            color = defaultColor;
         }
         SuperToast.cancelAllSuperToasts();
-        SuperToast superToast = new SuperToast(context.getApplicationContext());
-        superToast.setDuration(duration);
-        superToast.setText(context.getApplicationContext().getResources().getString(resId));
-        superToast.setTextSize(SuperToast.TextSize.SMALL);
-        superToast.setAnimations(defaultAnimations);
-        superToast.setBackground(background);
-        superToast.setGravity(Gravity.CENTER, 0, 0);
-        superToast.show();
+        new SuperToast(context.getApplicationContext())
+                .setText(context.getApplicationContext().getString(resId))
+                .setTextSize(Style.TEXTSIZE_SMALL)
+                .setGravity(Gravity.CENTER, 0, 0)
+                .setColor(color)
+                .setFrame(defaultFrame)
+                .setDuration(duration)
+                .setAnimations(defaultAnimations)
+                .show();
     }
 
-    private static SuperToast.Animations defaultAnimations = SuperToast.Animations.SCALE;   //所有SuperToast的默认动画效果
-    private static int                   defaultDuration   = 2000;
-    private static int                   defaultBackground = SuperToast.Background.BLUE; //默认背景颜色
+    private static int defaultAnimations = Animations.SCALE;   //所有SuperToast的默认动画效果
+    private static int defaultDuration   = Duration.SHORT;    //默认持续时间
+    private static int defaultColor      = Background.BLUE; //默认背景颜色
+    private static int defaultFrame      = Frame.STANDARD;   //默认样式
 
     /**
      * 初始化SuperToast 设置Animations，Duration，Background
      */
-    public static void initSuperToast(SuperToast.Animations animations, int duration, int background) {
+    public static void initSuperToast(int frame, int animations, int duration, int background) {
+        ToastUtil.defaultFrame = frame;
         ToastUtil.defaultAnimations = animations;
         ToastUtil.defaultDuration = duration;
-        ToastUtil.defaultBackground = background;
+        ToastUtil.defaultColor = background;
     }
 
     /**
      * SuperToast 动画
      */
     public static class Animations {
-        public static final SuperToast.Animations FADE  = SuperToast.Animations.FADE;    //淡出
-        public static final SuperToast.Animations FLYIN = SuperToast.Animations.FLYIN;  //从右飞入
-        public static final SuperToast.Animations SCALE = SuperToast.Animations.SCALE;  //缩放
-        public static final SuperToast.Animations POPUP = SuperToast.Animations.POPUP;  //从下往上
-
-        public static SuperToast.Animations randomAnimations() {
-            SuperToast.Animations anim;
-            int                   i = QUtils.MathUtil.random(1, 4);
-            switch (i) {
-                case 1:
-                    anim = SuperToast.Animations.FADE;
-                    break;
-                case 2:
-                    anim = SuperToast.Animations.FLYIN;
-                    break;
-                case 3:
-                    anim = SuperToast.Animations.SCALE;
-                    break;
-                case 4:
-                    anim = SuperToast.Animations.POPUP;
-                    break;
-                default:
-                    anim = SuperToast.Animations.FLYIN;
-                    break;
-            }
-            return anim;
-        }
+        public static final int FADE  = Style.ANIMATIONS_FADE;    //淡出
+        public static final int FLY   = Style.ANIMATIONS_FLY;  //从右飞入
+        public static final int SCALE = Style.ANIMATIONS_SCALE;  //缩放
+        public static final int POP   = Style.ANIMATIONS_POP;  //从下往上
 
     }
 
@@ -297,24 +285,44 @@ public class ToastUtil {
      * SuperToast 显示时长
      */
     public static class Duration {
-        public static final int VERY_SHORT = 1500;
-        public static final int SHORT      = 2000;
-        public static final int MEDIUM     = 2750;
-        public static final int LONG       = 3500;
-        public static final int EXTRA_LONG = 4500;
+        public static final int VERY_SHORT = Style.DURATION_VERY_SHORT;
+        public static final int SHORT      = Style.DURATION_SHORT;
+        public static final int MEDIUM     = Style.DURATION_MEDIUM;
+        public static final int LONG       = Style.DURATION_LONG;
+        public static final int VERY_LONG  = Style.DURATION_VERY_LONG;
     }
 
     /**
      * SuperToast 背景颜色
      */
     public static class Background {
-        public static final int BLACK  = SuperToast.Background.BLACK;
-        public static final int BLUE   = SuperToast.Background.BLUE;
-        public static final int GRAY   = SuperToast.Background.GRAY;
-        public static final int GREEN  = SuperToast.Background.GREEN;
-        public static final int ORANGE = SuperToast.Background.ORANGE;
-        public static final int PURPLE = SuperToast.Background.PURPLE;
-        public static final int RED    = SuperToast.Background.RED;
-        public static final int WHITE  = SuperToast.Background.WHITE;
+        public static final int RED         = PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_RED);
+        public static final int PINK        = PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_PINK);
+        public static final int PURPLE      = PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_PURPLE);
+        public static final int DEEP_PURPLE = PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_DEEP_PURPLE);
+        public static final int INDIGO      = PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_INDIGO);
+        public static final int BLUE        = PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_BLUE);
+        public static final int LIGHT_BLUE  = PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_LIGHT_BLUE);
+        public static final int CYAN        = PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_CYAN);
+        public static final int TEAL        = PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_TEAL);
+        public static final int GREEN       = PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_GREEN);
+        public static final int LIGHT_GREEN = PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_LIGHT_GREEN);
+        public static final int LIME        = PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_LIME);
+        public static final int YELLOW      = PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_YELLOW);
+        public static final int AMBER       = PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_AMBER);
+        public static final int ORANGE      = PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_ORANGE);
+        public static final int DEEP_ORANGE = PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_DEEP_ORANGE);
+        public static final int BROWN       = PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_BROWN);
+        public static final int GREY        = PaletteUtils.getSolidColor(PaletteUtils.GREY);
+        public static final int BLUE_GREY   = PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_BLUE_GREY);
+    }
+
+    /**
+     * SuperToast 样式
+     */
+    public static class Frame {
+        public static final int STANDARD = Style.TYPE_STANDARD;
+        public static final int KITKAT   = Style.FRAME_KITKAT;
+        public static final int LOLLIPOP = Style.FRAME_LOLLIPOP;
     }
 }
