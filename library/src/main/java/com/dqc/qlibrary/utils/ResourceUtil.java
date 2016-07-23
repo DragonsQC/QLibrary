@@ -18,6 +18,7 @@ import android.provider.MediaStore;
 import android.util.DisplayMetrics;
 import android.util.Log;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -276,5 +277,27 @@ public class ResourceUtil {
         canvas.drawCircle(roundPx, roundPx, roundPx, paint);
 
         return output;
+    }
+
+    /**
+     * 保存 bitmap 到指定路径，保存格式为png
+     *
+     * @param bitmap
+     * @param file   保存的文件，若存在则删除后保存；请传入后缀为“.png”的文件
+     */
+    public static void saveBitmap4PNG(Bitmap bitmap, File file) {
+        if (file.exists()) {
+            file.delete();
+        }
+        FileOutputStream out;
+        try {
+            out = new FileOutputStream(file);
+            if (bitmap.compress(Bitmap.CompressFormat.PNG, 90, out)) {
+                out.flush();
+                out.close();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
