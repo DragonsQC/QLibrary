@@ -15,13 +15,6 @@ import java.util.List;
 
 /**
  * 网络状态工具类
- * <p/>
- * 使用方法： <br/>
- * （1）先初始化 <br/>
- * 初始化网络状态检测类 <br/>
- * NetworkStateManager.getInstance().init(this); <br/>
- * （2）调用 <br/>
- * NetworkStateManager.getInstance().isNetworkConnected(); <br/>
  *
  * @author DragonsQC
  */
