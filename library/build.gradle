@@ -43,7 +43,7 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:24.1.1'
     compile 'com.android.support:palette-v7:24.1.1'
     compile 'com.android.support:cardview-v7:24.1.1'
-    //compile 'com.android.support:design:23.1.1'
+    //compile 'com.android.support:design:24.1.1'
 
 //【HTTP】******************************************************************************************
     //xUtils [https://github.com/wyouflf/xUtils3]
