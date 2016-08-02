@@ -1,7 +1,5 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jakewharton.butterknife'
-apply plugin: 'com.neenbedankt.android-apt'
 group = 'com.github.DragonsQC'
 
 android {
@@ -68,9 +66,6 @@ dependencies {
     compile 'com.orhanobut:logger:1.13'
     //UCrop [https://github.com/Yalantis/uCrop]
     compile 'com.yalantis:ucrop:2.1.1'
-    //ButterKnife [https://github.com/JakeWharton/butterknife]
-    compile 'com.jakewharton:butterknife:8.2.1'
-    apt 'com.jakewharton:butterknife-compiler:8.2.1'
 
 //【Animation】*************************************************************************************
     //NineoldAndroids [https://github.com/JakeWharton/NineOldAndroids]

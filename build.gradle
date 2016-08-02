@@ -13,11 +13,6 @@ buildscript {
         //[http://mvnrepository.com/artifact/com.github.dcendents/android-maven-gradle-plugin]
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
 
-        //[https://jcenter.bintray.com/com/neenbedankt/gradle/plugins/android-apt/]
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
-
-        //[https://github.com/JakeWharton/butterknife]
-        classpath 'com.jakewharton:butterknife-gradle-plugin:8.2.1'
     }
 }
 
