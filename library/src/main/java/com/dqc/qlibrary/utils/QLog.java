@@ -1,6 +1,5 @@
 package com.dqc.qlibrary.utils;
 
-import com.orhanobut.logger.BuildConfig;
 import com.orhanobut.logger.Logger;
 
 /**
@@ -12,8 +11,10 @@ import com.orhanobut.logger.Logger;
  * @author DragonsQC
  */
 public class QLog {
+    private static boolean mAllowLog = true;
 
-    public static void init(String tag) {
+    public static void init(boolean allowLog, String tag) {
+        mAllowLog = allowLog;
         Logger
                 .init(tag);
     }
@@ -24,7 +25,7 @@ public class QLog {
      * @param msg
      */
     public static void v(String msg) {
-        if (BuildConfig.DEBUG) {
+        if (mAllowLog) {
             Logger.v(msg);
         }
     }
@@ -35,7 +36,7 @@ public class QLog {
      * @param o
      */
     public static void d(Object o) {
-        if (BuildConfig.DEBUG) {
+        if (mAllowLog) {
             Logger.d(o);
         }
     }
@@ -46,7 +47,7 @@ public class QLog {
      * @param msg
      */
     public static void i(String msg) {
-        if (BuildConfig.DEBUG) {
+        if (mAllowLog) {
             Logger.i(msg);
         }
     }
@@ -57,7 +58,7 @@ public class QLog {
      * @param msg
      */
     public static void w(String msg) {
-        if (BuildConfig.DEBUG) {
+        if (mAllowLog) {
             Logger.w(msg);
         }
     }
@@ -68,7 +69,7 @@ public class QLog {
      * @param msg
      */
     public static void e(String msg) {
-        if (BuildConfig.DEBUG) {
+        if (mAllowLog) {
             Logger.e(msg);
         }
     }
@@ -79,7 +80,7 @@ public class QLog {
      * @param msg
      */
     public static void e(Throwable throwable, String msg) {
-        if (BuildConfig.DEBUG) {
+        if (mAllowLog) {
             Logger.e(throwable, msg);
         }
     }
@@ -90,7 +91,7 @@ public class QLog {
      * @param msg
      */
     public static void wtf(String msg) {
-        if (BuildConfig.DEBUG) {
+        if (mAllowLog) {
             Logger.wtf(msg);
         }
     }
@@ -102,7 +103,7 @@ public class QLog {
      * @param json
      */
     public static void json(String json) {
-        if (BuildConfig.DEBUG) {
+        if (mAllowLog) {
             Logger.json(json);
         }
     }
@@ -113,7 +114,7 @@ public class QLog {
      * @param xml
      */
     public static void xml(String xml) {
-        if (BuildConfig.DEBUG) {
+        if (mAllowLog) {
             Logger.xml(xml);
         }
     }
