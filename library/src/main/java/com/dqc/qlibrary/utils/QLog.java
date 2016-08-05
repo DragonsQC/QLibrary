@@ -1,90 +1,88 @@
 package com.dqc.qlibrary.utils;
 
-import com.orhanobut.logger.Logger;
+import com.apkfuns.logutils.LogUtils;
 
 /**
  * Android 日志工具类
- * <p/>
- * require https://github.com/orhanobut/logger
- * <p/>
  *
  * @author DragonsQC
  */
 public class QLog {
     public static boolean DEBUG_MODE = true;
 
+    public QLog() {
+        LogUtils.getLogConfig()
+                .configAllowLog(DEBUG_MODE)
+                .configShowBorders(true);
+    }
+
     /**
-     * com.orhanobut.logger.Logger 日志工具
+     * 日志工具
      * <p/>
      * verbose 信息
      *
-     * @param msg
+     * @param o
      */
-    public static void v(String msg) {
+    public static void v(Object o) {
         if (DEBUG_MODE) {
-            Logger.init().hideThreadInfo();
-            Logger.v(msg);
+            LogUtils.v(o);
         }
     }
 
     /**
-     * com.orhanobut.logger.Logger 日志工具
+     * 日志工具
      * <p/>
      * debug 调试信息
      *
-     * @param msg
+     * @param o
      */
-    public static void d(String msg) {
+    public static void d(Object o) {
         if (DEBUG_MODE) {
-            Logger.init().hideThreadInfo();
-            Logger.d(msg);
+            LogUtils.d(o);
         }
     }
 
     /**
-     * com.orhanobut.logger.Logger 日志工具
+     * 日志工具
      * <p/>
      * info 普通信息
      *
-     * @param msg
+     * @param o
      */
-    public static void i(String msg) {
+    public static void i(Object o) {
         if (DEBUG_MODE) {
-            Logger.init().hideThreadInfo();
-            Logger.i(msg);
+            LogUtils.i(o);
         }
     }
 
     /**
-     * com.orhanobut.logger.Logger 日志工具
+     * 日志工具
      * <p/>
      * warning 警告信息
      *
-     * @param msg
+     * @param o
      */
-    public static void w(String msg) {
+    public static void w(Object o) {
         if (DEBUG_MODE) {
-            Logger.init().hideThreadInfo();
-            Logger.w(msg);
+            LogUtils.w(o);
         }
     }
 
     /**
-     * com.orhanobut.logger.Logger 日志工具
+     * 日志工具
      * <p/>
      * error 错误信息
      *
-     * @param msg
+     * @param o
      */
-    public static void e(String msg) {
+    public static void e(Object o) {
         if (DEBUG_MODE) {
-            Logger.init().hideThreadInfo();
-            Logger.e(msg);
+            LogUtils.e(o);
         }
     }
 
     /**
-     * com.orhanobut.logger.Logger 日志工具
+     * 日志工具
      * <p/>
      * json格式字符串
      *
@@ -92,8 +90,7 @@ public class QLog {
      */
     public static void json(String json) {
         if (DEBUG_MODE) {
-            Logger.init().hideThreadInfo();
-            Logger.json(json);
+            LogUtils.json(json);
         }
     }
 
