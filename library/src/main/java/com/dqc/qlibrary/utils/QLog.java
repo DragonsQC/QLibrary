@@ -15,8 +15,7 @@ public class QLog {
 
     public static void init(boolean allowLog, String tag) {
         mAllowLog = allowLog;
-        Logger
-                .init(tag).hideThreadInfo();
+        Logger.init(tag).hideThreadInfo();
     }
 
     /**
