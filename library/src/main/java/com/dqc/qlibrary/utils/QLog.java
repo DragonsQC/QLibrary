@@ -1,6 +1,7 @@
 package com.dqc.qlibrary.utils;
 
 import com.apkfuns.logutils.LogUtils;
+import com.dqc.qlibrary.BuildConfig;
 
 /**
  * Android 日志工具类
@@ -8,11 +9,10 @@ import com.apkfuns.logutils.LogUtils;
  * @author DragonsQC
  */
 public class QLog {
-    public static boolean DEBUG_MODE = true;
 
     public QLog() {
         LogUtils.getLogConfig()
-                .configAllowLog(DEBUG_MODE)
+                .configAllowLog(BuildConfig.DEBUG)
                 .configShowBorders(true);
     }
 
@@ -24,7 +24,7 @@ public class QLog {
      * @param o
      */
     public static void v(Object o) {
-        if (DEBUG_MODE) {
+        if (BuildConfig.DEBUG) {
             LogUtils.v(o);
         }
     }
@@ -37,7 +37,7 @@ public class QLog {
      * @param o
      */
     public static void d(Object o) {
-        if (DEBUG_MODE) {
+        if (BuildConfig.DEBUG) {
             LogUtils.d(o);
         }
     }
@@ -50,7 +50,7 @@ public class QLog {
      * @param o
      */
     public static void i(Object o) {
-        if (DEBUG_MODE) {
+        if (BuildConfig.DEBUG) {
             LogUtils.i(o);
         }
     }
@@ -63,7 +63,7 @@ public class QLog {
      * @param o
      */
     public static void w(Object o) {
-        if (DEBUG_MODE) {
+        if (BuildConfig.DEBUG) {
             LogUtils.w(o);
         }
     }
@@ -76,7 +76,7 @@ public class QLog {
      * @param o
      */
     public static void e(Object o) {
-        if (DEBUG_MODE) {
+        if (BuildConfig.DEBUG) {
             LogUtils.e(o);
         }
     }
@@ -89,7 +89,7 @@ public class QLog {
      * @param json
      */
     public static void json(String json) {
-        if (DEBUG_MODE) {
+        if (BuildConfig.DEBUG) {
             LogUtils.json(json);
         }
     }
