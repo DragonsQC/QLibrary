@@ -10,9 +10,10 @@ import com.dqc.qlibrary.BuildConfig;
  */
 public class QLog {
 
-    public QLog() {
+    public static void init(boolean configAllowLog,String configTagPrefix) {
         LogUtils.getLogConfig()
-                .configAllowLog(BuildConfig.DEBUG)
+                .configAllowLog(configAllowLog)
+                .configTagPrefix(configTagPrefix)
                 .configShowBorders(true);
     }
 
