@@ -300,10 +300,10 @@ public class ToastUtil {
         superToast.show();
     }
 
-    private static int defaultAnimations = Animations.SCALE;   //所有SuperToast的默认动画效果
-    private static int defaultDuration   = Duration.SHORT;    //默认持续时间
-    private static int defaultBackground = Background.BLUE; //默认背景颜色
-    private static int defaultFrame      = Frame.STANDARD;   //默认样式
+    private static int defaultAnimations = Animations.SCALE;    //所有SuperToast的默认动画效果
+    private static int defaultDuration   = Duration.SHORT;      //默认持续时间
+    private static int defaultBackground = Background.GREY;     //默认背景颜色
+    private static int defaultFrame      = Frame.STANDARD;      //默认样式
 
     /**
      * 自定义初始化SuperToast
