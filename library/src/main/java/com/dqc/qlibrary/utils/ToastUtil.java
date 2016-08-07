@@ -149,14 +149,14 @@ public class ToastUtil {
      *
      * @param context    context
      * @param s          字符串
-     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，<=0 为默认值
-     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，<=0 为默认值
+     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，0 为默认值
+     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，0 为默认值
      */
     public static void superToastAdvanced(Context context, String s, int duration, int background) {
-        if (duration <= 0) {
+        if (duration == 0) {
             duration = defaultDuration;
         }
-        if (background <= 0) {
+        if (background == 0) {
             background = defaultBackground;
         }
         SuperToast.cancelAllSuperToasts();
@@ -192,14 +192,14 @@ public class ToastUtil {
      *
      * @param context    context
      * @param resId      资源id
-     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，<=0 为默认值
-     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，<=0 为默认值
+     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，0 为默认值
+     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，0 为默认值
      */
     public static void superToastAdvanced(Context context, int resId, int duration, int background) {
-        if (duration == -1) {
+        if (duration == 0) {
             duration = defaultDuration;
         }
-        if (background == -1) {
+        if (background == 0) {
             background = defaultBackground;
         }
         SuperToast superToast = new SuperToast(context.getApplicationContext())
@@ -236,14 +236,14 @@ public class ToastUtil {
      *
      * @param context    context
      * @param s          字符串
-     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，<=0 为默认值
-     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，<=0 为默认值
+     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，0 为默认值
+     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，0 为默认值
      */
     public static void superToastAdvanced4Center(Context context, String s, int duration, int background) {
-        if (duration <= 0) {
+        if (duration == 0) {
             duration = defaultDuration;
         }
-        if (background <= 0) {
+        if (background == 0) {
             background = defaultBackground;
         }
         SuperToast.cancelAllSuperToasts();
@@ -280,14 +280,14 @@ public class ToastUtil {
      *
      * @param context    context
      * @param resId      资源id
-     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，<=0 为默认值
-     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，<=0 为默认值
+     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，0 为默认值
+     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，0 为默认值
      */
     public static void superToastAdvanced4Center(Context context, int resId, int duration, int background) {
-        if (duration <= 0) {
+        if (duration == 0) {
             duration = defaultDuration;
         }
-        if (background <= 0) {
+        if (background == 0) {
             background = defaultBackground;
         }
         SuperToast.cancelAllSuperToasts();
