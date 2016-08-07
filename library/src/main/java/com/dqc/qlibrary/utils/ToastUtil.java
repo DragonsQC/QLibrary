@@ -240,10 +240,10 @@ public class ToastUtil {
      * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，<=0 为默认值
      */
     public static void superToastAdvanced4Center(Context context, String s, int duration, int background) {
-        if (duration == -1) {
+        if (duration <= 0) {
             duration = defaultDuration;
         }
-        if (background == -1) {
+        if (background <= 0) {
             background = defaultBackground;
         }
         SuperToast.cancelAllSuperToasts();
@@ -284,10 +284,10 @@ public class ToastUtil {
      * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，<=0 为默认值
      */
     public static void superToastAdvanced4Center(Context context, int resId, int duration, int background) {
-        if (duration == -1) {
+        if (duration <= 0) {
             duration = defaultDuration;
         }
-        if (background == -1) {
+        if (background <= 0) {
             background = defaultBackground;
         }
         SuperToast.cancelAllSuperToasts();
@@ -314,10 +314,12 @@ public class ToastUtil {
      * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，<=0 为默认值
      */
     public static void initSuperToast(int frame, int animations, int duration, int background) {
-        ToastUtil.defaultFrame = frame;
-        ToastUtil.defaultAnimations = animations;
-        ToastUtil.defaultDuration = duration;
-        ToastUtil.defaultBackground = background;
+        defaultFrame = frame;
+        defaultAnimations = animations;
+        defaultDuration = duration;
+        if (background >= 0) {
+            defaultBackground = background;
+        }
     }
 
     /**
