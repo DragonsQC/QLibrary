@@ -317,7 +317,7 @@ public class ToastUtil {
         defaultFrame = frame;
         defaultAnimations = animations;
         defaultDuration = duration;
-        if (background >= 0) {
+        if (background > 0) {
             defaultBackground = background;
         }
     }
