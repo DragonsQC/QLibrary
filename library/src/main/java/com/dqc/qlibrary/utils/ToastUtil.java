@@ -308,10 +308,10 @@ public class ToastUtil {
     /**
      * 自定义初始化SuperToast
      *
-     * @param frame      样式(@com.dqc.qlibrary.{@link ToastUtil.Frame})，<=0 为默认值
-     * @param animations 动画(@com.dqc.qlibrary.{@link ToastUtil.Animations})，<=0 为默认值
-     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，<=0 为默认值
-     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，==0 为默认值
+     * @param frame      样式(@com.dqc.qlibrary.{@link ToastUtil.Frame})，0 为默认值
+     * @param animations 动画(@com.dqc.qlibrary.{@link ToastUtil.Animations})，0 为默认值
+     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，0 为默认值
+     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，0 为默认值
      */
     public static void initSuperToast(int frame, int animations, int duration, int background) {
         defaultFrame = frame;
