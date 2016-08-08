@@ -35,8 +35,8 @@ public class ResourceUtil {
     /**
      * 获取Drawable下的图片资源
      *
-     * @param context
-     * @param fileName
+     * @param context  Context
+     * @param fileName String
      * @return
      */
     public static Drawable getAssets4Drawable(Context context, String fileName) {
@@ -54,8 +54,8 @@ public class ResourceUtil {
     /**
      * 获取Assets下的图片资源
      *
-     * @param context
-     * @param fileName
+     * @param context  Context
+     * @param fileName String
      * @return
      */
     public static Bitmap getBitmap4Assets(Context context, String fileName) {

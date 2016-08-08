@@ -79,8 +79,6 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
 
     /**
      * toggle overridePendingTransition
-     *
-     * @return
      */
     protected abstract boolean toggleOverridePendingTransition();
 

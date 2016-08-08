@@ -96,7 +96,7 @@ public class QUtils {
          * 新建文件夹
          *
          * @param folderPath 文件夹路径
-         * @return
+         * @return 是否创建
          */
         public static boolean newCreateFolder(String folderPath) {
             File file = new File(folderPath);
@@ -115,16 +115,16 @@ public class QUtils {
             try {
                 if (sourceFile.exists()) {
                     // 新建文件输入流并对它进行缓冲
-                    FileInputStream input = new FileInputStream(sourceFile);
+                    FileInputStream     input  = new FileInputStream(sourceFile);
                     BufferedInputStream inBuff = new BufferedInputStream(input);
 
                     // 新建文件输出流并对它进行缓冲
-                    FileOutputStream output = new FileOutputStream(targetFile);
+                    FileOutputStream     output  = new FileOutputStream(targetFile);
                     BufferedOutputStream outBuff = new BufferedOutputStream(output);
 
                     // 缓冲数组
                     byte[] b = new byte[1024 * 5];
-                    int len;
+                    int    len;
                     while ((len = inBuff.read(b)) != -1) {
                         outBuff.write(b, 0, len);
                     }
@@ -147,7 +147,7 @@ public class QUtils {
          * 格式化文件大小
          *
          * @param size 文件 length
-         * @return
+         * @return 格式化后字符串
          */
         public static String formatFileSize(double size) {
             double kiloByte = size / 1024;
@@ -208,7 +208,7 @@ public class QUtils {
          */
         public static String formatDistance(double m) {
             DecimalFormat df;
-            String formatStr;
+            String        formatStr;
             if (m < 1000) {
                 df = new DecimalFormat("#");
                 formatStr = df.format(m) + "m";
@@ -226,9 +226,9 @@ public class QUtils {
      * 以下是摘抄的BigDecimal方法:
      */
     public static class DoubleUtil implements Serializable {
-        private static final long serialVersionUID = -3345205828566485102L;
+        private static final long    serialVersionUID = -3345205828566485102L;
         // 默认除法运算精度
-        private static final Integer DEF_DIV_SCALE = 2;
+        private static final Integer DEF_DIV_SCALE    = 2;
 
         /**
          * 提供精确的加法运算。
@@ -309,7 +309,7 @@ public class QUtils {
             if (scale < 0) {
                 throw new IllegalArgumentException("The scale must be a positive integer or zero");
             }
-            BigDecimal b = new BigDecimal(Double.toString(value));
+            BigDecimal b   = new BigDecimal(Double.toString(value));
             BigDecimal one = new BigDecimal("1");
             return b.divide(one, scale, BigDecimal.ROUND_HALF_UP).doubleValue();
         }
@@ -333,7 +333,7 @@ public class QUtils {
          */
         public static boolean isEmail(String email) {
             Pattern emailPattern = Pattern.compile("\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*");
-            Matcher matcher = emailPattern.matcher(email);
+            Matcher matcher      = emailPattern.matcher(email);
             return matcher.find();
         }
 
@@ -482,7 +482,7 @@ public class QUtils {
          */
         public static Date strDate2Date(String strDate, String strDateFormat) {
             DateFormat format = new SimpleDateFormat(strDateFormat);
-            Date date = null;
+            Date       date   = null;
             try {
                 date = format.parse(strDate);
             } catch (ParseException e) {
@@ -511,7 +511,7 @@ public class QUtils {
             cal.setTime(smDate);
             long time1 = cal.getTimeInMillis();
             cal.setTime(bDate);
-            long time2 = cal.getTimeInMillis();
+            long time2        = cal.getTimeInMillis();
             long between_days = (time2 - time1) / (1000 * 3600 * 24);
 
             return Integer.parseInt(String.valueOf(between_days));

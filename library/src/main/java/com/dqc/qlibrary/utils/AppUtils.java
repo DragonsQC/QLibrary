@@ -21,8 +21,8 @@ public class AppUtils {
     /**
      * 获得 APP 当前版本号
      *
-     * @param context
-     * @return
+     * @param context Context
+     * @return 当前版本号
      */
     public static int getVerCode(Context context) {
         int verCode = -1;
@@ -39,7 +39,7 @@ public class AppUtils {
     /**
      * 获得 APP 当前版本信息
      *
-     * @param context
+     * @param context Context
      * @return 当前版本信息
      */
     public static String getVerName(Context context) {
@@ -66,7 +66,7 @@ public class AppUtils {
     /**
      * 安装 apk
      *
-     * @param context
+     * @param context Context
      * @param file    APK file
      */
     public static void installApk(Context context, File file) {
@@ -80,7 +80,7 @@ public class AppUtils {
     /**
      * 安装 apk
      *
-     * @param context
+     * @param context Context
      * @param uri     APK uri
      */
     public static void installApk(Context context, Uri uri) {
@@ -94,7 +94,7 @@ public class AppUtils {
     /**
      * 卸载 app
      *
-     * @param context
+     * @param context     Context
      * @param packageName 包名
      */
     public static void uninstallApk(Context context, String packageName) {
@@ -107,9 +107,9 @@ public class AppUtils {
     /**
      * 检测服务是否运行
      *
-     * @param context
+     * @param context   Context
      * @param className 类名
-     * @return
+     * @return 服务是否运行
      */
     public static boolean isServiceRunning(Context context, String className) {
         boolean isRunning = false;
@@ -127,9 +127,9 @@ public class AppUtils {
     /**
      * 停止运行的服务
      *
-     * @param context
+     * @param context   Context
      * @param className 类名
-     * @return
+     * @return 是否停止运行的服务
      */
     public static boolean stopRunningService(Context context, String className) {
         Intent  intent_service = null;
@@ -148,8 +148,8 @@ public class AppUtils {
     /**
      * 获得当前系统的可用内存
      *
-     * @param context
-     * @return
+     * @param context Context
+     * @return 当前系统的可用内存
      */
     public static int getDeviceUsableMemory(Context context) {
         ActivityManager            am = (ActivityManager) context.getApplicationContext().getSystemService(Context.ACTIVITY_SERVICE);
@@ -170,7 +170,7 @@ public class AppUtils {
     /**
      * 获得当前APP PackageInfo 对象
      *
-     * @return
+     * @return PackageInfo 对象
      */
     public PackageInfo getPackageInfo(Context context) {
         PackageManager manager = context.getApplicationContext().getPackageManager();

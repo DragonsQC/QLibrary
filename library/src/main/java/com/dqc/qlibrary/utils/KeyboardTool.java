@@ -19,7 +19,7 @@ public class KeyboardTool {
     /**
      * 隐藏虚拟键盘
      *
-     * @param activity
+     * @param activity Activity
      */
     public static void hideKeyboard(Activity activity) {
         if (activity != null && activity.getCurrentFocus() != null) {
@@ -67,8 +67,8 @@ public class KeyboardTool {
 
     //输入法是否显示着
     public static boolean KeyBoard(EditText edittext) {
-        boolean bool = false;
-        InputMethodManager imm = (InputMethodManager) edittext.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+        boolean            bool = false;
+        InputMethodManager imm  = (InputMethodManager) edittext.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
         if (imm.isActive()) {
             bool = true;
         }

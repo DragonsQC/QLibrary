@@ -23,7 +23,7 @@ public class NetStateUtil {
     /**
      * 判断是否有网络连接
      *
-     * @return
+     * @return 是否有网络连接
      */
     public static boolean isNetworkConnected(Context context) {
         if (context != null) {
@@ -39,7 +39,7 @@ public class NetStateUtil {
     /**
      * 判断WIFI网络是否连接
      *
-     * @return
+     * @return WIFI是否连接
      */
     public static boolean isWifiConnected(Context context) {
         if (context != null) {
@@ -55,7 +55,7 @@ public class NetStateUtil {
     /**
      * 判断MOBILE网络是否连接
      *
-     * @return
+     * @return MOBILE网络是否连接
      */
     public static boolean isMobileConnected(Context context) {
         if (context != null) {
@@ -72,7 +72,7 @@ public class NetStateUtil {
      * 获取当前的网络状态
      * -1：没有网络，1：WIFI网络，2：wap网络，3：net网络
      *
-     * @return
+     * @return 当前的网络状态
      */
     public static int getConnectedType(Context context) {
         if (context != null) {
@@ -136,7 +136,7 @@ public class NetStateUtil {
     /**
      * 判断GPS是否打开
      *
-     * @return
+     * @return GPS是否打开
      */
     public static boolean isGpsEnabled(Context context) {
         LocationManager lm        = ((LocationManager) context.getApplicationContext().getSystemService(Context.LOCATION_SERVICE));

@@ -21,7 +21,7 @@ public class QLog {
     /**
      * verbose 信息
      *
-     * @param msg
+     * @param msg String
      */
     public static void v(String msg) {
         if (mAllowLog) {
@@ -32,7 +32,7 @@ public class QLog {
     /**
      * debug 调试信息
      *
-     * @param o
+     * @param o Object
      */
     public static void d(Object o) {
         if (mAllowLog) {
@@ -43,7 +43,7 @@ public class QLog {
     /**
      * info 普通信息
      *
-     * @param msg
+     * @param msg String
      */
     public static void i(String msg) {
         if (mAllowLog) {
@@ -54,7 +54,7 @@ public class QLog {
     /**
      * warning 警告信息
      *
-     * @param msg
+     * @param msg String
      */
     public static void w(String msg) {
         if (mAllowLog) {
@@ -65,7 +65,7 @@ public class QLog {
     /**
      * error 错误信息
      *
-     * @param msg
+     * @param msg String
      */
     public static void e(String msg) {
         if (mAllowLog) {
@@ -76,7 +76,8 @@ public class QLog {
     /**
      * error 错误信息
      *
-     * @param msg
+     * @param throwable Throwable
+     * @param msg       String
      */
     public static void e(Throwable throwable, String msg) {
         if (mAllowLog) {
@@ -87,7 +88,7 @@ public class QLog {
     /**
      * wtf
      *
-     * @param msg
+     * @param msg String
      */
     public static void wtf(String msg) {
         if (mAllowLog) {
@@ -99,7 +100,7 @@ public class QLog {
     /**
      * json 格式字符串
      *
-     * @param json
+     * @param json String
      */
     public static void json(String json) {
         if (mAllowLog) {
@@ -110,7 +111,7 @@ public class QLog {
     /**
      * xml 格式
      *
-     * @param xml
+     * @param xml String
      */
     public static void xml(String xml) {
         if (mAllowLog) {
