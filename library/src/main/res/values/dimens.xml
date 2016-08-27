@@ -1,6 +1,17 @@
 <resources>
-    <!-- 文字大小 -->
-    <dimen name="txt_size_micro">12sp</dimen>
+    <!-- 间距 -->
+    <dimen name="space_min">4dp</dimen>
+    <dimen name="space_small">8dp</dimen>
+    <dimen name="space_middle">12dp</dimen>
+    <dimen name="space_large">16dp</dimen>
+    <dimen name="space_large_x">20dp</dimen>
+    <dimen name="space_large_xx">24dp</dimen>
+    <dimen name="space_large_xxx">28dp</dimen>
+    <dimen name="space_large_xxxx">32dp</dimen>
+
+
+    <!-- 文字 -->
+    <dimen name="txt_size_min">12sp</dimen>
     <dimen name="txt_size_small">14sp</dimen>
     <dimen name="txt_size_medium">18sp</dimen>
     <dimen name="txt_size_large">22sp</dimen>
