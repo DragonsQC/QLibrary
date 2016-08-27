@@ -7,8 +7,9 @@
     <dimen name="space_large_x">20dp</dimen>
     <dimen name="space_large_xx">24dp</dimen>
     <dimen name="space_large_xxx">28dp</dimen>
-    <dimen name="space_large_xxxx">32dp</dimen>
-
+    <dimen name="space_bigger">32dp</dimen>
+    <dimen name="space_bigger_x">36dp</dimen>
+    <dimen name="space_bigger_xx">40dp</dimen>
 
     <!-- 文字 -->
     <dimen name="txt_size_min">12sp</dimen>
