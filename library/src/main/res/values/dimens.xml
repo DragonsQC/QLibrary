@@ -1,22 +1,6 @@
 <resources>
-    <!-- 间距 -->
-    <dimen name="space_min">5dp</dimen>
-    <dimen name="space_small">10dp</dimen>
-    <dimen name="space_middle">15dp</dimen>
-    <dimen name="space_large">20dp</dimen>
-    <dimen name="space_large_x">25dp</dimen>
-    <dimen name="space_large_xx">30dp</dimen>
-
-    <!-- 图标 -->
-    <dimen name="icon_size_min">16dp</dimen>
-    <dimen name="icon_size_small">24dp</dimen>
-    <dimen name="icon_size_middle">32dp</dimen>
-    <dimen name="icon_size_large">40dp</dimen>
-    <dimen name="icon_size_large_x">48dp</dimen>
-    <dimen name="icon_size_large_xx">56dp</dimen>
-
-    <!-- 文字 -->
-    <dimen name="txt_size_min">12sp</dimen>
+    <!-- 文字大小 -->
+    <dimen name="txt_size_micro">12sp</dimen>
     <dimen name="txt_size_small">14sp</dimen>
     <dimen name="txt_size_medium">18sp</dimen>
     <dimen name="txt_size_large">22sp</dimen>
