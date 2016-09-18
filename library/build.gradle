@@ -62,8 +62,6 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:3.7.0'
 
 //【Utils】
-    //Apache Commons Codec [https://mvnrepository.com/artifact/commons-codec/commons-codec]
-    compile group: 'commons-codec', name: 'commons-codec', version: '1.10'
     //logger [https://github.com/orhanobut/logger]
     compile 'com.orhanobut:logger:1.15'
     //UCrop [https://github.com/Yalantis/uCrop]
