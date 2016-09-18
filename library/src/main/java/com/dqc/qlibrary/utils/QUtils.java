@@ -1,6 +1,6 @@
 package com.dqc.qlibrary.utils;
 
-import com.dqc.qlibrary.library.codec.StringUtils;
+import org.apache.commons.codec.binary.StringUtils;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
