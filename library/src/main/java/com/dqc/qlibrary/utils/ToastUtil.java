@@ -155,7 +155,7 @@ public class ToastUtil {
     }
 
     /**
-     * SuperActivityToast 显示在默认位置，(解决SuperToast，在6.0系统上无显示悬浮窗权限问题)
+     * SuperActivityToast 显示在默认位置，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题)
      * 显示时长：默认，
      * 背景颜色：默认。
      *
@@ -198,7 +198,7 @@ public class ToastUtil {
     }
 
     /**
-     * SuperToast 显示在默认位置，(解决SuperToast，在6.0系统上无显示悬浮窗权限问题)
+     * SuperToast 显示在默认位置，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题)
      *
      * @param activity   Activity
      * @param s          字符串
@@ -242,7 +242,7 @@ public class ToastUtil {
     }
 
     /**
-     * SuperToast 显示在默认位置，(解决SuperToast，在6.0系统上无显示悬浮窗权限问题)
+     * SuperToast 显示在默认位置，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题)
      * 显示时长：默认，
      * 背景颜色：默认。
      *
@@ -286,7 +286,7 @@ public class ToastUtil {
     }
 
     /**
-     * SuperToast 显示在默认位置，(解决SuperToast，在6.0系统上无显示悬浮窗权限问题)
+     * SuperToast 显示在默认位置，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题)
      *
      * @param activity   Activity
      * @param resId      资源id
@@ -331,7 +331,7 @@ public class ToastUtil {
     }
 
     /**
-     * SuperToast 显示在屏幕中间，(解决SuperToast，在6.0系统上无显示悬浮窗权限问题)
+     * SuperToast 显示在屏幕中间，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题)
      * 显示时长：默认，
      * 背景颜色：默认。
      *
@@ -377,7 +377,7 @@ public class ToastUtil {
     }
 
     /**
-     * SuperToast 显示在屏幕中间，(解决SuperToast，在6.0系统上无显示悬浮窗权限问题)
+     * SuperToast 显示在屏幕中间，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题)
      *
      * @param activity   Activity
      * @param s          字符串
@@ -423,7 +423,7 @@ public class ToastUtil {
     }
 
     /**
-     * SuperToast 显示在屏幕中间，(解决SuperToast，在6.0系统上无显示悬浮窗权限问题)
+     * SuperToast 显示在屏幕中间，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题)
      * 显示时长：默认，
      * 背景颜色：默认。
      *
@@ -468,7 +468,7 @@ public class ToastUtil {
     }
 
     /**
-     * SuperToast 显示在屏幕中间，(解决SuperToast，在6.0系统上无显示悬浮窗权限问题)
+     * SuperToast 显示在屏幕中间，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题)
      *
      * @param activity
      * @param resId      资源id
