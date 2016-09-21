@@ -1,10 +1,12 @@
 package com.dqc.qlibrary.utils;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.Gravity;
 import android.widget.Toast;
 
 import com.github.johnpersano.supertoasts.library.Style;
+import com.github.johnpersano.supertoasts.library.SuperActivityToast;
 import com.github.johnpersano.supertoasts.library.SuperToast;
 import com.github.johnpersano.supertoasts.library.utils.PaletteUtils;
 
@@ -134,14 +136,40 @@ public class ToastUtil {
      * @param context context
      * @param s       字符串
      */
-    public static void superToastAdvanced(Context context, String s) {
+    @Deprecated
+    public static void superToast(Context context, String s) {
         SuperToast.cancelAllSuperToasts();
+        SuperToast superActivityToast = SuperActivityToast.create(context, new Style())
+                .setText(s)
+                .setTextSize(Style.TEXTSIZE_SMALL)
+                .setColor(defaultBackground);
+        setSuperToastStyle(superActivityToast, 0);
+        superActivityToast.show();
+
         SuperToast superToast = new SuperToast(context.getApplicationContext())
                 .setText(s)
                 .setTextSize(Style.TEXTSIZE_SMALL)
                 .setColor(defaultBackground);
         setSuperToastStyle(superToast, 0);
         superToast.show();
+    }
+
+    /**
+     * SuperActivityToast 显示在默认位置，(解决SuperToast，在6.0系统上无显示悬浮窗权限问题)
+     * 显示时长：默认，
+     * 背景颜色：默认。
+     *
+     * @param activity Activity
+     * @param s        字符串
+     */
+    public static void superActivityToast(Activity activity, String s) {
+        SuperToast.cancelAllSuperToasts();
+        SuperToast superActivityToast = SuperActivityToast.create(activity, new Style())
+                .setText(s)
+                .setTextSize(Style.TEXTSIZE_SMALL)
+                .setColor(defaultBackground);
+        setSuperToastStyle(superActivityToast, 0);
+        superActivityToast.show();
     }
 
     /**
@@ -152,7 +180,8 @@ public class ToastUtil {
      * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，0 为默认值
      * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，0 为默认值
      */
-    public static void superToastAdvanced(Context context, String s, int duration, int background) {
+    @Deprecated
+    public static void superToast(Context context, String s, int duration, int background) {
         if (duration == 0) {
             duration = defaultDuration;
         }
@@ -169,6 +198,30 @@ public class ToastUtil {
     }
 
     /**
+     * SuperToast 显示在默认位置，(解决SuperToast，在6.0系统上无显示悬浮窗权限问题)
+     *
+     * @param activity   Activity
+     * @param s          字符串
+     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，0 为默认值
+     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，0 为默认值
+     */
+    public static void superActivityToast(Activity activity, String s, int duration, int background) {
+        if (duration == 0) {
+            duration = defaultDuration;
+        }
+        if (background == 0) {
+            background = defaultBackground;
+        }
+        SuperToast.cancelAllSuperToasts();
+        SuperToast superActivityToast = SuperActivityToast.create(activity, new Style())
+                .setText(s)
+                .setTextSize(Style.TEXTSIZE_SMALL)
+                .setColor(background);
+        setSuperToastStyle(superActivityToast, duration);
+        superActivityToast.show();
+    }
+
+    /**
      * SuperToast 显示在默认位置
      * 显示时长：默认，
      * 背景颜色：默认。
@@ -176,7 +229,8 @@ public class ToastUtil {
      * @param context context
      * @param resId   资源id
      */
-    public static void superToastAdvanced(Context context, int resId) {
+    @Deprecated
+    public static void superToast(Context context, int resId) {
         SuperToast.cancelAllSuperToasts();
         SuperToast superToast = new SuperToast(context.getApplicationContext())
                 .setText(context.getApplicationContext().getString(resId))
@@ -184,6 +238,25 @@ public class ToastUtil {
                 .setColor(defaultBackground);
         setSuperToastStyle(superToast, 0);
         superToast.show();
+
+    }
+
+    /**
+     * SuperToast 显示在默认位置，(解决SuperToast，在6.0系统上无显示悬浮窗权限问题)
+     * 显示时长：默认，
+     * 背景颜色：默认。
+     *
+     * @param activity Activity
+     * @param resId    资源id
+     */
+    public static void superActivityToast(Activity activity, int resId) {
+        SuperToast.cancelAllSuperToasts();
+        SuperToast superActivityToast = SuperActivityToast.create(activity, new Style())
+                .setText(activity.getString(resId))
+                .setTextSize(Style.TEXTSIZE_SMALL)
+                .setColor(defaultBackground);
+        setSuperToastStyle(superActivityToast, 0);
+        superActivityToast.show();
 
     }
 
@@ -195,7 +268,8 @@ public class ToastUtil {
      * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，0 为默认值
      * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，0 为默认值
      */
-    public static void superToastAdvanced(Context context, int resId, int duration, int background) {
+    @Deprecated
+    public static void superToast(Context context, int resId, int duration, int background) {
         if (duration == 0) {
             duration = defaultDuration;
         }
@@ -208,6 +282,31 @@ public class ToastUtil {
                 .setColor(background);
         setSuperToastStyle(superToast, duration);
         superToast.show();
+
+    }
+
+    /**
+     * SuperToast 显示在默认位置，(解决SuperToast，在6.0系统上无显示悬浮窗权限问题)
+     *
+     * @param activity   Activity
+     * @param resId      资源id
+     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，0 为默认值
+     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，0 为默认值
+     */
+    public static void superActivityToast(Activity activity, int resId, int duration, int background) {
+        if (duration == 0) {
+            duration = defaultDuration;
+        }
+        if (background == 0) {
+            background = defaultBackground;
+        }
+        SuperToast.cancelAllSuperToasts();
+        SuperToast superActivityToast = SuperActivityToast.create(activity, new Style())
+                .setText(activity.getString(resId))
+                .setTextSize(Style.TEXTSIZE_SMALL)
+                .setColor(background);
+        setSuperToastStyle(superActivityToast, duration);
+        superActivityToast.show();
 
     }
 
@@ -219,7 +318,8 @@ public class ToastUtil {
      * @param context context
      * @param s       字符串
      */
-    public static void superToastAdvanced4Center(Context context, String s) {
+    @Deprecated
+    public static void superToast4Center(Context context, String s) {
         SuperToast.cancelAllSuperToasts();
         SuperToast superToast = new SuperToast(context.getApplicationContext())
                 .setText(s)
@@ -228,6 +328,25 @@ public class ToastUtil {
                 .setColor(defaultBackground);
         setSuperToastStyle(superToast, 0);
         superToast.show();
+    }
+
+    /**
+     * SuperToast 显示在屏幕中间，(解决SuperToast，在6.0系统上无显示悬浮窗权限问题)
+     * 显示时长：默认，
+     * 背景颜色：默认。
+     *
+     * @param activity Activity
+     * @param s        字符串
+     */
+    public static void superActivityToast4Center(Activity activity, String s) {
+        SuperToast.cancelAllSuperToasts();
+        SuperToast superActivityToast = SuperActivityToast.create(activity, new Style())
+                .setText(s)
+                .setTextSize(Style.TEXTSIZE_SMALL)
+                .setGravity(Gravity.CENTER, 0, 0)
+                .setColor(defaultBackground);
+        setSuperToastStyle(superActivityToast, 0);
+        superActivityToast.show();
     }
 
 
@@ -239,7 +358,8 @@ public class ToastUtil {
      * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，0 为默认值
      * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，0 为默认值
      */
-    public static void superToastAdvanced4Center(Context context, String s, int duration, int background) {
+    @Deprecated
+    public static void superToast4Center(Context context, String s, int duration, int background) {
         if (duration == 0) {
             duration = defaultDuration;
         }
@@ -257,6 +377,32 @@ public class ToastUtil {
     }
 
     /**
+     * SuperToast 显示在屏幕中间，(解决SuperToast，在6.0系统上无显示悬浮窗权限问题)
+     *
+     * @param activity   Activity
+     * @param s          字符串
+     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，0 为默认值
+     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，0 为默认值
+     */
+    public static void superActivityToast4Center(Activity activity, String s, int duration, int background) {
+        if (duration == 0) {
+            duration = defaultDuration;
+        }
+        if (background == 0) {
+            background = defaultBackground;
+        }
+
+        SuperToast.cancelAllSuperToasts();
+        SuperToast superActivityToast = SuperActivityToast.create(activity, new Style())
+                .setText(s)
+                .setTextSize(Style.TEXTSIZE_SMALL)
+                .setGravity(Gravity.CENTER, 0, 0)
+                .setColor(background);
+        setSuperToastStyle(superActivityToast, duration);
+        superActivityToast.show();
+    }
+
+    /**
      * SuperToast 显示在屏幕中间
      * 显示时长：默认，
      * 背景颜色：默认。
@@ -264,7 +410,8 @@ public class ToastUtil {
      * @param context context
      * @param resId   资源id
      */
-    public static void superToastAdvanced4Center(Context context, int resId) {
+    @Deprecated
+    public static void superToast4Center(Context context, int resId) {
         SuperToast.cancelAllSuperToasts();
         SuperToast superToast = new SuperToast(context.getApplicationContext())
                 .setText(context.getApplicationContext().getString(resId))
@@ -276,6 +423,25 @@ public class ToastUtil {
     }
 
     /**
+     * SuperToast 显示在屏幕中间，(解决SuperToast，在6.0系统上无显示悬浮窗权限问题)
+     * 显示时长：默认，
+     * 背景颜色：默认。
+     *
+     * @param activity
+     * @param resId    资源id
+     */
+    public static void superActivityToast4Center(Activity activity, int resId) {
+        SuperToast.cancelAllSuperToasts();
+        SuperToast superActivityToast = SuperActivityToast.create(activity, new Style())
+                .setText(activity.getString(resId))
+                .setTextSize(Style.TEXTSIZE_SMALL)
+                .setGravity(Gravity.CENTER, 0, 0)
+                .setColor(defaultBackground);
+        setSuperToastStyle(superActivityToast, 0);
+        superActivityToast.show();
+    }
+
+    /**
      * SuperToast 显示在屏幕中间
      *
      * @param context    context
@@ -283,7 +449,8 @@ public class ToastUtil {
      * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，0 为默认值
      * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，0 为默认值
      */
-    public static void superToastAdvanced4Center(Context context, int resId, int duration, int background) {
+    @Deprecated
+    public static void superToast4Center(Context context, int resId, int duration, int background) {
         if (duration == 0) {
             duration = defaultDuration;
         }
@@ -298,6 +465,31 @@ public class ToastUtil {
                 .setColor(background);
         setSuperToastStyle(superToast, duration);
         superToast.show();
+    }
+
+    /**
+     * SuperToast 显示在屏幕中间，(解决SuperToast，在6.0系统上无显示悬浮窗权限问题)
+     *
+     * @param activity
+     * @param resId      资源id
+     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，0 为默认值
+     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，0 为默认值
+     */
+    public static void superActivityToast4Center(Activity activity, int resId, int duration, int background) {
+        if (duration == 0) {
+            duration = defaultDuration;
+        }
+        if (background == 0) {
+            background = defaultBackground;
+        }
+        SuperToast.cancelAllSuperToasts();
+        SuperToast superActivityToast = SuperActivityToast.create(activity, new Style())
+                .setText(activity.getString(resId))
+                .setTextSize(Style.TEXTSIZE_SMALL)
+                .setGravity(Gravity.CENTER, 0, 0)
+                .setColor(background);
+        setSuperToastStyle(superActivityToast, duration);
+        superActivityToast.show();
     }
 
     private static int defaultAnimations = Animations.SCALE;    //所有SuperToast的默认动画效果

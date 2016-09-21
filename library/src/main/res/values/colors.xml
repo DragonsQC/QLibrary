@@ -212,11 +212,11 @@
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
     <color name="transparent">#00ffffff</color>
-    <color name="transparent_thin">#2Affffff</color>
-    <color name="transparent_half">#80ffffff</color>
+    <color name="transparent_thin">#22ffffff</color>
+    <color name="transparent_half">#88ffffff</color>
     <color name="transparent_deep">#AAffffff</color>
-    <color name="transparent_thin_b">#2A000000</color>
-    <color name="transparent_half_b">#80000000</color>
+    <color name="transparent_thin_b">#22000000</color>
+    <color name="transparent_half_b">#88000000</color>
     <color name="transparent_deep_b">#AA000000</color>
 
     <color name="alpha_05_white">#0DFFFFFF</color>
