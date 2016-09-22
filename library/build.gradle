@@ -4,7 +4,7 @@ group = 'com.github.DragonsQC'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.1"
+    buildToolsVersion "24.0.2"
     compileOptions.encoding = 'UTF-8'
 
     defaultConfig {
