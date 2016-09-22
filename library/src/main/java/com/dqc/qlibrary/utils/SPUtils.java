@@ -12,9 +12,9 @@ import java.util.Map;
  *
  * @author DragonsQC
  */
-public class SPUtil {
+public class SPUtils {
 
-    private static String SP_NAME = "SPUtil";
+    private static String SP_NAME = "SPUtils";
     private static SharedPreferences sharedPreferences;
     private static SharedPreferences.Editor editor;
 

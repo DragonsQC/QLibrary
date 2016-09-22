@@ -17,7 +17,7 @@ import com.github.johnpersano.supertoasts.library.utils.PaletteUtils;
  *
  * @author DragonsQC
  */
-public class ToastUtil {
+public class ToastUtils {
 
     /**
      * 系统 Toast 默认显示位置
@@ -177,8 +177,8 @@ public class ToastUtil {
      *
      * @param context    context
      * @param s          字符串
-     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，0 为默认值
-     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，0 为默认值
+     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtils.Duration})，0 为默认值
+     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtils.Background})，0 为默认值
      */
     @Deprecated
     public static void superToast(Context context, String s, int duration, int background) {
@@ -202,8 +202,8 @@ public class ToastUtil {
      *
      * @param activity   Activity
      * @param s          字符串
-     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，0 为默认值
-     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，0 为默认值
+     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtils.Duration})，0 为默认值
+     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtils.Background})，0 为默认值
      */
     public static void superActivityToast(Activity activity, String s, int duration, int background) {
         if (duration == 0) {
@@ -265,8 +265,8 @@ public class ToastUtil {
      *
      * @param context    context
      * @param resId      资源id
-     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，0 为默认值
-     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，0 为默认值
+     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtils.Duration})，0 为默认值
+     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtils.Background})，0 为默认值
      */
     @Deprecated
     public static void superToast(Context context, int resId, int duration, int background) {
@@ -290,8 +290,8 @@ public class ToastUtil {
      *
      * @param activity   Activity
      * @param resId      资源id
-     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，0 为默认值
-     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，0 为默认值
+     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtils.Duration})，0 为默认值
+     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtils.Background})，0 为默认值
      */
     public static void superActivityToast(Activity activity, int resId, int duration, int background) {
         if (duration == 0) {
@@ -355,8 +355,8 @@ public class ToastUtil {
      *
      * @param context    context
      * @param s          字符串
-     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，0 为默认值
-     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，0 为默认值
+     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtils.Duration})，0 为默认值
+     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtils.Background})，0 为默认值
      */
     @Deprecated
     public static void superToast4Center(Context context, String s, int duration, int background) {
@@ -381,8 +381,8 @@ public class ToastUtil {
      *
      * @param activity   Activity
      * @param s          字符串
-     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，0 为默认值
-     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，0 为默认值
+     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtils.Duration})，0 为默认值
+     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtils.Background})，0 为默认值
      */
     public static void superActivityToast4Center(Activity activity, String s, int duration, int background) {
         if (duration == 0) {
@@ -446,8 +446,8 @@ public class ToastUtil {
      *
      * @param context    context
      * @param resId      资源id
-     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，0 为默认值
-     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，0 为默认值
+     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtils.Duration})，0 为默认值
+     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtils.Background})，0 为默认值
      */
     @Deprecated
     public static void superToast4Center(Context context, int resId, int duration, int background) {
@@ -472,8 +472,8 @@ public class ToastUtil {
      *
      * @param activity
      * @param resId      资源id
-     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，0 为默认值
-     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，0 为默认值
+     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtils.Duration})，0 为默认值
+     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtils.Background})，0 为默认值
      */
     public static void superActivityToast4Center(Activity activity, int resId, int duration, int background) {
         if (duration == 0) {
@@ -500,10 +500,10 @@ public class ToastUtil {
     /**
      * 自定义初始化SuperToast
      *
-     * @param frame      样式(@com.dqc.qlibrary.{@link ToastUtil.Frame})，0 为默认值
-     * @param animations 动画(@com.dqc.qlibrary.{@link ToastUtil.Animations})，0 为默认值
-     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtil.Duration})，0 为默认值
-     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtil.Background})，0 为默认值
+     * @param frame      样式(@com.dqc.qlibrary.{@link ToastUtils.Frame})，0 为默认值
+     * @param animations 动画(@com.dqc.qlibrary.{@link ToastUtils.Animations})，0 为默认值
+     * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtils.Duration})，0 为默认值
+     * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtils.Background})，0 为默认值
      */
     public static void initSuperToast(int frame, int animations, int duration, int background) {
         defaultFrame = frame;

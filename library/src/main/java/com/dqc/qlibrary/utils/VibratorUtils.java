@@ -7,7 +7,7 @@ import android.os.Vibrator;
 /**
  * 手机震动工具类
  */
-public class VibratorUtil {
+public class VibratorUtils {
 
     /**
      * @param activity

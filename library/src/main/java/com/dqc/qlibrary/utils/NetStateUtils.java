@@ -18,7 +18,7 @@ import java.util.List;
  *
  * @author DragonsQC
  */
-public class NetStateUtil {
+public class NetStateUtils {
 
     /**
      * 判断是否有网络连接

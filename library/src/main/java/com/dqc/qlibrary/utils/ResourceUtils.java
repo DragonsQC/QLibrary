@@ -29,7 +29,7 @@ import java.io.OutputStream;
  *
  * @author DragonsQC
  */
-public class ResourceUtil {
+public class ResourceUtils {
     private static DisplayMetrics sDisplayMetrics;
 
     /**
