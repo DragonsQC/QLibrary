@@ -7,9 +7,7 @@ import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 
 /**
- * 动画工具类
- *
- * @author zhenguo
+ * Animation 工具类
  */
 public final class AnimationUtils {
 
@@ -250,8 +248,8 @@ public final class AnimationUtils {
     /**
      * 获取一个缩小动画
      *
-     * @param durationMillis   时间
-     * @param animationListener  监听
+     * @param durationMillis    时间
+     * @param animationListener 监听
      * @return 一个缩小动画
      */
     public static ScaleAnimation getLessenScaleAnimation(long durationMillis, AnimationListener animationListener) {
@@ -280,7 +278,7 @@ public final class AnimationUtils {
     /**
      * 获取一个缩小动画
      *
-     * @param animationListener  监听
+     * @param animationListener 监听
      * @return 返回一个缩小的动画
      */
     public static ScaleAnimation getLessenScaleAnimation(AnimationListener animationListener) {
@@ -292,9 +290,9 @@ public final class AnimationUtils {
 
     /**
      * 获取一个放大动画
-     * @param durationMillis   时间
-     * @param animationListener  监听
      *
+     * @param durationMillis    时间
+     * @param animationListener 监听
      * @return 返回一个放大的效果
      */
     public static ScaleAnimation getAmplificationAnimation(long durationMillis, AnimationListener animationListener) {
@@ -310,8 +308,7 @@ public final class AnimationUtils {
     /**
      * 获取一个放大动画
      *
-     * @param durationMillis   时间
-     *
+     * @param durationMillis 时间
      * @return 返回一个放大的效果
      */
     public static ScaleAnimation getAmplificationAnimation(long durationMillis) {
@@ -323,7 +320,7 @@ public final class AnimationUtils {
     /**
      * 获取一个放大动画
      *
-     * @param animationListener  监听
+     * @param animationListener 监听
      * @return 返回一个放大的效果
      */
     public static ScaleAnimation getAmplificationAnimation(AnimationListener animationListener) {
