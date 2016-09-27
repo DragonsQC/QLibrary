@@ -155,7 +155,7 @@ public class ToastUtils {
     }
 
     /**
-     * SuperActivityToast 显示在默认位置，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题)
+     * SuperActivityToast 显示在默认位置，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题；但只能在Activity可见时显示，如果Activity有遮罩层，会被遮罩层挡住)
      * 显示时长：默认，
      * 背景颜色：默认。
      *
@@ -198,7 +198,7 @@ public class ToastUtils {
     }
 
     /**
-     * SuperToast 显示在默认位置，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题)
+     * SuperToast 显示在默认位置，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题；但只能在Activity可见时显示，如果Activity有遮罩层，会被遮罩层挡住)
      *
      * @param activity   Activity
      * @param s          字符串
@@ -242,7 +242,7 @@ public class ToastUtils {
     }
 
     /**
-     * SuperToast 显示在默认位置，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题)
+     * SuperToast 显示在默认位置，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题；但只能在Activity可见时显示，如果Activity有遮罩层，会被遮罩层挡住)
      * 显示时长：默认，
      * 背景颜色：默认。
      *
@@ -286,7 +286,7 @@ public class ToastUtils {
     }
 
     /**
-     * SuperToast 显示在默认位置，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题)
+     * SuperToast 显示在默认位置，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题；但只能在Activity可见时显示，如果Activity有遮罩层，会被遮罩层挡住)
      *
      * @param activity   Activity
      * @param resId      资源id
@@ -331,7 +331,7 @@ public class ToastUtils {
     }
 
     /**
-     * SuperToast 显示在屏幕中间，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题)
+     * SuperToast 显示在屏幕中间，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题；但只能在Activity可见时显示，如果Activity有遮罩层，会被遮罩层挡住)
      * 显示时长：默认，
      * 背景颜色：默认。
      *
@@ -377,7 +377,7 @@ public class ToastUtils {
     }
 
     /**
-     * SuperToast 显示在屏幕中间，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题)
+     * SuperToast 显示在屏幕中间，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题；但只能在Activity可见时显示，如果Activity有遮罩层，会被遮罩层挡住)
      *
      * @param activity   Activity
      * @param s          字符串
@@ -423,11 +423,11 @@ public class ToastUtils {
     }
 
     /**
-     * SuperToast 显示在屏幕中间，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题)
+     * SuperToast 显示在屏幕中间，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题；但只能在Activity可见时显示，如果Activity有遮罩层，会被遮罩层挡住)
      * 显示时长：默认，
      * 背景颜色：默认。
      *
-     * @param activity
+     * @param activity Activity
      * @param resId    资源id
      */
     public static void superActivityToast4Center(Activity activity, int resId) {
@@ -468,9 +468,9 @@ public class ToastUtils {
     }
 
     /**
-     * SuperToast 显示在屏幕中间，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题)
+     * SuperToast 显示在屏幕中间，(解决SuperToast，在6.0系统上无显示悬浮窗权限无法显示问题；但只能在Activity可见时显示，如果Activity有遮罩层，会被遮罩层挡住)
      *
-     * @param activity
+     * @param activity   Activity
      * @param resId      资源id
      * @param duration   显示时长(@com.dqc.qlibrary.{@link ToastUtils.Duration})，0 为默认值
      * @param background 背景颜色(@com.dqc.qlibrary.{@link ToastUtils.Background})，0 为默认值
