@@ -14,6 +14,8 @@ import com.dqc.qlibrary.R;
 
 import java.util.List;
 
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
+
 /**
  * 网络状态工具类
  *
@@ -104,6 +106,7 @@ public class NetStateUtils {
                 .onNegative(new MaterialDialog.SingleButtonCallback() {
                     @Override
                     public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+                        android.os.Process.killProcess(android.os.Process.myPid());
                         System.exit(0);
                     }
                 })
@@ -121,6 +124,7 @@ public class NetStateUtils {
                             intent = new Intent();
                             ComponentName component = new ComponentName("com.android.settings", "com.android.settings.WirelessSettings");
                             intent.setComponent(component);
+                            intent.addFlags(FLAG_ACTIVITY_NEW_TASK);
                             intent.setAction("android.intent.action.VIEW");
                         }
                         context.getApplicationContext().startActivity(intent);
