@@ -1,20 +1,11 @@
 package com.dqc.qlibrary.utils;
 
-import android.content.ComponentName;
 import android.content.Context;
-import android.content.Intent;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.support.annotation.NonNull;
-
-import com.afollestad.materialdialogs.DialogAction;
-import com.afollestad.materialdialogs.MaterialDialog;
-import com.dqc.qlibrary.R;
 
 import java.util.List;
-
-import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
 /**
  * 网络状态工具类
@@ -88,51 +79,6 @@ public class NetStateUtils {
         return -1;
     }
 
-
-    /**
-     * 网络未连接时，调用设置方法
-     */
-    public static void setNetwork(final Context context) {
-        new MaterialDialog.Builder(context)
-                .title(R.string.net_state_dialog_title)
-                .content(R.string.net_state_dialog_msg)
-                .cancelable(false)
-                .canceledOnTouchOutside(false)
-                .autoDismiss(false)
-                .negativeText(R.string.exit)
-                .negativeColorRes(R.color.gray_500)
-                .positiveText(R.string.settings)
-                .positiveColorRes(R.color.red_500)
-                .onNegative(new MaterialDialog.SingleButtonCallback() {
-                    @Override
-                    public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                        android.os.Process.killProcess(android.os.Process.myPid());
-                        System.exit(0);
-                    }
-                })
-                .onPositive(new MaterialDialog.SingleButtonCallback() {
-                    @Override
-                    public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                        Intent intent;
-                        /**
-                         * 判断系统的版本！如果API大于10 就是3.0+
-                         * 因为3.0以上的版本的设置和3.0以下的设置不一样，调用的方法不同
-                         */
-                        if (android.os.Build.VERSION.SDK_INT > 10) {
-                            intent = new Intent(android.provider.Settings.ACTION_WIFI_SETTINGS);
-                        } else {
-                            intent = new Intent();
-                            ComponentName component = new ComponentName("com.android.settings", "com.android.settings.WirelessSettings");
-                            intent.setComponent(component);
-                            intent.addFlags(FLAG_ACTIVITY_NEW_TASK);
-                            intent.setAction("android.intent.action.VIEW");
-                        }
-                        context.getApplicationContext().startActivity(intent);
-                    }
-                })
-                .show();
-
-    }
 
     /**
      * 判断GPS是否打开
