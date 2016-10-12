@@ -14,6 +14,8 @@ import com.github.johnpersano.supertoasts.library.utils.PaletteUtils;
  * Android Toast 工具类
  * <p/>
  * require https://github.com/JohnPersano/SuperToasts <br/>
+ * 注：1、superToast 需要“显示悬浮框权限”，若没有则会出现异常。<br/>
+ * 2、superActivityToast 不需要“显示悬浮框权限”，但如果有遮罩层时，会被遮罩层挡住<br/>
  *
  * @author DragonsQC
  */
@@ -31,6 +33,16 @@ public class ToastUtils {
     }
 
     /**
+     * 系统 Toast 默认显示位置，默认显示时长 Toast.LENGTH_SHORT
+     *
+     * @param context      context
+     * @param charSequence 字符串
+     */
+    public static void showDefault(Context context, CharSequence charSequence) {
+        Toast.makeText(context.getApplicationContext(), charSequence, Toast.LENGTH_SHORT).show();
+    }
+
+    /**
      * 系统 Toast 默认显示位置
      *
      * @param context  context
@@ -39,6 +51,16 @@ public class ToastUtils {
      */
     public static void showDefault(Context context, int rseId, int duration) {
         Toast.makeText(context.getApplicationContext(), rseId, duration).show();
+    }
+
+    /**
+     * 系统 Toast 默认显示位置，默认显示时长 Toast.LENGTH_SHORT
+     *
+     * @param context context
+     * @param rseId   资源id
+     */
+    public static void showDefault(Context context, int rseId) {
+        Toast.makeText(context.getApplicationContext(), rseId, Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -55,6 +77,18 @@ public class ToastUtils {
     }
 
     /**
+     * 系统 Toast 显示在屏幕中间，默认显示时长 Toast.LENGTH_SHORT
+     *
+     * @param context      context
+     * @param charSequence 字符串
+     */
+    public static void showCenter(Context context, CharSequence charSequence) {
+        Toast toast = Toast.makeText(context.getApplicationContext(), charSequence, Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
+    }
+
+    /**
      * 系统 Toast 显示在屏幕中间
      *
      * @param context  context
@@ -63,6 +97,18 @@ public class ToastUtils {
      */
     public static void showCenter(Context context, int rseId, int duration) {
         Toast toast = Toast.makeText(context.getApplicationContext(), rseId, duration);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
+    }
+
+    /**
+     * 系统 Toast 显示在屏幕中间，默认显示时长 Toast.LENGTH_SHORT
+     *
+     * @param context context
+     * @param rseId   资源id
+     */
+    public static void showCenter(Context context, int rseId) {
+        Toast toast = Toast.makeText(context.getApplicationContext(), rseId, Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
     }
