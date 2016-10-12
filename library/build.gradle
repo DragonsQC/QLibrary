@@ -53,7 +53,7 @@ dependencies {
     //logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
     compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
     //fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
-    compile 'com.alibaba:fastjson:1.1.53.android'
+    compile 'com.alibaba:fastjson:1.1.54.android'
 
 //【图片加载】***************************************************************************************
     //Picasso [https://github.com/square/picasso]
@@ -65,7 +65,8 @@ dependencies {
     //logger [https://github.com/orhanobut/logger]
     compile 'com.orhanobut:logger:1.15'
     //UCrop [https://github.com/Yalantis/uCrop]
-    compile 'com.yalantis:ucrop:2.1.2'
+    //compile 'com.yalantis:ucrop:2.2.0'
+    compile 'com.yalantis:ucrop:2.2.0-native'
 
 //【Animation】*************************************************************************************
     //NineoldAndroids [https://github.com/JakeWharton/NineOldAndroids]
@@ -83,7 +84,7 @@ dependencies {
     compile 'com.twotoasters.jazzylistview:library:1.2.1'
     compile 'com.twotoasters.jazzylistview:library-recyclerview:1.2.1'
     //Material Dialogs [https://github.com/afollestad/material-dialogs]
-    compile 'com.afollestad.material-dialogs:core:0.9.0.1'
+    compile 'com.afollestad.material-dialogs:core:0.9.0.2'
     //Material Design Library [https://github.com/rey5137/Material]
     compile 'com.github.rey5137:material:1.2.4'
     //SuperToasts [https://github.com/JohnPersano/SuperToasts]
