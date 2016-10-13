@@ -117,6 +117,41 @@ task sourcesJar(type: Jar) {
     classifier = 'sources'
 }
 
+def siteUrl = 'https://github.com/DragonsQC'
+def gitUrl = 'https://github.com/DragonsQC/QLibrary.git'
+install {
+    repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
+        pom {
+            project {
+                packaging 'aar'
+                // Add your description here
+                name 'Qlibrary' //项目描述
+                url siteUrl
+                // Set your license
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'DragonsQC' //填写开发者基本信息
+                        name 'DragonsQC'
+                        email 'tkzl@vip.qq.com'
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+                }
+            }
+        }
+    }
+}
+
 task javadoc(type: Javadoc) {
     failOnError false
     source = android.sourceSets.main.java.sourceFiles
