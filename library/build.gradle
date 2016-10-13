@@ -111,11 +111,6 @@ repositories {
     //maven { url 'https://jcenter.bintray.com' }
 }
 
-// build a jar with source files
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
-}
 
 def siteUrl = 'https://github.com/DragonsQC'
 def gitUrl = 'https://github.com/DragonsQC/QLibrary.git'
@@ -125,8 +120,8 @@ install {
         pom {
             project {
                 packaging 'aar'
-                // Add your description here
-                name 'Qlibrary' //项目描述
+                // 项目描述
+                name 'Qlibrary'
                 url siteUrl
                 // Set your license
                 licenses {
@@ -136,8 +131,8 @@ install {
                     }
                 }
                 developers {
-                    developer {
-                        id 'DragonsQC' //填写开发者基本信息
+                    developer { //开发者基本信息
+                        id 'DragonsQC'
                         name 'DragonsQC'
                         email 'tkzl@vip.qq.com'
                     }
@@ -150,6 +145,12 @@ install {
             }
         }
     }
+}
+
+// build a jar with source files
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
 }
 
 task javadoc(type: Javadoc) {
