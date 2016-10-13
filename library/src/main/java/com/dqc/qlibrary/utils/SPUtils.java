@@ -15,7 +15,7 @@ import java.util.Map;
 public class SPUtils {
 
     private static String SP_NAME = "SPUtils";
-    private static SharedPreferences sharedPreferences;
+    private static SharedPreferences        sharedPreferences;
     private static SharedPreferences.Editor editor;
 
     public static void init(String appName) {
