@@ -16,6 +16,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -196,8 +197,7 @@ public class QUtils {
          * @return
          */
         public static int random(int min, int max) {
-            java.util.Random r = new java.util.Random();
-            return r.nextInt(max) % (max - min + 1) + min;
+            return new Random().nextInt(max - min + 1) + min;
         }
 
 
