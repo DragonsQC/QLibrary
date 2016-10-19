@@ -194,7 +194,7 @@ public class QUtils {
          *
          * @param min 最小数（包含）
          * @param max 最大数（包含）
-         * @return
+         * @return 返回一个包括最小数和最大数的随机数
          */
         public static int random(int min, int max) {
             return new Random().nextInt(max - min + 1) + min;
