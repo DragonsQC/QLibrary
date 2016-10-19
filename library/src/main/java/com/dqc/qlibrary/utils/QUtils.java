@@ -196,7 +196,6 @@ public class QUtils {
          * @return
          */
         public static int random(int min, int max) {
-            max = max + 1;
             java.util.Random r = new java.util.Random();
             return r.nextInt(max) % (max - min + 1) + min;
         }
