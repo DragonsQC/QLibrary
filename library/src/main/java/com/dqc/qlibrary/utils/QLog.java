@@ -18,7 +18,6 @@ public class QLog {
         XLog.init(allowLog ? LogLevel.ALL : LogLevel.NONE,
                 new LogConfiguration.Builder()
                         .tag(tag)   // 指定 TAG，默认为 "X-LOG"
-                        .t()        // 允许打印线程信息，默认禁止
                         .b()        // 允许打印日志边框，默认禁止
                         .st(2)      // 允许打印深度为1的调用栈信息，默认禁止
                         .build());
