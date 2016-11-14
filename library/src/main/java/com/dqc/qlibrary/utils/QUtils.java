@@ -463,7 +463,7 @@ public class QUtils {
          *                 zzzz：太平洋夏令时标识全拼（Pacific Daylight Time）
          *                 Z：当前时区（-0800）
          *                 X：ISO时区
-         * @return
+         * @return String
          */
         public static String getCurrentDate2Str(String patterns) {
             if (StringUtil.isEmpty(patterns)) {
@@ -478,7 +478,7 @@ public class QUtils {
          *
          * @param strDate       字符串时间
          * @param strDateFormat 字符串的时间格式，例：yyyy-MM-dd HH:mm:ss
-         * @return
+         * @return Date
          */
         public static Date strDate2Date(String strDate, String strDateFormat) {
             DateFormat format = new SimpleDateFormat(strDateFormat);

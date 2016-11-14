@@ -48,15 +48,15 @@ dependencies {
     compile 'io.reactivex:rxandroid:1.2.1'
 
 //【Utils】***************************************************************************************
-    //logger [https://github.com/orhanobut/logger]
-    compile 'com.orhanobut:logger:1.15'
+    //xLog [https://github.com/elvishew/xLog]
+    compile 'com.elvishew:xlog:1.1.0'
     //UCrop [https://github.com/Yalantis/uCrop]
     //compile 'com.yalantis:ucrop:2.2.0'
     compile 'com.yalantis:ucrop:2.2.0-native'
 
 //【HTTP】******************************************************************************************
     //xUtils [https://github.com/wyouflf/xUtils3]
-    compile 'org.xutils:xutils:3.3.36'
+    compile 'org.xutils:xutils:3.3.38'
     //Retrofit2 [https://github.com/square/retrofit]
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     //converter-gson [http://www.mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson]
@@ -88,23 +88,24 @@ dependencies {
     compile 'com.twotoasters.jazzylistview:library:1.2.1'
     compile 'com.twotoasters.jazzylistview:library-recyclerview:1.2.1'
     //Material Dialogs [https://github.com/afollestad/material-dialogs]
-    compile 'com.afollestad.material-dialogs:core:0.9.0.2'
+    compile 'com.afollestad.material-dialogs:core:0.9.1.0'
     //Material Design Library [https://github.com/rey5137/Material]
     compile 'com.github.rey5137:material:1.2.4'
     //SuperToasts [https://github.com/JohnPersano/SuperToasts]
     compile 'com.github.johnpersano:supertoasts:2.0'
     //拖拽排序 Advanced RecyclerView [https://github.com/h6ah4i/android-advancedrecyclerview]
-    compile('com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.9.3@aar') {
-        transitive = true
+    compile ('com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.10.0@aar'){
+        transitive=true
     }
 
 }
 repositories {
     jcenter()
+    //mavenLocal()
     //mavenCentral()
-    maven { url "https://jitpack.io" }
-    //maven { url 'http://maven.oschina.net/content/groups/public' }
-    //maven { url 'https://jcenter.bintray.com' }
+    //maven { url 'http://maven.oschina.net/content/groups/public/' }
+    maven { url 'https://jcenter.bintray.com' }
+    //maven { url "https://jitpack.io" }
 }
 
 

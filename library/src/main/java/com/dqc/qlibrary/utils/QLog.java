@@ -1,32 +1,36 @@
 package com.dqc.qlibrary.utils;
 
-import com.orhanobut.logger.Logger;
+import com.elvishew.xlog.LogConfiguration;
+import com.elvishew.xlog.LogLevel;
+import com.elvishew.xlog.XLog;
 
 /**
  * Android 日志工具类
  * <p/>
- * require https://github.com/orhanobut/logger
+ * require xLog [https://github.com/elvishew/xLog]
  * <p/>
  *
  * @author DragonsQC
  */
 public class QLog {
-    private static boolean mAllowLog = true;
 
     public static void init(boolean allowLog, String tag) {
-        mAllowLog = allowLog;
-        Logger.init(tag).hideThreadInfo();
+        XLog.init(allowLog ? LogLevel.ALL : LogLevel.NONE,
+                new LogConfiguration.Builder()
+                        .tag(tag)  // 指定 TAG，默认为 "X-LOG"
+                        .t()            // 允许打印线程信息，默认禁止
+                        .b()            // 允许打印日志边框，默认禁止
+                        .st(1)          // 允许打印深度为1的调用栈信息，默认禁止
+                        .build());
     }
 
     /**
      * verbose 信息
      *
-     * @param msg String
+     * @param o Object
      */
-    public static void v(String msg) {
-        if (mAllowLog) {
-            Logger.v(msg);
-        }
+    public static void v(Object o) {
+        XLog.v(o);
     }
 
     /**
@@ -35,65 +39,34 @@ public class QLog {
      * @param o Object
      */
     public static void d(Object o) {
-        if (mAllowLog) {
-            Logger.d(o);
-        }
+        XLog.d(o);
     }
 
     /**
      * info 普通信息
      *
-     * @param msg String
+     * @param o Object
      */
-    public static void i(String msg) {
-        if (mAllowLog) {
-            Logger.i(msg);
-        }
+    public static void i(Object o) {
+        XLog.i(o);
     }
 
     /**
      * warning 警告信息
      *
-     * @param msg String
+     * @param o Object
      */
-    public static void w(String msg) {
-        if (mAllowLog) {
-            Logger.w(msg);
-        }
+    public static void w(Object o) {
+        XLog.w(o);
     }
 
     /**
      * error 错误信息
      *
-     * @param msg String
+     * @param o Object
      */
-    public static void e(String msg) {
-        if (mAllowLog) {
-            Logger.e(msg);
-        }
-    }
-
-    /**
-     * error 错误信息
-     *
-     * @param throwable Throwable
-     * @param msg       String
-     */
-    public static void e(Throwable throwable, String msg) {
-        if (mAllowLog) {
-            Logger.e(throwable, msg);
-        }
-    }
-
-    /**
-     * wtf
-     *
-     * @param msg String
-     */
-    public static void wtf(String msg) {
-        if (mAllowLog) {
-            Logger.wtf(msg);
-        }
+    public static void e(Object o) {
+        XLog.e(o);
     }
 
 
@@ -103,9 +76,7 @@ public class QLog {
      * @param json String
      */
     public static void json(String json) {
-        if (mAllowLog) {
-            Logger.json(json);
-        }
+        XLog.json(json);
     }
 
     /**
@@ -114,9 +85,7 @@ public class QLog {
      * @param xml String
      */
     public static void xml(String xml) {
-        if (mAllowLog) {
-            Logger.xml(xml);
-        }
+        XLog.xml(xml);
     }
 
 }

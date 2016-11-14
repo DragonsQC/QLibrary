@@ -5,10 +5,10 @@ buildscript {
     }
     dependencies {
         //[https://jcenter.bintray.com/com/android/tools/build/gradle/]
-        classpath 'com.android.tools.build:gradle:2.2.1'
+        classpath 'com.android.tools.build:gradle:2.2.2'
 
         //Java8 特性支持 [http://www.mvnrepository.com/artifact/me.tatarka/gradle-retrolambda]
-        classpath 'me.tatarka:gradle-retrolambda:3.3.0'
+        classpath 'me.tatarka:gradle-retrolambda:3.3.1'
 
         //[http://mvnrepository.com/artifact/com.github.dcendents/android-maven-gradle-plugin]
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
@@ -19,6 +19,11 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        //mavenLocal()
+        //mavenCentral()
+        //maven { url 'http://maven.oschina.net/content/groups/public/' }
+        //maven { url 'https://jcenter.bintray.com' }
+        //maven { url 'https://jitpack.io'}
     }
 }
 
