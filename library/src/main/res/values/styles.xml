@@ -11,14 +11,52 @@
         <item name="android:layout_height">1dp</item>
         <item name="android:background">@color/divider</item>
     </style>
+
     <style name="split_line_h_min">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">4dp</item>
         <item name="android:background">@color/divider</item>
     </style>
+
     <style name="split_line_h_small">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">4dp</item>
         <item name="android:background">@color/divider</item>
+    </style>
+
+    <style name="split_line_white">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="split_line_h_min_white">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">4dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="split_line_h_small_white">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">4dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="split_line_black">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="split_line_h_min_black">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">4dp</item>
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="split_line_h_small_black">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">4dp</item>
+        <item name="android:background">@color/black</item>
     </style>
 </resources>
