@@ -19,7 +19,7 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
-        //mavenLocal()
+        mavenLocal()
         //mavenCentral()
         //maven { url 'http://maven.oschina.net/content/groups/public/' }
         //maven { url 'https://jcenter.bintray.com' }
