@@ -81,7 +81,7 @@ dependencies {
 
 //【Widget】******************************************************************************************
     //Bootstrap [https://github.com/Bearded-Hen/Android-Bootstrap]
-    compile 'com.beardedhen:androidbootstrap:2.3.0'
+    compile 'com.beardedhen:androidbootstrap:2.3.1'
     //KenBurnsView [https://github.com/flavioarfaria/KenBurnsView]
     compile 'com.flaviofaria:kenburnsview:1.0.7'
     //ListView、GridView、RecyclerView 载入特效 [https://github.com/twotoasters/JazzyListView]
