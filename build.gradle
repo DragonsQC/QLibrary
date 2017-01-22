@@ -8,7 +8,7 @@ buildscript {
         classpath 'com.android.tools.build:gradle:2.2.3'
 
         //Java8 特性支持 [http://www.mvnrepository.com/artifact/me.tatarka/gradle-retrolambda]
-        classpath 'me.tatarka:gradle-retrolambda:3.3.1'
+        classpath 'me.tatarka:gradle-retrolambda:3.4.0'
 
         //[http://mvnrepository.com/artifact/com.github.dcendents/android-maven-gradle-plugin]
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
