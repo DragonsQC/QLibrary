@@ -11,8 +11,6 @@ import java.util.TimerTask;
 
 /**
  * 键盘工具类
- *
- * @author DragonsQC
  */
 public class KeyboardTool {
 
@@ -28,13 +26,22 @@ public class KeyboardTool {
         }
     }
 
-    //显示虚拟键盘
+    /**
+     * 显示虚拟键盘
+     *
+     * @param v View
+     */
     public static void showKeyboard(View v) {
         InputMethodManager imm = (InputMethodManager) v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.showSoftInput(v, InputMethodManager.SHOW_FORCED);
     }
 
-    //强制显示或者关闭系统键盘
+    /**
+     * 强制显示或者关闭系统键盘
+     *
+     * @param txtSearchKey EditText
+     * @param status
+     */
     public static void KeyBoard(final EditText txtSearchKey, final String status) {
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
@@ -51,7 +58,11 @@ public class KeyboardTool {
         }, 300);
     }
 
-    //通过定时器强制隐藏虚拟键盘
+    /**
+     * 通过定时器强制隐藏虚拟键盘
+     *
+     * @param v View
+     */
     public static void TimerHideKeyboard(final View v) {
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
@@ -65,14 +76,15 @@ public class KeyboardTool {
         }, 10);
     }
 
-    //输入法是否显示着
+    /**
+     * 键盘是否显示着
+     *
+     * @param edittext EditText
+     * @return
+     */
     public static boolean KeyBoard(EditText edittext) {
-        boolean            bool = false;
-        InputMethodManager imm  = (InputMethodManager) edittext.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
-        if (imm.isActive()) {
-            bool = true;
-        }
-        return bool;
+        InputMethodManager imm = (InputMethodManager) edittext.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+        return imm.isActive();
 
     }
 }
