@@ -11,8 +11,6 @@ import java.util.List;
 
 /**
  * xUtil json 解析器
- *
- * @author DragonsQC
  */
 public class JsonResponseParser implements ResponseParser {
 

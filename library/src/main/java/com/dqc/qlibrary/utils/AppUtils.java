@@ -13,8 +13,6 @@ import java.util.List;
 
 /**
  * APP 相关信息工具类
- *
- * @author DragonsQC
  */
 public class AppUtils {
 
