@@ -9,8 +9,6 @@ import java.util.List;
 
 /**
  * 网络状态工具类
- *
- * @author DragonsQC
  */
 public class NetStateUtils {
 

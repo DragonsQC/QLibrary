@@ -11,8 +11,6 @@ import com.elvishew.xlog.XLog;
  * <p/>
  * 基于xLog，使用前请初始化，QLog.init。
  * 若需要替换原来已使用的原生Log包名替换为换为com.dqc.qlibrary.utils.QLog.Log
- *
- * @author DragonsQC
  */
 public class QLog {
 

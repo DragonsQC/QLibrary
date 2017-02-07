@@ -8,9 +8,7 @@ import java.util.Map;
 /**
  * Android SharedPreferences 工具类
  * <p/>
- * 在 Application 中初始化
- *
- * @author DragonsQC
+ * 需要在 Application 中初始化
  */
 public class SPUtils {
 

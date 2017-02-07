@@ -22,8 +22,6 @@ import java.util.regex.Pattern;
 
 /**
  * 常用工具类集合
- *
- * @author DragonsQC
  */
 public class QUtils {
 
