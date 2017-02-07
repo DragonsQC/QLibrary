@@ -21,8 +21,12 @@ Step 2. Add the dependency
     }
 
 #工具类说明
- 类 | 描述
+ activity 相关类 | 描述
  ---  | ---
  [BaseAppCompatActivity](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/activity/BaseAppCompatActivity.java)| 简单封装startActivity()，start、finish带过度动画
  [BaseFragment](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/activity/BaseFragment.java)| 简单封装startActivity()
  [SwipeBackCompatActivity](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/activity/SwipeBackCompatActivity.java)| 简单封装startActivity()，start、finish带过度动画，可侧滑返回
+
+ 工具类 | 描述
+  ---  | ---
+ [AnimationUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/AnimationUtils)| 动画工具类
