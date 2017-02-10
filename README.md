@@ -21,14 +21,14 @@ Step 2. Add the dependency
     }
 
 #说明
- activity 相关类 | 描述
- ---  | ---
+ Activity 相关类 | 描述
+ --- | ---
  [BaseAppCompatActivity](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/activity/BaseAppCompatActivity.java)| 简单封装startActivity()，start、finish带过度动画
  [BaseFragment](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/activity/BaseFragment.java)| 简单封装startActivity()
- [SwipeBackCompatActivity](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/activity/SwipeBackCompatActivity.java)| 简单封装startActivity()，start、finish带过度动画，可侧滑返回
+ [BaseSwipeBackCompatActivity](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/activity/BaseSwipeBackCompatActivity.java)| 简单封装startActivity()，start、finish带过度动画，可侧滑返回
 
  工具类 | 描述
-  ---  | ---
+ --- | ---
  [AnimationUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/AnimationUtils.java)| 动画工具类
  [AppUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/AppUtils.java)| APP相关信息工具类
  [JsonResponseParser](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/JsonResponseParser.java)| xUtil json 解析器
@@ -47,4 +47,10 @@ Step 2. Add the dependency
  [ToastUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/ToastUtils.java)| Android Toast 工具类
  [VibratorUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/VibratorUtils.java)| Android 手机震动工具类
 
- ......
+ 第三方库 | 描述
+ --- | ---
+ [Apache Commons Codec](https://github.com/DragonsQC/QLibrary/tree/master/library/src/main/java/com/dqc/qlibrary/library/codec)| Apache Commons Codec v1.10
+ 【Android Support】|
+ >> compile 'com.android.support:support-v4:25.1.0' |
+ >> compile 'com.android.support:appcompat-v7:25.1.0' |
+ >> compile 'com.android.support:palette-v7:25.1.0' |

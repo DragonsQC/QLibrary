@@ -11,7 +11,7 @@ import com.dqc.qlibrary.library.swipeback.Utils;
 /**
  * 侧滑返回 Activity
  */
-public abstract class SwipeBackCompatActivity extends BaseAppCompatActivity implements SwipeBackActivityBase {
+public abstract class BaseSwipeBackCompatActivity extends BaseAppCompatActivity implements SwipeBackActivityBase {
     private SwipeBackActivityHelper mHelper;
 
     @Override
