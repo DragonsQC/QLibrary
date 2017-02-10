@@ -20,7 +20,7 @@ Step 2. Add the dependency
         compile 'com.github.DragonsQC:QLibrary:{X.X.X}'
     }
 
-#工具类说明
+#说明
  activity 相关类 | 描述
  ---  | ---
  [BaseAppCompatActivity](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/activity/BaseAppCompatActivity.java)| 简单封装startActivity()，start、finish带过度动画
@@ -31,5 +31,12 @@ Step 2. Add the dependency
   ---  | ---
  [AnimationUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/AnimationUtils)| 动画工具类
  [AppUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/AppUtils)| APP相关信息工具类
+ [JsonResponseParser](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/JsonResponseParser)| xUtil json 解析器
+ [KeyboardTool](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/KeyboardTool)| 键盘工具类
+ [ListViewUtil](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/ListViewUtil)| 动态设置嵌套 ListView 中高度
+ [NetStateUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/NetStateUtils)| 网络状态工具类
+ [QLog](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/QLog)| 日志工具类
+ [QUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/QUtils)| 常用 Java 工具类集合
+ [>>QUtils.FileUtil](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/QUtils.FileUtil)| 文件相关工具类
 
  ......

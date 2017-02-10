@@ -21,7 +21,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * 常用工具类集合
+ * 常用 Java 工具类集合
  */
 public class QUtils {
 
