@@ -10,7 +10,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * 键盘工具类
+ * Android 键盘工具类
  */
 public class KeyboardTool {
 

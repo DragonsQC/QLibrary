@@ -5,7 +5,7 @@ import android.content.Context;
 import android.os.Vibrator;
 
 /**
- * 手机震动工具类
+ * Android 手机震动工具类
  */
 public class VibratorUtils {
 
