@@ -37,6 +37,10 @@ Step 2. Add the dependency
  [NetStateUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/NetStateUtils.java)| 网络状态工具类
  [QLog](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/QLog.java)| 日志工具类
  [QUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/QUtils.java)| 常用 Java 工具类集合
- [>>QUtils.FileUtil](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/QUtils.java)| 文件相关工具类
+ [>>QUtils.FileUtil](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/QUtils.java#L35)| 文件相关工具类
+ [>>QUtils.MathUtil](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/QUtils.java#L187)| 数字相关工具类
+ [>>QUtils.DoubleUtil](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/QUtils.java#L230)| 小数计算精确类
+ [>>QUtils.StringUtil](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/QUtils.java#L328)| 字符串相关工具类
+ [>>QUtils.DateUtil](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/QUtils.java#L410)| 时间相关工具类
 
  ......
