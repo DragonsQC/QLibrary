@@ -58,7 +58,7 @@ Step 2. Add the dependency
  >> compile 'com.android.support:recyclerview-v7:25.1.0' | recyclerview-v7
  >> compile 'com.android.support:percent:25.1.0' | percent
  >> compile 'com.android.support:design:25.1.0' | design
- RxJava、RaAndroid |
+ 【RxJava、RaAndroid 】|
  >> compile 'io.reactivex.rxjava2:rxjava:2.0.1' | RxJava
  >> compile 'io.reactivex.rxjava2:rxandroid:2.0.1' | RxAndroid
  【Utils】 |
@@ -75,11 +75,11 @@ Step 2. Add the dependency
  >> compile 'com.github.bumptech.glide:glide:3.7.0' | Glide
  【Animation】 |
  >> compile 'com.nineoldandroids:library:2.4.0' | NineoldAndroids
- >> compile 'com.daimajia.easing:library:1.0.1@aar'<br/>compile 'com.daimajia.androidanimations:library:1.1.3@aar' | AndroidViewAnimations
+ >> compile 'com.daimajia.easing:library:1.0.1@aar'<br/>>> compile 'com.daimajia.androidanimations:library:1.1.3@aar' | AndroidViewAnimations
  【Widget】 |
  >> compile 'com.beardedhen:androidbootstrap:2.3.1' | Bootstrap
  >> compile 'com.flaviofaria:kenburnsview:1.0.7' | KenBurnsView
- >> compile 'com.twotoasters.jazzylistview:library:1.2.1'<br/>compile 'com.twotoasters.jazzylistview:library-recyclerview:1.2.1' | 带载入特效的ListView、GridView、RecyclerView
+ >> compile 'com.twotoasters.jazzylistview:library:1.2.1'<br/>>> compile 'com.twotoasters.jazzylistview:library-recyclerview:1.2.1' | 带载入特效的ListView、GridView、RecyclerView
  >> compile 'com.afollestad.material-dialogs:core:0.9.2.3' | Material Dialogs
  >> compile 'com.github.rey5137:material:1.2.4' | Material Design Library
  >> compile 'com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.10.3@aar' | 拖拽排序 Advanced RecyclerView
