@@ -84,7 +84,7 @@ dependencies {
     compile 'com.beardedhen:androidbootstrap:2.3.1'
     //KenBurnsView [https://github.com/flavioarfaria/KenBurnsView]
     compile 'com.flaviofaria:kenburnsview:1.0.7'
-    //ListView、GridView、RecyclerView 载入特效 [https://github.com/twotoasters/JazzyListView]
+    //带载入特效的ListView、GridView、RecyclerView [https://github.com/twotoasters/JazzyListView]
     compile 'com.twotoasters.jazzylistview:library:1.2.1'
     compile 'com.twotoasters.jazzylistview:library-recyclerview:1.2.1'
     //Material Dialogs [https://github.com/afollestad/material-dialogs]
