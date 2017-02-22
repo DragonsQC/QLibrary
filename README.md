@@ -51,13 +51,13 @@ Step 2. Add the dependency
  --- | ---
  [Apache Commons Codec](https://github.com/DragonsQC/QLibrary/tree/master/library/src/main/java/com/dqc/qlibrary/library/codec)| Apache Commons Codec v1.10
  【Android Support】|
- >> compile 'com.android.support:support-v4:25.1.0' | support-v4
- >> compile 'com.android.support:appcompat-v7:25.1.0' | appcompat-v7
- >> compile 'com.android.support:palette-v7:25.1.0' | palette-v7
- >> compile 'com.android.support:cardview-v7:25.1.0' | cardview-v7
- >> compile 'com.android.support:recyclerview-v7:25.1.0' | recyclerview-v7
- >> compile 'com.android.support:percent:25.1.0' | percent
- >> compile 'com.android.support:design:25.1.0' | design
+ >> compile 'com.android.support:support-v4:25.2.0' | support-v4
+ >> compile 'com.android.support:appcompat-v7:25.2.0' | appcompat-v7
+ >> compile 'com.android.support:palette-v7:25.21.0' | palette-v7
+ >> compile 'com.android.support:cardview-v7:25.2.0' | cardview-v7
+ >> compile 'com.android.support:recyclerview-v7:25.2.0' | recyclerview-v7
+ >> compile 'com.android.support:percent:25.2.0' | percent
+ >> compile 'com.android.support:design:25.2.0' | design
  【RxJava、RaAndroid 】|
  >> compile 'io.reactivex.rxjava2:rxjava:2.0.1' | RxJava
  >> compile 'io.reactivex.rxjava2:rxandroid:2.0.1' | RxAndroid
