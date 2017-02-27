@@ -85,6 +85,7 @@ Step 2. Add the dependency
  >> compile 'com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.10.3@aar' | 拖拽排序 Advanced RecyclerView
 【Other】 |
 >> compile 'org.projectlombok:lombok:1.16.14' | lombok
+
  资源文件 | 描述
  --- | ---
   [【res/anim】](https://github.com/DragonsQC/QLibrary/tree/master/library/src/main/res/anim) | 各种动画资源
