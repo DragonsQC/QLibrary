@@ -35,17 +35,17 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 //【Android Support】*******************************************************************************
-    compile 'com.android.support:support-v4:25.2.0'
-    compile 'com.android.support:appcompat-v7:25.2.0'
-    compile 'com.android.support:palette-v7:25.2.0'
-    compile 'com.android.support:cardview-v7:25.2.0'
-    compile 'com.android.support:recyclerview-v7:25.2.0'
-    compile 'com.android.support:percent:25.2.0'
-    compile 'com.android.support:design:25.2.0'
+    compile 'com.android.support:support-v4:25.3.0'
+    compile 'com.android.support:appcompat-v7:25.3.0'
+    compile 'com.android.support:palette-v7:25.3.0'
+    compile 'com.android.support:cardview-v7:25.3.0'
+    compile 'com.android.support:recyclerview-v7:25.3.0'
+    compile 'com.android.support:percent:25.3.0'
+    compile 'com.android.support:design:25.3.0'
 
 //【RxJava、RaAndroid】 [https://github.com/ReactiveX/RxAndroid]
-    compile 'io.reactivex.rxjava2:rxjava:2.0.1'
-    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+//    compile 'io.reactivex.rxjava2:rxjava:2.0.1'
+//    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
 
 //【Utils】*****************************************************************************************
     //xLog [https://github.com/elvishew/xLog]
@@ -56,13 +56,13 @@ dependencies {
 
 //【HTTP】******************************************************************************************
     //xUtils [https://github.com/wyouflf/xUtils3]
-    compile 'org.xutils:xutils:3.3.40'
+    compile 'org.xutils:xutils:3.3.42'
     //Retrofit2 [https://github.com/square/retrofit]
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
     //converter-gson [http://www.mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson]
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
     //logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
-    compile 'com.squareup.okhttp3:logging-interceptor:3.5.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
     //fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
     compile 'com.alibaba:fastjson:1.1.56.android'
 
@@ -76,8 +76,8 @@ dependencies {
     //NineoldAndroids [https://github.com/JakeWharton/NineOldAndroids]
     compile 'com.nineoldandroids:library:2.4.0'
     //"YoYo" 动画效果 AndroidViewAnimations [https://github.com/daimajia/AndroidViewAnimations]
-    compile 'com.daimajia.easing:library:1.0.1@aar'
-    compile 'com.daimajia.androidanimations:library:1.1.3@aar'
+    compile 'com.daimajia.easing:library:2.0@aar'
+    compile 'com.daimajia.androidanimations:library:2.2@aar'
 
 //【Widget】****************************************************************************************
     //Bootstrap [https://github.com/Bearded-Hen/Android-Bootstrap]
@@ -88,11 +88,11 @@ dependencies {
     compile 'com.twotoasters.jazzylistview:library:1.2.1'
     compile 'com.twotoasters.jazzylistview:library-recyclerview:1.2.1'
     //Material Dialogs [https://github.com/afollestad/material-dialogs]
-    compile 'com.afollestad.material-dialogs:core:0.9.2.3'
+    compile 'com.afollestad.material-dialogs:core:0.9.4.1'
     //Material Design Library [https://github.com/rey5137/Material]
     compile 'com.github.rey5137:material:1.2.4'
     //拖拽排序 Advanced RecyclerView [https://github.com/h6ah4i/android-advancedrecyclerview]
-    compile ('com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.10.3@aar'){
+    compile ('com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.10.4@aar'){
         transitive=true
     }
 
