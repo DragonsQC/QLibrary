@@ -79,7 +79,7 @@ Step 2. Add the dependency
  【Widget】 |
   compile 'com.beardedhen:androidbootstrap:2.3.1' | Bootstrap
   compile 'com.flaviofaria:kenburnsview:1.0.7' | KenBurnsView
-  compile 'com.twotoasters.jazzylistview:library:1.2.1'<br/> compile 'com.twotoasters.jazzylistview:library-recyclerview:1.2.1' | 带载入特效的ListView、GridView、RecyclerView
+  compile 'com.twotoasters.jazzylistview:library:1.2.1'<br/>compile 'com.twotoasters.jazzylistview:library-recyclerview:1.2.1' | 带载入特效的ListView、GridView、RecyclerView
   compile 'com.afollestad.material-dialogs:core:0.9.2.3' | Material Dialogs
   compile 'com.github.rey5137:material:1.2.4' | Material Design Library
   compile 'com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.10.3@aar' | 拖拽排序 Advanced RecyclerView
