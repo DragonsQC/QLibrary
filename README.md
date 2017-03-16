@@ -51,40 +51,40 @@ Step 2. Add the dependency
  --- | ---
  [Apache Commons Codec](https://github.com/DragonsQC/QLibrary/tree/master/library/src/main/java/com/dqc/qlibrary/library/codec)| Apache Commons Codec v1.10
  【Android Support】|
- >> compile 'com.android.support:support-v4:25.2.0' | support-v4
- >> compile 'com.android.support:appcompat-v7:25.2.0' | appcompat-v7
- >> compile 'com.android.support:palette-v7:25.21.0' | palette-v7
- >> compile 'com.android.support:cardview-v7:25.2.0' | cardview-v7
- >> compile 'com.android.support:recyclerview-v7:25.2.0' | recyclerview-v7
- >> compile 'com.android.support:percent:25.2.0' | percent
- >> compile 'com.android.support:design:25.2.0' | design
+  compile 'com.android.support:support-v4:25.2.0' | support-v4
+  compile 'com.android.support:appcompat-v7:25.2.0' | appcompat-v7
+  compile 'com.android.support:palette-v7:25.21.0' | palette-v7
+  compile 'com.android.support:cardview-v7:25.2.0' | cardview-v7
+  compile 'com.android.support:recyclerview-v7:25.2.0' | recyclerview-v7
+  compile 'com.android.support:percent:25.2.0' | percent
+  compile 'com.android.support:design:25.2.0' | design
  【RxJava、RaAndroid 】|
- >> compile 'io.reactivex.rxjava2:rxjava:2.0.1' | RxJava
- >> compile 'io.reactivex.rxjava2:rxandroid:2.0.1' | RxAndroid
+  compile 'io.reactivex.rxjava2:rxjava:2.0.1' | RxJava
+  compile 'io.reactivex.rxjava2:rxandroid:2.0.1' | RxAndroid
  【Utils】 |
- >> compile 'com.elvishew:xlog:1.3.0' | xlog
- >> compile 'com.yalantis:ucrop:2.2.0-native' | uCrop
+  compile 'com.elvishew:xlog:1.3.0' | xlog
+  compile 'com.yalantis:ucrop:2.2.0-native' | uCrop
  【HTTP】 |
- >> compile 'org.xutils:xutils:3.3.40' | xUtils3
- >> compile 'com.squareup.retrofit2:retrofit:2.1.0' | Retrofit2
- >> compile 'com.squareup.retrofit2:converter-gson:2.1.0' | Retrofit2 converter-gson
- >> compile 'com.squareup.okhttp3:logging-interceptor:3.5.0' | okhttp3 logging-interceptor
- >> compile 'com.alibaba:fastjson:1.1.56.android' | Fastjson
+  compile 'org.xutils:xutils:3.3.40' | xUtils3
+  compile 'com.squareup.retrofit2:retrofit:2.1.0' | Retrofit2
+  compile 'com.squareup.retrofit2:converter-gson:2.1.0' | Retrofit2 converter-gson
+  compile 'com.squareup.okhttp3:logging-interceptor:3.5.0' | okhttp3 logging-interceptor
+  compile 'com.alibaba:fastjson:1.1.56.android' | Fastjson
  【图片加载】 |
- >> compile 'com.squareup.picasso:picasso:2.5.2' | Picasso
- >> compile 'com.github.bumptech.glide:glide:3.7.0' | Glide
+  compile 'com.squareup.picasso:picasso:2.5.2' | Picasso
+  compile 'com.github.bumptech.glide:glide:3.7.0' | Glide
  【Animation】 |
- >> compile 'com.nineoldandroids:library:2.4.0' | NineoldAndroids
- >> compile 'com.daimajia.easing:library:1.0.1@aar'<br/>>> compile 'com.daimajia.androidanimations:library:1.1.3@aar' | AndroidViewAnimations
+  compile 'com.nineoldandroids:library:2.4.0' | NineoldAndroids
+  compile 'com.daimajia.easing:library:1.0.1@aar'<br/> compile 'com.daimajia.androidanimations:library:1.1.3@aar' | AndroidViewAnimations
  【Widget】 |
- >> compile 'com.beardedhen:androidbootstrap:2.3.1' | Bootstrap
- >> compile 'com.flaviofaria:kenburnsview:1.0.7' | KenBurnsView
- >> compile 'com.twotoasters.jazzylistview:library:1.2.1'<br/>>> compile 'com.twotoasters.jazzylistview:library-recyclerview:1.2.1' | 带载入特效的ListView、GridView、RecyclerView
- >> compile 'com.afollestad.material-dialogs:core:0.9.2.3' | Material Dialogs
- >> compile 'com.github.rey5137:material:1.2.4' | Material Design Library
- >> compile 'com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.10.3@aar' | 拖拽排序 Advanced RecyclerView
+  compile 'com.beardedhen:androidbootstrap:2.3.1' | Bootstrap
+  compile 'com.flaviofaria:kenburnsview:1.0.7' | KenBurnsView
+  compile 'com.twotoasters.jazzylistview:library:1.2.1'<br/> compile 'com.twotoasters.jazzylistview:library-recyclerview:1.2.1' | 带载入特效的ListView、GridView、RecyclerView
+  compile 'com.afollestad.material-dialogs:core:0.9.2.3' | Material Dialogs
+  compile 'com.github.rey5137:material:1.2.4' | Material Design Library
+  compile 'com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.10.3@aar' | 拖拽排序 Advanced RecyclerView
 【Other】 |
->> compile 'org.projectlombok:lombok:1.16.14' | lombok
+  compile 'org.projectlombok:lombok:1.16.14' | lombok
 
  资源文件 | 描述
  --- | ---
