@@ -1,6 +1,6 @@
-#Android 常用工具库
+# Android 常用工具库
 
-#Quick Start
+# Quick Start
 [![](https://jitpack.io/v/DragonsQC/QLibrary.svg)](https://jitpack.io/#DragonsQC/QLibrary)
 
 Step 1. Add the JitPack repository to your build file
@@ -20,7 +20,7 @@ Step 2. Add the dependency
         compile 'com.github.DragonsQC:QLibrary:{X.X.X}'
     }
 
-#说明
+# 说明
  Activity 相关类 | 描述
  --- | ---
  [BaseAppCompatActivity](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/activity/BaseAppCompatActivity.java)| 简单封装startActivity()，start、finish带过度动画
