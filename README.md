@@ -82,11 +82,12 @@ Step 2. Add the dependency
 【Other】 |
   compile 'org.projectlombok:lombok:{*version}' | lombok
 
-{*version}：均为最新稳定版本
  资源文件 | 描述
  --- | ---
   [【res/anim】](https://github.com/DragonsQC/QLibrary/tree/master/library/src/main/res/anim) | 各种动画资源
   [【res/values/colors.xml】](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/res/values/colors.xml) | 官方 Material Design 各种颜色
   [【res/values/dimens.xml】](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/res/values/dimens.xml) | 常用间距（dp）、文字大小（sp）
+
+{*version}：均为最新稳定版本
 
 MORE AND MORE ......
