@@ -60,7 +60,6 @@ Step 2. Add the dependency
   compile 'com.android.support:design:{*version}' | design
  【Utils】 |
   compile 'com.elvishew:xlog:{*version}' | xlog
-  compile 'com.yalantis:ucrop:{*version}-native' | uCrop
  【HTTP】 |
   compile 'org.xutils:xutils:{*version}' | xUtils3
   compile 'com.squareup.retrofit2:retrofit:{*version}' | Retrofit2

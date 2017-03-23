@@ -50,9 +50,6 @@ dependencies {
 //【Utils】*****************************************************************************************
     //xLog [https://github.com/elvishew/xLog]
     compile 'com.elvishew:xlog:1.3.0'
-    //UCrop [https://github.com/Yalantis/uCrop]
-    //compile 'com.yalantis:ucrop:2.2.0'
-    compile 'com.yalantis:ucrop:2.2.0-native'
 
 //【HTTP】******************************************************************************************
     //xUtils [https://github.com/wyouflf/xUtils3]
@@ -100,15 +97,14 @@ dependencies {
     //lombok [https://mvnrepository.com/artifact/org.projectlombok/lombok]
     compile 'org.projectlombok:lombok:1.16.14'
 
-
 }
 repositories {
     jcenter()
     mavenLocal()
-    //mavenCentral()
-    //maven { url 'http://maven.oschina.net/content/groups/public/' }
+//    mavenCentral()
+//    maven { url 'http://maven.oschina.net/content/groups/public/' }
 //    maven { url 'https://jcenter.bintray.com' }
-    //maven { url "https://jitpack.io" }
+//    maven { url "https://jitpack.io" }
 }
 
 
