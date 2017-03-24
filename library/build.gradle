@@ -35,6 +35,7 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 //【Android Support】*******************************************************************************
+    //noinspection GradleCompatible
     compile 'com.android.support:support-v4:25.3.0'
     compile 'com.android.support:appcompat-v7:25.3.0'
     compile 'com.android.support:palette-v7:25.3.0'
@@ -53,7 +54,7 @@ dependencies {
 
 //【HTTP】******************************************************************************************
     //xUtils [https://github.com/wyouflf/xUtils3]
-    compile 'org.xutils:xutils:3.3.42'
+    compile 'org.xutils:xutils:3.4.0'
     //Retrofit2 [https://github.com/square/retrofit]
     compile 'com.squareup.retrofit2:retrofit:2.2.0'
     //converter-gson [http://www.mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson]
@@ -85,7 +86,7 @@ dependencies {
     compile 'com.twotoasters.jazzylistview:library:1.2.1'
     compile 'com.twotoasters.jazzylistview:library-recyclerview:1.2.1'
     //Material Dialogs [https://github.com/afollestad/material-dialogs]
-    compile 'com.afollestad.material-dialogs:core:0.9.4.1'
+    compile 'com.afollestad.material-dialogs:core:0.9.4.2'
     //Material Design Library [https://github.com/rey5137/Material]
     compile 'com.github.rey5137:material:1.2.4'
     //拖拽排序 Advanced RecyclerView [https://github.com/h6ah4i/android-advancedrecyclerview]
@@ -95,7 +96,7 @@ dependencies {
 
 //【Other】*****************************************************************************************
     //lombok [https://mvnrepository.com/artifact/org.projectlombok/lombok]
-    compile 'org.projectlombok:lombok:1.16.14'
+    compile 'org.projectlombok:lombok:1.16.16'
 
 }
 repositories {
