@@ -5,18 +5,18 @@ import android.util.AttributeSet;
 import android.widget.GridView;
 
 /**
- * 解决 ScrollView 等控件中嵌套 GridView 显示不正常的问题
+ * 解决嵌套 GridView 显示不正常的问题，显示所有数据，不出现滚动条
  */
-public class CustomGridView extends GridView {
-    public CustomGridView(Context context, AttributeSet attrs) {
+public class QGridView extends GridView {
+    public QGridView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public CustomGridView(Context context) {
+    public QGridView(Context context) {
         super(context);
     }
 
-    public CustomGridView(Context context, AttributeSet attrs, int defStyle) {
+    public QGridView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 

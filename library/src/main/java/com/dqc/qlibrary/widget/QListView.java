@@ -5,21 +5,21 @@ import android.util.AttributeSet;
 import android.widget.ListView;
 
 /**
- * 解决 ScrollView 等控件中嵌套 ListView 显示不正常的问题
+ * 解决嵌套 ListView 显示不正常的问题，显示所有数据，不出现滚动条
  */
-public class CustomListView extends ListView {
+public class QListView extends ListView {
 
-    public CustomListView(Context context) {
+    public QListView(Context context) {
         // TODO Auto-generated method stub
         super(context);
     }
 
-    public CustomListView(Context context, AttributeSet attrs) {
+    public QListView(Context context, AttributeSet attrs) {
         // TODO Auto-generated method stub
         super(context, attrs);
     }
 
-    public CustomListView(Context context, AttributeSet attrs, int defStyle) {
+    public QListView(Context context, AttributeSet attrs, int defStyle) {
         // TODO Auto-generated method stub
         super(context, attrs, defStyle);
     }

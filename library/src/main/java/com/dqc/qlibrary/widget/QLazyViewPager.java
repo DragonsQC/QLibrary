@@ -64,7 +64,7 @@ import java.util.Comparator;
  * the compatibility library, requiring changes to the source code
  * of apps when they are compiled against the newer version.</p>
  */
-public class CustomLazyViewPager extends ViewGroup {
+public class QLazyViewPager extends ViewGroup {
     /**
      * Indicates that the pager is in an idle, settled state. The current page
      * is fully in view and no animation is in progress.
@@ -153,12 +153,12 @@ public class CustomLazyViewPager extends ViewGroup {
      */
     private boolean isCanScroll = true;
 
-    public CustomLazyViewPager(Context context) {
+    public QLazyViewPager(Context context) {
         super(context);
         initViewPager();
     }
 
-    public CustomLazyViewPager(Context context, AttributeSet attrs) {
+    public QLazyViewPager(Context context, AttributeSet attrs) {
         super(context, attrs);
         initViewPager();
     }
@@ -1632,7 +1632,7 @@ public class CustomLazyViewPager extends ViewGroup {
          * @param positionOffset       Value from [0, 1) indicating the offset from the page at position.
          * @param positionOffsetPixels Value in pixels indicating the offset from position.
          */
-        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels);
+        void onPageScrolled(int position, float positionOffset, int positionOffsetPixels);
 
         /**
          * This method will be invoked when a new page becomes selected. Animation is not
@@ -1640,7 +1640,7 @@ public class CustomLazyViewPager extends ViewGroup {
          *
          * @param position Position index of the new selected page.
          */
-        public void onPageSelected(int position);
+        void onPageSelected(int position);
 
         /**
          * Called when the scroll state changes. Useful for discovering when the user
@@ -1652,7 +1652,7 @@ public class CustomLazyViewPager extends ViewGroup {
          * @see android.support.v4.view.ViewPager#SCROLL_STATE_DRAGGING
          * @see android.support.v4.view.ViewPager#SCROLL_STATE_SETTLING
          */
-        public void onPageScrollStateChanged(int state);
+        void onPageScrollStateChanged(int state);
     }
 
     static class ItemInfo {
@@ -1662,9 +1662,9 @@ public class CustomLazyViewPager extends ViewGroup {
     }
 
     /**
-     * Simple implementation of the {@link CustomLazyViewPager.OnPageChangeListener} interface with stub
+     * Simple implementation of the {@link QLazyViewPager.OnPageChangeListener} interface with stub
      * implementations of each method. Extend this if you do not intend to override
-     * every method of {@link CustomLazyViewPager.OnPageChangeListener}.
+     * every method of {@link QLazyViewPager.OnPageChangeListener}.
      */
     public static class SimpleOnPageChangeListener implements OnPageChangeListener {
         @Override

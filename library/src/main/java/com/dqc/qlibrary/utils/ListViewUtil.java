@@ -6,7 +6,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 
 /**
- * 动态设置嵌套 ListView 中高度
+ * 动态设置 ListView 高度
  */
 public class ListViewUtil {
     public static void setListViewHeightBasedOnChildren(ListView listView) {

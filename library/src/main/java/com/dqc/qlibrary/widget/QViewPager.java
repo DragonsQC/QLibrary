@@ -12,16 +12,16 @@ import com.rey.material.widget.Slider;
 /**
  * 可设置是否滑动的 ViewPager
  */
-public class CustomViewPager extends ViewPager {
+public class QViewPager extends ViewPager {
 
 
     private boolean isCanScroll = true;
 
-    public CustomViewPager(Context context) {
+    public QViewPager(Context context) {
         super(context);
     }
 
-    public CustomViewPager(Context context, AttributeSet attrs) {
+    public QViewPager(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
@@ -45,35 +45,23 @@ public class CustomViewPager extends ViewPager {
 
     @Override
     public boolean onTouchEvent(MotionEvent arg0) {
-        // TODO Auto-generated method stub
-        if (isCanScroll) {
-            return super.onTouchEvent(arg0);
-        } else {
-            return false;
-        }
+        return isCanScroll && super.onTouchEvent(arg0);
 
     }
 
     @Override
     public void setCurrentItem(int item, boolean smoothScroll) {
-        // TODO Auto-generated method stub
         super.setCurrentItem(item, smoothScroll);
     }
 
     @Override
     public void setCurrentItem(int item) {
-        // TODO Auto-generated method stub
         super.setCurrentItem(item);
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent arg0) {
-        // TODO Auto-generated method stub
-        if (isCanScroll) {
-            return super.onInterceptTouchEvent(arg0);
-        } else {
-            return false;
-        }
+        return isCanScroll && super.onInterceptTouchEvent(arg0);
 
     }
 }

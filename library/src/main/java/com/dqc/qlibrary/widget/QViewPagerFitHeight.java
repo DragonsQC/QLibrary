@@ -11,13 +11,13 @@ import com.rey.material.widget.Switch;
 /**
  * 自动适应高度 ViewPager
  */
-public class CustomViewPagerFitHeight extends ViewPager {
+public class QViewPagerFitHeight extends ViewPager {
 
-    public CustomViewPagerFitHeight(Context context, AttributeSet attrs) {
+    public QViewPagerFitHeight(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public CustomViewPagerFitHeight(Context context) {
+    public QViewPagerFitHeight(Context context) {
         super(context);
     }
 
