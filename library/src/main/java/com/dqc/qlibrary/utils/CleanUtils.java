@@ -11,7 +11,7 @@ import java.io.File;
  * 清除SharedPreference，
  * 清除files和清除自定义目录
  */
-public class DataCleanUtils {
+public class CleanUtils {
     /**
      * 清除本应用内部缓存(/data/data/com.xxx.xxx/cache)
      *
