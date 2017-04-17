@@ -16,8 +16,8 @@ public class SPUtils {
     private static SharedPreferences        sharedPreferences;
     private static SharedPreferences.Editor editor;
 
-    public static void init(String appName) {
-        SP_NAME = appName;
+    public static void init(String spName) {
+        SP_NAME = spName;
     }
 
     public static void putBoolen(Context context, String key, boolean val) {
