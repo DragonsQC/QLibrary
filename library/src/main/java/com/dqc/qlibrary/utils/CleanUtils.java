@@ -22,12 +22,21 @@ public class CleanUtils {
     }
 
     /**
+     * 清除/data/data/com.xxx.xxx/files下的内容
+     *
+     * @param context Context
+     */
+    public static void cleanFiles(Context context) {
+        deleteFilesByDir(context.getFilesDir());
+    }
+
+    /**
      * 清除本应用所有数据库(/data/data/com.xxx.xxx/databases)
      *
      * @param context Context
      */
-    public static void cleanDatabases(Context context) {
-        deleteFilesByDir(new File("/data/data/" + context.getPackageName() + "/databases"));
+    public static void cleanDB(Context context) {
+        deleteFilesByDir(new File(context.getFilesDir().getParent() + File.separator + "databases"));
     }
 
     /**
@@ -35,8 +44,8 @@ public class CleanUtils {
      *
      * @param context Context
      */
-    public static void cleanSharedPreference(Context context) {
-        deleteFilesByDir(new File("/data/data/" + context.getPackageName() + "/shared_prefs"));
+    public static void cleanSP(Context context) {
+        deleteFilesByDir(new File(context.getFilesDir().getParent() + File.separator + "shared_prefs"));
     }
 
     /**
@@ -45,18 +54,10 @@ public class CleanUtils {
      * @param context Context
      * @param dbName  数据库文件名
      */
-    public static void cleanDatabaseByName(Context context, String dbName) {
+    public static void cleanDBByName(Context context, String dbName) {
         context.deleteDatabase(dbName);
     }
 
-    /**
-     * 清除/data/data/com.xxx.xxx/files下的内容
-     *
-     * @param context Context
-     */
-    public static void cleanFiles(Context context) {
-        deleteFilesByDir(context.getFilesDir());
-    }
 
     /**
      * 清除外部cache下的内容(/mnt/sdcard/android/data/com.xxx.xxx/cache)
@@ -87,8 +88,8 @@ public class CleanUtils {
     public static void cleanApplicationData(Context context, String... filepath) {
         cleanCacheDir(context);
         cleanExternalCache(context);
-        cleanDatabases(context);
-        cleanSharedPreference(context);
+        cleanDB(context);
+        cleanSP(context);
         cleanFiles(context);
         for (String filePath : filepath) {
             cleanCustomCache(filePath);
