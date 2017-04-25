@@ -74,6 +74,7 @@ Step 2. Add the dependency
   compile 'com.nineoldandroids:library:{*version}' | NineoldAndroids
   compile 'com.daimajia.easing:library:{*version}@aar'<br/> compile 'com.daimajia.androidanimations:library:1.1.3@aar' | AndroidViewAnimations
  【Widget】 |
+  compile 'de.hdodenhof:circleimageview:{*version}' | CircleImageView
   compile 'com.beardedhen:androidbootstrap:{*version}' | Bootstrap
   compile 'com.flaviofaria:kenburnsview:{*version}' | KenBurnsView
   compile 'com.twotoasters.jazzylistview:library:{*version}'<br/>compile 'com.twotoasters.jazzylistview:library-recyclerview:{*version}' | 带载入特效的ListView、GridView、RecyclerView

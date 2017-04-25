@@ -77,6 +77,8 @@ dependencies {
     compile 'com.daimajia.androidanimations:library:2.2@aar'
 
 //【Widget】****************************************************************************************
+    //圆形ImageView [https://github.com/hdodenhof/CircleImageView]
+    compile 'de.hdodenhof:circleimageview:2.1.0'
     //Bootstrap [https://github.com/Bearded-Hen/Android-Bootstrap]
     compile 'com.beardedhen:androidbootstrap:2.3.1'
     //KenBurnsView [https://github.com/flavioarfaria/KenBurnsView]
