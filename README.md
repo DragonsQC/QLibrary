@@ -58,6 +58,7 @@ Step 2. Add the dependency
   compile 'com.android.support:cardview-v7:{*version}' | cardview-v7
   compile 'com.android.support:recyclerview-v7:{*version}' | recyclerview-v7
   compile 'com.android.support:preference-v7:{*version}' | preference-v7
+  compile 'com.android.support:preference-v14:{*version}' | preference-v14
   compile 'com.android.support:percent:{*version}' | percent
   compile 'com.android.support:design:{*version}' | design
  【Utils】 |
