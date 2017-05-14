@@ -62,7 +62,7 @@
 
     <style name="split_line_h_min_black">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">4dp</item>
+        <item name="android:layout_height">2dp</item>
         <item name="android:background">@color/black</item>
     </style>
 
