@@ -88,22 +88,6 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     protected abstract TransitionMode getOverridePendingTransitionMode();
 
     /**
-     * 隐藏输入法
-     */
-    public void hideInputMethod() {
-        // 隐藏输入法
-        InputMethodManager imm = (InputMethodManager) getApplicationContext().getSystemService(Context.INPUT_METHOD_SERVICE);
-        if (imm.isActive()) { //是否打开输入法
-            //隐藏输入法
-            try {
-                imm.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(), 0);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    /**
      * startActivity
      *
      * @param clazz Activity.class
