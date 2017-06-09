@@ -55,13 +55,13 @@ dependencies {
     //xUtils [https://github.com/wyouflf/xUtils3]
     compile 'org.xutils:xutils:3.5.0'
     //Retrofit2 [https://github.com/square/retrofit]
-    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
     //converter-gson [http://www.mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson]
-    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     //logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
-    compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.8.0'
     //fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
-    compile 'com.alibaba:fastjson:1.1.56.android'
+    compile 'com.alibaba:fastjson:1.1.58.android'
 
 //【图片加载】***************************************************************************************
     //Picasso [https://github.com/square/picasso]
@@ -87,11 +87,11 @@ dependencies {
     compile 'com.twotoasters.jazzylistview:library:1.2.1'
     compile 'com.twotoasters.jazzylistview:library-recyclerview:1.2.1'
     //Material Dialogs [https://github.com/afollestad/material-dialogs]
-    compile 'com.afollestad.material-dialogs:core:0.9.4.4'
+    compile 'com.afollestad.material-dialogs:core:0.9.4.5'
     //Material Design Library [https://github.com/rey5137/Material]
     compile 'com.github.rey5137:material:1.2.4'
     //拖拽排序 Advanced RecyclerView [https://github.com/h6ah4i/android-advancedrecyclerview]
-    compile('com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.10.5@aar') {
+    compile('com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.10.6@aar') {
         transitive = true
     }
 

@@ -1,18 +1,20 @@
-
+apply plugin: 'com.github.ben-manes.versions'
 buildscript {
     repositories {
         jcenter()
     }
     dependencies {
         //[https://jcenter.bintray.com/com/android/tools/build/gradle/]
-        classpath 'com.android.tools.build:gradle:2.3.1'
+        classpath 'com.android.tools.build:gradle:2.3.3'
 
         //Java8 特性支持 [http://www.mvnrepository.com/artifact/me.tatarka/gradle-retrolambda]
-        classpath 'me.tatarka:gradle-retrolambda:3.6.0'
+        classpath 'me.tatarka:gradle-retrolambda:3.6.1'
 
         //[http://mvnrepository.com/artifact/com.github.dcendents/android-maven-gradle-plugin]
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
 
+        //[https://github.com/ben-manes/gradle-versions-plugin]
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.15.0'
     }
 }
 
