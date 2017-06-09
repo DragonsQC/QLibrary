@@ -30,6 +30,10 @@ android {
         exclude 'META-INF/ASL2.0'
     }
 
+    lintOptions {
+        abortOnError false
+    }
+
 }
 
 dependencies {
@@ -111,7 +115,6 @@ repositories {
 //    maven { url "https://jitpack.io" }
 }
 
-
 //def siteUrl = 'https://github.com/DragonsQC'
 //def gitUrl = 'https://github.com/DragonsQC/QLibrary.git'
 //install {
@@ -147,7 +150,6 @@ repositories {
 //    }
 //}
 
-
 // 指定编码
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
@@ -160,7 +162,7 @@ task sourcesJar(type: Jar) {
 }
 
 task javadoc(type: Javadoc) {
-    failOnError  false
+    failOnError false
     source = android.sourceSets.main.java.sourceFiles
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
     classpath += configurations.compile
