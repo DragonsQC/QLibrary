@@ -19,6 +19,7 @@ public abstract class BaseSwipeBackCompatActivity extends BaseAppCompatActivity 
         super.onCreate(savedInstanceState);
         mHelper = new SwipeBackActivityHelper(this);
         mHelper.onActivityCreate();
+
     }
 
     @Override
@@ -50,4 +51,5 @@ public abstract class BaseSwipeBackCompatActivity extends BaseAppCompatActivity 
         Utils.convertActivityToTranslucent(this);
         getSwipeBackLayout().scrollToFinishActivity();
     }
+
 }

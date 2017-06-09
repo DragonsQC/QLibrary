@@ -1,12 +1,11 @@
 package com.dqc.qlibrary.activity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.inputmethod.InputMethodManager;
 
 import com.dqc.qlibrary.R;
+import com.jaeger.library.StatusBarUtil;
 
 /**
  * BaseAppCompatActivity
@@ -41,11 +40,6 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     }
 
     @Override
-    public void setContentView(int layoutResID) {
-        super.setContentView(layoutResID);
-    }
-
-    @Override
     public void finish() {
         super.finish();
         if (toggleOverridePendingTransition()) {
@@ -72,9 +66,23 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
+    /**
+     * 设置状态栏颜色
+     *
+     * @param color Color
+     */
+    public void setStatusBarColor(int color) {
+        StatusBarUtil.setColor(this, color);
+    }
+
+    /**
+     * 设置状态栏颜色和透明度
+     *
+     * @param color Color
+     * @param alpha 状态栏的透明度 0~255
+     */
+    public void setStatusBarColor(int color, int alpha) {
+        StatusBarUtil.setColor(this, color, alpha);
     }
 
     /**

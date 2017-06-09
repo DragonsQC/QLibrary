@@ -50,6 +50,8 @@ dependencies {
 //【Utils】*****************************************************************************************
     //xLog [https://github.com/elvishew/xLog]
     compile 'com.elvishew:xlog:1.3.0'
+    //沉浸式状态栏 [https://github.com/laobie/StatusBarUtil]
+    compile 'com.jaeger.statusbarutil:library:1.4.0'
 
 //【HTTP】******************************************************************************************
     //xUtils [https://github.com/wyouflf/xUtils3]
