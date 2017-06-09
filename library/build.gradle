@@ -112,40 +112,40 @@ repositories {
 }
 
 
-def siteUrl = 'https://github.com/DragonsQC'
-def gitUrl = 'https://github.com/DragonsQC/QLibrary.git'
-install {
-    repositories.mavenInstaller {
-        // This generates POM.xml with proper parameters
-        pom {
-            project {
-                packaging 'aar'
-                // 项目描述
-                name 'Qlibrary'
-                url siteUrl
-                // Set your license
-                licenses {
-                    license {
-                        name 'The Apache Software License, Version 2.0'
-                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                    }
-                }
-                developers {
-                    developer { //开发者基本信息
-                        id 'DragonsQC'
-                        name 'DragonsQC'
-                        email 'tkzl@vip.qq.com'
-                    }
-                }
-                scm {
-                    connection gitUrl
-                    developerConnection gitUrl
-                    url siteUrl
-                }
-            }
-        }
-    }
-}
+//def siteUrl = 'https://github.com/DragonsQC'
+//def gitUrl = 'https://github.com/DragonsQC/QLibrary.git'
+//install {
+//    repositories.mavenInstaller {
+//        // This generates POM.xml with proper parameters
+//        pom {
+//            project {
+//                packaging 'aar'
+//                // 项目描述
+//                name 'Qlibrary'
+//                url siteUrl
+//                // Set your license
+//                licenses {
+//                    license {
+//                        name 'The Apache Software License, Version 2.0'
+//                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//                    }
+//                }
+//                developers {
+//                    developer { //开发者基本信息
+//                        id 'DragonsQC'
+//                        name 'DragonsQC'
+//                        email 'tkzl@vip.qq.com'
+//                    }
+//                }
+//                scm {
+//                    connection gitUrl
+//                    developerConnection gitUrl
+//                    url siteUrl
+//                }
+//            }
+//        }
+//    }
+//}
 
 // build a jar with source files
 task sourcesJar(type: Jar) {
