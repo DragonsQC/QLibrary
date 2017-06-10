@@ -69,7 +69,7 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     /**
      * 设置状态栏颜色
      * <p>
-     * setStatusBarXXX 方法只会实现最后调用的一次
+     * setStatusBarXXX 方法只会实现最后一次的调用
      *
      * @param color Color
      */
@@ -80,7 +80,7 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     /**
      * 设置状态栏颜色和透明度
      * <p>
-     * setStatusBarXXX 方法只会实现最后调用的一次
+     * setStatusBarXXX 方法只会实现最后一次的调用
      *
      * @param color Color
      * @param alpha 状态栏的透明度 0~255
@@ -92,7 +92,7 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     /**
      * 设置透明状态栏
      * <p>
-     * setStatusBarXXX 方法只会实现最后调用的一次
+     * setStatusBarXXX 方法只会实现最后一次的调用
      */
     public void setStatusBarTransparent() {
         StatusBarUtil.setTransparent(this);
