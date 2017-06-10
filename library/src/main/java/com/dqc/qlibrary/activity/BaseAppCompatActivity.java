@@ -86,6 +86,13 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     }
 
     /**
+     * 设置透明状态栏
+     */
+    public void setStatusBarTransparent() {
+        StatusBarUtil.setTransparent(this);
+    }
+
+    /**
      * toggle overridePendingTransition
      */
     protected abstract boolean toggleOverridePendingTransition();
