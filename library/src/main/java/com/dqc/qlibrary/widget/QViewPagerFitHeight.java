@@ -3,30 +3,39 @@ package com.dqc.qlibrary.widget;
 import android.content.Context;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
 
-import com.rey.material.widget.Slider;
-import com.rey.material.widget.Switch;
-
 /**
- * 自动适应高度 ViewPager
+ * 自动适应高度 ViewPager，可设置是否滑动
  */
 public class QViewPagerFitHeight extends ViewPager {
 
-    public QViewPagerFitHeight(Context context, AttributeSet attrs) {
-        super(context, attrs);
-    }
+    private boolean isScroll = true;
 
     public QViewPagerFitHeight(Context context) {
         super(context);
     }
 
-    protected boolean canScroll(View v, boolean checkV, int dx, int x, int y) {
-        return super.canScroll(v, checkV, dx, x, y) || (checkV && customCanScroll(v));
+    public QViewPagerFitHeight(Context context, AttributeSet attrs) {
+        super(context, attrs);
     }
 
-    protected boolean customCanScroll(View v) {
-        return v instanceof Slider || v instanceof Switch;
+    /**
+     * @param isScroll 是否滑动（true 滑动，false 禁止）
+     */
+    public void setScroll(boolean isScroll) {
+        this.isScroll = isScroll;
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent ev) {
+        return isScroll && super.onTouchEvent(ev);
+    }
+
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent ev) {
+        return isScroll && super.onInterceptTouchEvent(ev);
     }
 
     @Override

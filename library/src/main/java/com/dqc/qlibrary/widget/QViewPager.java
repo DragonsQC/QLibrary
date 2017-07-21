@@ -4,18 +4,14 @@ import android.content.Context;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.view.View;
-import android.widget.Switch;
 
-import com.rey.material.widget.Slider;
 
 /**
  * 可设置是否滑动的 ViewPager
  */
 public class QViewPager extends ViewPager {
 
-
-    private boolean isCanScroll = true;
+    private boolean isScroll = true;
 
     public QViewPager(Context context) {
         super(context);
@@ -25,43 +21,21 @@ public class QViewPager extends ViewPager {
         super(context, attrs);
     }
 
-
-    protected boolean canScroll(View v, boolean checkV, int dx, int x, int y) {
-        return super.canScroll(v, checkV, dx, x, y) || (checkV && customCanScroll(v));
-    }
-
-    protected boolean customCanScroll(View v) {
-        return v instanceof Slider || v instanceof Switch;
-    }
-
-    public void setScanScroll(boolean isCanScroll) {
-        this.isCanScroll = isCanScroll;
+    /**
+     * @param isScroll 是否滑动（true 滑动，false 禁止）
+     */
+    public void setScroll(boolean isScroll) {
+        this.isScroll = isScroll;
     }
 
     @Override
-    public void scrollTo(int x, int y) {
-        super.scrollTo(x, y);
+    public boolean onTouchEvent(MotionEvent ev) {
+        return isScroll && super.onTouchEvent(ev);
     }
 
     @Override
-    public boolean onTouchEvent(MotionEvent arg0) {
-        return isCanScroll && super.onTouchEvent(arg0);
-
+    public boolean onInterceptTouchEvent(MotionEvent ev) {
+        return isScroll && super.onInterceptTouchEvent(ev);
     }
-
-    @Override
-    public void setCurrentItem(int item, boolean smoothScroll) {
-        super.setCurrentItem(item, smoothScroll);
-    }
-
-    @Override
-    public void setCurrentItem(int item) {
-        super.setCurrentItem(item);
-    }
-
-    @Override
-    public boolean onInterceptTouchEvent(MotionEvent arg0) {
-        return isCanScroll && super.onInterceptTouchEvent(arg0);
-
-    }
+    
 }
