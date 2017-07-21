@@ -51,7 +51,6 @@ Step 2. Add the dependency
 
  第三方库 | 描述
  --- | ---
- [Apache Commons Codec](https://github.com/DragonsQC/QLibrary/tree/master/library/src/main/java/com/dqc/qlibrary/library/codec)| Apache Commons Codec v1.10
  【Android Support】|
   compile 'com.android.support:support-v4:{*version}' | support-v4
   compile 'com.android.support:appcompat-v7:{*version}' | appcompat-v7
