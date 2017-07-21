@@ -69,7 +69,7 @@ Step 2. Add the dependency
   compile 'com.alibaba:fastjson:{*version}.android' | Fastjson
  【图片加载】 |
   compile 'com.squareup.picasso:picasso:{*version}' | Picasso
-  compile 'com.github.bumptech.glide:glide:{*version}' | Glide
+  compile 'com.github.bumptech.glide:glide:{*version}' | Glide（需要使用GlideApp，请添加《annotationProcessor 'com.github.bumptech.glide:compiler:{*version}'》）
  【Animation】 |
   compile 'com.nineoldandroids:library:{*version}' | NineoldAndroids
   compile 'com.daimajia.easing:library:{*version}@aar'<br/> compile 'com.daimajia.androidanimations:library:1.1.3@aar' | AndroidViewAnimations
@@ -82,7 +82,7 @@ Step 2. Add the dependency
   compile 'com.github.rey5137:material:{*version}' | Material Design Library
   compile 'com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:{*version}@aar' | 拖拽排序 Advanced RecyclerView
 【Other】 |
-  compile 'org.projectlombok:lombok:{*version}' | lombok
+  compile 'org.projectlombok:lombok:{*version}' | lombok（移除，需要使用单独添加，并添加《annotationProcessor 'org.projectlombok:lombok:{*version}'》）
 
  资源文件 | 描述
  --- | ---
