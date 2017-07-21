@@ -106,13 +106,12 @@ dependencies {
 //【Other】*****************************************************************************************
     //lombok [https://mvnrepository.com/artifact/org.projectlombok/lombok]
     compile 'org.projectlombok:lombok:1.16.18'
-
+    annotationProcessor 'org.projectlombok:lombok:1.16.18'
 }
 repositories {
     jcenter()
     mavenLocal()
 //    mavenCentral()
-//    maven { url 'http://maven.oschina.net/content/groups/public/' }
 //    maven { url 'https://jcenter.bintray.com' }
 //    maven { url "https://jitpack.io" }
 //    maven { url "https://maven.google.com" }
