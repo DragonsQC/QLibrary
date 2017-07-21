@@ -96,8 +96,6 @@ dependencies {
     compile 'com.twotoasters.jazzylistview:library-recyclerview:1.2.1'
     //Material Dialogs [https://github.com/afollestad/material-dialogs]
     compile 'com.afollestad.material-dialogs:core:0.9.4.5'
-    //Material Design Library [https://github.com/rey5137/Material]
-    compile 'com.github.rey5137:material:1.2.4'
     //拖拽排序 Advanced RecyclerView [https://github.com/h6ah4i/android-advancedrecyclerview]
     compile('com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.10.6@aar') {
         transitive = true
