@@ -1,6 +1,6 @@
 package com.dqc.qlibrary.utils;
 
-import com.dqc.qlibrary.library.codec.StringUtils;
+import android.text.TextUtils;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -67,7 +67,7 @@ public class QUtils {
          * @param isDeleteFolder 是否删除文件夹
          */
         public static void deleteFile(String filePath, boolean isDeleteFolder) {
-            if (!StringUtil.isEmpty(filePath)) {
+            if (!TextUtils.isEmpty(filePath)) {
                 try {
                     File file = new File(filePath);
                     if (file.exists()) { // 判断文件是否存在
@@ -340,16 +340,6 @@ public class QUtils {
         }
 
         /**
-         * 判断非空，包括不为【""】、不为【"null"】、不为【null】
-         *
-         * @param s 待校验字符串
-         * @return boolean
-         */
-        public static boolean isEmpty(String s) {
-            return StringUtils.equals(s, null) || StringUtils.equals(s, "") || StringUtils.equals(s, "null");
-        }
-
-        /**
          * 判断字符串是否为null或全为空白字符
          *
          * @param s 待校验字符串
@@ -390,7 +380,7 @@ public class QUtils {
          * @return
          */
         public static boolean equals(CharSequence cs1, CharSequence cs2) {
-            return StringUtils.equals(cs1, cs2);
+            return TextUtils.equals(cs1, cs2);
         }
 
         /**
@@ -421,7 +411,7 @@ public class QUtils {
          * @return 首字母大写字符串
          */
         public static String upperFirstLetter(String s) {
-            if (isEmpty(s) || !Character.isLowerCase(s.charAt(0))) return s;
+            if (TextUtils.isEmpty(s) || !Character.isLowerCase(s.charAt(0))) return s;
             return String.valueOf((char) (s.charAt(0) - 32)) + s.substring(1);
         }
 
@@ -432,7 +422,7 @@ public class QUtils {
          * @return 首字母小写字符串
          */
         public static String lowerFirstLetter(String s) {
-            if (isEmpty(s) || !Character.isUpperCase(s.charAt(0))) return s;
+            if (TextUtils.isEmpty(s) || !Character.isUpperCase(s.charAt(0))) return s;
             return String.valueOf((char) (s.charAt(0) + 32)) + s.substring(1);
         }
 
@@ -443,7 +433,7 @@ public class QUtils {
          * @return 反转字符串
          */
         public static String reverse(String s) {
-            if (isEmpty(s)) {
+            if (TextUtils.isEmpty(s)) {
                 return s;
             }
             int len = s.length();
@@ -466,7 +456,7 @@ public class QUtils {
          * @return 半角字符串
          */
         public static String toDBC(String s) {
-            if (isEmpty(s)) return s;
+            if (TextUtils.isEmpty(s)) return s;
             char[] chars = s.toCharArray();
             for (int i = 0, len = chars.length; i < len; i++) {
                 if (chars[i] == 12288) {
@@ -487,7 +477,7 @@ public class QUtils {
          * @return 全角字符串
          */
         public static String toSBC(String s) {
-            if (isEmpty(s)) return s;
+            if (TextUtils.isEmpty(s)) return s;
             char[] chars = s.toCharArray();
             for (int i = 0, len = chars.length; i < len; i++) {
                 if (chars[i] == ' ') {
@@ -683,7 +673,7 @@ public class QUtils {
          * @return 格式化后的时间
          */
         public static String millis2Str(long millis, String pattern) {
-            if (StringUtil.isEmpty(pattern)) {
+            if (TextUtils.isEmpty(pattern)) {
                 pattern = "yyyy-MM-dd HH:mm:ss";
             }
             return new SimpleDateFormat(pattern, Locale.getDefault()).format(new Date(millis));
@@ -732,7 +722,7 @@ public class QUtils {
          * @return String
          */
         public static String getCurrentMillis2Str(String pattern) {
-            if (StringUtil.isEmpty(pattern)) {
+            if (TextUtils.isEmpty(pattern)) {
                 pattern = "yyyy-MM-dd HH:mm:ss";
             }
             return new SimpleDateFormat(pattern, Locale.getDefault()).format(new Date(System.currentTimeMillis()));
