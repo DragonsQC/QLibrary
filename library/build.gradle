@@ -67,6 +67,7 @@ dependencies {
     //logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
     compile 'com.squareup.okhttp3:logging-interceptor:3.8.1'
     //fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
+    //noinspection GradleDependency
     compile 'com.alibaba:fastjson:1.1.59.android'
 
 //【图片加载】***************************************************************************************
@@ -114,7 +115,7 @@ repositories {
 //    maven { url 'http://maven.oschina.net/content/groups/public/' }
 //    maven { url 'https://jcenter.bintray.com' }
 //    maven { url "https://jitpack.io" }
-    maven { url "https://maven.google.com" }
+//    maven { url "https://maven.google.com" }
 }
 
 //def siteUrl = 'https://github.com/DragonsQC'

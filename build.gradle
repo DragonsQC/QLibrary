@@ -24,8 +24,8 @@ allprojects {
         mavenLocal()
         //mavenCentral()
         //maven { url 'http://maven.oschina.net/content/groups/public/' }
-        //maven { url 'https://jcenter.bintray.com' }
-        //maven { url 'https://jitpack.io'}
+        maven { url 'https://jcenter.bintray.com' }
+//        maven { url 'https://jitpack.io'}
     }
 }
 
