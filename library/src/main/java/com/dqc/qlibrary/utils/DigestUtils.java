@@ -39,8 +39,8 @@ public final class DigestUtils {
      * @param data 明文字符串
      * @return 16进制密文
      */
-    public static String encryptMD2ToString(final String data) {
-        return encryptMD2ToString(data.getBytes());
+    public static String md2ToString(final String data) {
+        return md2ToString(data.getBytes());
     }
 
     /**
@@ -49,8 +49,8 @@ public final class DigestUtils {
      * @param data 明文字节数组
      * @return 16进制密文
      */
-    public static String encryptMD2ToString(final byte[] data) {
-        return bytes2HexString(encryptMD2(data));
+    public static String md2ToString(final byte[] data) {
+        return bytes2HexString(md2(data));
     }
 
     /**
@@ -59,7 +59,7 @@ public final class DigestUtils {
      * @param data 明文字节数组
      * @return 密文字节数组
      */
-    public static byte[] encryptMD2(final byte[] data) {
+    public static byte[] md2(final byte[] data) {
         return hashTemplate(data, "MD2");
     }
 
@@ -69,8 +69,8 @@ public final class DigestUtils {
      * @param data 明文字符串
      * @return 16进制密文
      */
-    public static String encryptMD5ToString(final String data) {
-        return encryptMD5ToString(data.getBytes());
+    public static String md5ToString(final String data) {
+        return md5ToString(data.getBytes());
     }
 
     /**
@@ -80,8 +80,8 @@ public final class DigestUtils {
      * @param salt 盐
      * @return 16进制加盐密文
      */
-    public static String encryptMD5ToString(final String data, final String salt) {
-        return bytes2HexString(encryptMD5((data + salt).getBytes()));
+    public static String md5ToString(final String data, final String salt) {
+        return bytes2HexString(md5((data + salt).getBytes()));
     }
 
     /**
@@ -90,8 +90,8 @@ public final class DigestUtils {
      * @param data 明文字节数组
      * @return 16进制密文
      */
-    public static String encryptMD5ToString(final byte[] data) {
-        return bytes2HexString(encryptMD5(data));
+    public static String md5ToString(final byte[] data) {
+        return bytes2HexString(md5(data));
     }
 
     /**
@@ -101,12 +101,12 @@ public final class DigestUtils {
      * @param salt 盐字节数组
      * @return 16进制加盐密文
      */
-    public static String encryptMD5ToString(final byte[] data, final byte[] salt) {
+    public static String md5ToString(final byte[] data, final byte[] salt) {
         if (data == null || salt == null) return null;
         byte[] dataSalt = new byte[data.length + salt.length];
         System.arraycopy(data, 0, dataSalt, 0, data.length);
         System.arraycopy(salt, 0, dataSalt, data.length, salt.length);
-        return bytes2HexString(encryptMD5(dataSalt));
+        return bytes2HexString(md5(dataSalt));
     }
 
     /**
@@ -115,7 +115,7 @@ public final class DigestUtils {
      * @param data 明文字节数组
      * @return 密文字节数组
      */
-    public static byte[] encryptMD5(final byte[] data) {
+    public static byte[] md5(final byte[] data) {
         return hashTemplate(data, "MD5");
     }
 
@@ -125,9 +125,9 @@ public final class DigestUtils {
      * @param filePath 文件路径
      * @return 文件的16进制密文
      */
-    public static String encryptMD5File2String(final String filePath) {
+    public static String md5File2String(final String filePath) {
         File file = isSpace(filePath) ? null : new File(filePath);
-        return encryptMD5File2String(file);
+        return md5File2String(file);
     }
 
     /**
@@ -136,9 +136,9 @@ public final class DigestUtils {
      * @param filePath 文件路径
      * @return 文件的MD5校验码
      */
-    public static byte[] encryptMD5File(final String filePath) {
+    public static byte[] md5File(final String filePath) {
         File file = isSpace(filePath) ? null : new File(filePath);
-        return encryptMD5File(file);
+        return md5File(file);
     }
 
     /**
@@ -147,8 +147,8 @@ public final class DigestUtils {
      * @param file 文件
      * @return 文件的16进制密文
      */
-    public static String encryptMD5File2String(final File file) {
-        return bytes2HexString(encryptMD5File(file));
+    public static String md5File2String(final File file) {
+        return bytes2HexString(md5File(file));
     }
 
     /**
@@ -157,7 +157,7 @@ public final class DigestUtils {
      * @param file 文件
      * @return 文件的MD5校验码
      */
-    public static byte[] encryptMD5File(final File file) {
+    public static byte[] md5File(final File file) {
         if (file == null) return null;
         FileInputStream fis = null;
         DigestInputStream digestInputStream;
@@ -191,8 +191,8 @@ public final class DigestUtils {
      * @param data 明文字符串
      * @return 16进制密文
      */
-    public static String encryptSHA1ToString(final String data) {
-        return encryptSHA1ToString(data.getBytes());
+    public static String sha1ToString(final String data) {
+        return sha1ToString(data.getBytes());
     }
 
     /**
@@ -201,8 +201,8 @@ public final class DigestUtils {
      * @param data 明文字节数组
      * @return 16进制密文
      */
-    public static String encryptSHA1ToString(final byte[] data) {
-        return bytes2HexString(encryptSHA1(data));
+    public static String sha1ToString(final byte[] data) {
+        return bytes2HexString(sha1(data));
     }
 
     /**
@@ -211,7 +211,7 @@ public final class DigestUtils {
      * @param data 明文字节数组
      * @return 密文字节数组
      */
-    public static byte[] encryptSHA1(final byte[] data) {
+    public static byte[] sha1(final byte[] data) {
         return hashTemplate(data, "SHA1");
     }
 
@@ -221,8 +221,8 @@ public final class DigestUtils {
      * @param data 明文字符串
      * @return 16进制密文
      */
-    public static String encryptSHA224ToString(final String data) {
-        return encryptSHA224ToString(data.getBytes());
+    public static String sha224ToString(final String data) {
+        return sha224ToString(data.getBytes());
     }
 
     /**
@@ -231,8 +231,8 @@ public final class DigestUtils {
      * @param data 明文字节数组
      * @return 16进制密文
      */
-    public static String encryptSHA224ToString(final byte[] data) {
-        return bytes2HexString(encryptSHA224(data));
+    public static String sha224ToString(final byte[] data) {
+        return bytes2HexString(sha224(data));
     }
 
     /**
@@ -241,7 +241,7 @@ public final class DigestUtils {
      * @param data 明文字节数组
      * @return 密文字节数组
      */
-    public static byte[] encryptSHA224(final byte[] data) {
+    public static byte[] sha224(final byte[] data) {
         return hashTemplate(data, "SHA224");
     }
 
@@ -251,8 +251,8 @@ public final class DigestUtils {
      * @param data 明文字符串
      * @return 16进制密文
      */
-    public static String encryptSHA256ToString(final String data) {
-        return encryptSHA256ToString(data.getBytes());
+    public static String sha256ToString(final String data) {
+        return sha256ToString(data.getBytes());
     }
 
     /**
@@ -261,8 +261,8 @@ public final class DigestUtils {
      * @param data 明文字节数组
      * @return 16进制密文
      */
-    public static String encryptSHA256ToString(final byte[] data) {
-        return bytes2HexString(encryptSHA256(data));
+    public static String sha256ToString(final byte[] data) {
+        return bytes2HexString(sha256(data));
     }
 
     /**
@@ -271,7 +271,7 @@ public final class DigestUtils {
      * @param data 明文字节数组
      * @return 密文字节数组
      */
-    public static byte[] encryptSHA256(final byte[] data) {
+    public static byte[] sha256(final byte[] data) {
         return hashTemplate(data, "SHA256");
     }
 
@@ -281,8 +281,8 @@ public final class DigestUtils {
      * @param data 明文字符串
      * @return 16进制密文
      */
-    public static String encryptSHA384ToString(final String data) {
-        return encryptSHA384ToString(data.getBytes());
+    public static String sha384ToString(final String data) {
+        return sha384ToString(data.getBytes());
     }
 
     /**
@@ -291,8 +291,8 @@ public final class DigestUtils {
      * @param data 明文字节数组
      * @return 16进制密文
      */
-    public static String encryptSHA384ToString(final byte[] data) {
-        return bytes2HexString(encryptSHA384(data));
+    public static String sha384ToString(final byte[] data) {
+        return bytes2HexString(sha384(data));
     }
 
     /**
@@ -301,7 +301,7 @@ public final class DigestUtils {
      * @param data 明文字节数组
      * @return 密文字节数组
      */
-    public static byte[] encryptSHA384(final byte[] data) {
+    public static byte[] sha384(final byte[] data) {
         return hashTemplate(data, "SHA384");
     }
 
@@ -311,8 +311,8 @@ public final class DigestUtils {
      * @param data 明文字符串
      * @return 16进制密文
      */
-    public static String encryptSHA512ToString(final String data) {
-        return encryptSHA512ToString(data.getBytes());
+    public static String sha512ToString(final String data) {
+        return sha512ToString(data.getBytes());
     }
 
     /**
@@ -321,8 +321,8 @@ public final class DigestUtils {
      * @param data 明文字节数组
      * @return 16进制密文
      */
-    public static String encryptSHA512ToString(final byte[] data) {
-        return bytes2HexString(encryptSHA512(data));
+    public static String sha512ToString(final byte[] data) {
+        return bytes2HexString(sha512(data));
     }
 
     /**
@@ -331,7 +331,7 @@ public final class DigestUtils {
      * @param data 明文字节数组
      * @return 密文字节数组
      */
-    public static byte[] encryptSHA512(final byte[] data) {
+    public static byte[] sha512(final byte[] data) {
         return hashTemplate(data, "SHA512");
     }
 
@@ -361,8 +361,8 @@ public final class DigestUtils {
      * @param key  秘钥
      * @return 16进制密文
      */
-    public static String encryptHmacMD5ToString(final String data, final String key) {
-        return encryptHmacMD5ToString(data.getBytes(), key.getBytes());
+    public static String hmacMD5ToString(final String data, final String key) {
+        return hmacMD5ToString(data.getBytes(), key.getBytes());
     }
 
     /**
@@ -372,8 +372,8 @@ public final class DigestUtils {
      * @param key  秘钥
      * @return 16进制密文
      */
-    public static String encryptHmacMD5ToString(final byte[] data, final byte[] key) {
-        return bytes2HexString(encryptHmacMD5(data, key));
+    public static String hmacMD5ToString(final byte[] data, final byte[] key) {
+        return bytes2HexString(hmacMD5(data, key));
     }
 
     /**
@@ -383,7 +383,7 @@ public final class DigestUtils {
      * @param key  秘钥
      * @return 密文字节数组
      */
-    public static byte[] encryptHmacMD5(final byte[] data, final byte[] key) {
+    public static byte[] hmacMD5(final byte[] data, final byte[] key) {
         return hmacTemplate(data, key, "HmacMD5");
     }
 
@@ -394,8 +394,8 @@ public final class DigestUtils {
      * @param key  秘钥
      * @return 16进制密文
      */
-    public static String encryptHmacSHA1ToString(final String data, final String key) {
-        return encryptHmacSHA1ToString(data.getBytes(), key.getBytes());
+    public static String hmacSHA1ToString(final String data, final String key) {
+        return hmacSHA1ToString(data.getBytes(), key.getBytes());
     }
 
     /**
@@ -405,8 +405,8 @@ public final class DigestUtils {
      * @param key  秘钥
      * @return 16进制密文
      */
-    public static String encryptHmacSHA1ToString(final byte[] data, final byte[] key) {
-        return bytes2HexString(encryptHmacSHA1(data, key));
+    public static String hmacSHA1ToString(final byte[] data, final byte[] key) {
+        return bytes2HexString(hmacSHA1(data, key));
     }
 
     /**
@@ -416,7 +416,7 @@ public final class DigestUtils {
      * @param key  秘钥
      * @return 密文字节数组
      */
-    public static byte[] encryptHmacSHA1(final byte[] data, final byte[] key) {
+    public static byte[] hmacSHA1(final byte[] data, final byte[] key) {
         return hmacTemplate(data, key, "HmacSHA1");
     }
 
@@ -427,8 +427,8 @@ public final class DigestUtils {
      * @param key  秘钥
      * @return 16进制密文
      */
-    public static String encryptHmacSHA224ToString(final String data, final String key) {
-        return encryptHmacSHA224ToString(data.getBytes(), key.getBytes());
+    public static String hmacSHA224ToString(final String data, final String key) {
+        return hmacSHA224ToString(data.getBytes(), key.getBytes());
     }
 
     /**
@@ -438,8 +438,8 @@ public final class DigestUtils {
      * @param key  秘钥
      * @return 16进制密文
      */
-    public static String encryptHmacSHA224ToString(final byte[] data, final byte[] key) {
-        return bytes2HexString(encryptHmacSHA224(data, key));
+    public static String hmacSHA224ToString(final byte[] data, final byte[] key) {
+        return bytes2HexString(hmacSHA224(data, key));
     }
 
     /**
@@ -449,7 +449,7 @@ public final class DigestUtils {
      * @param key  秘钥
      * @return 密文字节数组
      */
-    public static byte[] encryptHmacSHA224(final byte[] data, final byte[] key) {
+    public static byte[] hmacSHA224(final byte[] data, final byte[] key) {
         return hmacTemplate(data, key, "HmacSHA224");
     }
 
@@ -460,8 +460,8 @@ public final class DigestUtils {
      * @param key  秘钥
      * @return 16进制密文
      */
-    public static String encryptHmacSHA256ToString(final String data, final String key) {
-        return encryptHmacSHA256ToString(data.getBytes(), key.getBytes());
+    public static String hmacSHA256ToString(final String data, final String key) {
+        return hmacSHA256ToString(data.getBytes(), key.getBytes());
     }
 
     /**
@@ -471,8 +471,8 @@ public final class DigestUtils {
      * @param key  秘钥
      * @return 16进制密文
      */
-    public static String encryptHmacSHA256ToString(final byte[] data, final byte[] key) {
-        return bytes2HexString(encryptHmacSHA256(data, key));
+    public static String hmacSHA256ToString(final byte[] data, final byte[] key) {
+        return bytes2HexString(hmacSHA256(data, key));
     }
 
     /**
@@ -482,7 +482,7 @@ public final class DigestUtils {
      * @param key  秘钥
      * @return 密文字节数组
      */
-    public static byte[] encryptHmacSHA256(final byte[] data, final byte[] key) {
+    public static byte[] hmacSHA256(final byte[] data, final byte[] key) {
         return hmacTemplate(data, key, "HmacSHA256");
     }
 
@@ -493,8 +493,8 @@ public final class DigestUtils {
      * @param key  秘钥
      * @return 16进制密文
      */
-    public static String encryptHmacSHA384ToString(final String data, final String key) {
-        return encryptHmacSHA384ToString(data.getBytes(), key.getBytes());
+    public static String hmacSHA384ToString(final String data, final String key) {
+        return hmacSHA384ToString(data.getBytes(), key.getBytes());
     }
 
     /**
@@ -504,8 +504,8 @@ public final class DigestUtils {
      * @param key  秘钥
      * @return 16进制密文
      */
-    public static String encryptHmacSHA384ToString(final byte[] data, final byte[] key) {
-        return bytes2HexString(encryptHmacSHA384(data, key));
+    public static String hmacSHA384ToString(final byte[] data, final byte[] key) {
+        return bytes2HexString(hmacSHA384(data, key));
     }
 
     /**
@@ -515,7 +515,7 @@ public final class DigestUtils {
      * @param key  秘钥
      * @return 密文字节数组
      */
-    public static byte[] encryptHmacSHA384(final byte[] data, final byte[] key) {
+    public static byte[] hmacSHA384(final byte[] data, final byte[] key) {
         return hmacTemplate(data, key, "HmacSHA384");
     }
 
@@ -526,8 +526,8 @@ public final class DigestUtils {
      * @param key  秘钥
      * @return 16进制密文
      */
-    public static String encryptHmacSHA512ToString(final String data, final String key) {
-        return encryptHmacSHA512ToString(data.getBytes(), key.getBytes());
+    public static String hmacSHA512ToString(final String data, final String key) {
+        return hmacSHA512ToString(data.getBytes(), key.getBytes());
     }
 
     /**
@@ -537,8 +537,8 @@ public final class DigestUtils {
      * @param key  秘钥
      * @return 16进制密文
      */
-    public static String encryptHmacSHA512ToString(final byte[] data, final byte[] key) {
-        return bytes2HexString(encryptHmacSHA512(data, key));
+    public static String hmacSHA512ToString(final byte[] data, final byte[] key) {
+        return bytes2HexString(hmacSHA512(data, key));
     }
 
     /**
@@ -548,7 +548,7 @@ public final class DigestUtils {
      * @param key  秘钥
      * @return 密文字节数组
      */
-    public static byte[] encryptHmacSHA512(final byte[] data, final byte[] key) {
+    public static byte[] hmacSHA512(final byte[] data, final byte[] key) {
         return hmacTemplate(data, key, "HmacSHA512");
     }
 
