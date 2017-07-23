@@ -62,7 +62,7 @@ Step 2. Add the dependency
  【Utils】 |
   compile 'com.elvishew:xlog:{*version}' | xlog
  【HTTP】 |
-  compile 'org.xutils:xutils:[(https://api.bintray.com/packages/laobie/maven/statusbarutil/images/download.svg)](https://bintray.com/laobie/maven/statusbarutil/_latestVersion)' | xUtils3
+  compile 'org.xutils:xutils:[![](https://api.bintray.com/packages/laobie/maven/statusbarutil/images/download.svg)](https://bintray.com/laobie/maven/statusbarutil/_latestVersion)' | xUtils3
   compile 'com.squareup.retrofit2:retrofit:{*version}' | Retrofit2
   compile 'com.squareup.retrofit2:converter-gson:{*version}' | Retrofit2 converter-gson
   compile 'com.squareup.okhttp3:logging-interceptor:{*version}' | okhttp3 logging-interceptor
