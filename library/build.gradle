@@ -36,16 +36,27 @@ android {
 
 }
 
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '25.4.0'
+            }
+        }
+    }
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 //【Android Support】*******************************************************************************
-    compile 'com.android.support:support-v4:25.3.1'
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:palette-v7:25.3.1'
-    compile 'com.android.support:cardview-v7:25.3.1'
-    compile 'com.android.support:recyclerview-v7:25.3.1'
-    compile 'com.android.support:percent:25.3.1'
-    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:support-v4:25.4.0'
+    compile 'com.android.support:appcompat-v7:25.4.0'
+    compile 'com.android.support:palette-v7:25.4.0'
+    compile 'com.android.support:cardview-v7:25.4.0'
+    compile 'com.android.support:recyclerview-v7:25.4.0'
+    compile 'com.android.support:percent:25.4.0'
+    compile 'com.android.support:design:25.4.0'
 
 //【RxJava、RaAndroid】 [https://github.com/ReactiveX/RxAndroid]
 //    compile 'io.reactivex.rxjava2:rxjava:2.0.1'
@@ -68,14 +79,14 @@ dependencies {
     compile 'com.squareup.okhttp3:logging-interceptor:3.8.1'
     //fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
     //noinspection GradleDependency
-    compile 'com.alibaba:fastjson:1.1.59.android'
+    compile 'com.alibaba:fastjson:1.1.60.android'
 
 //【图片加载】***************************************************************************************
     //Picasso [https://github.com/square/picasso]
     compile 'com.squareup.picasso:picasso:2.5.2'
     //Glide [https://github.com/bumptech/glide]
-    compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC1'
+    compile 'com.github.bumptech.glide:glide:4.0.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
 
 //【Animation】*************************************************************************************
     //NineoldAndroids [https://github.com/JakeWharton/NineOldAndroids]
@@ -88,7 +99,7 @@ dependencies {
     //圆形ImageView [https://github.com/hdodenhof/CircleImageView]
     compile 'de.hdodenhof:circleimageview:2.1.0'
     //Bootstrap [https://github.com/Bearded-Hen/Android-Bootstrap]
-    compile 'com.beardedhen:androidbootstrap:2.3.1'
+    compile 'com.beardedhen:androidbootstrap:2.3.2'
     //KenBurnsView [https://github.com/flavioarfaria/KenBurnsView]
     compile 'com.flaviofaria:kenburnsview:1.0.7'
     //带载入特效的ListView、GridView、RecyclerView [https://github.com/twotoasters/JazzyListView]
@@ -106,11 +117,12 @@ dependencies {
 }
 repositories {
     jcenter()
+    google()
     mavenLocal()
 //    mavenCentral()
 //    maven { url 'https://jcenter.bintray.com' }
 //    maven { url "https://jitpack.io" }
-//    maven { url "https://maven.google.com" }
+    maven { url "https://maven.google.com" }
 }
 
 //def siteUrl = 'https://github.com/DragonsQC'
