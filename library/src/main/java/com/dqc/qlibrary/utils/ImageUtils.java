@@ -25,23 +25,21 @@ public class ImageUtils {
     /**
      * 转为圆形图片
      *
-     * @param src   源图片
-     * @param color 背景颜色
+     * @param src 源图片
      * @return 圆形图片
      */
-    public static Bitmap toRound(final Bitmap src, @ColorInt final int color) {
-        return toRound(src, color, false);
+    public static Bitmap toRound(final Bitmap src) {
+        return toRound(src, false);
     }
 
     /**
      * 转为圆形图片
      *
      * @param src     源图片
-     * @param color   背景颜色
      * @param recycle 是否回收
      * @return 圆形图片
      */
-    public static Bitmap toRound(final Bitmap src, @ColorInt final int color, final boolean recycle) {
+    public static Bitmap toRound(final Bitmap src, final boolean recycle) {
         int    width  = src.getWidth();
         int    height = src.getHeight();
         int    radius = Math.min(width, height) >> 1;
@@ -50,7 +48,6 @@ public class ImageUtils {
         Canvas canvas = new Canvas(ret);
         Rect   rect   = new Rect(0, 0, width, height);
         paint.setAntiAlias(true);
-        paint.setColor(color);
         canvas.drawARGB(0, 0, 0, 0);
         canvas.drawCircle(width >> 1, height >> 1, radius, paint);
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
@@ -100,7 +97,7 @@ public class ImageUtils {
      * @param color  {@link Color}
      */
     public static Bitmap toRoundAndBorder(Bitmap bitmap, final int borderWidth, @ColorInt int color) {
-        bitmap = toRound(bitmap, color);
+        bitmap = toRound(bitmap);
         return addRoundeBorder(bitmap, borderWidth, color);
     }
 
