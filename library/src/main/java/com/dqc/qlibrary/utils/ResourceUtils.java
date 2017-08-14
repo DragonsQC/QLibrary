@@ -300,7 +300,7 @@ public class ResourceUtils {
     }
 
     /**
-     * 创建 圆形图片 自定义边框颜色
+     * 创建 圆形图片 并添加 自定义颜色边框
      *
      * @param bitmap Bitmap
      * @param color  {@link Color}
