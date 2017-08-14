@@ -107,7 +107,7 @@ public class ImageUtils {
      *
      * @param src         源图片
      * @param borderWidth 边框宽度
-     * @param color       边框的颜色值
+     * @param color       边框的颜色值 {@link Color}
      * @return 带颜色边框图
      */
     public static Bitmap addRoundeBorder(final Bitmap src, final int borderWidth, @ColorInt final int color) {
@@ -119,7 +119,7 @@ public class ImageUtils {
      *
      * @param src         源图片
      * @param borderWidth 边框宽度
-     * @param color       边框的颜色值
+     * @param color       边框的颜色值 {@link Color}
      * @param recycle     是否回收
      * @return 带颜色边框图
      */
