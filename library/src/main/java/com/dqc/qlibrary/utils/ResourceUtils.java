@@ -11,6 +11,7 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.RadialGradient;
 import android.graphics.Rect;
+import android.graphics.RectF;
 import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -229,58 +230,99 @@ public class ResourceUtils {
 
 
     /**
-     * 创建 圆形图片
+     * 转为圆形图片
      *
-     * @param bitmap
-     * @return
+     * @param src 源图片
+     * @return 圆形图片
      */
-    public static Bitmap createRoundBitmap(Bitmap bitmap) {
-        int    size   = bitmap.getWidth() < bitmap.getHeight() ? bitmap.getWidth() : bitmap.getHeight();
-        Bitmap output = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888);
-        Canvas canvas = new Canvas(output);
+    public static Bitmap toRound(final Bitmap src) {
+        return toRound(src, false);
+    }
 
-        final int   color   = 0xff424242;
-        final Paint paint   = new Paint();
-        final Rect  rect    = new Rect(0, 0, size, size);
-        final float roundPx = size / 2;
-
+    /**
+     * 转为圆形图片
+     *
+     * @param src     源图片
+     * @param recycle 是否回收
+     * @return 圆形图片
+     */
+    public static Bitmap toRound(final Bitmap src, final boolean recycle) {
+        int    width  = src.getWidth();
+        int    height = src.getHeight();
+        int    radius = Math.min(width, height) >> 1;
+        Bitmap ret    = Bitmap.createBitmap(width, height, src.getConfig());
+        Paint  paint  = new Paint();
+        Canvas canvas = new Canvas(ret);
+        Rect   rect   = new Rect(0, 0, width, height);
         paint.setAntiAlias(true);
         canvas.drawARGB(0, 0, 0, 0);
-        paint.setColor(color);
-        canvas.drawCircle(roundPx, roundPx, roundPx, paint);
-
+        canvas.drawCircle(width >> 1, height >> 1, radius, paint);
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
-        canvas.drawBitmap(bitmap, rect, rect, paint);
-
-        return output;
+        canvas.drawBitmap(src, rect, rect, paint);
+        if (recycle && !src.isRecycled()) src.recycle();
+        return ret;
     }
 
     /**
-     * 创建 圆形图片 带白色边框
+     * 转为圆角图片
      *
-     * @param bitmap
-     * @return
+     * @param src    源图片
+     * @param radius 圆角的度数
+     * @return 圆角图片
      */
-    public static Bitmap createRoundBitmapWithWhiteBorder(Bitmap bitmap) {
-        bitmap = createRoundBitmap(bitmap);
-        return addRoundeBitmapWhiteBorder(bitmap);
+    public static Bitmap toRoundCorner(final Bitmap src, final float radius) {
+        return toRoundCorner(src, radius, false);
+    }
+
+    /**
+     * 转为圆角图片
+     *
+     * @param src     源图片
+     * @param radius  圆角的度数
+     * @param recycle 是否回收
+     * @return 圆角图片
+     */
+    public static Bitmap toRoundCorner(final Bitmap src, final float radius, final boolean recycle) {
+        int    width  = src.getWidth();
+        int    height = src.getHeight();
+        Bitmap ret    = Bitmap.createBitmap(width, height, src.getConfig());
+        Paint  paint  = new Paint();
+        Canvas canvas = new Canvas(ret);
+        Rect   rect   = new Rect(0, 0, width, height);
+        paint.setAntiAlias(true);
+        canvas.drawRoundRect(new RectF(rect), radius, radius, paint);
+        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
+        canvas.drawBitmap(src, rect, rect, paint);
+        if (recycle && !src.isRecycled()) src.recycle();
+        return ret;
+    }
+
+    /**
+     * 创建 圆形图片 自定义边框颜色
+     *
+     * @param bitmap Bitmap
+     * @param color  {@link Color}
+     */
+    public static Bitmap toRoundAndBorder(Bitmap bitmap, int color) {
+        bitmap = toRound(bitmap);
+        return addRoundeBorder(bitmap, color);
     }
 
 
     /**
-     * 给 圆形图 添加 白色边框
+     * 给 圆形图 添加 边框
      *
-     * @param bitmap
+     * @param bitmap Bitmap
+     * @param color  {@link Color}
      * @return
      */
-    public static Bitmap addRoundeBitmapWhiteBorder(Bitmap bitmap) {
+    public static Bitmap addRoundeBorder(Bitmap bitmap, int color) {
         int    size    = bitmap.getWidth() < bitmap.getHeight() ? bitmap.getWidth() : bitmap.getHeight();
         int    num     = 14;
         int    sizebig = size + num;
         Bitmap output  = Bitmap.createBitmap(sizebig, sizebig, Bitmap.Config.ARGB_8888);
         Canvas canvas  = new Canvas(output);
 
-        final int   color   = Color.parseColor("#FFFFFF");
         final Paint paint   = new Paint();
         final float roundPx = sizebig / 2;
 
