@@ -233,7 +233,8 @@ public class ResourceUtils {
     /**
      * 转为圆形图片
      *
-     * @param src 源图片
+     * @param src   源图片
+     * @param color 背景颜色
      * @return 圆形图片
      */
     public static Bitmap toRound(final Bitmap src, @ColorInt final int color) {
@@ -244,6 +245,7 @@ public class ResourceUtils {
      * 转为圆形图片
      *
      * @param src     源图片
+     * @param color   背景颜色
      * @param recycle 是否回收
      * @return 圆形图片
      */
@@ -256,8 +258,8 @@ public class ResourceUtils {
         Canvas canvas = new Canvas(ret);
         Rect   rect   = new Rect(0, 0, width, height);
         paint.setAntiAlias(true);
-        //canvas.drawARGB(0, 0, 0, 0);
-        canvas.drawColor(color);
+        paint.setColor(color);
+        canvas.drawARGB(0, 0, 0, 0);
         canvas.drawCircle(width >> 1, height >> 1, radius, paint);
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
         canvas.drawBitmap(src, rect, rect, paint);
