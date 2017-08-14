@@ -128,7 +128,7 @@ public class FileUtils {
      * @param size 文件 length
      * @return 格式化后字符串
      */
-    public static String formatFileSize(double size) {
+    public static String formatFileSize(long size) {
         double kiloByte = size / 1024;
         if (kiloByte < 1) {
             return size + "Byte";
