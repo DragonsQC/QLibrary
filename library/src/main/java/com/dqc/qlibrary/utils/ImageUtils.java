@@ -6,8 +6,10 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
+import android.graphics.RadialGradient;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.graphics.Shader;
 import android.support.annotation.ColorInt;
 
 import java.io.BufferedOutputStream;
@@ -98,24 +100,57 @@ public class ImageUtils {
      */
     public static Bitmap toRoundAndBorder(Bitmap bitmap, final int borderWidth, @ColorInt int color) {
         bitmap = toRound(bitmap);
-        return addRoundeBorder(bitmap, borderWidth, color);
+        return addRoundBorder(bitmap, color);
     }
 
+    /**
+     * 添加 圆形  边框
+     *
+     * @param bitmap Bitmap
+     * @param color  {@link Color}
+     * @return .
+     */
+    public static Bitmap addRoundBorder(final Bitmap bitmap, @ColorInt final int color) {
+        int    size    = bitmap.getWidth() < bitmap.getHeight() ? bitmap.getWidth() : bitmap.getHeight();
+        int    num     = 14;
+        int    sizebig = size + num;
+        Bitmap output  = Bitmap.createBitmap(sizebig, sizebig, Bitmap.Config.ARGB_8888);
+        Canvas canvas  = new Canvas(output);
+
+        final Paint paint   = new Paint();
+        final float roundPx = sizebig / 2;
+
+        paint.setAntiAlias(true);
+        paint.setColor(Color.WHITE);
+        canvas.drawARGB(0, 0, 0, 0);
+        canvas.drawBitmap(bitmap, num / 2, num / 2, paint);
+        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_ATOP));
+
+        //RadialGradient gradient = new RadialGradient(roundPx, roundPx, roundPx,
+        //        new int[]{Color.WHITE, Color.WHITE, Color.parseColor("#AAAAAAAA")},
+        //        new float[]{0.f, 0.97f, 1.0f}, Shader.TileMode.CLAMP);
+        RadialGradient gradient = new RadialGradient(roundPx, roundPx, roundPx,
+                Color.WHITE, color, Shader.TileMode.CLAMP);
+        paint.setShader(gradient);
+        canvas.drawCircle(roundPx, roundPx, roundPx, paint);
+
+        return output;
+    }
 
     /**
-     * 添加颜色边框
+     * 添加颜色边框（方形）
      *
      * @param src         源图片
      * @param borderWidth 边框宽度
      * @param color       边框的颜色值 {@link Color}
      * @return 带颜色边框图
      */
-    public static Bitmap addRoundeBorder(final Bitmap src, final int borderWidth, @ColorInt final int color) {
-        return addRoundeBorder(src, borderWidth, color, false);
+    public static Bitmap addBorder(final Bitmap src, final int borderWidth, @ColorInt final int color) {
+        return addBorder(src, borderWidth, color, false);
     }
 
     /**
-     * 添加颜色边框
+     * 添加颜色边框（方形）
      *
      * @param src         源图片
      * @param borderWidth 边框宽度
@@ -123,7 +158,7 @@ public class ImageUtils {
      * @param recycle     是否回收
      * @return 带颜色边框图
      */
-    public static Bitmap addRoundeBorder(final Bitmap src, final int borderWidth, @ColorInt  final int color, final boolean recycle) {
+    public static Bitmap addBorder(final Bitmap src, final int borderWidth, @ColorInt  final int color, final boolean recycle) {
         int    doubleBorder = borderWidth << 1;
         int    newWidth     = src.getWidth() + doubleBorder;
         int    newHeight    = src.getHeight() + doubleBorder;
