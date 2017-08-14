@@ -4,7 +4,6 @@ buildscript {
         jcenter()
     }
     dependencies {
-        //[https://jcenter.bintray.com/com/android/tools/build/gradle/]
         classpath 'com.android.tools.build:gradle:2.3.3'
 
         //Jitpack [http://mvnrepository.com/artifact/com.github.dcendents/android-maven-gradle-plugin]

@@ -68,7 +68,6 @@ Step 2. Add the dependency
   compile 'com.squareup.okhttp3:logging-interceptor:{*version}' | okhttp3 logging-interceptor
   compile 'com.alibaba:fastjson:{*version}.android' | Fastjson
  【图片加载】 |
-  compile 'com.squareup.picasso:picasso:{*version}' | Picasso
   compile 'com.github.bumptech.glide:glide:{*version}' | Glide（需要使用GlideApp，请添加《annotationProcessor 'com.github.bumptech.glide:compiler:{*version}'》）
  【Animation】 |
   compile 'com.nineoldandroids:library:{*version}' | NineoldAndroids

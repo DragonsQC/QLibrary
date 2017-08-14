@@ -59,8 +59,8 @@ dependencies {
     compile 'com.android.support:design:26.0.1'
 
 //【RxJava、RaAndroid】 [https://github.com/ReactiveX/RxAndroid]
-//    compile 'io.reactivex.rxjava2:rxjava:2.0.1'
-//    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    //compile 'io.reactivex.rxjava2:rxjava:2.0.1'
+    //compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
 
 //【Utils】*****************************************************************************************
     //xLog [https://github.com/elvishew/xLog]
@@ -78,12 +78,11 @@ dependencies {
     //logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
     compile 'com.squareup.okhttp3:logging-interceptor:3.8.1'
     //fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
-    //noinspection GradleDependency
-    compile 'com.alibaba:fastjson:1.1.60.android'
+    compile 'com.alibaba:fastjson:1.1.61.android'
 
 //【图片加载】***************************************************************************************
     //Picasso [https://github.com/square/picasso]
-    compile 'com.squareup.picasso:picasso:2.5.2'
+    //compile 'com.squareup.picasso:picasso:2.5.2'
     //Glide [https://github.com/bumptech/glide]
     compile 'com.github.bumptech.glide:glide:4.0.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
