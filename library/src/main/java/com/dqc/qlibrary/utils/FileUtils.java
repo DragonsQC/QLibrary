@@ -26,10 +26,8 @@ public class FileUtils {
             for (File aFileList : fileList) {
                 if (aFileList.isDirectory()) {
                     size = size + getFileSize(aFileList);
-
                 } else {
                     size = size + aFileList.length();
-
                 }
             }
         } catch (Exception e) {
