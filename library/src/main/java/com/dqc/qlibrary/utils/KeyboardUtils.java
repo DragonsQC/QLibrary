@@ -13,6 +13,7 @@ import android.view.inputmethod.InputMethodManager;
  * 在manifest.xml中activity中设置<br>
  * android:windowSoftInputMode="adjustPan"
  */
+@SuppressWarnings("WeakerAccess,unused")
 public class KeyboardUtils {
 
     /**

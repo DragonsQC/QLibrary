@@ -64,70 +64,64 @@ import java.util.Comparator;
  * the compatibility library, requiring changes to the source code
  * of apps when they are compiled against the newer version.</p>
  */
+@SuppressWarnings("WeakerAccess,unused")
 public class QLazyViewPager extends ViewGroup {
     /**
      * Indicates that the pager is in an idle, settled state. The current page
      * is fully in view and no animation is in progress.
      */
-    public static final int SCROLL_STATE_IDLE = 0;
+    public static final  int                  SCROLL_STATE_IDLE       = 0;
     /**
      * Indicates that the pager is currently being dragged by the user.
      */
-    public static final int SCROLL_STATE_DRAGGING = 1;
+    public static final  int                  SCROLL_STATE_DRAGGING   = 1;
     /**
      * Indicates that the pager is in the process of settling to a final position.
      */
-    public static final int SCROLL_STATE_SETTLING = 2;
-    private static final String TAG = "LazyViewPager";
-    private static final boolean DEBUG = false;
-    private static final boolean USE_CACHE = false;
-    private static final int DEFAULT_OFFSCREEN_PAGES = 0;//默认的加载页面,ViewPager是1个,所以会加载两个Fragment
-    private static final int MAX_SETTLE_DURATION = 600; // ms
-    private static final Comparator<ItemInfo> COMPARATOR = new Comparator<ItemInfo>() {
-        @Override
-        public int compare(ItemInfo lhs, ItemInfo rhs) {
-            return lhs.position - rhs.position;
-        }
-    };
-    private static final Interpolator sInterpolator = new Interpolator() {
-        public float getInterpolation(float t) {
-            // _o(t) = t * t * ((tension + 1) * t + tension)
-            // o(t) = _o(t - 1) + 1
-            t -= 1.0f;
-            return t * t * t + 1.0f;
-        }
+    public static final  int                  SCROLL_STATE_SETTLING   = 2;
+    private static final String               TAG                     = "LazyViewPager";
+    private static final boolean              DEBUG                   = false;
+    private static final boolean              USE_CACHE               = false;
+    private static final int                  DEFAULT_OFFSCREEN_PAGES = 0;//默认的加载页面,ViewPager是1个,所以会加载两个Fragment
+    private static final int                  MAX_SETTLE_DURATION     = 600; // ms
+    private static final Comparator<ItemInfo> COMPARATOR              = (lhs, rhs) -> lhs.position - rhs.position;
+    private static final Interpolator         sInterpolator           = t -> {
+        // _o(t) = t * t * ((tension + 1) * t + tension)
+        // o(t) = _o(t - 1) + 1
+        t -= 1.0f;
+        return t * t * t + 1.0f;
     };
     /**
      * Sentinel value for no current active pointer.
      * Used by {@link #mActivePointerId}.
      */
-    private static final int INVALID_POINTER = -1;
-    private final ArrayList<ItemInfo> mItems = new ArrayList<ItemInfo>();
+    private static final int                  INVALID_POINTER         = -1;
+    private final        ArrayList<ItemInfo>  mItems                  = new ArrayList<>();
     private PagerAdapter mAdapter;
-    private int mCurItem;   // Index of currently displayed page.
-    private int mRestoredCurItem = -1;
-    private Parcelable mRestoredAdapterState = null;
-    private ClassLoader mRestoredClassLoader = null;
-    private Scroller mScroller;
+    private int          mCurItem;   // Index of currently displayed page.
+    private int         mRestoredCurItem      = -1;
+    private Parcelable  mRestoredAdapterState = null;
+    private ClassLoader mRestoredClassLoader  = null;
+    private Scroller      mScroller;
     private PagerObserver mObserver;
-    private int mPageMargin;
-    private Drawable mMarginDrawable;
-    private int mChildWidthMeasureSpec;
-    private int mChildHeightMeasureSpec;
-    private boolean mInLayout;
-    private boolean mScrollingCacheEnabled;
-    private boolean mPopulatePending;
-    private boolean mScrolling;
+    private int           mPageMargin;
+    private Drawable      mMarginDrawable;
+    private int           mChildWidthMeasureSpec;
+    private int           mChildHeightMeasureSpec;
+    private boolean       mInLayout;
+    private boolean       mScrollingCacheEnabled;
+    private boolean       mPopulatePending;
+    private boolean       mScrolling;
     private int mOffscreenPageLimit = DEFAULT_OFFSCREEN_PAGES;
     private boolean mIsBeingDragged;
     private boolean mIsUnableToDrag;
-    private int mTouchSlop;
-    private float mInitialMotionX;
+    private int     mTouchSlop;
+    private float   mInitialMotionX;
     /**
      * Position of the last motion event.
      */
-    private float mLastMotionX;
-    private float mLastMotionY;
+    private float   mLastMotionX;
+    private float   mLastMotionY;
     /**
      * ID of the active pointer. This is used to retain consistency during
      * drags/flings if multiple pointers are used.
@@ -136,22 +130,22 @@ public class QLazyViewPager extends ViewGroup {
     /**
      * Determines speed during touch scrolling
      */
-    private VelocityTracker mVelocityTracker;
-    private int mMinimumVelocity;
-    private int mMaximumVelocity;
-    private float mBaseLineFlingVelocity;
-    private float mFlingVelocityInfluence;
-    private boolean mFakeDragging;
-    private long mFakeDragBeginTime;
+    private VelocityTracker  mVelocityTracker;
+    private int              mMinimumVelocity;
+    private int              mMaximumVelocity;
+    private float            mBaseLineFlingVelocity;
+    private float            mFlingVelocityInfluence;
+    private boolean          mFakeDragging;
+    private long             mFakeDragBeginTime;
     private EdgeEffectCompat mLeftEdge;
     private EdgeEffectCompat mRightEdge;
     private boolean mFirstLayout = true;
     private OnPageChangeListener mOnPageChangeListener;
-    private int mScrollState = SCROLL_STATE_IDLE;
+    private int     mScrollState = SCROLL_STATE_IDLE;
     /**
      * 是否滑动
      */
-    private boolean isCanScroll = true;
+    private boolean isCanScroll  = true;
 
     public QLazyViewPager(Context context) {
         super(context);
@@ -462,7 +456,7 @@ public class QLazyViewPager extends ViewGroup {
         setScrollState(SCROLL_STATE_SETTLING);
 
         final float pageDelta = (float) Math.abs(dx) / (getWidth() + mPageMargin);
-        int duration = (int) (pageDelta * 100);
+        int         duration  = (int) (pageDelta * 100);
 
         velocity = Math.abs(velocity);
         if (velocity > 0) {
@@ -491,11 +485,11 @@ public class QLazyViewPager extends ViewGroup {
         // This method only gets called if our observer is attached, so mAdapter is non-null.
 
         boolean needPopulate = mItems.size() < 3 && mItems.size() < mAdapter.getCount();
-        int newCurrItem = -1;
+        int     newCurrItem  = -1;
 
         for (int i = 0; i < mItems.size(); i++) {
-            final ItemInfo ii = mItems.get(i);
-            final int newPos = mAdapter.getItemPosition(ii.object);
+            final ItemInfo ii     = mItems.get(i);
+            final int      newPos = mAdapter.getItemPosition(ii.object);
 
             if (newPos == PagerAdapter.POSITION_UNCHANGED) {
                 continue;
@@ -562,9 +556,9 @@ public class QLazyViewPager extends ViewGroup {
         mAdapter.startUpdate(this);
 
         final int pageLimit = mOffscreenPageLimit;
-        final int startPos = Math.max(0, mCurItem - pageLimit);
-        final int N = mAdapter.getCount();
-        final int endPos = Math.min(N - 1, mCurItem + pageLimit);
+        final int startPos  = Math.max(0, mCurItem - pageLimit);
+        final int N         = mAdapter.getCount();
+        final int endPos    = Math.min(N - 1, mCurItem + pageLimit);
 
         if (DEBUG) Log.v(TAG, "populating: startPos=" + startPos + " endPos=" + endPos);
 
@@ -626,8 +620,8 @@ public class QLazyViewPager extends ViewGroup {
         mAdapter.finishUpdate(this);
 
         if (hasFocus()) {
-            View currentFocused = findFocus();
-            ItemInfo ii = currentFocused != null ? infoForAnyChild(currentFocused) : null;
+            View     currentFocused = findFocus();
+            ItemInfo ii             = currentFocused != null ? infoForAnyChild(currentFocused) : null;
             if (ii == null || ii.position != mCurItem) {
                 for (int i = 0; i < getChildCount(); i++) {
                     View child = getChildAt(i);
@@ -645,7 +639,7 @@ public class QLazyViewPager extends ViewGroup {
     @Override
     public Parcelable onSaveInstanceState() {
         Parcelable superState = super.onSaveInstanceState();
-        SavedState ss = new SavedState(superState);
+        SavedState ss         = new SavedState(superState);
         ss.position = mCurItem;
         if (mAdapter != null) {
             ss.adapterState = mAdapter.saveState();
@@ -764,11 +758,11 @@ public class QLazyViewPager extends ViewGroup {
     private void recomputeScrollPosition(int width, int oldWidth, int margin, int oldMargin) {
         final int widthWithMargin = width + margin;
         if (oldWidth > 0) {
-            final int oldScrollPos = getScrollX();
-            final int oldwwm = oldWidth + oldMargin;
-            final int oldScrollItem = oldScrollPos / oldwwm;
-            final float scrollOffset = (float) (oldScrollPos % oldwwm) / oldwwm;
-            final int scrollPos = (int) ((oldScrollItem + scrollOffset) * widthWithMargin);
+            final int   oldScrollPos  = getScrollX();
+            final int   oldwwm        = oldWidth + oldMargin;
+            final int   oldScrollItem = oldScrollPos / oldwwm;
+            final float scrollOffset  = (float) (oldScrollPos % oldwwm) / oldwwm;
+            final int   scrollPos     = (int) ((oldScrollItem + scrollOffset) * widthWithMargin);
             scrollTo(scrollPos, getScrollY());
             if (!mScroller.isFinished()) {
                 // We now return to your regularly scheduled scroll, already in progress.
@@ -794,12 +788,12 @@ public class QLazyViewPager extends ViewGroup {
         final int width = r - l;
 
         for (int i = 0; i < count; i++) {
-            View child = getChildAt(i);
+            View     child = getChildAt(i);
             ItemInfo ii;
             if (child.getVisibility() != GONE && (ii = infoForChild(child)) != null) {
-                int loff = (width + mPageMargin) * ii.position;
+                int loff      = (width + mPageMargin) * ii.position;
                 int childLeft = getPaddingLeft() + loff;
-                int childTop = getPaddingTop();
+                int childTop  = getPaddingTop();
                 if (DEBUG) Log.v(TAG, "Positioning #" + i + " " + child + " f=" + ii.object
                         + ":" + childLeft + "," + childTop + " " + child.getMeasuredWidth()
                         + "x" + child.getMeasuredHeight());
@@ -819,18 +813,18 @@ public class QLazyViewPager extends ViewGroup {
                 if (DEBUG) Log.i(TAG, "computeScroll: still scrolling");
                 int oldX = getScrollX();
                 int oldY = getScrollY();
-                int x = mScroller.getCurrX();
-                int y = mScroller.getCurrY();
+                int x    = mScroller.getCurrX();
+                int y    = mScroller.getCurrY();
 
                 if (oldX != x || oldY != y) {
                     scrollTo(x, y);
                 }
 
                 if (mOnPageChangeListener != null) {
-                    final int widthWithMargin = getWidth() + mPageMargin;
-                    final int position = x / widthWithMargin;
-                    final int offsetPixels = x % widthWithMargin;
-                    final float offset = (float) offsetPixels / widthWithMargin;
+                    final int   widthWithMargin = getWidth() + mPageMargin;
+                    final int   position        = x / widthWithMargin;
+                    final int   offsetPixels    = x % widthWithMargin;
+                    final float offset          = (float) offsetPixels / widthWithMargin;
                     mOnPageChangeListener.onPageScrolled(position, offset, offsetPixels);
                 }
 
@@ -852,8 +846,8 @@ public class QLazyViewPager extends ViewGroup {
             mScroller.abortAnimation();
             int oldX = getScrollX();
             int oldY = getScrollY();
-            int x = mScroller.getCurrX();
-            int y = mScroller.getCurrY();
+            int x    = mScroller.getCurrX();
+            int y    = mScroller.getCurrY();
             if (oldX != x || oldY != y) {
                 scrollTo(x, y);
             }
@@ -1162,7 +1156,7 @@ public class QLazyViewPager extends ViewGroup {
                         mAdapter != null && mAdapter.getCount() > 1)) {
             if (!mLeftEdge.isFinished()) {
                 final int restoreCount = canvas.save();
-                final int height = getHeight() - getPaddingTop() - getPaddingBottom();
+                final int height       = getHeight() - getPaddingTop() - getPaddingBottom();
 
                 canvas.rotate(270);
                 canvas.translate(-height + getPaddingTop(), 0);
@@ -1172,9 +1166,9 @@ public class QLazyViewPager extends ViewGroup {
             }
             if (!mRightEdge.isFinished()) {
                 final int restoreCount = canvas.save();
-                final int width = getWidth();
-                final int height = getHeight() - getPaddingTop() - getPaddingBottom();
-                final int itemCount = mAdapter != null ? mAdapter.getCount() : 1;
+                final int width        = getWidth();
+                final int height       = getHeight() - getPaddingTop() - getPaddingBottom();
+                final int itemCount    = mAdapter != null ? mAdapter.getCount() : 1;
 
                 canvas.rotate(90);
                 canvas.translate(-getPaddingTop(),
@@ -1201,8 +1195,8 @@ public class QLazyViewPager extends ViewGroup {
         // Draw the margin drawable if needed.
         if (mPageMargin > 0 && mMarginDrawable != null) {
             final int scrollX = getScrollX();
-            final int width = getWidth();
-            final int offset = scrollX % (width + mPageMargin);
+            final int width   = getWidth();
+            final int offset  = scrollX % (width + mPageMargin);
             if (offset != 0) {
                 // Pages fit completely when settled; we only need to draw when in between
                 final int left = scrollX - offset + width;
@@ -1240,8 +1234,8 @@ public class QLazyViewPager extends ViewGroup {
         } else {
             mVelocityTracker.clear();
         }
-        final long time = SystemClock.uptimeMillis();
-        final MotionEvent ev = MotionEvent.obtain(time, time, MotionEvent.ACTION_DOWN, 0, 0, 0);
+        final long        time = SystemClock.uptimeMillis();
+        final MotionEvent ev   = MotionEvent.obtain(time, time, MotionEvent.ACTION_DOWN, 0, 0, 0);
         mVelocityTracker.addMovement(ev);
         ev.recycle();
         mFakeDragBeginTime = time;
@@ -1292,8 +1286,8 @@ public class QLazyViewPager extends ViewGroup {
         }
 
         mLastMotionX += xOffset;
-        float scrollX = getScrollX() - xOffset;
-        final int width = getWidth();
+        float     scrollX         = getScrollX() - xOffset;
+        final int width           = getWidth();
         final int widthWithMargin = width + mPageMargin;
 
         final float leftBound = Math.max(0, (mCurItem - 1) * widthWithMargin);
@@ -1308,9 +1302,9 @@ public class QLazyViewPager extends ViewGroup {
         mLastMotionX += scrollX - (int) scrollX;
         scrollTo((int) scrollX, getScrollY());
         if (mOnPageChangeListener != null) {
-            final int position = (int) scrollX / widthWithMargin;
-            final int positionOffsetPixels = (int) scrollX % widthWithMargin;
-            final float positionOffset = (float) positionOffsetPixels / widthWithMargin;
+            final int   position             = (int) scrollX / widthWithMargin;
+            final int   positionOffsetPixels = (int) scrollX % widthWithMargin;
+            final float positionOffset       = (float) positionOffsetPixels / widthWithMargin;
             mOnPageChangeListener.onPageScrolled(position, positionOffset,
                     positionOffsetPixels);
         }
@@ -1337,7 +1331,7 @@ public class QLazyViewPager extends ViewGroup {
 
     private void onSecondaryPointerUp(MotionEvent ev) {
         final int pointerIndex = MotionEventCompat.getActionIndex(ev);
-        final int pointerId = MotionEventCompat.getPointerId(ev, pointerIndex);
+        final int pointerId    = MotionEventCompat.getPointerId(ev, pointerIndex);
         if (pointerId == mActivePointerId) {
             // This was our active pointer going up. Choose a new
             // active pointer and adjust accordingly.
@@ -1386,12 +1380,13 @@ public class QLazyViewPager extends ViewGroup {
      * @param y      Y coordinate of the active touch point
      * @return true if child views of v can be scrolled by delta of dx.
      */
+    @SuppressWarnings("SameParameterValue")
     protected boolean canScroll(View v, boolean checkV, int dx, int x, int y) {
         if (v instanceof ViewGroup) {
-            final ViewGroup group = (ViewGroup) v;
-            final int scrollX = v.getScrollX();
-            final int scrollY = v.getScrollY();
-            final int count = group.getChildCount();
+            final ViewGroup group   = (ViewGroup) v;
+            final int       scrollX = v.getScrollX();
+            final int       scrollY = v.getScrollY();
+            final int       count   = group.getChildCount();
             // Count backwards - let topmost views consume scroll distance first.
             for (int i = count - 1; i >= 0; i--) {
                 // TODO: Add versioned support here for transformed views.
@@ -1525,10 +1520,9 @@ public class QLazyViewPager extends ViewGroup {
         // FOCUS_AFTER_DESCENDANTS and there are some descendants focusable.  this is
         // to avoid the focus search finding layouts when a more precise search
         // among the focusable children would be more interesting.
-        if (
-                descendantFocusability != FOCUS_AFTER_DESCENDANTS ||
-                        // No focusable descendants
-                        (focusableCount == views.size())) {
+        if (descendantFocusability != FOCUS_AFTER_DESCENDANTS ||
+                // No focusable descendants
+                (focusableCount == views.size())) {
             // Note that we can't call the superclass here, because it will
             // add all views in.  So we need to do the same thing View does.
             if (!isFocusable()) {
@@ -1538,9 +1532,7 @@ public class QLazyViewPager extends ViewGroup {
                     isInTouchMode() && !isFocusableInTouchMode()) {
                 return;
             }
-            if (views != null) {
-                views.add(this);
-            }
+            views.add(this);
         }
     }
 
@@ -1656,8 +1648,8 @@ public class QLazyViewPager extends ViewGroup {
     }
 
     static class ItemInfo {
-        Object object;
-        int position;
+        Object  object;
+        int     position;
         boolean scrolling;
     }
 
@@ -1696,8 +1688,8 @@ public class QLazyViewPager extends ViewGroup {
                 return new SavedState[size];
             }
         });
-        int position;
-        Parcelable adapterState;
+        int         position;
+        Parcelable  adapterState;
         ClassLoader loader;
 
         public SavedState(Parcelable superState) {

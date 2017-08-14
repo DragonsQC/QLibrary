@@ -9,6 +9,7 @@ import android.view.MotionEvent;
 /**
  * 可设置是否滑动的 ViewPager
  */
+@SuppressWarnings("WeakerAccess,unused")
 public class QViewPager extends ViewPager {
 
     private boolean isScroll = true;
@@ -37,5 +38,5 @@ public class QViewPager extends ViewPager {
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         return isScroll && super.onInterceptTouchEvent(ev);
     }
-    
+
 }

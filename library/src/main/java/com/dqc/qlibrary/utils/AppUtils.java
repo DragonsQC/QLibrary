@@ -14,6 +14,7 @@ import java.util.List;
 /**
  * APP 相关信息工具类
  */
+@SuppressWarnings("WeakerAccess,unused")
 public class AppUtils {
 
     /**
@@ -111,9 +112,15 @@ public class AppUtils {
      */
     public static boolean isServiceRunning(Context context, String className) {
         boolean isRunning = false;
-        ActivityManager activityManager = (ActivityManager) context.getApplicationContext().getSystemService(
-                Context.ACTIVITY_SERVICE);
-        List<ActivityManager.RunningServiceInfo> servicesList = activityManager.getRunningServices(Integer.MAX_VALUE);
+        ActivityManager activityManager =
+                (ActivityManager) context.getApplicationContext()
+                        .getSystemService(Context.ACTIVITY_SERVICE);
+        if (activityManager == null) {
+            return false;
+        }
+        List<ActivityManager.RunningServiceInfo> servicesList =
+                activityManager.getRunningServices(Integer.MAX_VALUE);
+
         for (ActivityManager.RunningServiceInfo si : servicesList) {
             if (className.equals(si.service.getClassName())) {
                 isRunning = true;
@@ -150,7 +157,11 @@ public class AppUtils {
      * @return 当前系统的可用内存
      */
     public static int getDeviceUsableMemory(Context context) {
-        ActivityManager            am = (ActivityManager) context.getApplicationContext().getSystemService(Context.ACTIVITY_SERVICE);
+        ActivityManager am = (ActivityManager) context.getApplicationContext()
+                .getSystemService(Context.ACTIVITY_SERVICE);
+        if (am == null) {
+            return -1;
+        }
         ActivityManager.MemoryInfo mi = new ActivityManager.MemoryInfo();
         am.getMemoryInfo(mi);
         return (int) (mi.availMem / (1024 * 1024));

@@ -12,6 +12,7 @@ import java.util.List;
 /**
  * xUtil json 解析器
  */
+@SuppressWarnings("WeakerAccess,unused")
 public class JsonResponseParser implements ResponseParser {
 
     @Override
@@ -27,7 +28,6 @@ public class JsonResponseParser implements ResponseParser {
      * @param resultClass 返回值类型
      * @param result      字符串数据
      * @return Object
-     * @throws Throwable
      */
     @Override
     public Object parse(Type resultType, Class<?> resultClass, String result) throws Throwable {

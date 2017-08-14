@@ -11,6 +11,7 @@ import java.io.File;
  * 清除SharedPreference，
  * 清除files和清除自定义目录
  */
+@SuppressWarnings("WeakerAccess,unused")
 public class CleanUtils {
 
     /**

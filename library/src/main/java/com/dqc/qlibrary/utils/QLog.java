@@ -12,6 +12,7 @@ import com.elvishew.xlog.XLog;
  * 基于xLog，使用前请初始化，QLog.init。
  * 若需要替换原来已使用的原生Log包名替换为换为com.dqc.qlibrary.utils.QLog.Log
  */
+@SuppressWarnings("WeakerAccess,unused")
 public class QLog {
 
     /**
@@ -21,12 +22,12 @@ public class QLog {
      * @param tag      日志tag
      */
     public static void init(boolean allowLog, String tag) {
-        XLog.init(allowLog ? LogLevel.ALL : LogLevel.NONE,
-                new LogConfiguration.Builder()
-                        .tag(tag)   // 指定 TAG，默认为 "X-LOG"
-                        .b()        // 允许打印日志边框，默认禁止
-                        .st(2)      // 允许打印深度为2的调用栈信息，默认禁止
-                        .build());
+        LogConfiguration configuration = new LogConfiguration.Builder()
+                .logLevel(allowLog ? LogLevel.ALL : LogLevel.NONE)
+                .tag(tag)   // 指定 TAG，默认为 "X-LOG"
+                .b()        // 允许打印日志边框，默认禁止
+                .build();
+        XLog.init(configuration);
     }
 
     /**
@@ -35,12 +36,13 @@ public class QLog {
      * @param depth    栈信息深度
      */
     public static void init(boolean allowLog, String tag, int depth) {
-        XLog.init(allowLog ? LogLevel.ALL : LogLevel.NONE,
-                new LogConfiguration.Builder()
-                        .tag(tag)   // 指定 TAG，默认为 "X-LOG"
-                        .b()        // 允许打印日志边框，默认禁止
-                        .st(depth)
-                        .build());
+        LogConfiguration configuration = new LogConfiguration.Builder()
+                .logLevel(allowLog ? LogLevel.ALL : LogLevel.NONE)
+                .tag(tag)   // 指定 TAG，默认为 "X-LOG"
+                .b()        // 允许打印日志边框，默认禁止
+                .st(depth)    // 允许打印深度为2的调用栈信息，默认禁止
+                .build();
+        XLog.init(configuration);
     }
 
     /**

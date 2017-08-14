@@ -23,6 +23,7 @@ import javax.crypto.spec.SecretKeySpec;
  *     desc  : 加密解密相关的工具类
  * </pre>
  */
+@SuppressWarnings("WeakerAccess,unused")
 public final class DigestUtils {
 
     private DigestUtils() {
@@ -159,7 +160,7 @@ public final class DigestUtils {
      */
     public static byte[] md5File(final File file) {
         if (file == null) return null;
-        FileInputStream fis = null;
+        FileInputStream   fis = null;
         DigestInputStream digestInputStream;
         try {
             fis = new FileInputStream(file);
@@ -564,7 +565,7 @@ public final class DigestUtils {
         if (data == null || data.length == 0 || key == null || key.length == 0) return null;
         try {
             SecretKeySpec secretKey = new SecretKeySpec(key, algorithm);
-            Mac mac = Mac.getInstance(algorithm);
+            Mac           mac       = Mac.getInstance(algorithm);
             mac.init(secretKey);
             return mac.doFinal(data);
         } catch (InvalidKeyException | NoSuchAlgorithmException e) {
@@ -826,8 +827,8 @@ public final class DigestUtils {
         if (data == null || data.length == 0 || key == null || key.length == 0) return null;
         try {
             SecretKeySpec keySpec = new SecretKeySpec(key, algorithm);
-            Cipher cipher = Cipher.getInstance(transformation);
-            SecureRandom random = new SecureRandom();
+            Cipher        cipher  = Cipher.getInstance(transformation);
+            SecureRandom  random  = new SecureRandom();
             cipher.init(isEncrypt ? Cipher.ENCRYPT_MODE : Cipher.DECRYPT_MODE, keySpec, random);
             return cipher.doFinal(data);
         } catch (Throwable e) {
@@ -858,7 +859,7 @@ public final class DigestUtils {
             len = len + 1;
         }
         char[] hexBytes = hexString.toUpperCase().toCharArray();
-        byte[] ret = new byte[len >> 1];
+        byte[] ret      = new byte[len >> 1];
         for (int i = 0; i < len; i += 2) {
             ret[i >> 1] = (byte) (hex2Dec(hexBytes[i]) << 4 | hex2Dec(hexBytes[i + 1]));
         }

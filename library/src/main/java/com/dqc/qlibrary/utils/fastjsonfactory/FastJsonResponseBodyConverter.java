@@ -20,7 +20,7 @@ import retrofit2.Converter;
  *
  * @version 1.0.0 <br/>
  */
-
+@SuppressWarnings("WeakerAccess,unused")
 public class FastJsonResponseBodyConverter<T> implements Converter<ResponseBody, T> {
     private final Type type;
 
@@ -34,7 +34,7 @@ public class FastJsonResponseBodyConverter<T> implements Converter<ResponseBody,
     @Override
     public T convert(ResponseBody value) throws IOException {
         BufferedSource bufferedSource = Okio.buffer(value.source());
-        String tempStr = bufferedSource.readUtf8();
+        String         tempStr        = bufferedSource.readUtf8();
         bufferedSource.close();
         return JSON.parseObject(tempStr, type);
 

@@ -8,6 +8,7 @@ import java.util.regex.Pattern;
 /**
  * 字符串相关工具类
  */
+@SuppressWarnings("WeakerAccess,unused")
 public class StringUtils {
 
     /**
@@ -58,9 +59,9 @@ public class StringUtils {
      * .equals("abc", "abc") = true
      * .equals("abc", "ABC") = false
      *
-     * @param cs1
-     * @param cs2
-     * @return
+     * @param cs1 字符串1
+     * @param cs2 字符串2
+     * @return .
      */
     public static boolean equals(CharSequence cs1, CharSequence cs2) {
         return TextUtils.equals(cs1, cs2);
@@ -69,19 +70,19 @@ public class StringUtils {
     /**
      * 判断是否为 URL
      *
-     * @param url
-     * @return
+     * @param url URL
+     * @return boolean
      */
     public static boolean isUrl(String url) {
-        Pattern pattern = Pattern.compile("^([hH][tT]{2}[pP]://|[hH][tT]{2}[pP][sS]://)(([A-Za-z0-9-~]+).)+([A-Za-z0-9-~\\/])+$");
+        Pattern pattern = Pattern.compile("^([hH][tT]{2}[pP]://|[hH][tT]{2}[pP][sS]://)(([A-Za-z0-9-~]+).)+([A-Za-z0-9-~/])+$");
         return pattern.matcher(url).matches();
     }
 
     /**
      * 格式化 Email 隐藏中间字符串
      *
-     * @param email
-     * @return
+     * @param email Email
+     * @return .
      */
     public static String formatEmailShowSafe(String email) {
         return email.substring(0, 2) + "*****" + email.substring(email.lastIndexOf("@"), email.length());

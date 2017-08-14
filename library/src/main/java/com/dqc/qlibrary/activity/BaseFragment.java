@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 /**
  * BaseFragment
  */
+@SuppressWarnings("WeakerAccess,unused")
 public abstract class BaseFragment extends Fragment {
 
 

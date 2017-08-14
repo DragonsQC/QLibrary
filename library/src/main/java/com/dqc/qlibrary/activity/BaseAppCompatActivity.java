@@ -10,6 +10,7 @@ import com.jaeger.library.StatusBarUtil;
 /**
  * BaseAppCompatActivity
  */
+@SuppressWarnings("WeakerAccess,unused")
 public abstract class BaseAppCompatActivity extends AppCompatActivity {
 
     @Override

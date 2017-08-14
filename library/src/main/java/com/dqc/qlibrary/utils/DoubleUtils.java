@@ -9,6 +9,7 @@ import java.math.BigDecimal;
  * 整型的方法适合于货币精度已知的情况，比如12.11+1.10转成1211+110计算，最后再/100即可
  * 以下是摘抄的BigDecimal方法:
  */
+@SuppressWarnings("WeakerAccess,unused")
 public class DoubleUtils implements Serializable {
     private static final long    serialVersionUID = -3345205828566485102L;
     // 默认除法运算精度

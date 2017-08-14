@@ -21,7 +21,7 @@ import java.io.OutputStream;
 /**
  * 图片相关工具类
  */
-
+@SuppressWarnings("WeakerAccess,unused,SameParameterValue")
 public class ImageUtils {
 
     /**
@@ -158,7 +158,8 @@ public class ImageUtils {
      * @param recycle     是否回收
      * @return 带颜色边框图
      */
-    public static Bitmap addBorder(final Bitmap src, final int borderWidth, @ColorInt  final int color, final boolean recycle) {
+    public static Bitmap addBorder(final Bitmap src, final int borderWidth, @ColorInt  final int color,
+                                   final boolean recycle) {
         int    doubleBorder = borderWidth << 1;
         int    newWidth     = src.getWidth() + doubleBorder;
         int    newHeight    = src.getHeight() + doubleBorder;
@@ -199,7 +200,8 @@ public class ImageUtils {
      * @param recycle 是否回收
      * @return {@code true}: 成功<br>{@code false}: 失败
      */
-    public static boolean save(final Bitmap src, final File file, final Bitmap.CompressFormat format, final boolean recycle) {
+    public static boolean save(final Bitmap src, final File file, final Bitmap.CompressFormat format,
+                               final boolean recycle) {
         if (src == null || file == null) {
             return false;
         }

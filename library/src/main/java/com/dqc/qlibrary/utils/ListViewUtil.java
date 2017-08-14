@@ -8,6 +8,7 @@ import android.widget.ListView;
 /**
  * 动态设置 ListView 高度
  */
+@SuppressWarnings("WeakerAccess,unused")
 public class ListViewUtil {
     public static void setListViewHeightBasedOnChildren(ListView listView) {
         //获取ListView对应的Adapter

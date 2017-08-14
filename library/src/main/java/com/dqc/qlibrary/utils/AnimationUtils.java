@@ -9,6 +9,7 @@ import android.view.animation.ScaleAnimation;
 /**
  * Animation 工具类
  */
+@SuppressWarnings("WeakerAccess,unused")
 public final class AnimationUtils {
 
     /**
@@ -38,9 +39,15 @@ public final class AnimationUtils {
      * @param animationListener 动画监听器
      * @return 一个旋转动画
      */
-    public static RotateAnimation getRotateAnimation(float fromDegrees, float toDegrees, int pivotXType, float pivotXValue, int pivotYType, float pivotYValue, long durationMillis, AnimationListener animationListener) {
-        RotateAnimation rotateAnimation = new RotateAnimation(fromDegrees,
-                toDegrees, pivotXType, pivotXValue, pivotYType, pivotYValue);
+    @SuppressWarnings("SameParameterValue")
+    public static RotateAnimation getRotateAnimation(float fromDegrees, float toDegrees,
+                                                     int pivotXType, float pivotXValue,
+                                                     int pivotYType, float pivotYValue,
+                                                     long durationMillis,
+                                                     AnimationListener animationListener) {
+        RotateAnimation rotateAnimation = new RotateAnimation(
+                fromDegrees, toDegrees,
+                pivotXType, pivotXValue, pivotYType, pivotYValue);
         rotateAnimation.setDuration(durationMillis);
         if (animationListener != null) {
             rotateAnimation.setAnimationListener(animationListener);
@@ -56,8 +63,10 @@ public final class AnimationUtils {
      * @param animationListener 动画监听器
      * @return 一个根据中心点旋转的动画
      */
-    public static RotateAnimation getRotateAnimationByCenter(long durationMillis, AnimationListener animationListener) {
-        return getRotateAnimation(0f, 359f, Animation.RELATIVE_TO_SELF, 0.5f,
+    public static RotateAnimation getRotateAnimationByCenter(long durationMillis,
+                                                             AnimationListener animationListener) {
+        return getRotateAnimation(0f, 359f,
+                Animation.RELATIVE_TO_SELF, 0.5f,
                 Animation.RELATIVE_TO_SELF, 0.5f, durationMillis,
                 animationListener);
     }
@@ -105,7 +114,9 @@ public final class AnimationUtils {
      * @param animationListener 动画监听器
      * @return 一个透明度渐变动画
      */
-    public static AlphaAnimation getAlphaAnimation(float fromAlpha, float toAlpha, long durationMillis, AnimationListener animationListener) {
+    public static AlphaAnimation getAlphaAnimation(float fromAlpha, float toAlpha,
+                                                   long durationMillis,
+                                                   AnimationListener animationListener) {
         AlphaAnimation alphaAnimation = new AlphaAnimation(fromAlpha, toAlpha);
         alphaAnimation.setDuration(durationMillis);
         if (animationListener != null) {
@@ -123,7 +134,8 @@ public final class AnimationUtils {
      * @param durationMillis 持续时间
      * @return 一个透明度渐变动画
      */
-    public static AlphaAnimation getAlphaAnimation(float fromAlpha, float toAlpha, long durationMillis) {
+    public static AlphaAnimation getAlphaAnimation(float fromAlpha, float toAlpha,
+                                                   long durationMillis) {
         return getAlphaAnimation(fromAlpha, toAlpha, durationMillis, null);
     }
 
@@ -136,7 +148,8 @@ public final class AnimationUtils {
      * @param animationListener 动画监听器
      * @return 一个透明度渐变动画，默认持续时间为DEFAULT_ANIMATION_DURATION
      */
-    public static AlphaAnimation getAlphaAnimation(float fromAlpha, float toAlpha, AnimationListener animationListener) {
+    public static AlphaAnimation getAlphaAnimation(float fromAlpha, float toAlpha,
+                                                   AnimationListener animationListener) {
         return getAlphaAnimation(fromAlpha, toAlpha, DEFAULT_ANIMATION_DURATION,
                 animationListener);
     }
@@ -162,7 +175,8 @@ public final class AnimationUtils {
      * @param animationListener 动画监听器
      * @return 一个由完全显示变为不可见的透明度渐变动画
      */
-    public static AlphaAnimation getHiddenAlphaAnimation(long durationMillis, AnimationListener animationListener) {
+    public static AlphaAnimation getHiddenAlphaAnimation(long durationMillis,
+                                                         AnimationListener animationListener) {
         return getAlphaAnimation(1.0f, 0.0f, durationMillis, animationListener);
     }
 
@@ -207,7 +221,8 @@ public final class AnimationUtils {
      * @param animationListener 动画监听器
      * @return 一个由不可见变为完全显示的透明度渐变动画
      */
-    public static AlphaAnimation getShowAlphaAnimation(long durationMillis, AnimationListener animationListener) {
+    public static AlphaAnimation getShowAlphaAnimation(long durationMillis,
+                                                       AnimationListener animationListener) {
         return getAlphaAnimation(0.0f, 1.0f, durationMillis, animationListener);
     }
 
@@ -241,7 +256,8 @@ public final class AnimationUtils {
      * @return 一个由不可见变为完全显示的透明度渐变动画，默认持续时间为DEFAULT_ANIMATION_DURATION
      */
     public static AlphaAnimation getShowAlphaAnimation() {
-        return getAlphaAnimation(0.0f, 1.0f, DEFAULT_ANIMATION_DURATION, null);
+        return getAlphaAnimation(0.0f, 1.0f,
+                DEFAULT_ANIMATION_DURATION, null);
     }
 
 
@@ -252,7 +268,8 @@ public final class AnimationUtils {
      * @param animationListener 监听
      * @return 一个缩小动画
      */
-    public static ScaleAnimation getLessenScaleAnimation(long durationMillis, AnimationListener animationListener) {
+    public static ScaleAnimation getLessenScaleAnimation(long durationMillis,
+                                                         AnimationListener animationListener) {
         ScaleAnimation scaleAnimation = new ScaleAnimation(1.0f, 0.0f, 1.0f,
                 0.0f, ScaleAnimation.RELATIVE_TO_SELF,
                 ScaleAnimation.RELATIVE_TO_SELF);
@@ -295,7 +312,8 @@ public final class AnimationUtils {
      * @param animationListener 监听
      * @return 返回一个放大的效果
      */
-    public static ScaleAnimation getAmplificationAnimation(long durationMillis, AnimationListener animationListener) {
+    public static ScaleAnimation getAmplificationAnimation(long durationMillis,
+                                                           AnimationListener animationListener) {
         ScaleAnimation scaleAnimation = new ScaleAnimation(0.0f, 1.0f, 0.0f,
                 1.0f, ScaleAnimation.RELATIVE_TO_SELF,
                 ScaleAnimation.RELATIVE_TO_SELF);

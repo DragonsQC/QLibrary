@@ -9,6 +9,7 @@ import android.view.View;
 /**
  * Android Snackbar 工具类
  */
+@SuppressWarnings("WeakerAccess,unused")
 public class SnackbarUtils {
 
     /**

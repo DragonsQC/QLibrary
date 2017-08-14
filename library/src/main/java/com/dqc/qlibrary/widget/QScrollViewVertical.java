@@ -9,6 +9,7 @@ import android.widget.ScrollView;
 /**
  * 解决嵌套 ViewPager 滑动冲突
  */
+@SuppressWarnings("WeakerAccess,unused")
 public class QScrollViewVertical extends ScrollView {
 
     private GestureDetector mGestureDetector;

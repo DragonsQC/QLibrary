@@ -24,7 +24,6 @@ import android.view.View;
 
 import com.dqc.qlibrary.R;
 
-
 public class SwipeBackActivityHelper {
     private Activity mActivity;
 

@@ -9,6 +9,7 @@ import android.widget.Toast;
 /**
  * Android Toast 工具类
  */
+@SuppressWarnings("WeakerAccess,unused")
 public class ToastUtils {
 
     /**
@@ -18,7 +19,7 @@ public class ToastUtils {
      * @param charSequence 字符串
      * @param duration     时长
      */
-    public static void showDefault(@NonNull Context context, @NonNull CharSequence charSequence, @NonNull int duration) {
+    public static void showDefault(@NonNull Context context, @NonNull CharSequence charSequence, int duration) {
         Toast.makeText(context.getApplicationContext(), charSequence, duration).show();
     }
 
@@ -39,7 +40,7 @@ public class ToastUtils {
      * @param rseId    资源id
      * @param duration 时长
      */
-    public static void showDefault(@NonNull Context context, @StringRes int rseId, @NonNull int duration) {
+    public static void showDefault(@NonNull Context context, @StringRes int rseId, int duration) {
         Toast.makeText(context.getApplicationContext(), rseId, duration).show();
     }
 
@@ -60,7 +61,7 @@ public class ToastUtils {
      * @param charSequence 字符串
      * @param duration     时长
      */
-    public static void showCenter(@NonNull Context context, @NonNull CharSequence charSequence, @NonNull int duration) {
+    public static void showCenter(@NonNull Context context, @NonNull CharSequence charSequence, int duration) {
         Toast toast = Toast.makeText(context.getApplicationContext(), charSequence, duration);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
@@ -85,7 +86,7 @@ public class ToastUtils {
      * @param rseId    资源id
      * @param duration 时长
      */
-    public static void showCenter(@NonNull Context context, @StringRes int rseId, @NonNull int duration) {
+    public static void showCenter(@NonNull Context context, @StringRes int rseId, int duration) {
         Toast toast = Toast.makeText(context.getApplicationContext(), rseId, duration);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
@@ -110,7 +111,7 @@ public class ToastUtils {
      * @param charSequence 字符串
      * @param duration     时长
      */
-    public static void showTop(@NonNull Context context, @NonNull CharSequence charSequence, @NonNull int duration) {
+    public static void showTop(@NonNull Context context, @NonNull CharSequence charSequence, int duration) {
         Toast toast = Toast.makeText(context.getApplicationContext(), charSequence, duration);
         toast.setGravity(Gravity.TOP, 0, 0);
         toast.show();
@@ -135,7 +136,7 @@ public class ToastUtils {
      * @param rseId    资源id
      * @param duration 时长
      */
-    public static void showTop(@NonNull Context context, @StringRes int rseId, @NonNull int duration) {
+    public static void showTop(@NonNull Context context, @StringRes int rseId, int duration) {
         Toast toast = Toast.makeText(context.getApplicationContext(), rseId, duration);
         toast.setGravity(Gravity.TOP, 0, 0);
         toast.show();

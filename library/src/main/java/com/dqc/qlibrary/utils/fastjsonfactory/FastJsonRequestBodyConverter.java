@@ -18,6 +18,7 @@ import retrofit2.Converter;
  *
  * @version 1.0.0 <br/>
  */
+@SuppressWarnings("WeakerAccess,unused")
 public class FastJsonRequestBodyConverter<T> implements Converter<T, RequestBody> {
     private static final MediaType MEDIA_TYPE = MediaType.parse("application/json; charset=UTF-8");
 

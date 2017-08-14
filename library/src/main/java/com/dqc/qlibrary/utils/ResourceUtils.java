@@ -18,6 +18,7 @@ import java.io.OutputStream;
 /**
  * Android 资源相关工具类
  */
+@SuppressWarnings("WeakerAccess,unused")
 public class ResourceUtils {
     private static DisplayMetrics sDisplayMetrics;
 

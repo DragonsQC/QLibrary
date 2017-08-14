@@ -7,6 +7,7 @@ import android.widget.GridView;
 /**
  * 解决嵌套 GridView 显示不正常的问题，显示所有数据，不出现滚动条
  */
+@SuppressWarnings("WeakerAccess,unused")
 public class QGridView extends GridView {
     public QGridView(Context context, AttributeSet attrs) {
         super(context, attrs);

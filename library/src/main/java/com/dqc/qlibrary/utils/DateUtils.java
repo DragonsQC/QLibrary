@@ -160,6 +160,7 @@ import java.util.Locale;
  * </pre>
  * 注意：SimpleDateFormat不是线程安全的，线程安全需用{@code ThreadLocal<SimpleDateFormat>}
  */
+@SuppressWarnings("WeakerAccess,unused")
 public class DateUtils {
     /**
      * 将毫秒数时间戳格式化为对应模式时间
@@ -275,7 +276,7 @@ public class DateUtils {
      * @return 相差天数
      */
     public static int daysBetween(Date smDate, Date bDate) {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
         try {
             smDate = sdf.parse(sdf.format(smDate));
             bDate = sdf.parse(sdf.format(bDate));

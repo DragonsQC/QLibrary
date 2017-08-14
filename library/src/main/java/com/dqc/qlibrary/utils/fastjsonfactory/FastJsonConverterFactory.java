@@ -11,7 +11,7 @@ import retrofit2.Retrofit;
 
 /**
  * ##### 存在问题，某些嵌套json数据无法转换 #####
- *
+ * <p>
  * <b>类名称：</b> FastJsonConverterFactory <br/>
  * <b>类描述：</b> FastJsonCoverter<br/>
  * <b>创建人：</b> Lincoln <br/>
@@ -21,6 +21,7 @@ import retrofit2.Retrofit;
  *
  * @version 1.0.0 <br/>
  */
+@SuppressWarnings("WeakerAccess,unused")
 public class FastJsonConverterFactory extends Converter.Factory {
 
     public static FastJsonConverterFactory create() {

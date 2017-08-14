@@ -10,6 +10,7 @@ import java.util.Map;
  * <p/>
  * 建议在 Application 中初始化设置spName，默认为
  */
+@SuppressWarnings("WeakerAccess,unused")
 public class SPUtils {
 
     private static String SP_NAME = "SPUtils";

@@ -34,6 +34,7 @@ import com.dqc.qlibrary.R;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("WeakerAccess,unused")
 public class SwipeBackLayout extends FrameLayout {
     /**
      * Minimum velocity that will be detected as a fling
@@ -156,7 +157,7 @@ public class SwipeBackLayout extends FrameLayout {
 
         a.recycle();
         final float density = getResources().getDisplayMetrics().density;
-        final float minVel = MIN_FLING_VELOCITY * density;
+        final float minVel  = MIN_FLING_VELOCITY * density;
         mDragHelper.setMinVelocity(minVel);
         mDragHelper.setMaxVelocity(minVel * 2f);
     }
@@ -175,7 +176,7 @@ public class SwipeBackLayout extends FrameLayout {
     /**
      * Set up contentView which will be moved by user gesture
      *
-     * @param view
+     * @param view View
      */
     private void setContentView(View view) {
         mContentView = view;
@@ -245,7 +246,7 @@ public class SwipeBackLayout extends FrameLayout {
      */
     public void addSwipeListener(SwipeListener listener) {
         if (mListeners == null) {
-            mListeners = new ArrayList<SwipeListener>();
+            mListeners = new ArrayList<>();
         }
         mListeners.add(listener);
     }
@@ -253,7 +254,7 @@ public class SwipeBackLayout extends FrameLayout {
     /**
      * Removes a listener from the set of listeners
      *
-     * @param listener
+     * @param listener SwipeListener
      */
     public void removeSwipeListener(SwipeListener listener) {
         if (mListeners == null) {
@@ -262,7 +263,7 @@ public class SwipeBackLayout extends FrameLayout {
         mListeners.remove(listener);
     }
 
-    public static interface SwipeListener {
+    public interface SwipeListener {
         /**
          * Invoke when state change
          *
@@ -272,7 +273,7 @@ public class SwipeBackLayout extends FrameLayout {
          * @see #STATE_DRAGGING
          * @see #STATE_SETTLING
          */
-        public void onScrollStateChange(int state, float scrollPercent);
+        void onScrollStateChange(int state, float scrollPercent);
 
         /**
          * Invoke when edge touched
@@ -282,19 +283,19 @@ public class SwipeBackLayout extends FrameLayout {
          * @see #EDGE_RIGHT
          * @see #EDGE_BOTTOM
          */
-        public void onEdgeTouch(int edgeFlag);
+        void onEdgeTouch(int edgeFlag);
 
         /**
          * Invoke when scroll percent over the threshold for the first time
          */
-        public void onScrollOverThreshold();
+        void onScrollOverThreshold();
     }
 
     /**
      * Set scroll threshold, we will close the activity, when scrollPercent over
      * this value
      *
-     * @param threshold
+     * @param threshold .
      */
     public void setScrollThresHold(float threshold) {
         if (threshold >= 1.0f || threshold <= 0) {
@@ -307,7 +308,7 @@ public class SwipeBackLayout extends FrameLayout {
      * Scroll out contentView and finish the activity
      */
     public void scrollToFinishActivity() {
-        final int childWidth = mContentView.getWidth();
+        final int childWidth  = mContentView.getWidth();
         final int childHeight = mContentView.getHeight();
 
         int left = 0, top = 0;
@@ -380,8 +381,8 @@ public class SwipeBackLayout extends FrameLayout {
 
     private void drawScrim(Canvas canvas, View child) {
         final int baseAlpha = (mScrimColor & 0xff000000) >>> 24;
-        final int alpha = (int) (baseAlpha * mScrimOpacity);
-        final int color = alpha << 24 | (mScrimColor & 0xffffff);
+        final int alpha     = (int) (baseAlpha * mScrimOpacity);
+        final int color     = alpha << 24 | (mScrimColor & 0xffffff);
 
         if ((mTrackingEdge & EDGE_LEFT) != 0) {
             canvas.clipRect(0, 0, child.getLeft(), getHeight());
@@ -401,7 +402,7 @@ public class SwipeBackLayout extends FrameLayout {
         int background = a.getResourceId(0, 0);
         a.recycle();
 
-        ViewGroup decor = (ViewGroup) activity.getWindow().getDecorView().findViewById(Window.ID_ANDROID_CONTENT);
+        ViewGroup decor      = activity.getWindow().getDecorView().findViewById(Window.ID_ANDROID_CONTENT);
         ViewGroup decorChild = (ViewGroup) decor.getChildAt(0);
         decorChild.setBackgroundResource(background);
         decor.removeView(decorChild);
@@ -488,7 +489,7 @@ public class SwipeBackLayout extends FrameLayout {
 
         @Override
         public void onViewReleased(View releasedChild, float xvel, float yvel) {
-            final int childWidth = releasedChild.getWidth();
+            final int childWidth  = releasedChild.getWidth();
             final int childHeight = releasedChild.getHeight();
 
             int left = 0, top = 0;

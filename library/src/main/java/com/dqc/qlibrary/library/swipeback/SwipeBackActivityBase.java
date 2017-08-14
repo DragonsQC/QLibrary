@@ -19,6 +19,7 @@ package com.dqc.qlibrary.library.swipeback;
 /**
  * @author Yrom
  */
+@SuppressWarnings("WeakerAccess,unused,UnnecessaryInterfaceModifier")
 public interface SwipeBackActivityBase {
     /**
      * @return the SwipeBackLayout associated with this activity.

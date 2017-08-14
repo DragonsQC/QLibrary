@@ -6,7 +6,10 @@ import android.os.Vibrator;
 
 /**
  * Android 手机震动工具类
+ * <p>
+ * 需要权限【android.permission.VIBRATE】
  */
+@SuppressWarnings("WeakerAccess,unused")
 public class VibratorUtils {
 
     /**
@@ -15,6 +18,9 @@ public class VibratorUtils {
      */
     public static void vibrate(final Context context, long milliseconds) {
         Vibrator vib = (Vibrator) context.getSystemService(Service.VIBRATOR_SERVICE);
+        if (vib == null) {
+            return;
+        }
         vib.vibrate(milliseconds);
     }
 
@@ -25,6 +31,9 @@ public class VibratorUtils {
      */
     public static void vibrate(final Context context, long[] pattern, boolean isRepeat) {
         Vibrator vib = (Vibrator) context.getSystemService(Service.VIBRATOR_SERVICE);
+        if (vib == null) {
+            return;
+        }
         vib.vibrate(pattern, isRepeat ? 1 : -1);
     }
 
