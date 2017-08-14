@@ -16,6 +16,7 @@ import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.provider.MediaStore;
+import android.support.annotation.ColorInt;
 import android.util.DisplayMetrics;
 import android.util.Log;
 
@@ -235,8 +236,8 @@ public class ResourceUtils {
      * @param src 源图片
      * @return 圆形图片
      */
-    public static Bitmap toRound(final Bitmap src) {
-        return toRound(src, false);
+    public static Bitmap toRound(final Bitmap src, @ColorInt final int color) {
+        return toRound(src, color, false);
     }
 
     /**
@@ -246,7 +247,7 @@ public class ResourceUtils {
      * @param recycle 是否回收
      * @return 圆形图片
      */
-    public static Bitmap toRound(final Bitmap src, final boolean recycle) {
+    public static Bitmap toRound(final Bitmap src, @ColorInt final int color, final boolean recycle) {
         int    width  = src.getWidth();
         int    height = src.getHeight();
         int    radius = Math.min(width, height) >> 1;
@@ -255,7 +256,8 @@ public class ResourceUtils {
         Canvas canvas = new Canvas(ret);
         Rect   rect   = new Rect(0, 0, width, height);
         paint.setAntiAlias(true);
-        canvas.drawARGB(0, 0, 0, 0);
+        //canvas.drawARGB(0, 0, 0, 0);
+        canvas.drawColor(color);
         canvas.drawCircle(width >> 1, height >> 1, radius, paint);
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
         canvas.drawBitmap(src, rect, rect, paint);
@@ -303,8 +305,8 @@ public class ResourceUtils {
      * @param bitmap Bitmap
      * @param color  {@link Color}
      */
-    public static Bitmap toRoundAndBorder(Bitmap bitmap, int color) {
-        bitmap = toRound(bitmap);
+    public static Bitmap toRoundAndBorder(Bitmap bitmap, @ColorInt int color) {
+        bitmap = toRound(bitmap, color);
         return addRoundeBorder(bitmap, color);
     }
 
@@ -316,7 +318,7 @@ public class ResourceUtils {
      * @param color  {@link Color}
      * @return
      */
-    public static Bitmap addRoundeBorder(Bitmap bitmap, int color) {
+    public static Bitmap addRoundeBorder(Bitmap bitmap, @ColorInt int color) {
         int    size    = bitmap.getWidth() < bitmap.getHeight() ? bitmap.getWidth() : bitmap.getHeight();
         int    num     = 14;
         int    sizebig = size + num;
