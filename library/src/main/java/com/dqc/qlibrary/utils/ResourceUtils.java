@@ -18,6 +18,7 @@ import android.support.annotation.ColorInt;
 import android.util.DisplayMetrics;
 import android.util.Log;
 
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -351,25 +352,51 @@ public class ResourceUtils {
         return ret;
     }
 
+
     /**
-     * 保存 bitmap 到指定路径，保存格式为png
+     * 保存图片
      *
-     * @param bitmap
-     * @param file   保存的文件，若存在则删除后保存；请传入后缀为“.png”的文件
+     * @param src    源图片
+     * @param file   要保存到的文件
+     * @param format 格式
+     * @return {@code true}: 成功<br>{@code false}: 失败
      */
-    public static void saveBitmap4PNG(Bitmap bitmap, File file) {
-        if (file.exists()) {
-            file.delete();
+    public static boolean save(final Bitmap src, final File file, final Bitmap.CompressFormat format) {
+        return save(src, file, format, false);
+    }
+
+    /**
+     * 保存图片
+     *
+     * @param src     源图片
+     * @param file    要保存到的文件
+     * @param format  格式
+     * @param recycle 是否回收
+     * @return {@code true}: 成功<br>{@code false}: 失败
+     */
+    public static boolean save(final Bitmap src, final File file, final Bitmap.CompressFormat format, final boolean recycle) {
+        if (src == null || file == null) {
+            return false;
         }
-        FileOutputStream out;
+        System.out.println(src.getWidth() + ", " + src.getHeight());
+        OutputStream os  = null;
+        boolean      ret = false;
         try {
-            out = new FileOutputStream(file);
-            if (bitmap.compress(Bitmap.CompressFormat.PNG, 90, out)) {
-                out.flush();
-                out.close();
-            }
+            os = new BufferedOutputStream(new FileOutputStream(file));
+            ret = src.compress(format, 100, os);
+            if (recycle && !src.isRecycled()) src.recycle();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if (os != null) {
+                try {
+                    os.flush();
+                    os.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
+        return ret;
     }
 }
