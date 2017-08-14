@@ -12,13 +12,14 @@ import java.io.File;
  * 清除files和清除自定义目录
  */
 public class CleanUtils {
+
     /**
      * 清除本应用内部缓存(/data/data/com.xxx.xxx/cache)
      *
      * @param context Context
      */
     public static void cleanCacheDir(Context context) {
-        deleteFilesByDir(context.getCacheDir());
+        FileUtils.deleteFile(context.getCacheDir(), false);
     }
 
     /**
@@ -27,7 +28,8 @@ public class CleanUtils {
      * @param context Context
      */
     public static void cleanFiles(Context context) {
-        deleteFilesByDir(context.getFilesDir());
+        FileUtils.deleteFile(context.getFilesDir(), false);
+
     }
 
     /**
@@ -36,7 +38,10 @@ public class CleanUtils {
      * @param context Context
      */
     public static void cleanDB(Context context) {
-        deleteFilesByDir(new File(context.getFilesDir().getParent() + File.separator + "databases"));
+        FileUtils.deleteFile(
+                new File(context.getFilesDir().getParent() + File.separator + "databases"),
+                false);
+
     }
 
     /**
@@ -45,7 +50,9 @@ public class CleanUtils {
      * @param context Context
      */
     public static void cleanSP(Context context) {
-        deleteFilesByDir(new File(context.getFilesDir().getParent() + File.separator + "shared_prefs"));
+        FileUtils.deleteFile(
+                new File(context.getFilesDir().getParent() + File.separator + "shared_prefs"),
+                false);
     }
 
     /**
@@ -66,7 +73,7 @@ public class CleanUtils {
      */
     public static void cleanExternalCache(Context context) {
         if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-            deleteFilesByDir(context.getExternalCacheDir());
+            FileUtils.deleteFile(context.getExternalCacheDir(), false);
         }
     }
 
@@ -76,7 +83,8 @@ public class CleanUtils {
      * @param filePath 文件路径
      */
     public static void cleanCustomCache(String filePath) {
-        deleteFilesByDir(new File(filePath));
+        FileUtils.deleteFile(new File(filePath), false);
+
     }
 
     /**
@@ -96,17 +104,4 @@ public class CleanUtils {
         }
     }
 
-    /**
-     * 删除某个文件夹下的文件，如果传入的directory是个文件，将不做处理
-     *
-     * @param directory 文件夹
-     */
-    private static void deleteFilesByDir(File directory) {
-        if (directory != null && directory.exists() && directory.isDirectory()) {
-            for (File item : directory.listFiles()) {
-                //noinspection ResultOfMethodCallIgnored
-                item.delete();
-            }
-        }
-    }
 }

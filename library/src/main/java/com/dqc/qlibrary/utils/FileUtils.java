@@ -1,7 +1,5 @@
 package com.dqc.qlibrary.utils;
 
-import android.text.TextUtils;
-
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -41,34 +39,32 @@ public class FileUtils {
     }
 
     /**
-     * 删除文件/文件夹
+     * 删除文件，如果是文件夹则删除文件夹内所有文件
      *
-     * @param filePath       文件路径
-     * @param isDeleteFolder 是否删除文件夹
+     * @param file               指定文件夹
+     * @param isDeleteRootFolder 是否删除根目录
+     * @return
      */
-    public static void deleteFile(String filePath, boolean isDeleteFolder) {
-        if (!TextUtils.isEmpty(filePath)) {
-            try {
-                File file = new File(filePath);
-                if (file.exists()) { // 判断文件是否存在
-                    if (file.isFile()) { // 判断是否是文件
-                        file.delete();
-                    } else if (file.isDirectory()) { // 否则如果它是一个目录
-                        File files[] = file.listFiles(); // 声明目录下所有的文件 files[];
-                        for (File file1 : files) {
-                            file1.delete();
-                        }
-                    }
-                    if (isDeleteFolder) {
-                        file.delete();
-                    }
-                } else {
-                    //文件不存在
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
+    public static boolean deleteFile(File file, boolean isDeleteRootFolder) {
+        if (file == null || !file.exists()) {
+            return false;
+        }
+        //如果是文件则直接删除
+        if (file.isFile()) {
+            return file.delete();
+        }
+        //如果是目录，则遍历目录，删除目录内文件
+        for (File subfile : file.listFiles()) {
+            if (subfile.isFile()) {
+                subfile.delete(); // 删除所有文件
+            } else if (subfile.isDirectory()) {
+                deleteFile(subfile, true); // 递规的方式删除文件夹
             }
         }
+        if (isDeleteRootFolder) {
+            file.delete();// 删除目录本身
+        }
+        return true;
     }
 
     /**
