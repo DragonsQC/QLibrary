@@ -120,8 +120,8 @@ repositories {
     mavenLocal()
 //    mavenCentral()
 //    maven { url 'https://jcenter.bintray.com' }
-//    maven { url "https://jitpack.io" }
-    maven { url "https://maven.google.com" }
+    maven { url "https://jitpack.io" }
+//    maven { url "https://maven.google.com" }
 }
 
 //def siteUrl = 'https://github.com/DragonsQC'

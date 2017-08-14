@@ -9,10 +9,8 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
-import android.graphics.RadialGradient;
 import android.graphics.Rect;
 import android.graphics.RectF;
-import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.provider.MediaStore;
@@ -307,42 +305,50 @@ public class ResourceUtils {
      * @param bitmap Bitmap
      * @param color  {@link Color}
      */
-    public static Bitmap toRoundAndBorder(Bitmap bitmap, @ColorInt int color) {
+    public static Bitmap toRoundAndBorder(Bitmap bitmap, final int borderWidth, @ColorInt int color) {
         bitmap = toRound(bitmap, color);
-        return addRoundeBorder(bitmap, color);
+        return addRoundeBorder(bitmap, borderWidth, color);
     }
 
 
     /**
-     * 给 圆形图 添加 边框
+     * 添加颜色边框
      *
-     * @param bitmap Bitmap
-     * @param color  {@link Color}
-     * @return
+     * @param src         源图片
+     * @param borderWidth 边框宽度
+     * @param color       边框的颜色值
+     * @return 带颜色边框图
      */
-    public static Bitmap addRoundeBorder(Bitmap bitmap, @ColorInt int color) {
-        int    size    = bitmap.getWidth() < bitmap.getHeight() ? bitmap.getWidth() : bitmap.getHeight();
-        int    num     = 14;
-        int    sizebig = size + num;
-        Bitmap output  = Bitmap.createBitmap(sizebig, sizebig, Bitmap.Config.ARGB_8888);
-        Canvas canvas  = new Canvas(output);
+    public static Bitmap addRoundeBorder(final Bitmap src, final int borderWidth, @ColorInt final int color) {
+        return addRoundeBorder(src, borderWidth, color, false);
+    }
 
-        final Paint paint   = new Paint();
-        final float roundPx = sizebig / 2;
-
-        paint.setAntiAlias(true);
-        canvas.drawARGB(0, 0, 0, 0);
+    /**
+     * 添加颜色边框
+     *
+     * @param src         源图片
+     * @param borderWidth 边框宽度
+     * @param color       边框的颜色值
+     * @param recycle     是否回收
+     * @return 带颜色边框图
+     */
+    public static Bitmap addRoundeBorder(final Bitmap src, final int borderWidth, @ColorInt  final int color, final boolean recycle) {
+        int    doubleBorder = borderWidth << 1;
+        int    newWidth     = src.getWidth() + doubleBorder;
+        int    newHeight    = src.getHeight() + doubleBorder;
+        Bitmap ret          = Bitmap.createBitmap(newWidth, newHeight, src.getConfig());
+        Canvas canvas       = new Canvas(ret);
+        //noinspection SuspiciousNameCombination
+        canvas.drawBitmap(src, borderWidth, borderWidth, null);
+        Paint paint = new Paint();
         paint.setColor(color);
-        canvas.drawBitmap(bitmap, num / 2, num / 2, paint);
-        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_ATOP));
-
-        RadialGradient gradient = new RadialGradient(roundPx, roundPx, roundPx,
-                new int[]{Color.WHITE, Color.WHITE, Color.parseColor("#AAAAAAAA")},
-                new float[]{0.f, 0.97f, 1.0f}, Shader.TileMode.CLAMP);
-        paint.setShader(gradient);
-        canvas.drawCircle(roundPx, roundPx, roundPx, paint);
-
-        return output;
+        paint.setStyle(Paint.Style.STROKE);
+        // setStrokeWidth是居中画的，所以要两倍的宽度才能画，否则有一半的宽度是空的
+        paint.setStrokeWidth(doubleBorder);
+        Rect rect = new Rect(0, 0, newWidth, newHeight);
+        canvas.drawRect(rect, paint);
+        if (recycle && !src.isRecycled()) src.recycle();
+        return ret;
     }
 
     /**
