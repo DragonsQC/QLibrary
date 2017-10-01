@@ -16,7 +16,7 @@ import java.util.Locale;
  * 需要权限 <uses-permission android:name="android.permission.READ_PHONE_STATE" />
  */
 @SuppressWarnings("unused")
-public class SystemUtil {
+public class SystemUtils {
 
     /**
      * 获取当前手机系统语言。
