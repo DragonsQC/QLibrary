@@ -11,7 +11,7 @@ import android.telephony.TelephonyManager;
 import java.util.Locale;
 
 /**
- * 系统工具类
+ * 系统/设备相关工具类
  * <p>
  * 需要权限 <uses-permission android:name="android.permission.READ_PHONE_STATE" />
  */
