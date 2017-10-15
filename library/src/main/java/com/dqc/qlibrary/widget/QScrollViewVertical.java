@@ -8,6 +8,8 @@ import android.widget.ScrollView;
 
 /**
  * 解决嵌套 ViewPager 滑动冲突
+ *
+ * @author .
  */
 @SuppressWarnings("WeakerAccess,unused")
 public class QScrollViewVertical extends ScrollView {

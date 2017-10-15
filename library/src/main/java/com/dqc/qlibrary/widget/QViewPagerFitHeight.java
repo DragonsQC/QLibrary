@@ -8,6 +8,8 @@ import android.view.View;
 
 /**
  * 自动适应高度 ViewPager，可设置是否滑动
+ *
+ * @author .
  */
 @SuppressWarnings("WeakerAccess,unused")
 public class QViewPagerFitHeight extends ViewPager {

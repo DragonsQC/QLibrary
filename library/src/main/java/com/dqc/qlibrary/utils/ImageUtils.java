@@ -20,6 +20,8 @@ import java.io.OutputStream;
 
 /**
  * 图片相关工具类
+ *
+ * @author DragonsQC
  */
 @SuppressWarnings("WeakerAccess,unused,SameParameterValue")
 public class ImageUtils {
@@ -54,7 +56,9 @@ public class ImageUtils {
         canvas.drawCircle(width >> 1, height >> 1, radius, paint);
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
         canvas.drawBitmap(src, rect, rect, paint);
-        if (recycle && !src.isRecycled()) src.recycle();
+        if (recycle && !src.isRecycled()) {
+            src.recycle();
+        }
         return ret;
     }
 
@@ -88,7 +92,9 @@ public class ImageUtils {
         canvas.drawRoundRect(new RectF(rect), radius, radius, paint);
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
         canvas.drawBitmap(src, rect, rect, paint);
-        if (recycle && !src.isRecycled()) src.recycle();
+        if (recycle && !src.isRecycled()) {
+            src.recycle();
+        }
         return ret;
     }
 
@@ -174,7 +180,9 @@ public class ImageUtils {
         paint.setStrokeWidth(doubleBorder);
         Rect rect = new Rect(0, 0, newWidth, newHeight);
         canvas.drawRect(rect, paint);
-        if (recycle && !src.isRecycled()) src.recycle();
+        if (recycle && !src.isRecycled()) {
+            src.recycle();
+        }
         return ret;
     }
 
@@ -211,7 +219,9 @@ public class ImageUtils {
         try {
             os = new BufferedOutputStream(new FileOutputStream(file));
             ret = src.compress(format, 100, os);
-            if (recycle && !src.isRecycled()) src.recycle();
+            if (recycle && !src.isRecycled()) {
+                src.recycle();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

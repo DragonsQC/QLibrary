@@ -9,6 +9,8 @@ import com.jaeger.library.StatusBarUtil;
 
 /**
  * BaseAppCompatActivity
+ *
+ * @author .
  */
 @SuppressWarnings("WeakerAccess,unused")
 public abstract class BaseAppCompatActivity extends AppCompatActivity {
@@ -34,6 +36,8 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
                     break;
                 case FADE:
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    break;
+                default:
                     break;
             }
         }
@@ -62,6 +66,8 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
                     break;
                 case FADE:
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    break;
+                default:
                     break;
             }
         }

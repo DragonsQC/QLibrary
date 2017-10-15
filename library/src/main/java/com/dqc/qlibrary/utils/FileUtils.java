@@ -9,6 +9,8 @@ import java.math.BigDecimal;
 
 /**
  * 文件相关工具类
+ *
+ * @author DragonsQC
  */
 @SuppressWarnings("WeakerAccess,unused,UnusedReturnValue")
 public class FileUtils {
@@ -58,7 +60,8 @@ public class FileUtils {
                 //noinspection ResultOfMethodCallIgnored
                 subfile.delete(); // 删除所有文件
             } else if (subfile.isDirectory()) {
-                deleteFile(subfile, true); // 递规的方式删除文件夹
+                // 递规的方式删除文件夹
+                deleteFile(subfile, true);
             }
         }
         if (isDeleteRootFolder) {

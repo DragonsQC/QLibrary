@@ -9,6 +9,8 @@ import com.dqc.qlibrary.library.swipeback.Utils;
 
 /**
  * 侧滑返回 Activity
+ *
+ * @author .
  */
 @SuppressWarnings("WeakerAccess,unused")
 public abstract class BaseSwipeBackCompatActivity extends BaseAppCompatActivity implements SwipeBackActivityBase {

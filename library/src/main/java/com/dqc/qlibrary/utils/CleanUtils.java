@@ -10,6 +10,8 @@ import java.io.File;
  * 清除数据库，
  * 清除SharedPreference，
  * 清除files和清除自定义目录
+ *
+ * @author .
  */
 @SuppressWarnings("WeakerAccess,unused")
 public class CleanUtils {

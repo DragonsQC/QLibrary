@@ -8,6 +8,8 @@ import android.view.MotionEvent;
 
 /**
  * 可设置是否滑动的 ViewPager
+ *
+ * @author .
  */
 @SuppressWarnings("WeakerAccess,unused")
 public class QViewPager extends ViewPager {

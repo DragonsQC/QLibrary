@@ -16,12 +16,9 @@ import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/08/02
- *     desc  : 加密解密相关的工具类
- * </pre>
+ * 加密解密相关的工具类
+ *
+ * @author .
  */
 @SuppressWarnings("WeakerAccess,unused")
 public final class DigestUtils {
@@ -103,7 +100,9 @@ public final class DigestUtils {
      * @return 16进制加盐密文
      */
     public static String md5ToString(final byte[] data, final byte[] salt) {
-        if (data == null || salt == null) return null;
+        if (data == null || salt == null) {
+            return null;
+        }
         byte[] dataSalt = new byte[data.length + salt.length];
         System.arraycopy(data, 0, dataSalt, 0, data.length);
         System.arraycopy(salt, 0, dataSalt, data.length, salt.length);
@@ -159,7 +158,9 @@ public final class DigestUtils {
      * @return 文件的MD5校验码
      */
     public static byte[] md5File(final File file) {
-        if (file == null) return null;
+        if (file == null) {
+            return null;
+        }
         FileInputStream   fis = null;
         DigestInputStream digestInputStream;
         try {
@@ -168,7 +169,9 @@ public final class DigestUtils {
             digestInputStream = new DigestInputStream(fis, md);
             byte[] buffer = new byte[256 * 1024];
             while (true) {
-                if (!(digestInputStream.read(buffer) > 0)) break;
+                if (!(digestInputStream.read(buffer) > 0)) {
+                    break;
+                }
             }
             md = digestInputStream.getMessageDigest();
             return md.digest();
@@ -344,7 +347,9 @@ public final class DigestUtils {
      * @return 密文字节数组
      */
     private static byte[] hashTemplate(final byte[] data, final String algorithm) {
-        if (data == null || data.length <= 0) return null;
+        if (data == null || data.length <= 0) {
+            return null;
+        }
         try {
             MessageDigest md = MessageDigest.getInstance(algorithm);
             md.update(data);
@@ -562,7 +567,9 @@ public final class DigestUtils {
      * @return 密文字节数组
      */
     private static byte[] hmacTemplate(final byte[] data, final byte[] key, final String algorithm) {
-        if (data == null || data.length == 0 || key == null || key.length == 0) return null;
+        if (data == null || data.length == 0 || key == null || key.length == 0) {
+            return null;
+        }
         try {
             SecretKeySpec secretKey = new SecretKeySpec(key, algorithm);
             Mac           mac       = Mac.getInstance(algorithm);
@@ -584,8 +591,8 @@ public final class DigestUtils {
      * <p>加密模式有：电子密码本模式ECB、加密块链模式CBC、加密反馈模式CFB、输出反馈模式OFB</p>
      * <p>填充方式有：NoPadding、ZerosPadding、PKCS5Padding</p>
      */
-    public static        String DES_Transformation = "DES/ECB/NoPadding";
-    private static final String DES_Algorithm      = "DES";
+    public static        String DES_TRANSFORMATION = "DES/ECB/NoPadding";
+    private static final String DES_ALGORITHM      = "DES";
 
     /**
      * DES加密后转为Base64编码
@@ -617,7 +624,7 @@ public final class DigestUtils {
      * @return 密文
      */
     public static byte[] encryptDES(final byte[] data, final byte[] key) {
-        return desTemplate(data, key, DES_Algorithm, DES_Transformation, true);
+        return desTemplate(data, key, DES_ALGORITHM, DES_TRANSFORMATION, true);
     }
 
     /**
@@ -650,7 +657,7 @@ public final class DigestUtils {
      * @return 明文
      */
     public static byte[] decryptDES(final byte[] data, final byte[] key) {
-        return desTemplate(data, key, DES_Algorithm, DES_Transformation, false);
+        return desTemplate(data, key, DES_ALGORITHM, DES_TRANSFORMATION, false);
     }
 
     ///////////////////////////////////////////////////////////////////////////
@@ -663,8 +670,8 @@ public final class DigestUtils {
      * <p>加密模式有：电子密码本模式ECB、加密块链模式CBC、加密反馈模式CFB、输出反馈模式OFB</p>
      * <p>填充方式有：NoPadding、ZerosPadding、PKCS5Padding</p>
      */
-    public static        String TripleDES_Transformation = "DESede/ECB/NoPadding";
-    private static final String TripleDES_Algorithm      = "DESede";
+    public static        String TRIPLE_DES_TRANSFORMATION = "DESede/ECB/NoPadding";
+    private static final String TRIPLE_DES_ALGORITHM      = "DESede";
 
 
     /**
@@ -697,7 +704,7 @@ public final class DigestUtils {
      * @return 密文
      */
     public static byte[] encrypt3DES(final byte[] data, final byte[] key) {
-        return desTemplate(data, key, TripleDES_Algorithm, TripleDES_Transformation, true);
+        return desTemplate(data, key, TRIPLE_DES_ALGORITHM, TRIPLE_DES_TRANSFORMATION, true);
     }
 
     /**
@@ -730,7 +737,7 @@ public final class DigestUtils {
      * @return 明文
      */
     public static byte[] decrypt3DES(final byte[] data, final byte[] key) {
-        return desTemplate(data, key, TripleDES_Algorithm, TripleDES_Transformation, false);
+        return desTemplate(data, key, TRIPLE_DES_ALGORITHM, TRIPLE_DES_TRANSFORMATION, false);
     }
 
     ///////////////////////////////////////////////////////////////////////////
@@ -743,8 +750,8 @@ public final class DigestUtils {
      * <p>加密模式有：电子密码本模式ECB、加密块链模式CBC、加密反馈模式CFB、输出反馈模式OFB</p>
      * <p>填充方式有：NoPadding、ZerosPadding、PKCS5Padding</p>
      */
-    public static        String AES_Transformation = "AES/ECB/NoPadding";
-    private static final String AES_Algorithm      = "AES";
+    public static        String AES_TRANSFORMATION = "AES/ECB/NoPadding";
+    private static final String AES_ALGORITHM      = "AES";
 
 
     /**
@@ -777,7 +784,7 @@ public final class DigestUtils {
      * @return 密文
      */
     public static byte[] encryptAES(final byte[] data, final byte[] key) {
-        return desTemplate(data, key, AES_Algorithm, AES_Transformation, true);
+        return desTemplate(data, key, AES_ALGORITHM, AES_TRANSFORMATION, true);
     }
 
     /**
@@ -810,7 +817,7 @@ public final class DigestUtils {
      * @return 明文
      */
     public static byte[] decryptAES(final byte[] data, final byte[] key) {
-        return desTemplate(data, key, AES_Algorithm, AES_Transformation, false);
+        return desTemplate(data, key, AES_ALGORITHM, AES_TRANSFORMATION, false);
     }
 
     /**
@@ -824,7 +831,9 @@ public final class DigestUtils {
      * @return 密文或者明文，适用于DES，3DES，AES
      */
     public static byte[] desTemplate(final byte[] data, final byte[] key, final String algorithm, final String transformation, final boolean isEncrypt) {
-        if (data == null || data.length == 0 || key == null || key.length == 0) return null;
+        if (data == null || data.length == 0 || key == null || key.length == 0) {
+            return null;
+        }
         try {
             SecretKeySpec keySpec = new SecretKeySpec(key, algorithm);
             Cipher        cipher  = Cipher.getInstance(transformation);
@@ -837,22 +846,28 @@ public final class DigestUtils {
         }
     }
 
-    private static final char hexDigits[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+    private static final char[] HEX_DIGITS = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
 
     private static String bytes2HexString(final byte[] bytes) {
-        if (bytes == null) return null;
+        if (bytes == null) {
+            return null;
+        }
         int len = bytes.length;
-        if (len <= 0) return null;
+        if (len <= 0) {
+            return null;
+        }
         char[] ret = new char[len << 1];
         for (int i = 0, j = 0; i < len; i++) {
-            ret[j++] = hexDigits[bytes[i] >>> 4 & 0x0f];
-            ret[j++] = hexDigits[bytes[i] & 0x0f];
+            ret[j++] = HEX_DIGITS[bytes[i] >>> 4 & 0x0f];
+            ret[j++] = HEX_DIGITS[bytes[i] & 0x0f];
         }
         return new String(ret);
     }
 
     private static byte[] hexString2Bytes(String hexString) {
-        if (isSpace(hexString)) return null;
+        if (isSpace(hexString)) {
+            return null;
+        }
         int len = hexString.length();
         if (len % 2 != 0) {
             hexString = "0" + hexString;
@@ -885,7 +900,9 @@ public final class DigestUtils {
     }
 
     private static boolean isSpace(final String s) {
-        if (s == null) return true;
+        if (s == null) {
+            return true;
+        }
         for (int i = 0, len = s.length(); i < len; ++i) {
             if (!Character.isWhitespace(s.charAt(i))) {
                 return false;

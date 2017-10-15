@@ -17,6 +17,8 @@ import java.io.OutputStream;
 
 /**
  * Android 资源相关工具类
+ *
+ * @author DragonsQC
  */
 @SuppressWarnings("WeakerAccess,unused")
 public class ResourceUtils {

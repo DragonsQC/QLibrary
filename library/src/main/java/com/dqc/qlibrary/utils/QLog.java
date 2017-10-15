@@ -11,6 +11,8 @@ import com.elvishew.xlog.XLog;
  * <p/>
  * 基于xLog，使用前请初始化，QLog.init。
  * 若需要替换原来已使用的原生Log包名替换为换为com.dqc.qlibrary.utils.QLog.Log
+ *
+ * @author DragonsQC
  */
 @SuppressWarnings("WeakerAccess,unused")
 public class QLog {
@@ -24,8 +26,8 @@ public class QLog {
     public static void init(boolean allowLog, String tag) {
         LogConfiguration configuration = new LogConfiguration.Builder()
                 .logLevel(allowLog ? LogLevel.ALL : LogLevel.NONE)
-                .tag(tag)   // 指定 TAG，默认为 "X-LOG"
-                .b()        // 允许打印日志边框，默认禁止
+                .tag(tag)
+                .b()
                 .build();
         XLog.init(configuration);
     }
@@ -38,9 +40,9 @@ public class QLog {
     public static void init(boolean allowLog, String tag, int depth) {
         LogConfiguration configuration = new LogConfiguration.Builder()
                 .logLevel(allowLog ? LogLevel.ALL : LogLevel.NONE)
-                .tag(tag)   // 指定 TAG，默认为 "X-LOG"
-                .b()        // 允许打印日志边框，默认禁止
-                .st(depth)    // 允许打印深度为2的调用栈信息，默认禁止
+                .tag(tag)
+                .b()
+                .st(depth)
                 .build();
         XLog.init(configuration);
     }

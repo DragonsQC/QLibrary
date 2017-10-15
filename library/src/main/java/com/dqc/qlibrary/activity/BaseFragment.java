@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 
 /**
  * BaseFragment
+ *
+ * @author .
  */
 @SuppressWarnings("WeakerAccess,unused")
 public abstract class BaseFragment extends Fragment {

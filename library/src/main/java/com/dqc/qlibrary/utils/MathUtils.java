@@ -5,6 +5,8 @@ import java.util.Random;
 
 /**
  * 数字等公式相关工具类
+ *
+ * @author DragonsQC
  */
 @SuppressWarnings("WeakerAccess,unused")
 public class MathUtils {

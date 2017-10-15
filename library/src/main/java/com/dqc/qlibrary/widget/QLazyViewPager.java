@@ -63,6 +63,8 @@ import java.util.Comparator;
  * development.  The API will likely change in later updates of
  * the compatibility library, requiring changes to the source code
  * of apps when they are compiled against the newer version.</p>
+ *
+ * @author .
  */
 @SuppressWarnings("WeakerAccess,unused")
 public class QLazyViewPager extends ViewGroup {
@@ -85,22 +87,14 @@ public class QLazyViewPager extends ViewGroup {
     private static final int                  DEFAULT_OFFSCREEN_PAGES = 0;//默认的加载页面,ViewPager是1个,所以会加载两个Fragment
     private static final int                  MAX_SETTLE_DURATION     = 600; // ms
     private static final Comparator<ItemInfo> COMPARATOR              =
-            new Comparator<ItemInfo>() {
-                @Override
-                public int compare(ItemInfo lhs, ItemInfo rhs) {
-                    return lhs.position - rhs.position;
-                }
-            };
+            (lhs, rhs) -> lhs.position - rhs.position;
 
     private static final Interpolator        sInterpolator   =
-            new Interpolator() {
-                @Override
-                public float getInterpolation(float t) {
-                    // _o(t) = t * t * ((tension + 1) * t + tension)
-                    // o(t) = _o(t - 1) + 1
-                    t -= 1.0f;
-                    return t * t * t + 1.0f;
-                }
+            t -> {
+                // _o(t) = t * t * ((tension + 1) * t + tension)
+                // o(t) = _o(t - 1) + 1
+                t -= 1.0f;
+                return t * t * t + 1.0f;
             };
     /**
      * Sentinel value for no current active pointer.
@@ -109,7 +103,8 @@ public class QLazyViewPager extends ViewGroup {
     private static final int                 INVALID_POINTER = -1;
     private final        ArrayList<ItemInfo> mItems          = new ArrayList<>();
     private PagerAdapter mAdapter;
-    private int          mCurItem;   // Index of currently displayed page.
+    // Index of currently displayed page.
+    private int          mCurItem;
     private int         mRestoredCurItem      = -1;
     private Parcelable  mRestoredAdapterState = null;
     private ClassLoader mRestoredClassLoader  = null;

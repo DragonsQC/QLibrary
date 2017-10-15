@@ -8,6 +8,8 @@ import android.view.View;
 
 /**
  * Android Snackbar 工具类
+ *
+ * @author DragonsQC
  */
 @SuppressWarnings("WeakerAccess,unused")
 public class SnackbarUtils {

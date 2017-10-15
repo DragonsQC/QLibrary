@@ -8,6 +8,8 @@ import android.os.Vibrator;
  * Android 手机震动工具类
  * <p>
  * 需要权限【android.permission.VIBRATE】
+ *
+ * @author .
  */
 @SuppressWarnings("WeakerAccess,unused")
 public class VibratorUtils {

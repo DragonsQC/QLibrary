@@ -2,14 +2,20 @@ package com.dqc.qlibrary.utils;
 
 import android.text.TextUtils;
 
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
  * 字符串相关工具类
+ *
+ * @author DragonsQC
  */
 @SuppressWarnings("WeakerAccess,unused")
 public class StringUtils {
+
+    private static Pattern emailPattern = Pattern.compile("\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*");
+    private static Pattern chEnPattern  = Pattern.compile("^[a-zA-Z0-9\\u4E00-\\u9FA5]+$");
+    private static Pattern isUrlPattern = Pattern.compile("^([hH][tT]{2}[pP]://|[hH][tT]{2}[pP][sS]://)(([A-Za-z0-9-~]+).)+([A-Za-z0-9-~/])+$");
+
 
     /**
      * Email验证
@@ -18,9 +24,7 @@ public class StringUtils {
      * @return boolean
      */
     public static boolean isEmail(String email) {
-        Pattern emailPattern = Pattern.compile("\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*");
-        Matcher matcher      = emailPattern.matcher(email);
-        return matcher.find();
+        return emailPattern.matcher(email).find();
     }
 
     /**
@@ -30,7 +34,9 @@ public class StringUtils {
      * @return {@code true}: null或全空白字符<br> {@code false}: 不为null且不全空白字符
      */
     public static boolean isSpace(String s) {
-        if (s == null) return true;
+        if (s == null) {
+            return true;
+        }
         for (int i = 0, len = s.length(); i < len; ++i) {
             if (!Character.isWhitespace(s.charAt(i))) {
                 return false;
@@ -46,9 +52,7 @@ public class StringUtils {
      * @return boolean
      */
     public static boolean matchChEn(String str) {
-        Pattern pattern = Pattern.compile("^[a-zA-Z0-9\\u4E00-\\u9FA5]+$");
-        Matcher matcher = pattern.matcher(str);
-        return matcher.matches();
+        return chEnPattern.matcher(str).matches();
     }
 
     /**
@@ -74,8 +78,7 @@ public class StringUtils {
      * @return boolean
      */
     public static boolean isUrl(String url) {
-        Pattern pattern = Pattern.compile("^([hH][tT]{2}[pP]://|[hH][tT]{2}[pP][sS]://)(([A-Za-z0-9-~]+).)+([A-Za-z0-9-~/])+$");
-        return pattern.matcher(url).matches();
+        return isUrlPattern.matcher(url).matches();
     }
 
     /**
@@ -95,7 +98,9 @@ public class StringUtils {
      * @return 首字母大写字符串
      */
     public static String upperFirstLetter(String s) {
-        if (TextUtils.isEmpty(s) || !Character.isLowerCase(s.charAt(0))) return s;
+        if (TextUtils.isEmpty(s) || !Character.isLowerCase(s.charAt(0))) {
+            return s;
+        }
         return String.valueOf((char) (s.charAt(0) - 32)) + s.substring(1);
     }
 
@@ -106,7 +111,9 @@ public class StringUtils {
      * @return 首字母小写字符串
      */
     public static String lowerFirstLetter(String s) {
-        if (TextUtils.isEmpty(s) || !Character.isUpperCase(s.charAt(0))) return s;
+        if (TextUtils.isEmpty(s) || !Character.isUpperCase(s.charAt(0))) {
+            return s;
+        }
         return String.valueOf((char) (s.charAt(0) + 32)) + s.substring(1);
     }
 
@@ -121,7 +128,9 @@ public class StringUtils {
             return s;
         }
         int len = s.length();
-        if (len <= 1) return s;
+        if (len <= 1) {
+            return s;
+        }
         int    mid   = len >> 1;
         char[] chars = s.toCharArray();
         char   c;
@@ -140,7 +149,9 @@ public class StringUtils {
      * @return 半角字符串
      */
     public static String toDBC(String s) {
-        if (TextUtils.isEmpty(s)) return s;
+        if (TextUtils.isEmpty(s)) {
+            return s;
+        }
         char[] chars = s.toCharArray();
         for (int i = 0, len = chars.length; i < len; i++) {
             if (chars[i] == 12288) {
@@ -161,7 +172,9 @@ public class StringUtils {
      * @return 全角字符串
      */
     public static String toSBC(String s) {
-        if (TextUtils.isEmpty(s)) return s;
+        if (TextUtils.isEmpty(s)) {
+            return s;
+        }
         char[] chars = s.toCharArray();
         for (int i = 0, len = chars.length; i < len; i++) {
             if (chars[i] == ' ') {

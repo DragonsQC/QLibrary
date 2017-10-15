@@ -11,6 +11,8 @@ import java.util.List;
  * 网络状态工具类
  * <p>
  * 需要权限 【android.permission.ACCESS_NETWORK_STATE】
+ *
+ * @author DragonsQC
  */
 @SuppressWarnings("WeakerAccess,unused")
 public class NetStateUtils {

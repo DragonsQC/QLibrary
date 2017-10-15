@@ -6,6 +6,8 @@ import android.widget.ListView;
 
 /**
  * 解决嵌套 ListView 显示不正常的问题，显示所有数据，不出现滚动条
+ *
+ * @author .
  */
 @SuppressWarnings("WeakerAccess,unused")
 public class QListView extends ListView {

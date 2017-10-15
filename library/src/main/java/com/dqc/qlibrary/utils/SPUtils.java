@@ -9,6 +9,8 @@ import java.util.Map;
  * Android SharedPreferences 工具类
  * <p/>
  * 建议在 Application 中初始化设置spName，默认为
+ *
+ * @author DragonsQC
  */
 @SuppressWarnings("WeakerAccess,unused")
 public class SPUtils {

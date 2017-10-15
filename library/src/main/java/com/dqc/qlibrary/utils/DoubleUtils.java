@@ -8,12 +8,18 @@ import java.math.BigDecimal;
  * double的计算不精确，会有类似0.0000000000000002的误差，正确的方法是使用BigDecimal或者用整型。
  * 整型的方法适合于货币精度已知的情况，比如12.11+1.10转成1211+110计算，最后再/100即可
  * 以下是摘抄的BigDecimal方法:
+ *
+ * @author DragonsQC
  */
 @SuppressWarnings("WeakerAccess,unused")
 public class DoubleUtils implements Serializable {
-    private static final long    serialVersionUID = -3345205828566485102L;
-    // 默认除法运算精度
-    private static final Integer DEF_DIV_SCALE    = 2;
+
+    private static final long serialVersionUID = -3345205828566485102L;
+
+    /**
+     * 默认除法运算精度
+     */
+    private static final Integer DEF_DIV_SCALE = 2;
 
     /**
      * 提供精确的加法运算。
@@ -75,8 +81,7 @@ public class DoubleUtils implements Serializable {
      */
     public static Double div(Double dividend, Double divisor, Integer scale) {
         if (scale < 0) {
-            throw new IllegalArgumentException(
-                    "The scale must be a positive integer or zero");
+            throw new IllegalArgumentException("The scale must be a positive integer or zero");
         }
         BigDecimal b1 = new BigDecimal(Double.toString(dividend));
         BigDecimal b2 = new BigDecimal(Double.toString(divisor));

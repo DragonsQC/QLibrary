@@ -159,6 +159,8 @@ import java.util.Locale;
  * EEEE 'DATE('yyyy-MM-dd')' 'TIME('HH:mm:ss')' zzzz    星期五 DATE(2016-08-12) TIME(15:44:40) 中国标准时间
  * </pre>
  * 注意：SimpleDateFormat不是线程安全的，线程安全需用{@code ThreadLocal<SimpleDateFormat>}
+ *
+ * @author DragonsQC
  */
 @SuppressWarnings("WeakerAccess,unused")
 public class DateUtils {
@@ -288,8 +290,8 @@ public class DateUtils {
         long time1 = cal.getTimeInMillis();
         cal.setTime(bDate);
         long time2        = cal.getTimeInMillis();
-        long between_days = (time2 - time1) / (1000 * 3600 * 24);
+        long betweenDays = (time2 - time1) / (1000 * 3600 * 24);
 
-        return Integer.parseInt(String.valueOf(between_days));
+        return Integer.parseInt(String.valueOf(betweenDays));
     }
 }

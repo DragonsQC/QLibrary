@@ -8,6 +8,8 @@ import android.view.animation.ScaleAnimation;
 
 /**
  * Animation 工具类
+ *
+ * @author .
  */
 @SuppressWarnings("WeakerAccess,unused")
 public final class AnimationUtils {
