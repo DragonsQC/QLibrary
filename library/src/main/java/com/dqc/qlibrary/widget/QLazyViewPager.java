@@ -87,14 +87,22 @@ public class QLazyViewPager extends ViewGroup {
     private static final int                  DEFAULT_OFFSCREEN_PAGES = 0;//默认的加载页面,ViewPager是1个,所以会加载两个Fragment
     private static final int                  MAX_SETTLE_DURATION     = 600; // ms
     private static final Comparator<ItemInfo> COMPARATOR              =
-            (lhs, rhs) -> lhs.position - rhs.position;
+            new Comparator<ItemInfo>() {
+                @Override
+                public int compare(ItemInfo lhs, ItemInfo rhs) {
+                    return lhs.position - rhs.position;
+                }
+            };
 
     private static final Interpolator        sInterpolator   =
-            t -> {
-                // _o(t) = t * t * ((tension + 1) * t + tension)
-                // o(t) = _o(t - 1) + 1
-                t -= 1.0f;
-                return t * t * t + 1.0f;
+            new Interpolator() {
+                @Override
+                public float getInterpolation(float t) {
+                    // _o(t) = t * t * ((tension + 1) * t + tension)
+                    // o(t) = _o(t - 1) + 1
+                    t -= 1.0f;
+                    return t * t * t + 1.0f;
+                }
             };
     /**
      * Sentinel value for no current active pointer.
@@ -103,8 +111,7 @@ public class QLazyViewPager extends ViewGroup {
     private static final int                 INVALID_POINTER = -1;
     private final        ArrayList<ItemInfo> mItems          = new ArrayList<>();
     private PagerAdapter mAdapter;
-    // Index of currently displayed page.
-    private int          mCurItem;
+    private int          mCurItem;   // Index of currently displayed page.
     private int         mRestoredCurItem      = -1;
     private Parcelable  mRestoredAdapterState = null;
     private ClassLoader mRestoredClassLoader  = null;
