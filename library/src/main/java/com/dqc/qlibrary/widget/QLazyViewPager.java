@@ -393,7 +393,9 @@ public class QLazyViewPager extends ViewGroup {
      */
     public void setPageMarginDrawable(Drawable d) {
         mMarginDrawable = d;
-        if (d != null) refreshDrawableState();
+        if (d != null) {
+            refreshDrawableState();
+        }
         setWillNotDraw(d == null);
         invalidate();
     }
@@ -555,7 +557,9 @@ public class QLazyViewPager extends ViewGroup {
         // fling to a new position until we have finished the scroll to
         // that position, avoiding glitches from happening at that point.
         if (mPopulatePending) {
-            if (DEBUG) Log.i(TAG, "populate is pending, skipping for now...");
+            if (DEBUG) {
+                Log.i(TAG, "populate is pending, skipping for now...");
+            }
             return;
         }
 
@@ -573,14 +577,18 @@ public class QLazyViewPager extends ViewGroup {
         final int N         = mAdapter.getCount();
         final int endPos    = Math.min(N - 1, mCurItem + pageLimit);
 
-        if (DEBUG) Log.v(TAG, "populating: startPos=" + startPos + " endPos=" + endPos);
+        if (DEBUG) {
+            Log.v(TAG, "populating: startPos=" + startPos + " endPos=" + endPos);
+        }
 
         // Add and remove pages in the existing list.
         int lastPos = -1;
         for (int i = 0; i < mItems.size(); i++) {
             ItemInfo ii = mItems.get(i);
             if ((ii.position < startPos || ii.position > endPos) && !ii.scrolling) {
-                if (DEBUG) Log.i(TAG, "removing: " + ii.position + " @ " + i);
+                if (DEBUG) {
+                    Log.i(TAG, "removing: " + ii.position + " @ " + i);
+                }
                 mItems.remove(i);
                 i--;
                 mAdapter.destroyItem(this, ii.position, ii.object);
@@ -593,7 +601,9 @@ public class QLazyViewPager extends ViewGroup {
                     lastPos = startPos;
                 }
                 while (lastPos <= endPos && lastPos < ii.position) {
-                    if (DEBUG) Log.i(TAG, "inserting: " + lastPos + " @ " + i);
+                    if (DEBUG) {
+                        Log.i(TAG, "inserting: " + lastPos + " @ " + i);
+                    }
                     addNewItem(lastPos, i);
                     lastPos++;
                     i++;
@@ -608,7 +618,9 @@ public class QLazyViewPager extends ViewGroup {
             lastPos++;
             lastPos = lastPos > startPos ? lastPos : startPos;
             while (lastPos <= endPos) {
-                if (DEBUG) Log.i(TAG, "appending: " + lastPos);
+                if (DEBUG) {
+                    Log.i(TAG, "appending: " + lastPos);
+                }
                 addNewItem(lastPos, -1);
                 lastPos++;
             }
@@ -751,8 +763,9 @@ public class QLazyViewPager extends ViewGroup {
         for (int i = 0; i < size; ++i) {
             final View child = getChildAt(i);
             if (child.getVisibility() != GONE) {
-                if (DEBUG) Log.v(TAG, "Measuring #" + i + " " + child
-                        + ": " + mChildWidthMeasureSpec);
+                if (DEBUG) {
+                    Log.v(TAG, "Measuring #" + i + " " + child + ": " + mChildWidthMeasureSpec);
+                }
                 child.measure(mChildWidthMeasureSpec, mChildHeightMeasureSpec);
             }
         }
@@ -807,9 +820,11 @@ public class QLazyViewPager extends ViewGroup {
                 int loff      = (width + mPageMargin) * ii.position;
                 int childLeft = getPaddingLeft() + loff;
                 int childTop  = getPaddingTop();
-                if (DEBUG) Log.v(TAG, "Positioning #" + i + " " + child + " f=" + ii.object
-                        + ":" + childLeft + "," + childTop + " " + child.getMeasuredWidth()
-                        + "x" + child.getMeasuredHeight());
+                if (DEBUG) {
+                    Log.v(TAG, "Positioning #" + i + " " + child + " f=" + ii.object
+                            + ":" + childLeft + "," + childTop + " " + child.getMeasuredWidth()
+                            + "x" + child.getMeasuredHeight());
+                }
                 child.layout(childLeft, childTop,
                         childLeft + child.getMeasuredWidth(),
                         childTop + child.getMeasuredHeight());
@@ -820,10 +835,14 @@ public class QLazyViewPager extends ViewGroup {
 
     @Override
     public void computeScroll() {
-        if (DEBUG) Log.i(TAG, "computeScroll: finished=" + mScroller.isFinished());
+        if (DEBUG) {
+            Log.i(TAG, "computeScroll: finished=" + mScroller.isFinished());
+        }
         if (!mScroller.isFinished()) {
             if (mScroller.computeScrollOffset()) {
-                if (DEBUG) Log.i(TAG, "computeScroll: still scrolling");
+                if (DEBUG) {
+                    Log.i(TAG, "computeScroll: still scrolling");
+                }
                 int oldX = getScrollX();
                 int oldY = getScrollY();
                 int x    = mScroller.getCurrX();
@@ -1455,7 +1474,9 @@ public class QLazyViewPager extends ViewGroup {
 
     public boolean arrowScroll(int direction) {
         View currentFocused = findFocus();
-        if (currentFocused == this) currentFocused = null;
+        if (currentFocused == this) {
+            currentFocused = null;
+        }
 
         boolean handled = false;
 
