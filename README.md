@@ -62,6 +62,7 @@ Step 2. Add the dependency
   compile 'com.android.support:percent:{*version}' | percent
   compile 'com.android.support:design:{*version}' | design
  【Utils】 |
+  compile 'org.apache.commons:commons-lang3:{*version}' | Commons Lang
   compile 'com.elvishew:xlog:{*version}' | xlog
  【HTTP】 |
   compile 'org.xutils:xutils:{*version}' | xUtils3

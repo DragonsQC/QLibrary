@@ -67,6 +67,8 @@ dependencies {
     //compile "io.reactivex.rxjava2:rxandroid:2.0.1"
 
 //【Utils】*****************************************************************************************
+    //Commons Lang https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    compile 'org.apache.commons:commons-lang3:3.6'
     //xLog [https://github.com/elvishew/xLog]
     compile "com.elvishew:xlog:1.4.0"
     //沉浸式状态栏 [https://github.com/laobie/StatusBarUtil]
