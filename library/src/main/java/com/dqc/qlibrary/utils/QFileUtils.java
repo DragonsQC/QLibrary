@@ -13,7 +13,7 @@ import java.math.BigDecimal;
  * @author DragonsQC
  */
 @SuppressWarnings("WeakerAccess,unused,UnusedReturnValue")
-public class FileUtils {
+public class QFileUtils {
 
     /**
      * 获取文件大小
