@@ -27,7 +27,7 @@ public abstract class BaseFragment extends Fragment {
      *
      * @param clazz Activity.class
      */
-    protected void goTo(Class<?> clazz) {
+    public void goTo(Class<?> clazz) {
         Intent intent = new Intent(getActivity(), clazz);
         startActivity(intent);
     }
@@ -38,7 +38,7 @@ public abstract class BaseFragment extends Fragment {
      * @param clazz Activity.class
      * @param flags FLAG_ACTIVITY
      */
-    protected void goTo(Class<?> clazz, int flags) {
+    public void goTo(Class<?> clazz, int flags) {
         Intent intent = new Intent(getActivity(), clazz);
         intent.addFlags(flags);
         startActivity(intent);
@@ -50,7 +50,7 @@ public abstract class BaseFragment extends Fragment {
      * @param clazz  Activity.class
      * @param bundle data
      */
-    protected void goTo(Class<?> clazz, Bundle bundle) {
+    public void goTo(Class<?> clazz, Bundle bundle) {
         Intent intent = new Intent(getActivity(), clazz);
         if (null != bundle) {
             intent.putExtras(bundle);
@@ -65,7 +65,7 @@ public abstract class BaseFragment extends Fragment {
      * @param bundle data
      * @param flags  FLAG_ACTIVITYs
      */
-    protected void goTo(Class<?> clazz, Bundle bundle, int flags) {
+    public void goTo(Class<?> clazz, Bundle bundle, int flags) {
         Intent intent = new Intent(getActivity(), clazz);
         if (null != bundle) {
             intent.putExtras(bundle);
@@ -79,7 +79,7 @@ public abstract class BaseFragment extends Fragment {
      *
      * @param clazz Activity.class
      */
-    protected void goToThenKill(Class<?> clazz) {
+    public void goToThenKill(Class<?> clazz) {
         Intent intent = new Intent(getActivity(), clazz);
         startActivity(intent);
         getActivity().finish();
@@ -91,7 +91,7 @@ public abstract class BaseFragment extends Fragment {
      * @param clazz Activity.class
      * @param flags FLAG_ACTIVITY
      */
-    protected void goToThenKill(Class<?> clazz, int flags) {
+    public void goToThenKill(Class<?> clazz, int flags) {
         Intent intent = new Intent(getActivity(), clazz);
         intent.addFlags(flags);
         startActivity(intent);
@@ -104,7 +104,7 @@ public abstract class BaseFragment extends Fragment {
      * @param clazz  Activity.class
      * @param bundle data
      */
-    protected void goToThenKill(Class<?> clazz, Bundle bundle) {
+    public void goToThenKill(Class<?> clazz, Bundle bundle) {
         Intent intent = new Intent(getActivity(), clazz);
         if (null != bundle) {
             intent.putExtras(bundle);
@@ -120,7 +120,7 @@ public abstract class BaseFragment extends Fragment {
      * @param bundle data
      * @param flags  FLAG_ACTIVITY
      */
-    protected void goToThenKill(Class<?> clazz, Bundle bundle, int flags) {
+    public void goToThenKill(Class<?> clazz, Bundle bundle, int flags) {
         Intent intent = new Intent(getActivity(), clazz);
         if (null != bundle) {
             intent.putExtras(bundle);
@@ -136,7 +136,7 @@ public abstract class BaseFragment extends Fragment {
      * @param clazz       Activity.class
      * @param requestCode RequestCode
      */
-    protected void goToForResult(Class<?> clazz, int requestCode) {
+    public void goToForResult(Class<?> clazz, int requestCode) {
         Intent intent = new Intent(getActivity(), clazz);
         startActivityForResult(intent, requestCode);
     }
@@ -148,7 +148,7 @@ public abstract class BaseFragment extends Fragment {
      * @param requestCode RequestCode
      * @param flags       FLAG_ACTIVITY
      */
-    protected void goToForResult(Class<?> clazz, int requestCode, int flags) {
+    public void goToForResult(Class<?> clazz, int requestCode, int flags) {
         Intent intent = new Intent(getActivity(), clazz);
         intent.addFlags(flags);
         startActivityForResult(intent, requestCode);
@@ -161,7 +161,7 @@ public abstract class BaseFragment extends Fragment {
      * @param requestCode RequestCode
      * @param bundle      data
      */
-    protected void goToForResult(Class<?> clazz, int requestCode, Bundle bundle) {
+    public void goToForResult(Class<?> clazz, int requestCode, Bundle bundle) {
         Intent intent = new Intent(getActivity(), clazz);
         if (null != bundle) {
             intent.putExtras(bundle);
@@ -177,7 +177,7 @@ public abstract class BaseFragment extends Fragment {
      * @param bundle      data
      * @param flags       FLAG_ACTIVITY
      */
-    protected void goToForResult(Class<?> clazz, int requestCode, Bundle bundle, int flags) {
+    public void goToForResult(Class<?> clazz, int requestCode, Bundle bundle, int flags) {
         Intent intent = new Intent(getActivity(), clazz);
         if (null != bundle) {
             intent.putExtras(bundle);
