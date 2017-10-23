@@ -35,13 +35,13 @@ Step 2. Add the dependency
  [DateUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/DateUtils.java)| 时间相关工具类
  [DigestUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/DigestUtils.java)| 摘要/加密解密工具类
  [DoubleUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/DoubleUtils.java)| 小数(Double)计算精确工具类类
+ [FileUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/FileUtils.java)| 文件相关工具类
  [ImageUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/ImageUtils.java)| 图片相关工具类
  [JsonResponseParser](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/JsonResponseParser.java)| xUtil json 解析器
  [KeyboardUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/KeyboardUtils.java)| Android 键盘工具类
  [ListViewUtil](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/ListViewUtil.java)| 动态设置嵌套 ListView 中高度
  [MathUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/MathUtils.java)| 数字等公式相关工具类
  [NetStateUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/NetStateUtils.java)| 网络状态工具类
- [QFileUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/QFileUtils.java)| 文件相关工具类
  [QLog](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/QLog.java)| Android 日志工具类
  [ResourceUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/ResourceUtils.java)| Android 资源相关工具类
  [SPUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/SPUtils.java)| Android SharedPreferences 工具类

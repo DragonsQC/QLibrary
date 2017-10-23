@@ -22,7 +22,7 @@ public class CleanUtils {
      * @param context Context
      */
     public static void cleanCacheDir(Context context) {
-        QFileUtils.deleteFile(context.getCacheDir(), false);
+        FileUtils.deleteFile(context.getCacheDir(), false);
     }
 
     /**
@@ -31,7 +31,7 @@ public class CleanUtils {
      * @param context Context
      */
     public static void cleanFiles(Context context) {
-        QFileUtils.deleteFile(context.getFilesDir(), false);
+        FileUtils.deleteFile(context.getFilesDir(), false);
 
     }
 
@@ -41,7 +41,7 @@ public class CleanUtils {
      * @param context Context
      */
     public static void cleanDB(Context context) {
-        QFileUtils.deleteFile(
+        FileUtils.deleteFile(
                 new File(context.getFilesDir().getParent() + File.separator + "databases"),
                 false);
 
@@ -53,7 +53,7 @@ public class CleanUtils {
      * @param context Context
      */
     public static void cleanSP(Context context) {
-        QFileUtils.deleteFile(
+        FileUtils.deleteFile(
                 new File(context.getFilesDir().getParent() + File.separator + "shared_prefs"),
                 false);
     }
@@ -76,7 +76,7 @@ public class CleanUtils {
      */
     public static void cleanExternalCache(Context context) {
         if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-            QFileUtils.deleteFile(context.getExternalCacheDir(), false);
+            FileUtils.deleteFile(context.getExternalCacheDir(), false);
         }
     }
 
@@ -86,7 +86,7 @@ public class CleanUtils {
      * @param filePath 文件路径
      */
     public static void cleanCustomCache(String filePath) {
-        QFileUtils.deleteFile(new File(filePath), false);
+        FileUtils.deleteFile(new File(filePath), false);
 
     }
 
