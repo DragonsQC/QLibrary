@@ -85,14 +85,14 @@ dependencies {
     //logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
     compile "com.squareup.okhttp3:logging-interceptor:3.9.0"
     //fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
-    compile "com.alibaba:fastjson:1.1.64.android"
+    compile "com.alibaba:fastjson:1.1.65.android"
 
 //【图片加载】***************************************************************************************
     //Picasso [https://github.com/square/picasso]
     //compile "com.squareup.picasso:picasso:2.5.2"
     //Glide [https://github.com/bumptech/glide]
-    compile 'com.github.bumptech.glide:glide:4.2.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.2.0'
+    compile 'com.github.bumptech.glide:glide:4.3.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.3.0'
 
 //【Animation】*************************************************************************************
     //NineoldAndroids [https://github.com/JakeWharton/NineOldAndroids]
@@ -114,7 +114,7 @@ dependencies {
     //Material Dialogs [https://github.com/afollestad/material-dialogs]
     compile "com.afollestad.material-dialogs:core:0.9.5.0"
     //拖拽排序 Advanced RecyclerView [https://github.com/h6ah4i/android-advancedrecyclerview]
-    compile("com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.10.6@aar") {
+    compile("com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.11.0@aar") {
         transitive = true
     }
 
