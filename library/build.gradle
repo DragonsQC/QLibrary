@@ -4,7 +4,7 @@ group = 'com.github.DragonsQC'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion "27"
+    buildToolsVersion "27.0.1"
     compileOptions.encoding = "UTF-8"
 
     defaultConfig {
@@ -69,7 +69,7 @@ dependencies {
 
 //【Utils】*****************************************************************************************
     //Commons Lang https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
-    compile 'org.apache.commons:commons-lang3:3.6'
+    compile 'org.apache.commons:commons-lang3:3.7'
     //xLog [https://github.com/elvishew/xLog]
     compile "com.elvishew:xlog:1.4.0"
     //沉浸式状态栏 [https://github.com/laobie/StatusBarUtil]
@@ -83,16 +83,16 @@ dependencies {
     //converter-gson [http://www.mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson]
     compile "com.squareup.retrofit2:converter-gson:2.3.0"
     //logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
-    compile "com.squareup.okhttp3:logging-interceptor:3.9.0"
+    compile "com.squareup.okhttp3:logging-interceptor:3.9.1"
     //fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
-    compile "com.alibaba:fastjson:1.1.65.android"
+    compile "com.alibaba:fastjson:1.1.67.android"
 
 //【图片加载】***************************************************************************************
     //Picasso [https://github.com/square/picasso]
     //compile "com.squareup.picasso:picasso:2.5.2"
     //Glide [https://github.com/bumptech/glide]
-    compile 'com.github.bumptech.glide:glide:4.3.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.3.0'
+    compile 'com.github.bumptech.glide:glide:4.3.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.3.1'
 
 //【Animation】*************************************************************************************
     //NineoldAndroids [https://github.com/JakeWharton/NineOldAndroids]
