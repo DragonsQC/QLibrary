@@ -1,11 +1,13 @@
 # Android 常用工具库
 
 # Quick Start
+
 [![](https://jitpack.io/v/DragonsQC/QLibrary.svg)](https://jitpack.io/#DragonsQC/QLibrary)
 
 Step 1. Add the JitPack repository to your build file
 
 Add it in your root build.gradle at the end of repositories:
+
 ```
 allprojects {
     repositories {
@@ -14,12 +16,15 @@ allprojects {
     }
 }
 ```
+
 Step 2. Add the dependency
+
 ```
 dependencies {
     compile 'com.github.DragonsQC:QLibrary:{X.X.X}'
 }
 ```
+
 # 说明
 Activity 相关类 | 描述
 --- | ---
@@ -28,7 +33,6 @@ Activity 相关类 | 描述
 [BaseSwipeBackCompatActivity](/library/src/main/java/com/dqc/qlibrary/activity/BaseSwipeBackCompatActivity.java)| 简单封装startActivity()，start、finish带过度动画，可侧滑返回
 
 ***
-
 工具类 | 描述
 --- | ---
 [AnimationUtils](/library/src/main/java/com/dqc/qlibrary/utils/AnimationUtils.java)| 动画工具类
@@ -54,7 +58,6 @@ Activity 相关类 | 描述
 [VibratorUtils](/library/src/main/java/com/dqc/qlibrary/utils/VibratorUtils.java)| Android 手机震动工具类
 
 ***
-
 第三方库 |
 --- |
 **【Android Support】** |
@@ -65,7 +68,7 @@ cardview-v7 |
 recyclerview-v7 |
 percent |
 design |
-【Utils】 |
+**【Utils】** |
 [Commons Lang](https://mvnrepository.com/artifact/org.apache.commons/commons-lang3) |
 [xLog](https://github.com/elvishew/xLog) |
 [沉浸式状态栏 StatusBarUtil](https://github.com/laobie/StatusBarUtil) |
@@ -76,7 +79,7 @@ design |
 [okhttp3 logging-interceptor](http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor) |
 [Fastjson](http://www.mvnrepository.com/artifact/com.alibaba/fastjson) |
 **【图片加载】** |
-[Glide](https://github.com/bumptech/glide) 需使用GlideApp，请添加[annotationProcessor 'com.github.bumptech.glide:compiler:XXX'] |
+[Glide](https://github.com/bumptech/glide) <br> 需使用GlideApp时，自行添 annotationProcessor |
 **【Animation】** |
 [NineoldAndroids](https://github.com/JakeWharton/NineOldAndroids) |
 [AndroidViewAnimations](https://github.com/daimajia/AndroidViewAnimations) |
@@ -88,11 +91,12 @@ design |
 [Material Dialogs](https://github.com/afollestad/material-dialogs) |
 [Advanced RecyclerView](https://github.com/h6ah4i/android-advancedrecyclerview) |
 
- 资源文件 | 描述
- --- | ---
-  [【res/anim】](/library/src/main/res/anim) | 各种动画资源
-  [【res/values/colors.xml】](/library/src/main/res/values/colors.xml) | 官方 Material Design 各种颜色
-  [【res/values/dimens.xml】](/library/src/main/res/values/dimens.xml) | 常用间距（dp）、文字大小（sp）
+***
+资源文件 | 描述
+--- | ---
+[res/anim](/library/src/main/res/anim) | 各种动画资源
+[res/values/colors.xml](/library/src/main/res/values/colors.xml) | 官方 Material Design 各种颜色
+[res/values/dimens.xml](/library/src/main/res/values/dimens.xml) | 常用间距（dp）、文字大小（sp）
 
 ***
 # [Change Log](CHANGELOG.md)
