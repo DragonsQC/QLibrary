@@ -24,32 +24,32 @@ Step 2. Add the dependency
  Activity 相关类 | 描述
  --- | ---
  [BaseAppCompatActivity](/library/src/main/java/com/dqc/qlibrary/activity/BaseAppCompatActivity.java)| 简单封装startActivity()，start、finish带过度动画
- [BaseFragment](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/activity/BaseFragment.java)| 简单封装startActivity()
- [BaseSwipeBackCompatActivity](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/activity/BaseSwipeBackCompatActivity.java)| 简单封装startActivity()，start、finish带过度动画，可侧滑返回
+ [BaseFragment](/library/src/main/java/com/dqc/qlibrary/activity/BaseFragment.java)| 简单封装startActivity()
+ [BaseSwipeBackCompatActivity](/library/src/main/java/com/dqc/qlibrary/activity/BaseSwipeBackCompatActivity.java)| 简单封装startActivity()，start、finish带过度动画，可侧滑返回
 
  工具类 | 描述
  --- | ---
- [AnimationUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/AnimationUtils.java)| 动画工具类
- [AppUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/AppUtils.java)| APP相关信息工具类
- [CleanUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/CleanUtils.java)| APP数据清除工具类
- [DateUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/DateUtils.java)| 时间相关工具类
- [DigestUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/DigestUtils.java)| 摘要/加密解密工具类
- [DoubleUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/DoubleUtils.java)| 小数(Double)计算精确工具类类
- [FileUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/FileUtils.java)| 文件相关工具类
- [ImageUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/ImageUtils.java)| 图片相关工具类
- [JsonResponseParser](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/JsonResponseParser.java)| xUtil json 解析器
- [KeyboardUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/KeyboardUtils.java)| Android 键盘工具类
- [ListViewUtil](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/ListViewUtil.java)| 动态设置嵌套 ListView 中高度
- [MathUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/MathUtils.java)| 数字等公式相关工具类
- [NetStateUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/NetStateUtils.java)| 网络状态工具类
- [QLog](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/QLog.java)| Android 日志工具类
- [ResourceUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/ResourceUtils.java)| Android 资源相关工具类
- [SPUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/SPUtils.java)| Android SharedPreferences 工具类
- [StringUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/StringUtils.java)| 字符串相关工具类
- [SystemUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/SystemUtils.java)| 系统/设备相关工具类
- [ThreadManager](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/ThreadManager.java)| 线程管理
- [ToastUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/ToastUtils.java)| Android Toast 工具类
- [VibratorUtils](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/java/com/dqc/qlibrary/utils/VibratorUtils.java)| Android 手机震动工具类
+ [AnimationUtils](/library/src/main/java/com/dqc/qlibrary/utils/AnimationUtils.java)| 动画工具类
+ [AppUtils](/library/src/main/java/com/dqc/qlibrary/utils/AppUtils.java)| APP相关信息工具类
+ [CleanUtils](/library/src/main/java/com/dqc/qlibrary/utils/CleanUtils.java)| APP数据清除工具类
+ [DateUtils](/library/src/main/java/com/dqc/qlibrary/utils/DateUtils.java)| 时间相关工具类
+ [DigestUtils](/library/src/main/java/com/dqc/qlibrary/utils/DigestUtils.java)| 摘要/加密解密工具类
+ [DoubleUtils](/library/src/main/java/com/dqc/qlibrary/utils/DoubleUtils.java)| 小数(Double)计算精确工具类类
+ [FileUtils](/library/src/main/java/com/dqc/qlibrary/utils/FileUtils.java)| 文件相关工具类
+ [ImageUtils](/library/src/main/java/com/dqc/qlibrary/utils/ImageUtils.java)| 图片相关工具类
+ [JsonResponseParser](/library/src/main/java/com/dqc/qlibrary/utils/JsonResponseParser.java)| xUtil json 解析器
+ [KeyboardUtils](/library/src/main/java/com/dqc/qlibrary/utils/KeyboardUtils.java)| Android 键盘工具类
+ [ListViewUtil](/library/src/main/java/com/dqc/qlibrary/utils/ListViewUtil.java)| 动态设置嵌套 ListView 中高度
+ [MathUtils](/library/src/main/java/com/dqc/qlibrary/utils/MathUtils.java)| 数字等公式相关工具类
+ [NetStateUtils](/library/src/main/java/com/dqc/qlibrary/utils/NetStateUtils.java)| 网络状态工具类
+ [QLog](/library/src/main/java/com/dqc/qlibrary/utils/QLog.java)| Android 日志工具类
+ [ResourceUtils](/library/src/main/java/com/dqc/qlibrary/utils/ResourceUtils.java)| Android 资源相关工具类
+ [SPUtils](/library/src/main/java/com/dqc/qlibrary/utils/SPUtils.java)| Android SharedPreferences 工具类
+ [StringUtils](/library/src/main/java/com/dqc/qlibrary/utils/StringUtils.java)| 字符串相关工具类
+ [SystemUtils](/library/src/main/java/com/dqc/qlibrary/utils/SystemUtils.java)| 系统/设备相关工具类
+ [ThreadManager](/library/src/main/java/com/dqc/qlibrary/utils/ThreadManager.java)| 线程管理
+ [ToastUtils](/library/src/main/java/com/dqc/qlibrary/utils/ToastUtils.java)| Android Toast 工具类
+ [VibratorUtils](/library/src/main/java/com/dqc/qlibrary/utils/VibratorUtils.java)| Android 手机震动工具类
 
  第三方库 | 描述
  --- | ---
@@ -88,9 +88,9 @@ Step 2. Add the dependency
 
  资源文件 | 描述
  --- | ---
-  [【res/anim】](https://github.com/DragonsQC/QLibrary/tree/master/library/src/main/res/anim) | 各种动画资源
-  [【res/values/colors.xml】](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/res/values/colors.xml) | 官方 Material Design 各种颜色
-  [【res/values/dimens.xml】](https://github.com/DragonsQC/QLibrary/blob/master/library/src/main/res/values/dimens.xml) | 常用间距（dp）、文字大小（sp）
+  [【res/anim】](/library/src/main/res/anim) | 各种动画资源
+  [【res/values/colors.xml】](/library/src/main/res/values/colors.xml) | 官方 Material Design 各种颜色
+  [【res/values/dimens.xml】](/library/src/main/res/values/dimens.xml) | 常用间距（dp）、文字大小（sp）
 
 {*version}：均为最新稳定版本
 
