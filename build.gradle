@@ -1,16 +1,18 @@
 apply plugin: 'com.github.ben-manes.versions'
 buildscript {
-    repositories {
-        jcenter()
-    }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.android.tools.build:gradle:3.0.0'
 
         //Jitpack [http://mvnrepository.com/artifact/com.github.dcendents/android-maven-gradle-plugin]
+        //[https://github.com/dcendents/android-maven-gradle-plugin#note-on-releases]
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
 
         //[https://github.com/ben-manes/gradle-versions-plugin]
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.17.0'
+    }
+    repositories {
+        jcenter()
+        google()
     }
 }
 
@@ -21,7 +23,7 @@ allprojects {
 //        mavenLocal()
 //        mavenCentral()
 //        maven { url 'https://jcenter.bintray.com' }
-//        maven { url 'https://jitpack.io'}
+        maven { url 'https://jitpack.io'}
 //        maven { url "https://maven.google.com" }
     }
 }
