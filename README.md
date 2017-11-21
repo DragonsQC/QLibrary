@@ -95,3 +95,5 @@ Step 2. Add the dependency
 {*version}：均为最新稳定版本
 
 MORE AND MORE ......
+
+## [Change Log](CHANGELOG.md)
