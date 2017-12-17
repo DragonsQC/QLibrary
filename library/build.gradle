@@ -4,7 +4,7 @@ group = 'com.github.DragonsQC'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion "27.0.1"
+    buildToolsVersion "27.0.2"
     compileOptions.encoding = "UTF-8"
 
     defaultConfig {
@@ -91,8 +91,8 @@ dependencies {
     //Picasso [https://github.com/square/picasso]
     //implementation "com.squareup.picasso:picasso:2.5.2"
     //Glide [https://github.com/bumptech/glide]
-    implementation 'com.github.bumptech.glide:glide:4.3.1'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.3.1'
+    implementation 'com.github.bumptech.glide:glide:4.4.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.4.0'
 
 //【Animation】*************************************************************************************
     //NineoldAndroids [https://github.com/JakeWharton/NineOldAndroids]
@@ -112,7 +112,7 @@ dependencies {
     implementation "com.twotoasters.jazzylistview:library:1.2.1"
     implementation "com.twotoasters.jazzylistview:library-recyclerview:1.2.1"
     //Material Dialogs [https://github.com/afollestad/material-dialogs]
-    implementation "com.afollestad.material-dialogs:core:0.9.5.0"
+    implementation "com.afollestad.material-dialogs:core:0.9.6.0"
     //拖拽排序 Advanced RecyclerView [https://github.com/h6ah4i/android-advancedrecyclerview]
     implementation("com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.11.0@aar") {
         transitive = true
