@@ -28,9 +28,9 @@ dependencies {
 # 说明
 Activity 相关类 | 描述
 --- | ---
-[BaseAppCompatActivity](/library/src/main/java/com/dqc/qlibrary/activity/BaseAppCompatActivity.java)| 简单封装startActivity()，start、finish带过度动画
+[BaseAppCompatActivity](/library/src/main/java/com/dqc/qlibrary/activity/BaseAppCompatActivity.java)| 简单封装startActivity()
 [BaseFragment](/library/src/main/java/com/dqc/qlibrary/activity/BaseFragment.java)| 简单封装startActivity()
-[BaseSwipeBackCompatActivity](/library/src/main/java/com/dqc/qlibrary/activity/BaseSwipeBackCompatActivity.java)| 简单封装startActivity()，start、finish带过度动画，可侧滑返回
+[BaseSwipeBackCompatActivity](/library/src/main/java/com/dqc/qlibrary/activity/BaseSwipeBackCompatActivity.java)| 简单封装startActivity()，可侧滑返回
 
 ***
 工具类 | 描述
