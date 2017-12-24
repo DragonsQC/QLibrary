@@ -87,6 +87,8 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
 
     /**
      * 设置 Activity 切换的过度动画模式，不设置时默认为TransitionMode.RIGHT
+     * <p>
+     * 设置值 {@link TransitionMode}
      *
      * @param transitionMode TransitionMode
      */
