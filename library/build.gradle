@@ -71,7 +71,7 @@ dependencies {
     //Commons Lang https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
     implementation 'org.apache.commons:commons-lang3:3.7'
     //xLog [https://github.com/elvishew/xLog]
-    implementation "com.elvishew:xlog:1.4.0"
+    implementation "com.elvishew:xlog:1.4.1"
     //沉浸式状态栏 [https://github.com/laobie/StatusBarUtil]
     implementation "com.jaeger.statusbarutil:library:1.4.0"
 
