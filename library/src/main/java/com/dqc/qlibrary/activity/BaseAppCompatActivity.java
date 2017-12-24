@@ -14,11 +14,14 @@ import com.jaeger.library.StatusBarUtil;
  */
 @SuppressWarnings("WeakerAccess,unused")
 public abstract class BaseAppCompatActivity extends AppCompatActivity {
-    
+
+    private TransitionMode mTransitionMode = TransitionMode.RIGHT;
+    private boolean        mIsTransition   = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        if (toggleOverridePendingTransition()) {
-            switch (getOverridePendingTransitionMode()) {
+        if (mIsTransition) {
+            switch (mTransitionMode) {
                 case LEFT:
                     overridePendingTransition(R.anim.left_in, R.anim.left_out);
                     break;
@@ -47,8 +50,8 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     @Override
     public void finish() {
         super.finish();
-        if (toggleOverridePendingTransition()) {
-            switch (getOverridePendingTransitionMode()) {
+        if (mIsTransition) {
+            switch (mTransitionMode) {
                 case LEFT:
                     overridePendingTransition(R.anim.left_in, R.anim.left_out);
                     break;
@@ -74,15 +77,22 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     }
 
     /**
-     * toggle overridePendingTransition
+     * 设置 Activity 是否有切换动画，默认true
+     *
+     * @param isTransition boolean
      */
-    protected abstract boolean toggleOverridePendingTransition();
+    public void setTransition(boolean isTransition) {
+        mIsTransition = isTransition;
+    }
 
     /**
-     * get the overridePendingTransition mode
+     * 设置 Activity 切换的过度动画模式，不设置时默认为TransitionMode.RIGHT
+     *
+     * @param transitionMode TransitionMode
      */
-    protected abstract TransitionMode getOverridePendingTransitionMode();
-
+    public void setTransitionMode(TransitionMode transitionMode) {
+        mTransitionMode = transitionMode;
+    }
 
     /**
      * 设置状态栏颜色
