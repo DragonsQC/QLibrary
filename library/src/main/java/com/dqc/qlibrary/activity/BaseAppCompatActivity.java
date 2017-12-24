@@ -2,8 +2,8 @@ package com.dqc.qlibrary.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-import com.aitangba.swipeback.SwipeBackActivity;
 import com.dqc.qlibrary.R;
 import com.jaeger.library.StatusBarUtil;
 
@@ -13,7 +13,7 @@ import com.jaeger.library.StatusBarUtil;
  * @author .
  */
 @SuppressWarnings("WeakerAccess,unused")
-public abstract class BaseAppCompatActivity extends SwipeBackActivity {
+public abstract class BaseAppCompatActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
