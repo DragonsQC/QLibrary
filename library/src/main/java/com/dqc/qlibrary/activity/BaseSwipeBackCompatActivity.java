@@ -1,9 +1,12 @@
 package com.dqc.qlibrary.activity;
 
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SlidingPaneLayout;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.dqc.qlibrary.R;
 
 import java.lang.reflect.Field;
 
@@ -38,7 +41,7 @@ public abstract class BaseSwipeBackCompatActivity extends BaseAppCompatActivity 
             e.printStackTrace();
         }
         slidingPaneLayout.setPanelSlideListener(this);
-        slidingPaneLayout.setSliderFadeColor(getResources().getColor(android.R.color.transparent));
+        slidingPaneLayout.setSliderFadeColor(ContextCompat.getColor(getApplicationContext(), R.color.transparent));
 
         View leftView = new View(this);
         leftView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
@@ -46,7 +49,7 @@ public abstract class BaseSwipeBackCompatActivity extends BaseAppCompatActivity 
 
         ViewGroup decor      = (ViewGroup) getWindow().getDecorView();
         ViewGroup decorChild = (ViewGroup) decor.getChildAt(0);
-        decorChild.setBackgroundColor(getResources().getColor(android.R.color.white));
+        decorChild.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.transparent));
         decor.removeView(decorChild);
         decor.addView(slidingPaneLayout);
         slidingPaneLayout.addView(decorChild, 1);
