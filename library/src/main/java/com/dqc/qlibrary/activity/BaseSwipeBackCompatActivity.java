@@ -17,6 +17,7 @@ public abstract class BaseSwipeBackCompatActivity extends BaseAppCompatActivity 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        initSwipeBackFinish();
         super.onCreate(savedInstanceState);
 
     }
