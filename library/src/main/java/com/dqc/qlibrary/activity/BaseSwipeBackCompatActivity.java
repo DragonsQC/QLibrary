@@ -52,16 +52,6 @@ public abstract class BaseSwipeBackCompatActivity extends SlideBackActivity {
     }
 
     /**
-     * toggle overridePendingTransition
-     */
-    protected abstract boolean toggleOverridePendingTransition();
-
-    /**
-     * get the overridePendingTransition mode
-     */
-    protected abstract BaseAppCompatActivity.TransitionMode getOverridePendingTransitionMode();
-
-    /**
      * startActivity
      *
      * @param clazz Activity.class
@@ -225,10 +215,4 @@ public abstract class BaseSwipeBackCompatActivity extends SlideBackActivity {
         startActivityForResult(intent, requestCode);
     }
 
-    /**
-     * overridePendingTransition mode
-     */
-    public enum TransitionMode {
-        LEFT, RIGHT, TOP, BOTTOM, SCALE, FADE
-    }
 }

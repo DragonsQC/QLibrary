@@ -52,16 +52,6 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     }
 
     /**
-     * toggle overridePendingTransition
-     */
-    protected abstract boolean toggleOverridePendingTransition();
-
-    /**
-     * get the overridePendingTransition mode
-     */
-    protected abstract TransitionMode getOverridePendingTransitionMode();
-
-    /**
      * startActivity
      *
      * @param clazz Activity.class
@@ -225,10 +215,4 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
         startActivityForResult(intent, requestCode);
     }
 
-    /**
-     * overridePendingTransition mode
-     */
-    public enum TransitionMode {
-        LEFT, RIGHT, TOP, BOTTOM, SCALE, FADE
-    }
 }
