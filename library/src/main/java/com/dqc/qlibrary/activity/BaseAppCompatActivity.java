@@ -20,13 +20,6 @@ import java.lang.reflect.Field;
 @SuppressWarnings("WeakerAccess,unused")
 public abstract class BaseAppCompatActivity extends AppCompatActivity implements SlidingPaneLayout.PanelSlideListener {
 
-    /**
-     * 是否滑动返回，默认true
-     * <p>
-     * 通过 {@link com.dqc.qlibrary.activity.BaseAppCompatActivity#setSwipeBack} 设置
-     */
-    private boolean isSwipeBack = true;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         if (toggleOverridePendingTransition()) {
@@ -53,7 +46,7 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity implements
                     break;
             }
         }
-        if (isSwipeBack) {
+        if (isSupportSwipeBack()) {
             initSwipeBackFinish();
         }
         super.onCreate(savedInstanceState);
@@ -119,12 +112,12 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity implements
     }
 
     /**
-     * 设置时候滑动返回
+     * 是否支持滑动返回
      *
-     * @param isSwipeBack boolean
+     * @return boolean
      */
-    public void setSwipeBack(boolean isSwipeBack) {
-        this.isSwipeBack = isSwipeBack;
+    protected boolean isSupportSwipeBack() {
+        return true;
     }
 
     /**
