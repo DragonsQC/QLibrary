@@ -74,8 +74,6 @@ dependencies {
     implementation "com.elvishew:xlog:1.4.1"
     //沉浸式状态栏 [https://github.com/laobie/StatusBarUtil]
     implementation "com.jaeger.statusbarutil:library:1.4.0"
-    //侧滑返回 [https://github.com/XBeats/and_swipeback]
-    compile 'com.aitangba:swipeback:1.0.1'
 
 //【HTTP】******************************************************************************************
     //xUtils [https://github.com/wyouflf/xUtils3]

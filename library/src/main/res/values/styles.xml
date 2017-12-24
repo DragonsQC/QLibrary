@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <style name="SwipeBackLayout">
-        <item name="edge_size">0dp</item>
-    </style>
-
     <!-- 分割线样式 -->
     <style name="split_line">
         <item name="android:layout_width">match_parent</item>

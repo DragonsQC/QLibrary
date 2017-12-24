@@ -3,7 +3,7 @@ package com.dqc.qlibrary.activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import com.aitangba.swipeback.SwipeBackActivity;
+import com.dqc.qlibrary.library.slide.SlideBackActivity;
 
 /**
  * 侧滑返回 Activity
@@ -11,7 +11,7 @@ import com.aitangba.swipeback.SwipeBackActivity;
  * @author .
  */
 @SuppressWarnings("WeakerAccess,unused")
-public abstract class BaseSwipeBackCompatActivity extends SwipeBackActivity {
+public abstract class BaseSwipeBackCompatActivity extends SlideBackActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
