@@ -2,6 +2,7 @@ package com.dqc.qlibrary.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -18,9 +19,11 @@ public abstract class BaseFragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return super.onCreateView(inflater, container, savedInstanceState);
     }
+
+    //<editor-fold defaultstate="collapsed" desc="startActivity 相关方法群" >
 
     /**
      * startActivity
@@ -185,4 +188,6 @@ public abstract class BaseFragment extends Fragment {
         intent.addFlags(flags);
         startActivityForResult(intent, requestCode);
     }
+
+    //</editor-fold>
 }

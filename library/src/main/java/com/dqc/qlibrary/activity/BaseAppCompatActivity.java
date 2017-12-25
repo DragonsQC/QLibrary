@@ -43,7 +43,7 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity implements
     //<editor-fold defaultstate="collapsed" desc="侧滑返回 相关方法群" >
 
     /**
-     * 设置是否滑动返回
+     * 设置是否滑动返回，默认 true
      *
      * @param isSwipeBack boolean
      */
