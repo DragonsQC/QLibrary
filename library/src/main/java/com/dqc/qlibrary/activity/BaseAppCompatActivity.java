@@ -15,13 +15,15 @@ import com.jaeger.library.StatusBarUtil;
 @SuppressWarnings("WeakerAccess,unused")
 public abstract class BaseAppCompatActivity extends AppCompatActivity {
 
-    private TransitionMode mTransitionMode = TransitionMode.RIGHT;
-    private boolean        mIsTransition   = true;
+    private boolean        mIsCreateTransition   = true;
+    private boolean        mIsFinishTransition   = true;
+    private TransitionMode mCreateTransitionMode = TransitionMode.RIGHT;
+    private TransitionMode mFinishTransitionMode = TransitionMode.RIGHT;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        if (mIsTransition) {
-            switch (mTransitionMode) {
+        if (mIsCreateTransition) {
+            switch (mCreateTransitionMode) {
                 case LEFT:
                     overridePendingTransition(R.anim.left_in, R.anim.left_out);
                     break;
@@ -50,8 +52,8 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     @Override
     public void finish() {
         super.finish();
-        if (mIsTransition) {
-            switch (mTransitionMode) {
+        if (mIsFinishTransition) {
+            switch (mFinishTransitionMode) {
                 case LEFT:
                     overridePendingTransition(R.anim.left_in, R.anim.left_out);
                     break;
@@ -79,10 +81,12 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     /**
      * 设置 Activity 是否有切换动画，默认true
      *
-     * @param isTransition boolean
+     * @param isCreateTransition 是否显示创建时的切换动画
+     * @param isFinishTransition 是否显示结束时的切换动画
      */
-    public void setTransition(boolean isTransition) {
-        mIsTransition = isTransition;
+    public void setTransition(boolean isCreateTransition, boolean isFinishTransition) {
+        mIsCreateTransition = isCreateTransition;
+        mIsFinishTransition = isFinishTransition;
     }
 
     /**
@@ -90,10 +94,13 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
      * <p>
      * 设置值 {@link TransitionMode}
      *
-     * @param transitionMode TransitionMode
+     * @param createTransitionMode 创建时切换动画
+     * @param finishTransitionMode 结束时切换动画
      */
-    public void setTransitionMode(TransitionMode transitionMode) {
-        mTransitionMode = transitionMode;
+    public void setTransitionMode(TransitionMode createTransitionMode, TransitionMode finishTransitionMode) {
+        mCreateTransitionMode = createTransitionMode;
+        mFinishTransitionMode = finishTransitionMode;
+
     }
 
     /**
