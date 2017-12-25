@@ -58,8 +58,8 @@ Activity 相关类 | 描述
 [VibratorUtils](/library/src/main/java/com/dqc/qlibrary/utils/VibratorUtils.java)| Android 手机震动工具类
 
 ***
-第三方库 |
---- |
+第三方库 | 说明
+--- | ---
 **【Android Support】** |
 support-v4 |
 appcompat-v7 |
@@ -70,8 +70,9 @@ percent |
 design |
 **【Utils】** |
 [Commons Lang](https://mvnrepository.com/artifact/org.apache.commons/commons-lang3) |
-[xLog](https://github.com/elvishew/xLog) |
-[沉浸式状态栏 StatusBarUtil](https://github.com/laobie/StatusBarUtil) |
+[xLog](https://github.com/elvishew/xLog) | 已封装入 [QLog](/library/src/main/java/com/dqc/qlibrary/utils/QLog.java)
+[沉浸式状态栏 StatusBarUtil](https://github.com/laobie/StatusBarUtil) | 已封装入 BaseAppCompatActivity，使用setStatusBarXXX方法调用
+[滑动返回 BGASwipeBackLayout](https://github.com/bingoogolapple/BGASwipeBackLayout-Android) | 必须在 Application 的 onCreate 方法中执行 BGASwipeBackHelper.init 来初始化滑动返回
 **【HTTP】** |
 [xUtils3](https://github.com/wyouflf/xUtils3) |
 [Retrofit2](https://github.com/square/retrofit) |
@@ -79,7 +80,7 @@ design |
 [okhttp3 logging-interceptor](http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor) |
 [Fastjson](http://www.mvnrepository.com/artifact/com.alibaba/fastjson) |
 **【图片加载】** |
-[Glide](https://github.com/bumptech/glide) <br> 需使用GlideApp时，自行添 annotationProcessor |
+[Glide](https://github.com/bumptech/glide) | 需使用GlideApp时，自行添 annotationProcessor
 **【Animation】** |
 [NineoldAndroids](https://github.com/JakeWharton/NineOldAndroids) |
 [AndroidViewAnimations](https://github.com/daimajia/AndroidViewAnimations) |
