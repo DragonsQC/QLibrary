@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.dqc.qlibrary.R;
 import com.jaeger.library.StatusBarUtil;
 
 /**
@@ -15,94 +14,9 @@ import com.jaeger.library.StatusBarUtil;
 @SuppressWarnings("WeakerAccess,unused")
 public abstract class BaseAppCompatActivity extends AppCompatActivity {
 
-    private boolean        mIsTransition   = true;
-    private TransitionMode mTransitionMode = TransitionMode.RIGHT;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        if (mIsTransition) {
-            switch (mTransitionMode) {
-                case LEFT:
-                    overridePendingTransition(R.anim.left_in, R.anim.left_out);
-                    break;
-                case RIGHT:
-                    overridePendingTransition(R.anim.right_in, R.anim.right_out);
-                    break;
-                case TOP:
-                    overridePendingTransition(R.anim.top_in, R.anim.top_out);
-                    break;
-                case BOTTOM:
-                    overridePendingTransition(R.anim.bottom_in, R.anim.bottom_out);
-                    break;
-                case SCALE:
-                    overridePendingTransition(R.anim.scale_in, R.anim.scale_out);
-                    break;
-                case FADE:
-                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                    break;
-                default:
-                    break;
-            }
-        }
         super.onCreate(savedInstanceState);
-    }
-
-    @Override
-    public void finish() {
-        super.finish();
-        if (mIsTransition) {
-            switch (mTransitionMode) {
-                case LEFT:
-                    overridePendingTransition(R.anim.left_in, R.anim.left_out);
-                    break;
-                case RIGHT:
-                    overridePendingTransition(R.anim.right_in, R.anim.right_out);
-                    break;
-                case TOP:
-                    overridePendingTransition(R.anim.top_in, R.anim.top_out);
-                    break;
-                case BOTTOM:
-                    overridePendingTransition(R.anim.bottom_in, R.anim.bottom_out);
-                    break;
-                case SCALE:
-                    overridePendingTransition(R.anim.scale_in, R.anim.scale_out);
-                    break;
-                case FADE:
-                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                    break;
-                default:
-                    break;
-            }
-        }
-    }
-
-    /**
-     * 设置 Activity 是否有切换动画，默认true
-     *
-     * @param isTransition 是否显示切换动画
-     */
-    public void setTransition(boolean isTransition) {
-        mIsTransition = isTransition;
-    }
-
-    /**
-     * 设置 Activity 切换的过度动画模式，不设置时默认为TransitionMode.RIGHT
-     * <p>
-     * 设置值 {@link TransitionMode}
-     *
-     * @param transitionMode 时切换动画
-     */
-    public void setTransitionMode(TransitionMode transitionMode) {
-        mTransitionMode = transitionMode;
-
-    }
-
-    /**
-     * overridePendingTransition mode
-     */
-    public enum TransitionMode {
-        LEFT, RIGHT, TOP, BOTTOM, SCALE, FADE
     }
 
     //<editor-fold defaultstate="collapsed" desc="StatusBar 相关方法群" >
