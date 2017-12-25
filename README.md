@@ -72,7 +72,7 @@ design |
 [Commons Lang](https://mvnrepository.com/artifact/org.apache.commons/commons-lang3) |
 [xLog](https://github.com/elvishew/xLog) | 已封装入 [QLog](/library/src/main/java/com/dqc/qlibrary/utils/QLog.java)
 [沉浸式状态栏 StatusBarUtil](https://github.com/laobie/StatusBarUtil) | 已封装入 BaseAppCompatActivity，使用setStatusBarXXX方法调用
-[滑动返回 BGASwipeBackLayout](https://github.com/bingoogolapple/BGASwipeBackLayout-Android) | 必须在 Application 的 onCreate 方法中执行 BGASwipeBackHelper.init 来初始化滑动返回
+[滑动返回 ParallaxBackLayout](https://github.com/anzewei/ParallaxBackLayout) | 必须在 Application 初始化 registerActivityLifecycleCallbacks(ParallaxHelper.getInstance()); [详细说明](https://github.com/anzewei/ParallaxBackLayout/blob/master/README_ZH.md)
 **【HTTP】** |
 [xUtils3](https://github.com/wyouflf/xUtils3) |
 [Retrofit2](https://github.com/square/retrofit) |

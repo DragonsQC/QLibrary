@@ -75,7 +75,7 @@ dependencies {
     //沉浸式状态栏 [https://github.com/laobie/StatusBarUtil]
     implementation "com.jaeger.statusbarutil:library:1.4.0"
     //侧滑返回 [https://github.com/bingoogolapple/BGASwipeBackLayout-Android]
-    implementation 'cn.bingoogolapple:bga-swipebacklayout:1.1.8@aar'
+    implementation 'com.github.anzewei:parallaxbacklayout:1.1.8'
 
 //【HTTP】******************************************************************************************
     //xUtils [https://github.com/wyouflf/xUtils3]
