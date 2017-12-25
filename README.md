@@ -26,11 +26,10 @@ dependencies {
 ```
 
 # 说明
-Activity 相关类 | 描述
+Activity 相关类 | 说明
 --- | ---
-[BaseAppCompatActivity](/library/src/main/java/com/dqc/qlibrary/activity/BaseAppCompatActivity.java)| 简单封装startActivity()
+[BaseAppCompatActivity](/library/src/main/java/com/dqc/qlibrary/activity/BaseAppCompatActivity.java)| 简单封装startActivity()，封装 StatusBar 相关方法
 [BaseFragment](/library/src/main/java/com/dqc/qlibrary/activity/BaseFragment.java)| 简单封装startActivity()
-[BaseSwipeBackCompatActivity](/library/src/main/java/com/dqc/qlibrary/activity/BaseSwipeBackCompatActivity.java)| 简单封装startActivity()，可侧滑返回
 
 ***
 工具类 | 描述
@@ -95,6 +94,7 @@ design |
 ***
 资源文件 | 描述
 --- | ---
+[res/anim](/library/src/main/res/anim) | 各种动画资源
 [res/values/colors.xml](/library/src/main/res/values/colors.xml) | 官方 Material Design 各种颜色
 [res/values/dimens.xml](/library/src/main/res/values/dimens.xml) | 常用间距（dp）、文字大小（sp）
 
