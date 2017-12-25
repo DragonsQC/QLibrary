@@ -1,75 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- 分割线样式 -->
-    <style name="split_line">
+    <style name="line_horizontal">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0.5dp</item>
         <item name="android:background">@color/divider</item>
     </style>
 
-    <style name="split_line_h_min">
+    <style name="line_horizontal_min">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">2dp</item>
         <item name="android:background">@color/divider</item>
     </style>
 
-    <style name="split_line_h_small">
+    <style name="line_horizontal_small">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">4dp</item>
         <item name="android:background">@color/divider</item>
     </style>
 
-    <style name="split_line_h_middle">
+    <style name="line_horizontal_middle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">8dp</item>
         <item name="android:background">@color/divider</item>
     </style>
 
-    <style name="split_line_white">
+    <style name="line_horizontal_white">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0.5dp</item>
         <item name="android:background">@color/white</item>
     </style>
 
-    <style name="split_line_h_min_white">
+    <style name="line_horizontal_white_min">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">2dp</item>
         <item name="android:background">@color/white</item>
     </style>
 
-    <style name="split_line_h_small_white">
+    <style name="line_horizontal_white_small">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">4dp</item>
         <item name="android:background">@color/white</item>
     </style>
 
-    <style name="split_line_h_middle_white">
+    <style name="line_horizontal_white_middle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">8dp</item>
         <item name="android:background">@color/white</item>
     </style>
 
-    <style name="split_line_black">
+    <style name="line_horizontal_black">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0.5dp</item>
         <item name="android:background">@color/black</item>
     </style>
 
-    <style name="split_line_h_min_black">
+    <style name="line_horizontal_black_min">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">2dp</item>
         <item name="android:background">@color/black</item>
     </style>
 
-    <style name="split_line_h_small_black">
+    <style name="line_horizontal_black_small">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">4dp</item>
         <item name="android:background">@color/black</item>
     </style>
 
-    <style name="split_line_h_middle_black">
+    <style name="line_horizontal_black_middle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">8dp</item>
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="line_vertical">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
+    <style name="line_vertical_min">
+        <item name="android:layout_width">2dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
+    <style name="line_vertical_small">
+        <item name="android:layout_width">4dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
+    <style name="line_vertical_middle">
+        <item name="android:layout_width">8dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
+    <style name="line_vertical_white">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="line_vertical_white_min">
+        <item name="android:layout_width">2dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="line_vertical_white_small">
+        <item name="android:layout_width">4dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="line_vertical_white_middle">
+        <item name="android:layout_width">8dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="line_vertical_black">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="line_vertical_black_min">
+        <item name="android:layout_width">2dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="line_vertical_black_small">
+        <item name="android:layout_width">4dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="line_vertical_black_middle">
+        <item name="android:layout_width">8dp</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:background">@color/black</item>
     </style>
 </resources>
