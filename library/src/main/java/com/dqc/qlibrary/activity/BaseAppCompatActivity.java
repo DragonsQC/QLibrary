@@ -18,24 +18,38 @@ import cn.bingoogolapple.swipebacklayout.BGASwipeBackHelper;
 public abstract class BaseAppCompatActivity extends AppCompatActivity implements BGASwipeBackHelper.Delegate {
 
     private BGASwipeBackHelper mSwipeBackHelper;
+    private boolean mIsSwipeBack = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // 「必须在 Application 的 onCreate 方法中执行 BGASwipeBackHelper.init 来初始化滑动返回」
-        initSwipeBack();
+        if (mIsSwipeBack) {
+            // 「必须在 Application 的 onCreate 方法中执行 BGASwipeBackHelper.init 来初始化滑动返回」
+            initSwipeBack();
+        }
         super.onCreate(savedInstanceState);
     }
 
     @Override
     public void onBackPressed() {
-        // 正在滑动返回的时候取消返回按钮事件
-        if (mSwipeBackHelper.isSliding()) {
-            return;
+        if (mIsSwipeBack) {
+            // 正在滑动返回的时候取消返回按钮事件
+            if (mSwipeBackHelper.isSliding()) {
+                return;
+            }
+            mSwipeBackHelper.backward();
         }
-        mSwipeBackHelper.backward();
     }
 
     //<editor-fold defaultstate="collapsed" desc="侧滑返回 相关方法群" >
+
+    /**
+     * 设置是否滑动返回
+     *
+     * @param isSwipeBack boolean
+     */
+    public void setIsSwipeBack(boolean isSwipeBack) {
+        mIsSwipeBack = isSwipeBack;
+    }
 
     /**
      * 初始化滑动返回。在 super.onCreate(savedInstanceState) 之前调用该方法
