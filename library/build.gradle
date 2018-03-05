@@ -4,7 +4,7 @@ group = 'com.github.DragonsQC'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion "27.0.2"
+    buildToolsVersion "27.0.3"
     compileOptions.encoding = "UTF-8"
 
     defaultConfig {
@@ -75,7 +75,7 @@ dependencies {
     //沉浸式状态栏 [https://github.com/laobie/StatusBarUtil]
     implementation "com.jaeger.statusbarutil:library:1.4.0"
     //侧滑返回 [https://github.com/bingoogolapple/BGASwipeBackLayout-Android]
-    implementation 'com.github.anzewei:parallaxbacklayout:1.1.8'
+    implementation 'com.github.anzewei:parallaxbacklayout:1.1.9'
 
 //【HTTP】******************************************************************************************
     //xUtils [https://github.com/wyouflf/xUtils3]
@@ -85,16 +85,16 @@ dependencies {
     //converter-gson [http://www.mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson]
     implementation "com.squareup.retrofit2:converter-gson:2.3.0"
     //logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
-    implementation "com.squareup.okhttp3:logging-interceptor:3.9.1"
+    implementation "com.squareup.okhttp3:logging-interceptor:3.10.0"
     //fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
-    implementation "com.alibaba:fastjson:1.1.67.android"
+    implementation "com.alibaba:fastjson:1.1.68.android"
 
 //【图片加载】***************************************************************************************
     //Picasso [https://github.com/square/picasso]
     //implementation "com.squareup.picasso:picasso:2.5.2"
     //Glide [https://github.com/bumptech/glide]
-    implementation 'com.github.bumptech.glide:glide:4.4.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.4.0'
+    implementation 'com.github.bumptech.glide:glide:4.6.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
 
 //【Animation】*************************************************************************************
     //NineoldAndroids [https://github.com/JakeWharton/NineOldAndroids]
