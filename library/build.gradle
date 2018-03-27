@@ -73,7 +73,7 @@ dependencies {
     //xLog [https://github.com/elvishew/xLog]
     implementation "com.elvishew:xlog:1.4.1"
     //沉浸式状态栏 [https://github.com/laobie/StatusBarUtil]
-    implementation "com.jaeger.statusbarutil:library:1.4.0"
+    implementation "com.jaeger.statusbarutil:library:1.5.0"
     //侧滑返回 [https://github.com/bingoogolapple/BGASwipeBackLayout-Android]
     implementation 'com.github.anzewei:parallaxbacklayout:1.1.9'
 
@@ -81,9 +81,9 @@ dependencies {
     //xUtils [https://github.com/wyouflf/xUtils3]
     implementation "org.xutils:xutils:3.5.0"
     //Retrofit2 [https://github.com/square/retrofit]
-    implementation "com.squareup.retrofit2:retrofit:2.3.0"
+    implementation "com.squareup.retrofit2:retrofit:2.4.0"
     //converter-gson [http://www.mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson]
-    implementation "com.squareup.retrofit2:converter-gson:2.3.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.4.0"
     //logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
     implementation "com.squareup.okhttp3:logging-interceptor:3.10.0"
     //fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
