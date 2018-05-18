@@ -1,6 +1,6 @@
-apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'//Jitpack
-group = 'com.github.DragonsQC'
+apply plugin: "com.android.library"
+apply plugin: "com.github.dcendents.android-maven"//Jitpack
+group = "com.github.DragonsQC"
 
 android {
     compileSdkVersion 27
@@ -21,18 +21,18 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
     packagingOptions {
-        exclude 'META-INF/DEPENDENCIES'
-        exclude 'META-INF/LICENSE'
-        exclude 'META-INF/LICENSE.txt'
-        exclude 'META-INF/license.txt'
-        exclude 'META-INF/NOTICE'
-        exclude 'META-INF/NOTICE.txt'
-        exclude 'META-INF/notice.txt'
-        exclude 'META-INF/ASL2.0'
+        exclude "META-INF/DEPENDENCIES"
+        exclude "META-INF/LICENSE"
+        exclude "META-INF/LICENSE.txt"
+        exclude "META-INF/license.txt"
+        exclude "META-INF/NOTICE"
+        exclude "META-INF/NOTICE.txt"
+        exclude "META-INF/notice.txt"
+        exclude "META-INF/ASL2.0"
     }
 
     lintOptions {
@@ -44,7 +44,7 @@ android {
 configurations.all {
     resolutionStrategy.eachDependency { DependencyResolveDetails details ->
         def requested = details.requested
-        if (requested.group == 'com.android.support') {
+        if (requested.group == "com.android.support") {
             if (!requested.name.startsWith("multidex")) {
                 details.useVersion rootProject.ext.supportLibraryVersion
             }
@@ -53,7 +53,7 @@ configurations.all {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: "libs", include: ["*.jar"])
 //【Android Support】*******************************************************************************
     implementation "com.android.support:support-v4:$rootProject.supportLibraryVersion"
     implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
@@ -69,13 +69,13 @@ dependencies {
 
 //【Utils】*****************************************************************************************
     //Commons Lang https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
-    implementation 'org.apache.commons:commons-lang3:3.7'
+    implementation "org.apache.commons:commons-lang3:3.7"
     //xLog [https://github.com/elvishew/xLog]
     implementation "com.elvishew:xlog:1.4.1"
     //沉浸式状态栏 [https://github.com/laobie/StatusBarUtil]
-    implementation "com.jaeger.statusbarutil:library:1.5.0"
+    implementation "com.jaeger.statusbarutil:library:1.5.1"
     //侧滑返回 [https://github.com/bingoogolapple/BGASwipeBackLayout-Android]
-    implementation 'com.github.anzewei:parallaxbacklayout:1.1.9'
+    implementation "com.github.anzewei:parallaxbacklayout:1.1.9"
 
 //【HTTP】******************************************************************************************
     //xUtils [https://github.com/wyouflf/xUtils3]
@@ -93,8 +93,8 @@ dependencies {
     //Picasso [https://github.com/square/picasso]
     //implementation "com.squareup.picasso:picasso:2.5.2"
     //Glide [https://github.com/bumptech/glide]
-    implementation 'com.github.bumptech.glide:glide:4.7.1'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+    implementation "com.github.bumptech.glide:glide:4.7.1"
+    annotationProcessor "com.github.bumptech.glide:compiler:4.7.1"
 
 //【Animation】*************************************************************************************
     //NineoldAndroids [https://github.com/JakeWharton/NineOldAndroids]
@@ -133,29 +133,29 @@ repositories {
 //    maven { url "https://maven.google.com" }
 }
 
-//def siteUrl = 'https://github.com/DragonsQC'
-//def gitUrl = 'https://github.com/DragonsQC/QLibrary.git'
+//def siteUrl = "https://github.com/DragonsQC"
+//def gitUrl = "https://github.com/DragonsQC/QLibrary.git"
 //install {
 //    repositories.mavenInstaller {
 //        // This generates POM.xml with proper parameters
 //        pom {
 //            project {
-//                packaging 'aar'
+//                packaging "aar"
 //                // 项目描述
-//                name 'Qlibrary'
+//                name "Qlibrary"
 //                url siteUrl
 //                // Set your license
 //                licenses {
 //                    license {
-//                        name 'The Apache Software License, Version 2.0'
-//                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//                        name "The Apache Software License, Version 2.0"
+//                        url "http://www.apache.org/licenses/LICENSE-2.0.txt"
 //                    }
 //                }
 //                developers {
 //                    developer { //开发者基本信息
-//                        id 'DragonsQC'
-//                        name 'DragonsQC'
-//                        email 'tkzl@vip.qq.com'
+//                        id "DragonsQC"
+//                        name "DragonsQC"
+//                        email "tkzl@vip.qq.com"
 //                    }
 //                }
 //                scm {
@@ -176,7 +176,7 @@ tasks.withType(JavaCompile) {
 // 打包源码
 task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
+    classifier = "sources"
 }
 
 task javadoc(type: Javadoc) {
@@ -188,7 +188,7 @@ task javadoc(type: Javadoc) {
 
 // 制作文档(Javadoc)
 task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
+    classifier = "javadoc"
     from javadoc.destinationDir
 }
 
