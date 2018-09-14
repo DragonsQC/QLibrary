@@ -164,7 +164,7 @@ public class ImageUtils {
      * @param recycle     是否回收
      * @return 带颜色边框图
      */
-    public static Bitmap addBorder(final Bitmap src, final int borderWidth, @ColorInt  final int color,
+    public static Bitmap addBorder(final Bitmap src, final int borderWidth, @ColorInt final int color,
                                    final boolean recycle) {
         int    doubleBorder = borderWidth << 1;
         int    newWidth     = src.getWidth() + doubleBorder;
@@ -213,7 +213,9 @@ public class ImageUtils {
         if (src == null || file == null) {
             return false;
         }
-        System.out.println(src.getWidth() + ", " + src.getHeight());
+        if (!file.getParentFile().exists()) {
+            file.getParentFile().mkdirs();
+        }
         OutputStream os  = null;
         boolean      ret = false;
         try {
