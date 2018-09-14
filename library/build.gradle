@@ -69,7 +69,7 @@ dependencies {
 
 //【Utils】*****************************************************************************************
     //Commons Lang https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
-    implementation "org.apache.commons:commons-lang3:3.7"
+    implementation "org.apache.commons:commons-lang3:3.8"
     //xLog [https://github.com/elvishew/xLog]
     implementation "com.elvishew:xlog:1.4.1"
     //沉浸式状态栏 [https://github.com/laobie/StatusBarUtil]
@@ -85,16 +85,16 @@ dependencies {
     //converter-gson [http://www.mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson]
     implementation "com.squareup.retrofit2:converter-gson:2.4.0"
     //logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
-    implementation "com.squareup.okhttp3:logging-interceptor:3.10.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:3.11.0"
     //fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
-    implementation "com.alibaba:fastjson:1.1.68.android"
+    implementation "com.alibaba:fastjson:1.1.70.android"
 
 //【图片加载】***************************************************************************************
     //Picasso [https://github.com/square/picasso]
     //implementation "com.squareup.picasso:picasso:2.5.2"
     //Glide [https://github.com/bumptech/glide]
-    implementation "com.github.bumptech.glide:glide:4.7.1"
-    annotationProcessor "com.github.bumptech.glide:compiler:4.7.1"
+    implementation "com.github.bumptech.glide:glide:4.8.0"
+    annotationProcessor "com.github.bumptech.glide:compiler:4.8.0"
 
 //【Animation】*************************************************************************************
     //NineoldAndroids [https://github.com/JakeWharton/NineOldAndroids]
