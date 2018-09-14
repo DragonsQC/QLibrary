@@ -214,6 +214,7 @@ public class ImageUtils {
             return false;
         }
         if (!file.getParentFile().exists()) {
+            //noinspection ResultOfMethodCallIgnored
             file.getParentFile().mkdirs();
         }
         OutputStream os  = null;
