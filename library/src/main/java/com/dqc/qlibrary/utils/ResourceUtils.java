@@ -31,7 +31,7 @@ public class ResourceUtils {
      * @param fileName 文件路径
      * @return .
      */
-    public static Drawable getAssets4Drawable(Context context, String fileName) {
+    public static Drawable getDrawable4Assets(Context context, String fileName) {
         Drawable drawable = null;
         try {
             InputStream is = context.getApplicationContext().getAssets().open(fileName);
