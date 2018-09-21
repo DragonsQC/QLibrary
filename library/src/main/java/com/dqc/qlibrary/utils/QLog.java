@@ -1,13 +1,15 @@
 package com.dqc.qlibrary.utils;
 
-import com.apkfuns.logutils.LogUtils;
+import com.elvishew.xlog.LogConfiguration;
+import com.elvishew.xlog.LogLevel;
+import com.elvishew.xlog.XLog;
 
 /**
  * Android 日志工具类
  * <p/>
- * require LogUtils [https://github.com/pengwei1024/LogUtils]
+ * require xLog [https://github.com/elvishew/xLog]
  * <p/>
- * 基于 LogUtils，使用前请初始化，QLog.init。
+ * 基于xLog，使用前请初始化，QLog.init。
  * 若需要替换原来已使用的原生Log包名替换为换为com.dqc.qlibrary.utils.QLog.Log
  *
  * @author DragonsQC
@@ -16,17 +18,17 @@ import com.apkfuns.logutils.LogUtils;
 public class QLog {
 
     /**
-     * @param allowLog       是否允许输出日志
-     * @param tag            日志tag
-     * @param showBorders    是否显示边界线
+     * @param allowLog 是否允许输出日志
+     * @param tag      日志tag
+     * @param depth    栈信息深度
      */
-    public static void init(boolean allowLog, String tag, boolean showBorders) {
-
-        LogUtils.getLogConfig()
-                .configAllowLog(allowLog)
-                .configTagPrefix(tag)
-                .configShowBorders(showBorders);
-
+    public static void init(boolean allowLog, String tag, int depth) {
+        LogConfiguration configuration = new LogConfiguration.Builder()
+                .logLevel(allowLog ? LogLevel.ALL : LogLevel.NONE)
+                .tag(tag)
+                .st(depth)
+                .build();
+        XLog.init(configuration);
     }
 
     /**
@@ -35,7 +37,7 @@ public class QLog {
      * @param o Object
      */
     public static void v(Object o) {
-        LogUtils.v(o);
+        XLog.v(o);
     }
 
     /**
@@ -44,7 +46,7 @@ public class QLog {
      * @param o Object
      */
     public static void d(Object o) {
-        LogUtils.d(o);
+        XLog.d(o);
     }
 
     /**
@@ -53,7 +55,7 @@ public class QLog {
      * @param o Object
      */
     public static void i(Object o) {
-        LogUtils.i(o);
+        XLog.i(o);
     }
 
     /**
@@ -62,7 +64,7 @@ public class QLog {
      * @param o Object
      */
     public static void w(Object o) {
-        LogUtils.w(o);
+        XLog.w(o);
     }
 
     /**
@@ -71,7 +73,7 @@ public class QLog {
      * @param o Object
      */
     public static void e(Object o) {
-        LogUtils.e(o);
+        XLog.e(o);
     }
 
 
@@ -81,7 +83,7 @@ public class QLog {
      * @param json String
      */
     public static void json(String json) {
-        LogUtils.json(json);
+        XLog.json(json);
     }
 
     /**
@@ -90,7 +92,7 @@ public class QLog {
      * @param xml String
      */
     public static void xml(String xml) {
-        LogUtils.xml(xml);
+        XLog.xml(xml);
     }
 
     /**
@@ -103,7 +105,7 @@ public class QLog {
          * @param o Object
          */
         public static void v(Object o) {
-            LogUtils.v(o);
+            XLog.v(o);
         }
 
         /**
@@ -112,7 +114,7 @@ public class QLog {
          * @param o Object
          */
         public static void d(Object o) {
-            LogUtils.d(o);
+            XLog.d(o);
         }
 
         /**
@@ -121,7 +123,7 @@ public class QLog {
          * @param o Object
          */
         public static void i(Object o) {
-            LogUtils.i(o);
+            XLog.i(o);
         }
 
         /**
@@ -130,7 +132,7 @@ public class QLog {
          * @param o Object
          */
         public static void w(Object o) {
-            LogUtils.w(o);
+            XLog.w(o);
         }
 
         /**
@@ -139,7 +141,7 @@ public class QLog {
          * @param o Object
          */
         public static void e(Object o) {
-            LogUtils.e(o);
+            XLog.e(o);
         }
 
 
@@ -149,7 +151,7 @@ public class QLog {
          * @param json String
          */
         public static void json(String json) {
-            LogUtils.json(json);
+            XLog.json(json);
         }
 
         /**
@@ -158,7 +160,7 @@ public class QLog {
          * @param xml String
          */
         public static void xml(String xml) {
-            LogUtils.xml(xml);
+            XLog.xml(xml);
         }
 
     }
