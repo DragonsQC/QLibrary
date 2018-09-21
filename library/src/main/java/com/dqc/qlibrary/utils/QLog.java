@@ -1,16 +1,13 @@
 package com.dqc.qlibrary.utils;
 
-import com.orhanobut.logger.AndroidLogAdapter;
-import com.orhanobut.logger.FormatStrategy;
-import com.orhanobut.logger.Logger;
-import com.orhanobut.logger.PrettyFormatStrategy;
+import com.apkfuns.logutils.LogUtils;
 
 /**
  * Android 日志工具类
  * <p/>
- * require logger [https://github.com/orhanobut/logger]
+ * require LogUtils [https://github.com/pengwei1024/LogUtils]
  * <p/>
- * 基于 logger，使用前请初始化，QLog.init。
+ * 基于 LogUtils，使用前请初始化，QLog.init。
  * 若需要替换原来已使用的原生Log包名替换为换为com.dqc.qlibrary.utils.QLog.Log
  *
  * @author DragonsQC
@@ -20,43 +17,25 @@ public class QLog {
 
     /**
      * @param allowLog       是否允许输出日志
-     * @param showThreadInfo 是否显示线程信息
-     * @param methodOffset   内部方法偏移量
      * @param tag            日志tag
-     * @param depth          栈信息深度
+     * @param showBorders    是否显示边界线
      */
-    public static void init(boolean allowLog,
-                            boolean showThreadInfo,
-                            int methodOffset,
-                            String tag,
-                            int depth) {
+    public static void init(boolean allowLog, String tag, boolean showBorders) {
 
-        FormatStrategy formatStrategy = PrettyFormatStrategy.newBuilder()
-                .showThreadInfo(showThreadInfo)
-                .methodCount(depth)
-                .methodOffset(methodOffset)
-                .tag(tag)
-                .build();
+        LogUtils.getLogConfig()
+                .configAllowLog(allowLog)
+                .configTagPrefix(tag)
+                .configShowBorders(showBorders);
 
-        Logger.addLogAdapter(new AndroidLogAdapter(formatStrategy));
     }
 
     /**
      * verbose 信息
      *
-     * @param s message
+     * @param o Object
      */
-    public static void v(String s) {
-        Logger.v(s);
-    }
-
-    /**
-     * debug 调试信息
-     *
-     * @param s message
-     */
-    public static void d(String s) {
-        Logger.d(s);
+    public static void v(Object o) {
+        LogUtils.v(o);
     }
 
     /**
@@ -65,34 +44,34 @@ public class QLog {
      * @param o Object
      */
     public static void d(Object o) {
-        Logger.d(o);
+        LogUtils.d(o);
     }
 
     /**
      * info 普通信息
      *
-     * @param s message
+     * @param o Object
      */
-    public static void i(String s) {
-        Logger.i(s);
+    public static void i(Object o) {
+        LogUtils.i(o);
     }
 
     /**
      * warning 警告信息
      *
-     * @param s message
+     * @param o Object
      */
-    public static void w(String s) {
-        Logger.w(s);
+    public static void w(Object o) {
+        LogUtils.w(o);
     }
 
     /**
      * error 错误信息
      *
-     * @param s message
+     * @param o Object
      */
-    public static void e(String s) {
-        Logger.e(s);
+    public static void e(Object o) {
+        LogUtils.e(o);
     }
 
 
@@ -102,7 +81,7 @@ public class QLog {
      * @param json String
      */
     public static void json(String json) {
-        Logger.json(json);
+        LogUtils.json(json);
     }
 
     /**
@@ -111,7 +90,7 @@ public class QLog {
      * @param xml String
      */
     public static void xml(String xml) {
-        Logger.xml(xml);
+        LogUtils.xml(xml);
     }
 
     /**
@@ -121,19 +100,10 @@ public class QLog {
         /**
          * verbose 信息
          *
-         * @param s message
+         * @param o Object
          */
-        public static void v(String s) {
-            Logger.v(s);
-        }
-
-        /**
-         * debug 调试信息
-         *
-         * @param s message
-         */
-        public static void d(String s) {
-            Logger.d(s);
+        public static void v(Object o) {
+            LogUtils.v(o);
         }
 
         /**
@@ -142,34 +112,34 @@ public class QLog {
          * @param o Object
          */
         public static void d(Object o) {
-            Logger.d(o);
+            LogUtils.d(o);
         }
 
         /**
          * info 普通信息
          *
-         * @param s message
+         * @param o Object
          */
-        public static void i(String s) {
-            Logger.i(s);
+        public static void i(Object o) {
+            LogUtils.i(o);
         }
 
         /**
          * warning 警告信息
          *
-         * @param s message
+         * @param o Object
          */
-        public static void w(String s) {
-            Logger.w(s);
+        public static void w(Object o) {
+            LogUtils.w(o);
         }
 
         /**
          * error 错误信息
          *
-         * @param s message
+         * @param o Object
          */
-        public static void e(String s) {
-            Logger.e(s);
+        public static void e(Object o) {
+            LogUtils.e(o);
         }
 
 
@@ -179,7 +149,7 @@ public class QLog {
          * @param json String
          */
         public static void json(String json) {
-            Logger.json(json);
+            LogUtils.json(json);
         }
 
         /**
@@ -188,7 +158,7 @@ public class QLog {
          * @param xml String
          */
         public static void xml(String xml) {
-            Logger.xml(xml);
+            LogUtils.xml(xml);
         }
 
     }

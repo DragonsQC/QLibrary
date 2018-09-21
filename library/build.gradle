@@ -70,8 +70,8 @@ dependencies {
 //【Utils】*****************************************************************************************
     //Commons Lang https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
     implementation "org.apache.commons:commons-lang3:3.8"
-    //logger [https://github.com/orhanobut/logger]
-    implementation 'com.orhanobut:logger:2.2.0'
+    //LogUtils [https://github.com/pengwei1024/LogUtils]
+    implementation 'com.apkfuns.logutils:library:1.6.1'
     //沉浸式状态栏 [https://github.com/laobie/StatusBarUtil]
     implementation "com.jaeger.statusbarutil:library:1.5.1"
     //侧滑返回 [https://github.com/bingoogolapple/BGASwipeBackLayout-Android]
