@@ -13,6 +13,7 @@ import com.github.anzewei.parallaxbacklayout.ParallaxHelper;
  * @author DragonsQC
  */
 
+@SuppressWarnings("unused")
 public class QLibrary {
 
     /**
