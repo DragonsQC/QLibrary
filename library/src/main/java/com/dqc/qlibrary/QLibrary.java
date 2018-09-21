@@ -19,9 +19,11 @@ public class QLibrary {
      * @param application Application
      * @param isDebug     isDebug
      * @param appName     APP名(英文)
-     * @param QLogDepth   QLog 日志方法打印深度
+     * @param logDepth    QLog 日志方法打印深度
      */
-    public static void init(Application application, boolean isDebug, String appName, int QLogDepth) {
+    public static void init(Application application, boolean isDebug, String appName,
+                            boolean showThreadInfo, int methodOffset, int logDepth) {
+
         //侧滑返回注册
         application.registerActivityLifecycleCallbacks(ParallaxHelper.getInstance());
 
@@ -34,7 +36,7 @@ public class QLibrary {
         org.xutils.x.Ext.setDebug(isDebug);
 
         //Log debug
-        QLog.init(isDebug, appName, QLogDepth);
+        QLog.init(isDebug, showThreadInfo, methodOffset, appName, logDepth);
 
         //SPUtil 初始化
         SPUtils.init(appName);
