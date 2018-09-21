@@ -19,6 +19,8 @@ public class QLibrary {
      * @param application Application
      * @param isDebug     isDebug
      * @param appName     APP名(英文)
+     * @param showThreadInfo QLog 日志是否显示线程信息
+     * @param methodOffset Qlog 日志 内部方法偏移量
      * @param logDepth    QLog 日志方法打印深度
      */
     public static void init(Application application, boolean isDebug, String appName,
