@@ -27,7 +27,6 @@ public class QLog {
         LogConfiguration configuration = new LogConfiguration.Builder()
                 .logLevel(allowLog ? LogLevel.ALL : LogLevel.NONE)
                 .tag(tag)
-                .b()
                 .build();
         XLog.init(configuration);
     }
@@ -41,7 +40,6 @@ public class QLog {
         LogConfiguration configuration = new LogConfiguration.Builder()
                 .logLevel(allowLog ? LogLevel.ALL : LogLevel.NONE)
                 .tag(tag)
-                .b()
                 .st(depth)
                 .build();
         XLog.init(configuration);
