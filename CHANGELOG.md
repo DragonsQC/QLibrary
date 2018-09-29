@@ -1,8 +1,8 @@
 # 更新日志
 ***
 ## 1.6.0
-minSdkVersion 19 --> minSdkVersion 21 
-supportLibraryVersion = "27.1.1" --> supportLibraryVersion = "28.0.0"
+minSdkVersion 19 --> minSdkVersion 21  
+supportLibraryVersion = "27.1.1" --> supportLibraryVersion = "28.0.0"  
 ***
 ## 1.5.1
 优化初始化代码  
