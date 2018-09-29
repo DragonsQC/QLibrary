@@ -4,11 +4,11 @@ group = "com.github.DragonsQC"
 
 android {
     compileSdkVersion 27
-    buildToolsVersion "27.0.3"
+    buildToolsVersion "28.0.3"
     compileOptions.encoding = "UTF-8"
 
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 27
         versionCode 1
         versionName "1.0.0"
@@ -69,7 +69,7 @@ dependencies {
 
 //【Utils】*****************************************************************************************
     //Commons Lang https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
-    implementation "org.apache.commons:commons-lang3:3.8"
+    implementation "org.apache.commons:commons-lang3:3.8.1"
     //xLog [https://github.com/elvishew/xLog]
     implementation 'com.elvishew:xlog:1.5.0'
     //沉浸式状态栏 [https://github.com/laobie/StatusBarUtil]
