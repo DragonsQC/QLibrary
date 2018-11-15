@@ -81,7 +81,6 @@ com.google.android.material:material |
 **【图片加载】** |
 [Glide](https://github.com/bumptech/glide) | 需使用GlideApp时，自行添 annotationProcessor
 **【Animation】** |
-[NineoldAndroids](https://github.com/JakeWharton/NineOldAndroids) |
 [AndroidViewAnimations](https://github.com/daimajia/AndroidViewAnimations) |
 **【Widget】** |
 [CircleImageView](https://github.com/hdodenhof/CircleImageView) |
