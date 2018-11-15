@@ -105,8 +105,6 @@ dependencies {
     annotationProcessor "com.github.bumptech.glide:compiler:4.8.0"
 
 //【Animation】*************************************************************************************
-    //NineoldAndroids [https://github.com/JakeWharton/NineOldAndroids]
-    implementation "com.nineoldandroids:library:2.4.0"
     //"YoYo" 动画效果 AndroidViewAnimations [https://github.com/daimajia/AndroidViewAnimations]
     implementation "com.daimajia.easing:library:2.1@aar"
     implementation "com.daimajia.androidanimations:library:2.3@aar"
