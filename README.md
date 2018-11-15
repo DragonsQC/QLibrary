@@ -85,7 +85,6 @@ recyclerview |
 [CircleImageView](https://github.com/hdodenhof/CircleImageView) |
 [Android-Bootstrap](https://github.com/Bearded-Hen/Android-Bootstrap) |
 [Android-KenBurnsView](https://github.com/flavioarfaria/KenBurnsView) |
-[JazzyListView](https://github.com/twotoasters/JazzyListView) |
 [Material Dialogs](https://github.com/afollestad/material-dialogs) |
 [Advanced RecyclerView](https://github.com/h6ah4i/android-advancedrecyclerview) |
 
