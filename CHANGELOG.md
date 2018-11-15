@@ -1,8 +1,5 @@
 # 更新日志
 ***
-## 1.6.1+
-upgrade to androidX  
-
 ## 1.6.0
 upgrade to androidX  
 minSdkVersion 19 --> minSdkVersion 21  
