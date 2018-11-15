@@ -6,12 +6,11 @@ minSdkVersion 19 --> minSdkVersion 21
 supportLibraryVersion = "27.1.1" --> supportLibraryVersion = "28.0.0"  
 
 ***
-## 1.5.1
-优化初始化代码  
-更新第三方库  
+## 1.5.12
+supportLibraryVersion = "27.1.1"
 
 ***
-## 1.5.0
+## 1.5.0+
 1、替换侧滑返回方案  
 2、去除页面切换动画  
 3、部分代码优化
