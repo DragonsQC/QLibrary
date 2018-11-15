@@ -68,6 +68,7 @@ dependencies {
     implementation "androidx.palette:palette:1.0.0"
     implementation "androidx.cardview:cardview:1.0.0"
     implementation "androidx.recyclerview:recyclerview:1.0.0"
+    implementation "androidx.annotation:annotation:1.0.0"
     implementation "com.google.android.material:material:1.0.0"
 
 //【RxJava、RaAndroid】 [https://github.com/ReactiveX/RxAndroid]
