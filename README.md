@@ -59,14 +59,12 @@ Activity 相关类 | 说明
 ***
 第三方库 | 说明
 --- | ---
-**【Android Support】** |
-support-v4 |
-appcompat-v7 |
-palette-v7 |
-cardview-v7 |
-recyclerview-v7 |
-percent |
-design |
+**【Android Support for Androidx】** |
+legacy-support-v4 |
+appcompat |
+palette |
+cardview |
+recyclerview |
 **【Utils】** |
 [Commons Lang](https://mvnrepository.com/artifact/org.apache.commons/commons-lang3) |
 [xLog](https://github.com/elvishew/xLog) | 已封装入 [QLog](/library/src/main/java/com/dqc/qlibrary/utils/QLog.java)
