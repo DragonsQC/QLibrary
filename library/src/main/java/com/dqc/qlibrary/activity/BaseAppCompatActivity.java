@@ -3,9 +3,8 @@ package com.dqc.qlibrary.activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.jaeger.library.StatusBarUtil;
-
 import androidx.appcompat.app.AppCompatActivity;
+import qiu.niorgai.StatusBarCompat;
 
 /**
  * BaseAppCompatActivity
@@ -30,7 +29,7 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
      * @param color Color
      */
     public void setStatusBarColor(int color) {
-        StatusBarUtil.setColor(this, color);
+        StatusBarCompat.setStatusBarColor(this, color);
     }
 
     /**
@@ -42,7 +41,7 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
      * @param alpha 状态栏的透明度 0~255
      */
     public void setStatusBarColor(int color, int alpha) {
-        StatusBarUtil.setColor(this, color, alpha);
+        StatusBarCompat.setStatusBarColor(this, color, alpha);
     }
 
     /**
@@ -51,7 +50,7 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
      * setStatusBarXXX 方法只会实现最后一次的调用
      */
     public void setStatusBarTransparent() {
-        StatusBarUtil.setTransparent(this);
+        StatusBarCompat.translucentStatusBar(this);
     }
 
     //</editor-fold>

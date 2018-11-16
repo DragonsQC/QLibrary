@@ -78,22 +78,29 @@ dependencies {
 //【Utils】*****************************************************************************************
     //Commons Lang https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
     implementation "org.apache.commons:commons-lang3:3.8.1"
+
     //xLog [https://github.com/elvishew/xLog]
     implementation 'com.elvishew:xlog:1.6.1'
-    //沉浸式状态栏 [https://github.com/laobie/StatusBarUtil]
-    implementation "com.jaeger.statusbarutil:library:1.5.1"
+
+    //沉浸式状态栏 [https://github.com/niorgai/StatusBarCompat]
+    implementation ('com.github.niorgai:StatusBarCompat:2.2.0', {
+        exclude group: 'com.android.support'
+    })
+
     //侧滑返回 [https://github.com/bingoogolapple/BGASwipeBackLayout-Android]
     implementation "com.github.anzewei:parallaxbacklayout:1.1.9"
 
 //【HTTP】******************************************************************************************
     //xUtils [https://github.com/wyouflf/xUtils3]
     implementation "org.xutils:xutils:3.5.0"
+
     //Retrofit2 [https://github.com/square/retrofit]
     implementation "com.squareup.retrofit2:retrofit:2.4.0"
     //converter-gson [http://www.mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson]
     implementation "com.squareup.retrofit2:converter-gson:2.4.0"
     //logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
     implementation "com.squareup.okhttp3:logging-interceptor:3.11.0"
+
     //fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
     implementation "com.alibaba:fastjson:1.1.70.android"
 
@@ -112,12 +119,16 @@ dependencies {
 //【Widget】****************************************************************************************
     //圆形ImageView [https://github.com/hdodenhof/CircleImageView]
     implementation "de.hdodenhof:circleimageview:2.2.0"
+
     //Bootstrap [https://github.com/Bearded-Hen/Android-Bootstrap]
     implementation "com.beardedhen:androidbootstrap:2.3.2"
+
     //KenBurnsView [https://github.com/flavioarfaria/KenBurnsView]
     implementation "com.flaviofaria:kenburnsview:1.0.7"
+
     //Material Dialogs [https://github.com/afollestad/material-dialogs]
     implementation "com.afollestad.material-dialogs:core:0.9.6.0"
+
     //拖拽排序 Advanced RecyclerView [https://github.com/h6ah4i/android-advancedrecyclerview]
     implementation("com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.11.0@aar") {
         transitive = true
