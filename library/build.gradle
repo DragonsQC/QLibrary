@@ -82,6 +82,9 @@ dependencies {
     //xLog [https://github.com/elvishew/xLog]
     implementation 'com.elvishew:xlog:1.6.1'
 
+    //xUtils [https://github.com/wyouflf/xUtils3]
+    implementation "org.xutils:xutils:3.5.0"
+
     //沉浸式状态栏 [https://github.com/niorgai/StatusBarCompat]
     implementation ('com.github.niorgai:StatusBarCompat:2.2.0', {
         exclude group: 'com.android.support'
