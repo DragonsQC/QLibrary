@@ -92,11 +92,11 @@ dependencies {
 
 //【HTTP】******************************************************************************************
     //Retrofit2 [https://github.com/square/retrofit]
-    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     //converter-gson [http://www.mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson]
-    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     //logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.0'
 
     //fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
     implementation 'com.alibaba:fastjson:1.1.70.android'
