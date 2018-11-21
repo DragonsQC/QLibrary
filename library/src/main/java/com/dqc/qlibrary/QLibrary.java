@@ -30,11 +30,6 @@ public class QLibrary {
         //AndroidBootstrap Typeface 初始化
         TypefaceProvider.registerDefaultIconSets();
 
-        //xUtil 初始化
-        org.xutils.x.Ext.init(application);
-        //xUtil debug
-        org.xutils.x.Ext.setDebug(isDebug);
-
         //Log debug
         QLog.init(isDebug, appName, logDepth);
 
