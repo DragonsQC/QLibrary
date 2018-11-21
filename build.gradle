@@ -1,4 +1,4 @@
-apply plugin: "com.github.ben-manes.versions"
+apply plugin: 'com.github.ben-manes.versions'
 buildscript {
 
     repositories {
@@ -7,14 +7,14 @@ buildscript {
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:3.2.1"
+        classpath 'com.android.tools.build:gradle:3.2.1'
 
         //Jitpack [http://mvnrepository.com/artifact/com.github.dcendents/android-maven-gradle-plugin]
         //[https://github.com/dcendents/android-maven-gradle-plugin#note-on-releases]
-        classpath "com.github.dcendents:android-maven-gradle-plugin:2.0"
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
 
         //[https://github.com/ben-manes/gradle-versions-plugin]
-        classpath "com.github.ben-manes:gradle-versions-plugin:0.20.0"
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.20.0'
     }
 
 }
@@ -25,9 +25,9 @@ allprojects {
         google()
 //        mavenLocal()
 //        mavenCentral()
-//        maven { url "https://jcenter.bintray.com" }
-        maven { url "https://jitpack.io"}
-//        maven { url "https://maven.google.com" }
+//        maven { url 'https://jcenter.bintray.com' }
+        maven { url 'https://jitpack.io'}
+//        maven { url 'https://maven.google.com' }
     }
 }
 
@@ -36,5 +36,5 @@ task clean(type: Delete) {
 }
 
 ext {
-    supportLibraryVersion = "28.0.0"
+    supportLibraryVersion = '28.0.0'
 }

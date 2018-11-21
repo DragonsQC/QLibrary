@@ -1,17 +1,17 @@
-apply plugin: "com.android.library"
-apply plugin: "com.github.dcendents.android-maven"//Jitpack
-group = "com.github.DragonsQC"
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'//Jitpack
+group = 'com.github.DragonsQC'
 
 android {
     compileSdkVersion 28
-    buildToolsVersion "28.0.3"
-    compileOptions.encoding = "UTF-8"
+    buildToolsVersion '28.0.3'
+    compileOptions.encoding = 'UTF-8'
 
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0.0"
+        versionName '1.0.0'
         multiDexEnabled true
     }
     compileOptions {
@@ -21,18 +21,18 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
     packagingOptions {
-        exclude "META-INF/DEPENDENCIES"
-        exclude "META-INF/LICENSE"
-        exclude "META-INF/LICENSE.txt"
-        exclude "META-INF/license.txt"
-        exclude "META-INF/NOTICE"
-        exclude "META-INF/NOTICE.txt"
-        exclude "META-INF/notice.txt"
-        exclude "META-INF/ASL2.0"
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
     }
 
     lintOptions {
@@ -44,8 +44,8 @@ android {
 configurations.all {
     resolutionStrategy.eachDependency { DependencyResolveDetails details ->
         def requested = details.requested
-        if (requested.group == "com.android.support") {
-            if (!requested.name.startsWith("multidex")) {
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith('multidex')) {
                 details.useVersion rootProject.ext.supportLibraryVersion
             }
         }
@@ -53,7 +53,7 @@ configurations.all {
 }
 
 dependencies {
-    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 //【Android Support】*******************************************************************************
 //    implementation "com.android.support:support-v4:$rootProject.supportLibraryVersion"
 //    implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
@@ -63,21 +63,21 @@ dependencies {
 //    implementation "com.android.support:percent:$rootProject.supportLibraryVersion"
 //    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
 
-    implementation "androidx.legacy:legacy-support-v4:1.0.0"
-    implementation "androidx.appcompat:appcompat:1.0.2"
-    implementation "androidx.palette:palette:1.0.0"
-    implementation "androidx.cardview:cardview:1.0.0"
-    implementation "androidx.recyclerview:recyclerview:1.0.0"
-    implementation "androidx.annotation:annotation:1.0.0"
-    implementation "com.google.android.material:material:1.0.0"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.palette:palette:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.annotation:annotation:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
 
 //【RxJava、RaAndroid】 [https://github.com/ReactiveX/RxAndroid]
-    //implementation "io.reactivex.rxjava2:rxjava:2.0.1"
-    //implementation "io.reactivex.rxjava2:rxandroid:2.0.1"
+    //implementation 'io.reactivex.rxjava2:rxjava:2.0.1'
+    //implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
 
 //【Utils】*****************************************************************************************
     //Commons Lang https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
-    implementation "org.apache.commons:commons-lang3:3.8.1"
+    implementation 'org.apache.commons:commons-lang3:3.8.1'
 
     //xLog [https://github.com/elvishew/xLog]
     implementation 'com.elvishew:xlog:1.6.1'
@@ -88,46 +88,46 @@ dependencies {
     })
 
     //侧滑返回 [https://github.com/bingoogolapple/BGASwipeBackLayout-Android]
-    implementation "com.github.anzewei:parallaxbacklayout:1.1.9"
+    implementation 'com.github.anzewei:parallaxbacklayout:1.1.9'
 
 //【HTTP】******************************************************************************************
     //Retrofit2 [https://github.com/square/retrofit]
-    implementation "com.squareup.retrofit2:retrofit:2.4.0"
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     //converter-gson [http://www.mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson]
-    implementation "com.squareup.retrofit2:converter-gson:2.4.0"
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
     //logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
-    implementation "com.squareup.okhttp3:logging-interceptor:3.11.0"
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
 
     //fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
-    implementation "com.alibaba:fastjson:1.1.70.android"
+    implementation 'com.alibaba:fastjson:1.1.70.android'
 
 //【图片加载】***************************************************************************************
     //Picasso [https://github.com/square/picasso]
-    //implementation "com.squareup.picasso:picasso:2.5.2"
+    //implementation 'com.squareup.picasso:picasso:2.5.2'
     //Glide [https://github.com/bumptech/glide]
-    implementation "com.github.bumptech.glide:glide:4.8.0"
-    annotationProcessor "com.github.bumptech.glide:compiler:4.8.0"
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
 
 //【Animation】*************************************************************************************
-    //"YoYo" 动画效果 AndroidViewAnimations [https://github.com/daimajia/AndroidViewAnimations]
-    implementation "com.daimajia.easing:library:2.1@aar"
-    implementation "com.daimajia.androidanimations:library:2.3@aar"
+    //'YoYo' 动画效果 AndroidViewAnimations [https://github.com/daimajia/AndroidViewAnimations]
+    implementation 'com.daimajia.easing:library:2.1@aar'
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
 
 //【Widget】****************************************************************************************
     //圆形ImageView [https://github.com/hdodenhof/CircleImageView]
-    implementation "de.hdodenhof:circleimageview:2.2.0"
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
 
     //Bootstrap [https://github.com/Bearded-Hen/Android-Bootstrap]
-    implementation "com.beardedhen:androidbootstrap:2.3.2"
+    implementation 'com.beardedhen:androidbootstrap:2.3.2'
 
     //KenBurnsView [https://github.com/flavioarfaria/KenBurnsView]
-    implementation "com.flaviofaria:kenburnsview:1.0.7"
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
 
     //Material Dialogs [https://github.com/afollestad/material-dialogs]
-    implementation "com.afollestad.material-dialogs:core:0.9.6.0"
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
 
     //拖拽排序 Advanced RecyclerView [https://github.com/h6ah4i/android-advancedrecyclerview]
-    implementation("com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.11.0@aar") {
+    implementation('com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.11.0@aar') {
         transitive = true
     }
 
@@ -139,34 +139,34 @@ repositories {
     google()
     mavenLocal()
 //    mavenCentral()
-//    maven { url "https://jcenter.bintray.com" }
-    maven { url "https://jitpack.io" }
-//    maven { url "https://maven.google.com" }
+//    maven { url 'https://jcenter.bintray.com' }
+    maven { url 'https://jitpack.io' }
+//    maven { url 'https://maven.google.com' }
 }
 
-//def siteUrl = "https://github.com/DragonsQC"
-//def gitUrl = "https://github.com/DragonsQC/QLibrary.git"
+//def siteUrl = 'https://github.com/DragonsQC'
+//def gitUrl = 'https://github.com/DragonsQC/QLibrary.git'
 //install {
 //    repositories.mavenInstaller {
 //        // This generates POM.xml with proper parameters
 //        pom {
 //            project {
-//                packaging "aar"
+//                packaging 'aar'
 //                // 项目描述
-//                name "Qlibrary"
+//                name 'Qlibrary'
 //                url siteUrl
 //                // Set your license
 //                licenses {
 //                    license {
-//                        name "The Apache Software License, Version 2.0"
-//                        url "http://www.apache.org/licenses/LICENSE-2.0.txt"
+//                        name 'The Apache Software License, Version 2.0'
+//                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
 //                    }
 //                }
 //                developers {
 //                    developer { //开发者基本信息
-//                        id "DragonsQC"
-//                        name "DragonsQC"
-//                        email "tkzl@vip.qq.com"
+//                        id 'DragonsQC'
+//                        name 'DragonsQC'
+//                        email 'tkzl@vip.qq.com'
 //                    }
 //                }
 //                scm {
@@ -181,13 +181,13 @@ repositories {
 
 // 指定编码
 tasks.withType(JavaCompile) {
-    options.encoding = "UTF-8"
+    options.encoding = 'UTF-8'
 }
 
 // 打包源码
 task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
-    classifier = "sources"
+    classifier = 'sources'
 }
 
 task javadoc(type: Javadoc) {
@@ -199,7 +199,7 @@ task javadoc(type: Javadoc) {
 
 // 制作文档(Javadoc)
 task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = "javadoc"
+    classifier = 'javadoc'
     from javadoc.destinationDir
 }
 
