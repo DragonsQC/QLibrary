@@ -7,7 +7,7 @@ import com.dqc.qlibrary.db.common.util.IOUtil;
 import com.dqc.qlibrary.db.ex.DbException;
 import com.dqc.qlibrary.db.sqlite.SqlInfo;
 import com.dqc.qlibrary.db.sqlite.SqlInfoBuilder;
-import com.dqc.qlibrary.utils.DbManager;
+import com.dqc.qlibrary.db.DbManager;
 import com.dqc.qlibrary.utils.QLog;
 
 import java.util.HashMap;

@@ -30,7 +30,6 @@ import com.dqc.qlibrary.db.table.ColumnEntity;
 import com.dqc.qlibrary.db.table.DbBase;
 import com.dqc.qlibrary.db.table.DbModel;
 import com.dqc.qlibrary.db.table.TableEntity;
-import com.dqc.qlibrary.utils.DbManager;
 import com.dqc.qlibrary.utils.QLog;
 
 import java.io.File;

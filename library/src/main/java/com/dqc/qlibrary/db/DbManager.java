@@ -1,10 +1,9 @@
-package com.dqc.qlibrary.utils;
+package com.dqc.qlibrary.db;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.text.TextUtils;
 
-import com.dqc.qlibrary.db.Selector;
 import com.dqc.qlibrary.db.common.util.KeyValue;
 import com.dqc.qlibrary.db.ex.DbException;
 import com.dqc.qlibrary.db.sqlite.SqlInfo;

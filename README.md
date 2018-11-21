@@ -55,6 +55,7 @@ Activity 相关类 | 说明
 [ThreadManager](/library/src/main/java/com/dqc/qlibrary/utils/ThreadManager.java)| 线程管理
 [ToastUtils](/library/src/main/java/com/dqc/qlibrary/utils/ToastUtils.java)| Android Toast 工具类
 [VibratorUtils](/library/src/main/java/com/dqc/qlibrary/utils/VibratorUtils.java)| Android 手机震动工具类
+[xUtils3](https://github.com/wyouflf/xUtils3)| 分拆出数据库工具 
 
 ***
 第三方库 | 说明
@@ -73,7 +74,6 @@ com.google.android.material:material |
 [沉浸式状态栏 StatusBarUtil](https://github.com/laobie/StatusBarUtil) | 已封装入 BaseAppCompatActivity，使用setStatusBarXXX方法调用
 [滑动返回 ParallaxBackLayout](https://github.com/anzewei/ParallaxBackLayout) | 必须在 Application 初始化 registerActivityLifecycleCallbacks(ParallaxHelper.getInstance()); [详细说明](https://github.com/anzewei/ParallaxBackLayout/blob/master/README_ZH.md)
 **【HTTP】** |
-[xUtils3](https://github.com/wyouflf/xUtils3) |
 [Retrofit2](https://github.com/square/retrofit) |
 [Retrofit2 converter-gson](http://www.mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson) |
 [okhttp3 logging-interceptor](http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor) |

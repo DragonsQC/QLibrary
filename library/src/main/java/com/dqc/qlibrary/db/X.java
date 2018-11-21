@@ -5,7 +5,6 @@ import android.content.Context;
 
 import com.dqc.qlibrary.db.common.TaskController;
 import com.dqc.qlibrary.db.common.task.TaskControllerImpl;
-import com.dqc.qlibrary.utils.DbManager;
 
 import java.lang.reflect.Method;
 

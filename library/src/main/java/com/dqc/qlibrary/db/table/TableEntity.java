@@ -20,7 +20,7 @@ import android.database.Cursor;
 import com.dqc.qlibrary.db.annotation.Table;
 import com.dqc.qlibrary.db.common.util.IOUtil;
 import com.dqc.qlibrary.db.ex.DbException;
-import com.dqc.qlibrary.utils.DbManager;
+import com.dqc.qlibrary.db.DbManager;
 
 import java.lang.reflect.Constructor;
 import java.util.LinkedHashMap;
