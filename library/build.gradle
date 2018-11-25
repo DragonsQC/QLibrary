@@ -90,7 +90,7 @@ dependencies {
         exclude group: 'com.android.support'
     })
 
-    //侧滑返回 [https://github.com/bingoogolapple/BGASwipeBackLayout-Android]
+    //侧滑返回 [https://github.com/anzewei/ParallaxBackLayout]
     implementation 'com.github.anzewei:parallaxbacklayout:1.1.9'
 
 //【HTTP】******************************************************************************************
