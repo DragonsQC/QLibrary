@@ -21,7 +21,7 @@ Step 2. Add the dependency
 
 ```
 dependencies {
-    compile 'com.github.DragonsQC:QLibrary:{X.X.X}'
+    implementation 'com.github.DragonsQC:QLibrary:{X.X.X}'
 }
 ```
 
