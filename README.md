@@ -66,6 +66,7 @@ androidx.palette:palette |
 androidx.cardview:cardview |
 androidx.recyclerview:recyclerview |
 androidx.annotation:annotation |
+androidx.constraintlayout |
 com.google.android.material:material |
 **【Utils】** |
 [Commons Lang](https://mvnrepository.com/artifact/org.apache.commons/commons-lang3) |
