@@ -289,11 +289,51 @@ public class DateUtils {
         cal.setTime(smDate);
         long time1 = cal.getTimeInMillis();
         cal.setTime(bDate);
-        long time2        = cal.getTimeInMillis();
+        long time2       = cal.getTimeInMillis();
         long betweenDays = (time2 - time1) / (1000 * 3600 * 24);
 
         return Integer.parseInt(String.valueOf(betweenDays));
     }
 
+    /**
+     * 根据毫秒时间戳来格式化字符串
+     * 显示今天、昨天、前天.
+     * 早于前天的显示传入的格式串；
+     *
+     * @param timeStamp 毫秒值
+     * @param pattern   如果不是今天、昨天、前天，这格式化为传入格式
+     * @return 今天 昨天 前天 或者 yyyy-MM-dd HH:mm:ss类型字符串
+     */
+    public static String format(long timeStamp, String pattern) {
+        if (TextUtils.isEmpty(pattern)) {
+            pattern = "yyyy-MM-dd HH:mm:ss";
+        }
+        SimpleDateFormat sdf;
+        Calendar         calendar = Calendar.getInstance();
+
+        long curTimeMillis       = System.currentTimeMillis();
+        int  todayHoursSeconds   = calendar.get(Calendar.HOUR_OF_DAY) * 60 * 60;
+        int  todayMinutesSeconds = calendar.get(Calendar.SECOND) * 60;
+        int  todaySeconds        = calendar.get(Calendar.MINUTE);
+        int  todayMillis         = (todayHoursSeconds + todayMinutesSeconds + todaySeconds) * 1000;
+        long todayStartMillis    = curTimeMillis - todayMillis;
+        if (timeStamp >= todayStartMillis) {
+            sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
+            return "今天 " + sdf.format(new Date(timeStamp));
+        }
+        int  oneDayMillis        = 24 * 60 * 60 * 1000;
+        long yesterdayStartMilis = todayStartMillis - oneDayMillis;
+        if (timeStamp >= yesterdayStartMilis) {
+            sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
+            return "昨天 " + sdf.format(new Date(timeStamp));
+        }
+        long yesterdayBeforeStartMilis = yesterdayStartMilis - oneDayMillis;
+        if (timeStamp >= yesterdayBeforeStartMilis) {
+            sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
+            return "前天 " + sdf.format(new Date(timeStamp));
+        }
+        sdf = new SimpleDateFormat(pattern, Locale.getDefault());
+        return sdf.format(new Date(timeStamp));
+    }
 
 }
