@@ -300,11 +300,11 @@ public class DateUtils {
      * 显示今天、昨天、前天.
      * 早于前天的显示传入的格式串；
      *
-     * @param timeStamp 毫秒值
-     * @param pattern   如果不是今天、昨天、前天，这格式化为传入格式
+     * @param time    毫秒值
+     * @param pattern 如果不是今天、昨天、前天，这格式化为传入格式
      * @return 今天 昨天 前天 或者 yyyy-MM-dd HH:mm:ss类型字符串
      */
-    public static String format(long timeStamp, String pattern) {
+    public static String format(long time, String pattern) {
         if (TextUtils.isEmpty(pattern)) {
             pattern = "yyyy-MM-dd HH:mm:ss";
         }
@@ -317,23 +317,23 @@ public class DateUtils {
         int  todaySeconds        = calendar.get(Calendar.MINUTE);
         int  todayMillis         = (todayHoursSeconds + todayMinutesSeconds + todaySeconds) * 1000;
         long todayStartMillis    = curTimeMillis - todayMillis;
-        if (timeStamp >= todayStartMillis) {
+        if (time >= todayStartMillis) {
             sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
-            return "今天 " + sdf.format(new Date(timeStamp));
+            return "今天 " + sdf.format(new Date(time));
         }
         int  oneDayMillis        = 24 * 60 * 60 * 1000;
         long yesterdayStartMilis = todayStartMillis - oneDayMillis;
-        if (timeStamp >= yesterdayStartMilis) {
+        if (time >= yesterdayStartMilis) {
             sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
-            return "昨天 " + sdf.format(new Date(timeStamp));
+            return "昨天 " + sdf.format(new Date(time));
         }
         long yesterdayBeforeStartMilis = yesterdayStartMilis - oneDayMillis;
-        if (timeStamp >= yesterdayBeforeStartMilis) {
+        if (time >= yesterdayBeforeStartMilis) {
             sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
-            return "前天 " + sdf.format(new Date(timeStamp));
+            return "前天 " + sdf.format(new Date(time));
         }
         sdf = new SimpleDateFormat(pattern, Locale.getDefault());
-        return sdf.format(new Date(timeStamp));
+        return sdf.format(new Date(time));
     }
 
 }
