@@ -300,14 +300,12 @@ public class DateUtils {
      * 显示今天、昨天、前天.
      * 早于前天的显示传入的格式串；
      *
-     * @param time    毫秒值
-     * @param pattern 如果不是今天、昨天、前天，这格式化为传入格式
+     * @param time     毫秒值
+     * @param pattern  如果不是今天、昨天、前天，这格式化为传入格式
+     * @param isShowHM 是否在今天、昨天、前天之后显示 时:分
      * @return 今天 昨天 前天 或者 yyyy-MM-dd HH:mm:ss类型字符串
      */
-    public static String format(long time, String pattern) {
-        if (TextUtils.isEmpty(pattern)) {
-            pattern = "yyyy-MM-dd HH:mm:ss";
-        }
+    public static String format(long time, String pattern, boolean isShowHM) {
         SimpleDateFormat sdf;
         Calendar         calendar = Calendar.getInstance();
 
@@ -318,19 +316,34 @@ public class DateUtils {
         int  todayMillis         = (todayHoursSeconds + todayMinutesSeconds + todaySeconds) * 1000;
         long todayStartMillis    = curTimeMillis - todayMillis;
         if (time >= todayStartMillis) {
-            sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
-            return "今天 " + sdf.format(new Date(time));
+            if (isShowHM) {
+                sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
+                return "今天 " + sdf.format(new Date(time));
+            } else {
+                return "今天";
+            }
         }
         int  oneDayMillis        = 24 * 60 * 60 * 1000;
         long yesterdayStartMilis = todayStartMillis - oneDayMillis;
         if (time >= yesterdayStartMilis) {
-            sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
-            return "昨天 " + sdf.format(new Date(time));
+            if (isShowHM) {
+                sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
+                return "昨天 " + sdf.format(new Date(time));
+            } else {
+                return "昨天";
+            }
         }
         long yesterdayBeforeStartMilis = yesterdayStartMilis - oneDayMillis;
         if (time >= yesterdayBeforeStartMilis) {
-            sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
-            return "前天 " + sdf.format(new Date(time));
+            if (isShowHM) {
+                sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
+                return "前天 " + sdf.format(new Date(time));
+            } else {
+                return "前天";
+            }
+        }
+        if (TextUtils.isEmpty(pattern)) {
+            pattern = "yyyy-MM-dd HH:mm:ss";
         }
         sdf = new SimpleDateFormat(pattern, Locale.getDefault());
         return sdf.format(new Date(time));
