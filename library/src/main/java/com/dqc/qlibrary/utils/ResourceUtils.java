@@ -4,9 +4,11 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.provider.MediaStore;
+import android.util.Base64;
 import android.util.DisplayMetrics;
 import android.util.Log;
 
@@ -219,6 +221,23 @@ public class ResourceUtils {
     public static float getDensity(Context context) {
         initDisplayMetrics(context.getApplicationContext());
         return sDisplayMetrics.density;
+    }
+
+    /**
+     * 文字 转 Drawable
+     *
+     * @param context Context
+     * @param s       文字
+     * @return Drawable
+     */
+    public static Drawable str2Drawable(Context context, String s) {
+        byte[] img = Base64.decode(s.getBytes(), Base64.DEFAULT);
+        Bitmap bitmap;
+        if (img != null) {
+            bitmap = BitmapFactory.decodeByteArray(img, 0, img.length);
+            return new BitmapDrawable(context.getApplicationContext().getResources(), bitmap);
+        }
+        return null;
     }
 
 }
