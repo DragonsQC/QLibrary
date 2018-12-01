@@ -122,7 +122,7 @@ dependencies {
     //圆形ImageView [https://github.com/hdodenhof/CircleImageView]
     implementation 'de.hdodenhof:circleimageview:2.2.0'
 
-    //Bootstrap [https://github.com/Bearded-Hen/Android-Bootstrap]
+    //Bootstrap [https://github.com/DragonsQC/Android-Bootstrap]
     implementation 'com.github.DragonsQC:Android-Bootstrap:1.0.1'
 
     //KenBurnsView [https://github.com/flavioarfaria/KenBurnsView]
