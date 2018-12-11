@@ -42,7 +42,6 @@ Activity 相关类 | 说明
 [DoubleUtils](/library/src/main/java/com/dqc/qlibrary/utils/DoubleUtils.java)| 小数(Double)计算精确工具类类
 [FileUtils](/library/src/main/java/com/dqc/qlibrary/utils/FileUtils.java)| 文件相关工具类
 [ImageUtils](/library/src/main/java/com/dqc/qlibrary/utils/ImageUtils.java)| 图片相关工具类
-[JsonResponseParser](/library/src/main/java/com/dqc/qlibrary/utils/JsonResponseParser.java)| xUtil json 解析器
 [KeyboardUtils](/library/src/main/java/com/dqc/qlibrary/utils/KeyboardUtils.java)| Android 键盘工具类
 [ListViewUtil](/library/src/main/java/com/dqc/qlibrary/utils/ListViewUtil.java)| 动态设置嵌套 ListView 中高度
 [MathUtils](/library/src/main/java/com/dqc/qlibrary/utils/MathUtils.java)| 数字等公式相关工具类
