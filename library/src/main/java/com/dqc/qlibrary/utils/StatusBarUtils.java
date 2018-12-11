@@ -1,10 +1,7 @@
 package com.dqc.qlibrary.utils;
 
 import android.app.Activity;
-import android.os.Build;
 import android.view.View;
-
-import androidx.annotation.RequiresApi;
 
 /**
  * 状态栏相关工具类
@@ -17,7 +14,6 @@ public class StatusBarUtils {
      * @param activity Activity
      * @param isDark   是否黑色文字，反之白色文字
      */
-    @RequiresApi(api = Build.VERSION_CODES.M)
     public static void setStatusBarTextColor(Activity activity, boolean isDark) {
         View decor = activity.getWindow().getDecorView();
         if (isDark) {
