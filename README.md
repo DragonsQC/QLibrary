@@ -47,14 +47,16 @@ Activity 相关类 | 说明
 [ListViewUtil](/library/src/main/java/com/dqc/qlibrary/utils/ListViewUtil.java)| 动态设置嵌套 ListView 中高度
 [MathUtils](/library/src/main/java/com/dqc/qlibrary/utils/MathUtils.java)| 数字等公式相关工具类
 [NetStateUtils](/library/src/main/java/com/dqc/qlibrary/utils/NetStateUtils.java)| 网络状态工具类
-[QLog](/library/src/main/java/com/dqc/qlibrary/utils/QLog.java)| Android 日志工具类
-[ResourceUtils](/library/src/main/java/com/dqc/qlibrary/utils/ResourceUtils.java)| Android 资源相关工具类
-[SPUtils](/library/src/main/java/com/dqc/qlibrary/utils/SPUtils.java)| Android SharedPreferences 工具类
+[OSUtil](/library/src/main/java/com/dqc/qlibrary/utils/OSUtil.java)| 设备系统工具类
+[QLog](/library/src/main/java/com/dqc/qlibrary/utils/QLog.java)| 日志工具类
+[ResourceUtils](/library/src/main/java/com/dqc/qlibrary/utils/ResourceUtils.java)| 资源相关工具类
+[SPUtils](/library/src/main/java/com/dqc/qlibrary/utils/SPUtils.java)| SharedPreferences 工具类
+[StatusBarUtils](/library/src/main/java/com/dqc/qlibrary/utils/StatusBarUtils.java)| 状态栏相关工具类
 [StringUtils](/library/src/main/java/com/dqc/qlibrary/utils/StringUtils.java)| 字符串相关工具类
 [SystemUtils](/library/src/main/java/com/dqc/qlibrary/utils/SystemUtils.java)| 系统/设备相关工具类
 [ThreadManager](/library/src/main/java/com/dqc/qlibrary/utils/ThreadManager.java)| 线程管理
-[ToastUtils](/library/src/main/java/com/dqc/qlibrary/utils/ToastUtils.java)| Android Toast 工具类
-[VibratorUtils](/library/src/main/java/com/dqc/qlibrary/utils/VibratorUtils.java)| Android 手机震动工具类
+[ToastUtils](/library/src/main/java/com/dqc/qlibrary/utils/ToastUtils.java)| Toast 工具类
+[VibratorUtils](/library/src/main/java/com/dqc/qlibrary/utils/VibratorUtils.java)| 手机震动工具类
 
 ***
 第三方库 | 说明
