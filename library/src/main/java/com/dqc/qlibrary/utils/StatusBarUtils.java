@@ -18,7 +18,7 @@ public class StatusBarUtils {
      * @param isDark   是否黑色文字，反之白色文字
      */
     @RequiresApi(api = Build.VERSION_CODES.M)
-    private static void setStatusBarTextColor(Activity activity, boolean isDark) {
+    public static void setStatusBarTextColor(Activity activity, boolean isDark) {
         View decor = activity.getWindow().getDecorView();
         if (isDark) {
             decor.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
