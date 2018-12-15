@@ -2,69 +2,26 @@ package com.dqc.qlibrary.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-import com.github.anzewei.parallaxbacklayout.ParallaxBack;
-import com.github.anzewei.parallaxbacklayout.ParallaxHelper;
-
-import androidx.appcompat.app.AppCompatActivity;
-import qiu.niorgai.StatusBarCompat;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 /**
- * BaseActivity
+ * QBaseFragment
  *
- * @author DragonsQC
+ * @author .
  */
-@SuppressWarnings("unused")
-@ParallaxBack
-public abstract class BaseActivity extends AppCompatActivity {
+@SuppressWarnings("WeakerAccess,unused")
+public abstract class QBaseFragment extends Fragment {
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return super.onCreateView(inflater, container, savedInstanceState);
     }
-
-    /**
-     * 默认支持滑动返回，调用此方法禁用
-     */
-    public void disableBack() {
-        ParallaxHelper.disableParallaxBack(this);
-    }
-
-    //<editor-fold defaultstate="collapsed" desc="StatusBar 相关方法群" >
-
-    /**
-     * 设置状态栏颜色
-     * <p>
-     * setStatusBarXXX 方法只会实现最后一次的调用
-     *
-     * @param color Color
-     */
-    public void setStatusBarColor(int color) {
-        StatusBarCompat.setStatusBarColor(this, color);
-    }
-
-    /**
-     * 设置状态栏颜色和透明度
-     * <p>
-     * setStatusBarXXX 方法只会实现最后一次的调用
-     *
-     * @param color Color
-     * @param alpha 状态栏的透明度 0~255
-     */
-    public void setStatusBarColor(int color, int alpha) {
-        StatusBarCompat.setStatusBarColor(this, color, alpha);
-    }
-
-    /**
-     * 设置透明状态栏
-     * <p>
-     * setStatusBarXXX 方法只会实现最后一次的调用
-     */
-    public void setStatusBarTransparent() {
-        StatusBarCompat.translucentStatusBar(this);
-    }
-
-    //</editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="startActivity 相关方法群" >
 
@@ -74,7 +31,7 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @param clazz Activity.class
      */
     public void goTo(Class<?> clazz) {
-        Intent intent = new Intent(this, clazz);
+        Intent intent = new Intent(getActivity(), clazz);
         startActivity(intent);
     }
 
@@ -85,7 +42,7 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @param flags FLAG_ACTIVITY
      */
     public void goTo(Class<?> clazz, int flags) {
-        Intent intent = new Intent(this, clazz);
+        Intent intent = new Intent(getActivity(), clazz);
         intent.addFlags(flags);
         startActivity(intent);
     }
@@ -97,7 +54,7 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @param bundle data
      */
     public void goTo(Class<?> clazz, Bundle bundle) {
-        Intent intent = new Intent(this, clazz);
+        Intent intent = new Intent(getActivity(), clazz);
         if (null != bundle) {
             intent.putExtras(bundle);
         }
@@ -109,10 +66,10 @@ public abstract class BaseActivity extends AppCompatActivity {
      *
      * @param clazz  Activity.class
      * @param bundle data
-     * @param flags  FLAG_ACTIVITY
+     * @param flags  FLAG_ACTIVITYs
      */
     public void goTo(Class<?> clazz, Bundle bundle, int flags) {
-        Intent intent = new Intent(this, clazz);
+        Intent intent = new Intent(getActivity(), clazz);
         if (null != bundle) {
             intent.putExtras(bundle);
         }
@@ -126,9 +83,10 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @param clazz Activity.class
      */
     public void goToThenKill(Class<?> clazz) {
-        Intent intent = new Intent(this, clazz);
+        Intent intent = new Intent(getActivity(), clazz);
         startActivity(intent);
-        finish();
+        //noinspection ConstantConditions
+        getActivity().finish();
     }
 
     /**
@@ -138,10 +96,11 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @param flags FLAG_ACTIVITY
      */
     public void goToThenKill(Class<?> clazz, int flags) {
-        Intent intent = new Intent(this, clazz);
+        Intent intent = new Intent(getActivity(), clazz);
         intent.addFlags(flags);
         startActivity(intent);
-        finish();
+        //noinspection ConstantConditions
+        getActivity().finish();
     }
 
     /**
@@ -151,12 +110,13 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @param bundle data
      */
     public void goToThenKill(Class<?> clazz, Bundle bundle) {
-        Intent intent = new Intent(this, clazz);
+        Intent intent = new Intent(getActivity(), clazz);
         if (null != bundle) {
             intent.putExtras(bundle);
         }
         startActivity(intent);
-        finish();
+        //noinspection ConstantConditions
+        getActivity().finish();
     }
 
     /**
@@ -167,13 +127,14 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @param flags  FLAG_ACTIVITY
      */
     public void goToThenKill(Class<?> clazz, Bundle bundle, int flags) {
-        Intent intent = new Intent(this, clazz);
+        Intent intent = new Intent(getActivity(), clazz);
         if (null != bundle) {
             intent.putExtras(bundle);
         }
         intent.addFlags(flags);
         startActivity(intent);
-        finish();
+        //noinspection ConstantConditions
+        getActivity().finish();
     }
 
     /**
@@ -183,7 +144,7 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @param requestCode RequestCode
      */
     public void goToForResult(Class<?> clazz, int requestCode) {
-        Intent intent = new Intent(this, clazz);
+        Intent intent = new Intent(getActivity(), clazz);
         startActivityForResult(intent, requestCode);
     }
 
@@ -195,7 +156,7 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @param flags       FLAG_ACTIVITY
      */
     public void goToForResult(Class<?> clazz, int requestCode, int flags) {
-        Intent intent = new Intent(this, clazz);
+        Intent intent = new Intent(getActivity(), clazz);
         intent.addFlags(flags);
         startActivityForResult(intent, requestCode);
     }
@@ -208,7 +169,7 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @param bundle      data
      */
     public void goToForResult(Class<?> clazz, int requestCode, Bundle bundle) {
-        Intent intent = new Intent(this, clazz);
+        Intent intent = new Intent(getActivity(), clazz);
         if (null != bundle) {
             intent.putExtras(bundle);
         }
@@ -224,7 +185,7 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @param flags       FLAG_ACTIVITY
      */
     public void goToForResult(Class<?> clazz, int requestCode, Bundle bundle, int flags) {
-        Intent intent = new Intent(this, clazz);
+        Intent intent = new Intent(getActivity(), clazz);
         if (null != bundle) {
             intent.putExtras(bundle);
         }
