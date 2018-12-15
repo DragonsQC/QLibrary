@@ -75,6 +75,7 @@ dependencies {
     implementation "com.trello.rxlifecycle3:rxlifecycle:$rootProject.rxlifecycleVersion"
     implementation "com.trello.rxlifecycle3:rxlifecycle-components:$rootProject.rxlifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-compiler:2.0.0"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:2.0.0"
     implementation "androidx.lifecycle:lifecycle-extensions:2.0.0"
 
 //【RxJava、RaAndroid】 [https://github.com/ReactiveX/RxAndroid]
@@ -98,8 +99,6 @@ dependencies {
 
     //侧滑返回 [https://github.com/anzewei/ParallaxBackLayout]
     implementation "com.github.anzewei:parallaxbacklayout:1.1.9"
-    //[https://github.com/bingoogolapple/BGASwipeBackLayout-Android]
-//    implementation "cn.bingoogolapple:bga-swipebacklayout:1.2.0"
 
 //【HTTP】******************************************************************************************
     //Retrofit2 [https://github.com/square/retrofit]
