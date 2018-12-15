@@ -53,92 +53,92 @@ configurations.all {
 }
 
 dependencies {
-    implementation fileTree(dir: "libs", include: ["*.jar"])
+    api fileTree(dir: "libs", include: ["*.jar"])
 //【Android Support】*******************************************************************************
-//    implementation "com.android.support:support-v4:$rootProject.supportLibraryVersion"
-//    implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
-//    implementation "com.android.support:palette-v7:$rootProject.supportLibraryVersion"
-//    implementation "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
-//    implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
-//    implementation "com.android.support:percent:$rootProject.supportLibraryVersion"
-//    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
+//    api "com.android.support:support-v4:$rootProject.supportLibraryVersion"
+//    api "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+//    api "com.android.support:palette-v7:$rootProject.supportLibraryVersion"
+//    api "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
+//    api "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+//    api "com.android.support:percent:$rootProject.supportLibraryVersion"
+//    api "com.android.support:design:$rootProject.supportLibraryVersion"
 
-    implementation "androidx.legacy:legacy-support-v4:1.0.0"
-    implementation "androidx.appcompat:appcompat:1.0.2"
-    implementation "androidx.palette:palette:1.0.0"
-    implementation "androidx.annotation:annotation:1.0.1"
-    implementation "androidx.recyclerview:recyclerview:1.0.0"
-    implementation "androidx.cardview:cardview:1.0.0"
-    implementation "androidx.constraintlayout:constraintlayout:1.1.3"
-    implementation "com.google.android.material:material:1.0.0"
+    api "androidx.legacy:legacy-support-v4:1.0.0"
+    api "androidx.appcompat:appcompat:1.0.2"
+    api "androidx.palette:palette:1.0.0"
+    api "androidx.annotation:annotation:1.0.1"
+    api "androidx.recyclerview:recyclerview:1.0.0"
+    api "androidx.cardview:cardview:1.0.0"
+    api "androidx.constraintlayout:constraintlayout:1.1.3"
+    api "com.google.android.material:material:1.0.0"
 
-    implementation "com.trello.rxlifecycle3:rxlifecycle:$rootProject.rxlifecycleVersion"
-    implementation "com.trello.rxlifecycle3:rxlifecycle-components:$rootProject.rxlifecycleVersion"
-    implementation "androidx.lifecycle:lifecycle-compiler:2.0.0"
+    api "com.trello.rxlifecycle3:rxlifecycle:$rootProject.rxlifecycleVersion"
+    api "com.trello.rxlifecycle3:rxlifecycle-components:$rootProject.rxlifecycleVersion"
+    api "androidx.lifecycle:lifecycle-compiler:2.0.0"
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:2.0.0"
-    implementation "androidx.lifecycle:lifecycle-extensions:2.0.0"
+    api "androidx.lifecycle:lifecycle-extensions:2.0.0"
 
 //【RxJava、RaAndroid】 [https://github.com/ReactiveX/RxAndroid]
-    //implementation "io.reactivex.rxjava2:rxjava:2.0.1"
-    //implementation "io.reactivex.rxjava2:rxandroid:2.0.1"
+    //api "io.reactivex.rxjava2:rxjava:2.0.1"
+    //api "io.reactivex.rxjava2:rxandroid:2.0.1"
 
 //【Utils】*****************************************************************************************
     //Commons Lang https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
-    implementation "org.apache.commons:commons-lang3:3.8.1"
+    api "org.apache.commons:commons-lang3:3.8.1"
 
     //xLog [https://github.com/elvishew/xLog]
-    implementation "com.elvishew:xlog:1.6.1"
+    api "com.elvishew:xlog:1.6.1"
 
     //xUtils [https://github.com/wyouflf/xUtils3]
-    implementation "org.xutils:xutils:3.5.0"
+    api "org.xutils:xutils:3.5.0"
 
     //沉浸式状态栏 [https://github.com/niorgai/StatusBarCompat]
-    implementation("com.github.niorgai:StatusBarCompat:2.2.0", {
+    api("com.github.niorgai:StatusBarCompat:2.2.0", {
         exclude group: "com.android.support"
     })
 
     //侧滑返回 [https://github.com/anzewei/ParallaxBackLayout]
-    implementation "com.github.anzewei:parallaxbacklayout:1.1.9"
+    api "com.github.anzewei:parallaxbacklayout:1.1.9"
 
 //【HTTP】******************************************************************************************
     //Retrofit2 [https://github.com/square/retrofit]
-    implementation "com.squareup.retrofit2:retrofit:2.5.0"
+    api "com.squareup.retrofit2:retrofit:2.5.0"
     //converter-gson [http://www.mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson]
-    implementation "com.squareup.retrofit2:converter-gson:2.5.0"
+    api "com.squareup.retrofit2:converter-gson:2.5.0"
     //logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
-    implementation "com.squareup.okhttp3:logging-interceptor:3.12.0"
+    api "com.squareup.okhttp3:logging-interceptor:3.12.0"
 
     //fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
-    implementation "com.alibaba:fastjson:1.1.70.android"
+    api "com.alibaba:fastjson:1.1.70.android"
 
 //【图片加载】***************************************************************************************
     //Picasso [https://github.com/square/picasso]
-    //implementation "com.squareup.picasso:picasso:2.5.2"
+    //api "com.squareup.picasso:picasso:2.5.2"
 
     //Glide [https://github.com/bumptech/glide]
-    implementation "com.github.bumptech.glide:glide:4.8.0"
+    api "com.github.bumptech.glide:glide:4.8.0"
     annotationProcessor "com.github.bumptech.glide:compiler:4.8.0"
 
 //【Animation】*************************************************************************************
     //"YoYo" 动画效果 AndroidViewAnimations [https://github.com/daimajia/AndroidViewAnimations]
-    implementation "com.daimajia.easing:library:2.1@aar"
-    implementation "com.daimajia.androidanimations:library:2.3@aar"
+    api "com.daimajia.easing:library:2.1@aar"
+    api "com.daimajia.androidanimations:library:2.3@aar"
 
 //【Widget】****************************************************************************************
     //圆形ImageView [https://github.com/hdodenhof/CircleImageView]
-    implementation "de.hdodenhof:circleimageview:2.2.0"
+    api "de.hdodenhof:circleimageview:2.2.0"
 
     //Bootstrap [https://github.com/DragonsQC/Android-Bootstrap]
-    implementation "com.github.DragonsQC:Android-Bootstrap:1.0.9"
+    api "com.github.DragonsQC:Android-Bootstrap:1.0.9"
 
     //KenBurnsView [https://github.com/flavioarfaria/KenBurnsView]
-    implementation "com.flaviofaria:kenburnsview:1.0.7"
+    api "com.flaviofaria:kenburnsview:1.0.7"
 
     //Material Dialogs [https://github.com/afollestad/material-dialogs]
-    implementation "com.afollestad.material-dialogs:core:0.9.6.0"
+    api "com.afollestad.material-dialogs:core:0.9.6.0"
 
     //拖拽排序 Advanced RecyclerView [https://github.com/h6ah4i/android-advancedrecyclerview]
-    implementation("com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.11.0@aar") {
+    api("com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.11.0@aar") {
         transitive = true
     }
 
