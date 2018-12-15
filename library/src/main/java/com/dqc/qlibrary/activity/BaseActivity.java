@@ -3,20 +3,31 @@ package com.dqc.qlibrary.activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.github.anzewei.parallaxbacklayout.ParallaxBack;
+import com.github.anzewei.parallaxbacklayout.ParallaxHelper;
+
 import androidx.appcompat.app.AppCompatActivity;
 import qiu.niorgai.StatusBarCompat;
 
 /**
- * BaseAppCompatActivity
+ * BaseActivity
  *
- * @author .
+ * @author DragonsQC
  */
-@SuppressWarnings("WeakerAccess,unused")
-public abstract class BaseAppCompatActivity extends AppCompatActivity {
+@SuppressWarnings("unused")
+@ParallaxBack
+public abstract class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+    }
+
+    /**
+     * 默认支持滑动返回，调用此方法禁用
+     */
+    public void disableBack() {
+        ParallaxHelper.disableParallaxBack(this);
     }
 
     //<editor-fold defaultstate="collapsed" desc="StatusBar 相关方法群" >

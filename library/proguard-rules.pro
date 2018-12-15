@@ -38,3 +38,9 @@
 #lombok
 -keep class lombok.**{*;}
 -dontwarn  lombok.**
+
+#侧滑返回
+-keep public enum com.github.anzewei.parallaxbacklayout.ParallaxBack$** {
+    **[] $VALUES;
+    public *;
+}

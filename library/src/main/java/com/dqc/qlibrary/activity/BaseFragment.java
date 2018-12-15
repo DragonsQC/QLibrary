@@ -85,6 +85,7 @@ public abstract class BaseFragment extends Fragment {
     public void goToThenKill(Class<?> clazz) {
         Intent intent = new Intent(getActivity(), clazz);
         startActivity(intent);
+        //noinspection ConstantConditions
         getActivity().finish();
     }
 
@@ -98,6 +99,7 @@ public abstract class BaseFragment extends Fragment {
         Intent intent = new Intent(getActivity(), clazz);
         intent.addFlags(flags);
         startActivity(intent);
+        //noinspection ConstantConditions
         getActivity().finish();
     }
 
@@ -113,6 +115,7 @@ public abstract class BaseFragment extends Fragment {
             intent.putExtras(bundle);
         }
         startActivity(intent);
+        //noinspection ConstantConditions
         getActivity().finish();
     }
 
@@ -130,6 +133,7 @@ public abstract class BaseFragment extends Fragment {
         }
         intent.addFlags(flags);
         startActivity(intent);
+        //noinspection ConstantConditions
         getActivity().finish();
     }
 

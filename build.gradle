@@ -37,4 +37,7 @@ task clean(type: Delete) {
 
 ext {
     supportLibraryVersion = '28.0.0'
+
+    //[https://github.com/trello/RxLifecycle]
+    rxlifecycleVersion = "3.0.0"
 }
