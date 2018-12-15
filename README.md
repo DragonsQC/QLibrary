@@ -69,6 +69,10 @@ androidx.recyclerview:recyclerview |
 androidx.annotation:annotation |
 androidx.constraintlayout |
 com.google.android.material:material |
+com.trello.rxlifecycle3:rxlifecycle |
+com.trello.rxlifecycle3:rxlifecycle-components |
+androidx.lifecycle:lifecycle-compiler |
+androidx.lifecycle:lifecycle-extensions |
 **【Utils】** |
 [Commons Lang](https://mvnrepository.com/artifact/org.apache.commons/commons-lang3) |
 [xLog](https://github.com/elvishew/xLog) | 已封装入 [QLog](/library/src/main/java/com/dqc/qlibrary/utils/QLog.java)
