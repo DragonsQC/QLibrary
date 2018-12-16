@@ -1,4 +1,6 @@
 apply plugin: 'com.github.ben-manes.versions'
+apply from: "config.gradle"
+
 buildscript {
 
     repositories {
@@ -33,11 +35,4 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
-}
-
-ext {
-    supportLibraryVersion = '28.0.0'
-
-    //[https://github.com/trello/RxLifecycle]
-    rxlifecycleVersion = "3.0.0"
 }
