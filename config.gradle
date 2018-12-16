@@ -41,7 +41,7 @@ ext {
             "xutils"                : "org.xutils:xutils:3.5.0",
 
             //沉浸式状态栏 [https://github.com/niorgai/StatusBarCompat]
-            "StatusBarCompat"       : "com.github.niorgai:StatusBarCompat:2.2.0",
+            "StatusBarCompat"       : "com.github.niorgai:StatusBarCompat:2.3.0",
 
             //侧滑返回 [https://github.com/anzewei/ParallaxBackLayout]
             "parallaxbacklayout"    : "com.github.anzewei:parallaxbacklayout:1.1.9",
