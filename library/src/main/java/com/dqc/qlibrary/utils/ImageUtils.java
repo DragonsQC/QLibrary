@@ -213,7 +213,7 @@ public class ImageUtils {
         boolean      ret = false;
         try {
             os = new BufferedOutputStream(new FileOutputStream(file));
-            ret = src.compress(format, 100, os);
+            ret = src.compress(format, quality, os);
             if (recycle && !src.isRecycled()) {
                 src.recycle();
             }
