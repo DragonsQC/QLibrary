@@ -8,7 +8,6 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.util.DisplayMetrics;
-import android.util.Log;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -134,8 +133,6 @@ public class ResourceUtils {
         try {
             return MediaStore.Images.Media.getBitmap(context.getApplicationContext().getContentResolver(), uri);
         } catch (Exception e) {
-            Log.e("[Android]", e.getMessage());
-            Log.e("[Android]", "目录为：" + uri);
             e.printStackTrace();
             return null;
         }

@@ -187,29 +187,20 @@ public class ImageUtils {
         return ret;
     }
 
-
-    /**
-     * 保存图片
-     *
-     * @param src    源图片
-     * @param file   要保存到的文件
-     * @param format 格式
-     * @return {@code true}: 成功<br>{@code false}: 失败
-     */
-    public static boolean save(final Bitmap src, final File file, final Bitmap.CompressFormat format) {
-        return save(src, file, format, false);
-    }
-
     /**
      * 保存图片
      *
      * @param src     源图片
      * @param file    要保存到的文件
      * @param format  格式
+     * @param quality 压缩率0-100，100:不压缩
      * @param recycle 是否回收
      * @return {@code true}: 成功<br>{@code false}: 失败
      */
-    public static boolean save(final Bitmap src, final File file, final Bitmap.CompressFormat format,
+    public static boolean save(final Bitmap src,
+                               final File file,
+                               final Bitmap.CompressFormat format,
+                               final int quality,
                                final boolean recycle) {
         if (src == null || file == null) {
             return false;
