@@ -5,6 +5,8 @@ import android.content.Context;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
+import com.dqc.qlibrary.QLibrary;
+
 /**
  * Android 键盘工具类
  * <p>
@@ -85,8 +87,8 @@ public class KeyboardUtils {
     /**
      * 切换键盘显示与否状态
      */
-    public static void toggleKeyboard(Context context) {
-        InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+    public static void toggleKeyboard() {
+        InputMethodManager imm = (InputMethodManager) QLibrary.getInstance().getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
         if (imm == null) {
             return;
         }

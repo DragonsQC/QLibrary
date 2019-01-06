@@ -3,9 +3,10 @@ package com.dqc.qlibrary.utils;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.Context;
 import android.content.pm.PackageManager;
 import android.telephony.TelephonyManager;
+
+import com.dqc.qlibrary.QLibrary;
 
 import java.util.Locale;
 
@@ -72,12 +73,12 @@ public class SystemUtils {
      * @return 手机IMEI
      */
     @SuppressLint("HardwareIds")
-    public static String getIMEI(Context context) {
-        TelephonyManager tm = (TelephonyManager) context.getSystemService(Activity.TELEPHONY_SERVICE);
+    public static String getIMEI() {
+        TelephonyManager tm = (TelephonyManager) QLibrary.getInstance().getContext().getSystemService(Activity.TELEPHONY_SERVICE);
         if (tm == null) {
             return "";
         }
-        if (ActivityCompat.checkSelfPermission(context, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(QLibrary.getInstance().getContext(), Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
             return "";
         }
         return tm.getDeviceId();

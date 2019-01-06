@@ -5,6 +5,8 @@ import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
+import com.dqc.qlibrary.QLibrary;
+
 import java.util.List;
 
 /**
@@ -22,18 +24,14 @@ public class NetStateUtils {
      *
      * @return 是否有网络连接
      */
-    public static boolean isNetworkConnected(Context context) {
-        if (context != null) {
-            ConnectivityManager mConnectivityManager =
-                    (ConnectivityManager) context.getApplicationContext()
-                            .getSystemService(Context.CONNECTIVITY_SERVICE);
-            if (mConnectivityManager == null) {
-                return false;
-            }
-            NetworkInfo mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
-            if (mNetworkInfo != null) {
-                return mNetworkInfo.isAvailable();
-            }
+    public static boolean isNetworkConnected() {
+        ConnectivityManager mConnectivityManager = (ConnectivityManager) QLibrary.getInstance().getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (mConnectivityManager == null) {
+            return false;
+        }
+        NetworkInfo mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
+        if (mNetworkInfo != null) {
+            return mNetworkInfo.isAvailable();
         }
         return false;
     }
@@ -43,20 +41,14 @@ public class NetStateUtils {
      *
      * @return WIFI是否连接
      */
-    public static boolean isWifiConnected(Context context) {
-        if (context != null) {
-            ConnectivityManager mConnectivityManager =
-                    (ConnectivityManager) context.getApplicationContext()
-                            .getSystemService(Context.CONNECTIVITY_SERVICE);
-            if (mConnectivityManager == null) {
-                return false;
-            }
-            NetworkInfo mWiFiNetworkInfo =
-                    mConnectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-            if (mWiFiNetworkInfo != null
-                    && mWiFiNetworkInfo.getState() == NetworkInfo.State.CONNECTED) {
-                return true;
-            }
+    public static boolean isWifiConnected() {
+        ConnectivityManager mConnectivityManager = (ConnectivityManager) QLibrary.getInstance().getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (mConnectivityManager == null) {
+            return false;
+        }
+        NetworkInfo mWiFiNetworkInfo = mConnectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        if (mWiFiNetworkInfo != null && mWiFiNetworkInfo.getState() == NetworkInfo.State.CONNECTED) {
+            return true;
         }
         return false;
     }
@@ -66,18 +58,14 @@ public class NetStateUtils {
      *
      * @return MOBILE网络是否连接
      */
-    public static boolean isMobileConnected(Context context) {
-        if (context != null) {
-            ConnectivityManager mConnectivityManager =
-                    (ConnectivityManager) context.getApplicationContext()
-                            .getSystemService(Context.CONNECTIVITY_SERVICE);
-            if (mConnectivityManager == null) {
-                return false;
-            }
-            NetworkInfo mMobileNetworkInfo = mConnectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
-            if (mMobileNetworkInfo != null) {
-                return mMobileNetworkInfo.isAvailable();
-            }
+    public static boolean isMobileConnected() {
+        ConnectivityManager mConnectivityManager = (ConnectivityManager) QLibrary.getInstance().getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (mConnectivityManager == null) {
+            return false;
+        }
+        NetworkInfo mMobileNetworkInfo = mConnectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+        if (mMobileNetworkInfo != null) {
+            return mMobileNetworkInfo.isAvailable();
         }
         return false;
     }
@@ -88,18 +76,14 @@ public class NetStateUtils {
      *
      * @return 当前的网络状态
      */
-    public static int getConnectedType(Context context) {
-        if (context != null) {
-            ConnectivityManager mConnectivityManager =
-                    (ConnectivityManager) context.getApplicationContext()
-                            .getSystemService(Context.CONNECTIVITY_SERVICE);
-            if (mConnectivityManager == null) {
-                return -2;
-            }
-            NetworkInfo mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
-            if (mNetworkInfo != null && mNetworkInfo.isAvailable()) {
-                return mNetworkInfo.getType();
-            }
+    public static int getConnectedType() {
+        ConnectivityManager mConnectivityManager = (ConnectivityManager) QLibrary.getInstance().getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (mConnectivityManager == null) {
+            return -2;
+        }
+        NetworkInfo mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
+        if (mNetworkInfo != null && mNetworkInfo.isAvailable()) {
+            return mNetworkInfo.getType();
         }
         return -1;
     }
@@ -110,9 +94,8 @@ public class NetStateUtils {
      *
      * @return GPS是否打开
      */
-    public static boolean isGpsEnabled(Context context) {
-        LocationManager lm = ((LocationManager) context.getApplicationContext()
-                .getSystemService(Context.LOCATION_SERVICE));
+    public static boolean isGpsEnabled() {
+        LocationManager lm = ((LocationManager) QLibrary.getInstance().getContext().getSystemService(Context.LOCATION_SERVICE));
         if (lm == null) {
             return false;
         }

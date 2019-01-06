@@ -8,6 +8,8 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 
+import com.dqc.qlibrary.QLibrary;
+
 import java.io.File;
 import java.util.List;
 
@@ -22,15 +24,13 @@ public class AppUtils {
     /**
      * 获得 APP 当前版本号
      *
-     * @param context Context
      * @return 当前版本号
      */
-    public static int getVerCode(Context context) {
+    public static int getVerCode() {
         int verCode = -1;
         try {
-            String packageName = context.getApplicationContext().getPackageName();
-            verCode = context.getApplicationContext().getPackageManager()
-                    .getPackageInfo(packageName, 0).versionCode;
+            String packageName = QLibrary.getInstance().getContext().getPackageName();
+            verCode = QLibrary.getInstance().getContext().getPackageManager().getPackageInfo(packageName, 0).versionCode;
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
@@ -40,15 +40,13 @@ public class AppUtils {
     /**
      * 获得 APP 当前版本信息
      *
-     * @param context Context
      * @return 当前版本信息
      */
-    public static String getVerName(Context context) {
+    public static String getVerName() {
         String verName = "";
         try {
-            String packageName = context.getApplicationContext().getPackageName();
-            verName = context.getApplicationContext().getPackageManager()
-                    .getPackageInfo(packageName, 0).versionName;
+            String packageName = QLibrary.getInstance().getContext().getPackageName();
+            verName = QLibrary.getInstance().getContext().getPackageManager().getPackageInfo(packageName, 0).versionName;
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
@@ -67,61 +65,55 @@ public class AppUtils {
     /**
      * 安装 apk
      *
-     * @param context Context
-     * @param file    APK file
+     * @param file APK file
      */
-    public static void installApk(Context context, File file) {
+    public static void installApk(File file) {
         Intent intent = new Intent();
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.setAction(Intent.ACTION_VIEW);
         intent.setDataAndType(Uri.fromFile(file), "application/vnd.android.package-archive");
-        context.startActivity(intent);
+        QLibrary.getInstance().getContext().startActivity(intent);
     }
 
     /**
      * 安装 apk
      *
-     * @param context Context
-     * @param uri     APK uri
+     * @param uri APK uri
      */
-    public static void installApk(Context context, Uri uri) {
+    public static void installApk(Uri uri) {
         Intent intent = new Intent();
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.setAction(Intent.ACTION_VIEW);
         intent.setDataAndType(uri, "application/vnd.android.package-archive");
-        context.startActivity(intent);
+        QLibrary.getInstance().getContext().startActivity(intent);
     }
 
     /**
      * 卸载 app
      *
-     * @param context     Context
      * @param packageName 包名
      */
-    public static void uninstallApk(Context context, String packageName) {
+    public static void uninstallApk(String packageName) {
         Intent intent     = new Intent(Intent.ACTION_DELETE);
         Uri    packageURI = Uri.parse("package:" + packageName);
         intent.setData(packageURI);
-        context.startActivity(intent);
+        QLibrary.getInstance().getContext().startActivity(intent);
     }
 
     /**
      * 检测服务是否运行
      *
-     * @param context   Context
      * @param className 类名
      * @return 服务是否运行
      */
-    public static boolean isServiceRunning(Context context, String className) {
+    public static boolean isServiceRunning(String className) {
         boolean isRunning = false;
         ActivityManager activityManager =
-                (ActivityManager) context.getApplicationContext()
-                        .getSystemService(Context.ACTIVITY_SERVICE);
+                (ActivityManager) QLibrary.getInstance().getContext().getSystemService(Context.ACTIVITY_SERVICE);
         if (activityManager == null) {
             return false;
         }
-        List<ActivityManager.RunningServiceInfo> servicesList =
-                activityManager.getRunningServices(Integer.MAX_VALUE);
+        List<ActivityManager.RunningServiceInfo> servicesList = activityManager.getRunningServices(Integer.MAX_VALUE);
 
         for (ActivityManager.RunningServiceInfo si : servicesList) {
             if (className.equals(si.service.getClassName())) {
@@ -134,20 +126,19 @@ public class AppUtils {
     /**
      * 停止运行的服务
      *
-     * @param context   Context
      * @param className 类名
      * @return 是否停止运行的服务
      */
-    public static boolean stopRunningService(Context context, String className) {
+    public static boolean stopRunningService(String className) {
         Intent  intentService = null;
-        boolean ret            = false;
+        boolean ret           = false;
         try {
-            intentService = new Intent(context, Class.forName(className));
+            intentService = new Intent(QLibrary.getInstance().getContext(), Class.forName(className));
         } catch (Exception e) {
             e.printStackTrace();
         }
         if (intentService != null) {
-            ret = context.stopService(intentService);
+            ret = QLibrary.getInstance().getContext().stopService(intentService);
         }
         return ret;
     }
@@ -155,12 +146,10 @@ public class AppUtils {
     /**
      * 获得当前系统的可用内存
      *
-     * @param context Context
      * @return 当前系统的可用内存
      */
-    public static int getDeviceUsableMemory(Context context) {
-        ActivityManager am = (ActivityManager) context.getApplicationContext()
-                .getSystemService(Context.ACTIVITY_SERVICE);
+    public static int getDeviceUsableMemory() {
+        ActivityManager am = (ActivityManager) QLibrary.getInstance().getContext().getSystemService(Context.ACTIVITY_SERVICE);
         if (am == null) {
             return -1;
         }
@@ -183,11 +172,11 @@ public class AppUtils {
      *
      * @return PackageInfo 对象
      */
-    public PackageInfo getPackageInfo(Context context) {
-        PackageManager manager = context.getApplicationContext().getPackageManager();
+    public PackageInfo getPackageInfo() {
+        PackageManager manager = QLibrary.getInstance().getContext().getPackageManager();
         PackageInfo    info    = null;
         try {
-            info = manager.getPackageInfo(context.getApplicationContext().getPackageName(), 0);
+            info = manager.getPackageInfo(QLibrary.getInstance().getContext().getPackageName(), 0);
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }

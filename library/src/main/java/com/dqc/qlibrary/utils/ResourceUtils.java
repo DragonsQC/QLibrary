@@ -1,6 +1,5 @@
 package com.dqc.qlibrary.utils;
 
-import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -8,6 +7,8 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.util.DisplayMetrics;
+
+import com.dqc.qlibrary.QLibrary;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -26,14 +27,13 @@ public class ResourceUtils {
     /**
      * 获取 Assets 下的图片资源
      *
-     * @param context  Context
      * @param fileName 文件路径
      * @return .
      */
-    public static Drawable getDrawable4Assets(Context context, String fileName) {
+    public static Drawable getDrawable4Assets(String fileName) {
         Drawable drawable = null;
         try {
-            InputStream is = context.getApplicationContext().getAssets().open(fileName);
+            InputStream is = QLibrary.getInstance().getContext().getAssets().open(fileName);
             drawable = Drawable.createFromStream(is, null);
             is.close();
         } catch (IOException e) {
@@ -45,21 +45,16 @@ public class ResourceUtils {
     /**
      * 获取 Assets 下的图片资源
      *
-     * @param context  Context
      * @param fileName String
      * @return .
      */
-    public static Bitmap getBitmap4Assets(Context context, String fileName) {
+    public static Bitmap getBitmap4Assets(String fileName) {
 
         Bitmap                bitmap = null;
         BitmapFactory.Options opt    = new BitmapFactory.Options();
         opt.inPreferredConfig = Bitmap.Config.RGB_565;
-        if (android.os.Build.VERSION.SDK_INT < 21) {
-            opt.inPurgeable = true;
-            opt.inInputShareable = true;
-        }
         try {
-            InputStream is = context.getApplicationContext().getAssets().open(fileName);
+            InputStream is = QLibrary.getInstance().getContext().getAssets().open(fileName);
             bitmap = BitmapFactory.decodeStream(is, null, opt);
             is.close();
         } catch (IOException e) {
@@ -71,21 +66,16 @@ public class ResourceUtils {
     /**
      * 获取Res下的图片资源
      *
-     * @param context Context
-     * @param resId   资源ID
+     * @param resId 资源ID
      * @return .
      */
-    public static Bitmap getBitmap4Res(Context context, int resId) {
+    public static Bitmap getBitmap4Res(int resId) {
 
         Bitmap                bitmap = null;
         BitmapFactory.Options opt    = new BitmapFactory.Options();
         opt.inPreferredConfig = Bitmap.Config.RGB_565;
-        if (android.os.Build.VERSION.SDK_INT < 21) {
-            opt.inPurgeable = true;
-            opt.inInputShareable = true;
-        }
         try {
-            InputStream is = context.getApplicationContext().getResources().openRawResource(resId);
+            InputStream is = QLibrary.getInstance().getContext().getResources().openRawResource(resId);
             bitmap = BitmapFactory.decodeStream(is, null, opt);
             is.close();
         } catch (IOException e) {
@@ -97,16 +87,15 @@ public class ResourceUtils {
     /**
      * copy assets 下的文件
      *
-     * @param context          Context
      * @param sourcePath       源文件路径
      * @param targetPathString 目标路径
      */
-    public static void copyAssetsFile(Context context, String sourcePath, String targetPathString) {
+    public static void copyAssetsFile(String sourcePath, String targetPathString) {
         InputStream  inputStream;
         OutputStream outputStream;
         try {
             outputStream = new FileOutputStream(targetPathString);
-            inputStream = context.getApplicationContext().getAssets().open(sourcePath);
+            inputStream = QLibrary.getInstance().getContext().getAssets().open(sourcePath);
             byte[] buffer = new byte[1024];
             int    length = inputStream.read(buffer);
             while (length > 0) {
@@ -125,13 +114,12 @@ public class ResourceUtils {
     /**
      * 获取对应Uri的图片资源
      *
-     * @param context Context
-     * @param uri     Uri
+     * @param uri Uri
      * @return .
      */
-    public static Bitmap getBitmap4Uri(Context context, Uri uri) {
+    public static Bitmap getBitmap4Uri(Uri uri) {
         try {
-            return MediaStore.Images.Media.getBitmap(context.getApplicationContext().getContentResolver(), uri);
+            return MediaStore.Images.Media.getBitmap(QLibrary.getInstance().getContext().getContentResolver(), uri);
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -178,43 +166,38 @@ public class ResourceUtils {
 
     /**
      * init display metrics
-     *
-     * @param context Context
      */
-    private static synchronized void initDisplayMetrics(Context context) {
-        sDisplayMetrics = context.getResources().getDisplayMetrics();
+    private static synchronized void initDisplayMetrics() {
+        sDisplayMetrics = QLibrary.getInstance().getContext().getResources().getDisplayMetrics();
     }
 
     /**
      * get screen width
      *
-     * @param context Context
      * @return .
      */
-    public static int getDisplayWidth(Context context) {
-        initDisplayMetrics(context.getApplicationContext());
+    public static int getDisplayWidth() {
+        initDisplayMetrics();
         return sDisplayMetrics.widthPixels;
     }
 
     /**
      * get screen height
      *
-     * @param context Context
      * @return .
      */
-    public static int getDisplayHeight(Context context) {
-        initDisplayMetrics(context.getApplicationContext());
+    public static int getDisplayHeight() {
+        initDisplayMetrics();
         return sDisplayMetrics.heightPixels;
     }
 
     /**
      * get screen density
      *
-     * @param context Context
      * @return .
      */
-    public static float getDensity(Context context) {
-        initDisplayMetrics(context.getApplicationContext());
+    public static float getDensity() {
+        initDisplayMetrics();
         return sDisplayMetrics.density;
     }
 
