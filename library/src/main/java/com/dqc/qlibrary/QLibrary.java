@@ -28,6 +28,11 @@ public class QLibrary {
 
     private Context mContext = null;
 
+    /**
+     * 当前APP的 getApplicationContext()
+     *
+     * @return Context
+     */
     public Context getContext() {
         if (mContext == null) {
             QLog.e("请调用 QLibrary.getInstance().init() 初始化");
