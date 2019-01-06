@@ -28,7 +28,7 @@ ext {
             "rxlifecycle-components": "com.trello.rxlifecycle3:rxlifecycle-components:3.0.0",
 
             //RxJava、RaAndroid [https://github.com/ReactiveX/RxAndroid]
-            "rxjava"                : "io.reactivex.rxjava2:rxjava:2.2.4",
+            "rxjava"                : "io.reactivex.rxjava2:rxjava:2.2.5",
             "rxandroid"             : "io.reactivex.rxjava2:rxandroid:2.1.0",
 
             //Commons Lang https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
@@ -51,7 +51,7 @@ ext {
             //converter-gson [http://www.mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson]
             "converter-gson"        : "com.squareup.retrofit2:converter-gson:2.5.0",
             //logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
-            "logging-interceptor"  : "com.squareup.okhttp3:logging-interceptor:3.12.0",
+            "logging-interceptor"  : "com.squareup.okhttp3:logging-interceptor:3.12.1",
 
             //fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
             "fastjson"              : "com.alibaba:fastjson:1.1.70.android",
@@ -77,7 +77,7 @@ ext {
             "material-dialogs"      : "com.afollestad.material-dialogs:core:0.9.6.0",
 
             //拖拽排序 Advanced RecyclerView [https://github.com/h6ah4i/android-advancedrecyclerview]
-            "advrecyclerview"       : "com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.11.0@aar",
+            "advrecyclerview"       : "com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:1.0.0",
 
     ]
 }
