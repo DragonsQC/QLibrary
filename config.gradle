@@ -73,7 +73,7 @@ ext {
             //KenBurnsView [https://github.com/flavioarfaria/KenBurnsView]
             "kenburnsview"          : "com.flaviofaria:kenburnsview:1.0.7",
 
-            //Material Dialogs [https://github.com/afollestad/material-dialogs]
+            //Material Dialogs [https://github.com/afollestad/material-dialogs] （2.x版本为kotlin版本）
             "material-dialogs"      : "com.afollestad.material-dialogs:core:0.9.6.0",
 
             //拖拽排序 Advanced RecyclerView [https://github.com/h6ah4i/android-advancedrecyclerview]
