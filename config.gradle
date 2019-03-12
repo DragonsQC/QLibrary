@@ -28,8 +28,8 @@ ext {
             "rxlifecycle-components": "com.trello.rxlifecycle3:rxlifecycle-components:3.0.0",
 
             //RxJava、RaAndroid [https://github.com/ReactiveX/RxAndroid]
-            "rxjava"                : "io.reactivex.rxjava2:rxjava:2.2.5",
-            "rxandroid"             : "io.reactivex.rxjava2:rxandroid:2.1.0",
+            "rxjava"                : "io.reactivex.rxjava2:rxjava:2.2.7",
+            "rxandroid"             : "io.reactivex.rxjava2:rxandroid:2.1.1",
 
             //Commons Lang https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
             "commons-lang3"         : "org.apache.commons:commons-lang3:3.8.1",
@@ -51,21 +51,21 @@ ext {
             //converter-gson [http://www.mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson]
             "converter-gson"        : "com.squareup.retrofit2:converter-gson:2.5.0",
             //logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
-            "logging-interceptor"  : "com.squareup.okhttp3:logging-interceptor:3.12.1",
+            "logging-interceptor"  : "com.squareup.okhttp3:logging-interceptor:3.13.1",
 
             //fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
             "fastjson"              : "com.alibaba:fastjson:1.1.70.android",
 
             //Glide [https://github.com/bumptech/glide]
-            "glide"                 : "com.github.bumptech.glide:glide:4.8.0",
-            "glide-compiler"        : "com.github.bumptech.glide:compiler:4.8.0",
+            "glide"                 : "com.github.bumptech.glide:glide:4.9.0",
+            "glide-compiler"        : "com.github.bumptech.glide:compiler:4.9.0",
 
             //"YoYo" 动画效果 AndroidViewAnimations [https://github.com/daimajia/AndroidViewAnimations]
             "easing"                : "com.daimajia.easing:library:2.1@aar",
             "androidanimations"     : "com.daimajia.androidanimations:library:2.3@aar",
 
             //圆形ImageView [https://github.com/hdodenhof/CircleImageView]
-            "circleimageview"       : "de.hdodenhof:circleimageview:2.2.0",
+            "circleimageview"       : "de.hdodenhof:circleimageview:3.0.0",
 
             //Bootstrap [https://github.com/DragonsQC/Android-Bootstrap]
             "Android-Bootstrap"     : "com.github.DragonsQC:Android-Bootstrap:1.0.9",
