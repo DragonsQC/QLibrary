@@ -92,7 +92,6 @@ dependencies {
     api rootProject.ext.dependencies["circleimageview"]
     api rootProject.ext.dependencies["Android-Bootstrap"]
     api rootProject.ext.dependencies["kenburnsview"]
-    api rootProject.ext.dependencies["material-dialogs"]
     api(rootProject.ext.dependencies["advrecyclerview"]) {
         transitive = true
     }
