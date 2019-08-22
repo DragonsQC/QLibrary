@@ -28,7 +28,7 @@ ext {
             "rxlifecycle-components": "com.trello.rxlifecycle3:rxlifecycle-components:3.0.0",
 
             //RxJava、RaAndroid [https://github.com/ReactiveX/RxAndroid]
-            "rxjava"                : "io.reactivex.rxjava2:rxjava:2.2.10",
+            "rxjava"                : "io.reactivex.rxjava2:rxjava:2.2.11",
             "rxandroid"             : "io.reactivex.rxjava2:rxandroid:2.1.1",
 
             //Commons Lang https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
@@ -38,7 +38,7 @@ ext {
             "xlog"                  : "com.elvishew:xlog:1.6.1",
 
             //xUtils [https://github.com/wyouflf/xUtils3]
-            "xutils"                : "org.xutils:xutils:3.5.1",
+            "xutils"                : "org.xutils:xutils:3.5.3",
 
             //沉浸式状态栏 [https://github.com/niorgai/StatusBarCompat]
             "StatusBarCompat"       : "com.github.niorgai:StatusBarCompat:2.3.3",
@@ -47,11 +47,11 @@ ext {
             "parallaxbacklayout"    : "com.github.anzewei:parallaxbacklayout:1.1.9",
 
             //Retrofit2 [https://github.com/square/retrofit]
-            "retrofit"              : "com.squareup.retrofit2:retrofit:2.6.0",
+            "retrofit"              : "com.squareup.retrofit2:retrofit:2.6.1",
             //converter-gson [http://www.mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson]
-            "converter-gson"        : "com.squareup.retrofit2:converter-gson:2.6.0",
+            "converter-gson"        : "com.squareup.retrofit2:converter-gson:2.6.1",
             //logging-interceptor [http://www.mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor]
-            "logging-interceptor"  : "com.squareup.okhttp3:logging-interceptor:4.0.1",
+            "logging-interceptor"  : "com.squareup.okhttp3:logging-interceptor:4.1.0",
 
             //fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
             "fastjson"              : "com.alibaba:fastjson:1.1.71.android",
