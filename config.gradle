@@ -68,7 +68,7 @@ ext {
             "circleimageview"       : "de.hdodenhof:circleimageview:3.0.1",
 
             //Bootstrap [https://github.com/DragonsQC/Android-Bootstrap]
-            "Android-Bootstrap"     : "com.github.DragonsQC:Android-Bootstrap:1.0.9",
+            "Android-Bootstrap"     : "com.github.DragonsQC:Android-Bootstrap:1.1.0",
 
             //KenBurnsView [https://github.com/flavioarfaria/KenBurnsView]
             "kenburnsview"          : "com.flaviofaria:kenburnsview:1.0.7",
