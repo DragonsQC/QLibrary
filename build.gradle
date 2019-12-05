@@ -9,14 +9,14 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath 'com.android.tools.build:gradle:3.5.2'
 
         //Jitpack [http://mvnrepository.com/artifact/com.github.dcendents/android-maven-gradle-plugin]
         //[https://github.com/dcendents/android-maven-gradle-plugin#note-on-releases]
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
 
         //[https://github.com/ben-manes/gradle-versions-plugin]
-        classpath 'com.github.ben-manes:gradle-versions-plugin:0.24.0'
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.27.0'
     }
 
 }
