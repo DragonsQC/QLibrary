@@ -2,10 +2,11 @@ apply plugin: 'com.github.ben-manes.versions'
 apply from: "config.gradle"
 
 buildscript {
-
     repositories {
         jcenter()
         google()
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
     }
 
     dependencies {
@@ -25,14 +26,8 @@ allprojects {
     repositories {
         jcenter()
         google()
-//        mavenLocal()
-//        mavenCentral()
-        maven { url 'https://jcenter.bintray.com' }
-        maven { url 'https://jitpack.io' }
-        maven {
-            url "https://maven.google.com"
-            name 'Google'
-        }
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
     }
 }
 

@@ -42,57 +42,55 @@ android {
 }
 
 dependencies {
-    api fileTree(dir: "libs", include: ["*.jar"])
+    implementation  fileTree(dir: "libs", include: ["*.jar"])
 //【Android Support】*******************************************************************************
-    api rootProject.ext.support["support-v4"]
-    api rootProject.ext.support["appcompat"]
-    api rootProject.ext.support["palette"]
-    api rootProject.ext.support["annotation"]
-    api rootProject.ext.support["recyclerview"]
-    api rootProject.ext.support["cardview"]
-    api rootProject.ext.support["constraintlayout"]
-    api rootProject.ext.support["material"]
+    implementation  rootProject.ext.support["support-v4"]
+    implementation  rootProject.ext.support["appcompat"]
+    implementation  rootProject.ext.support["palette"]
+    implementation  rootProject.ext.support["annotation"]
+    implementation  rootProject.ext.support["recyclerview"]
+    implementation  rootProject.ext.support["cardview"]
+    implementation  rootProject.ext.support["constraintlayout"]
+    implementation  rootProject.ext.support["material"]
 
-    api rootProject.ext.support["lifecycle-compiler"]
+    implementation  rootProject.ext.support["lifecycle-compiler"]
     annotationProcessor rootProject.ext.support["lifecycle-compiler"]
-    api rootProject.ext.support["lifecycle-extensions"]
+    implementation  rootProject.ext.support["lifecycle-extensions"]
 
-    api rootProject.ext.dependencies["rxlifecycle"]
-    api rootProject.ext.dependencies["rxlifecycle-components"]
+    implementation  rootProject.ext.dependencies["rxlifecycle"]
+    implementation  rootProject.ext.dependencies["rxlifecycle-components"]
 
-    api rootProject.ext.dependencies["rxjava"]
-    api rootProject.ext.dependencies["rxandroid"]
+    implementation  rootProject.ext.dependencies["rxjava"]
+    implementation  rootProject.ext.dependencies["rxandroid"]
 
 //【Utils】*****************************************************************************************
-    api rootProject.ext.dependencies["commons-lang3"]
-    api rootProject.ext.dependencies["xlog"]
-    api rootProject.ext.dependencies["xutils"]
-    api(rootProject.ext.dependencies["StatusBarCompat"]) {
+    implementation  rootProject.ext.dependencies["commons-lang3"]
+    implementation  rootProject.ext.dependencies["xlog"]
+    implementation  rootProject.ext.dependencies["xutils"]
+    implementation (rootProject.ext.dependencies["StatusBarCompat"]) {
         exclude group: 'com.android.support'
     }
-    api rootProject.ext.dependencies["parallaxbacklayout"]
+    implementation  rootProject.ext.dependencies["parallaxbacklayout"]
 
 //【HTTP】******************************************************************************************
-    api rootProject.ext.dependencies["retrofit"]
-    api rootProject.ext.dependencies["converter-gson"]
-    api rootProject.ext.dependencies["logging-interceptor"]
-
-    //fastjson [http://www.mvnrepository.com/artifact/com.alibaba/fastjson]
-    api rootProject.ext.dependencies["fastjson"]
+    implementation  rootProject.ext.dependencies["retrofit"]
+    implementation  rootProject.ext.dependencies["converter-gson"]
+    implementation  rootProject.ext.dependencies["logging-interceptor"]
+    implementation  rootProject.ext.dependencies["fastjson"]
 
 //【图片加载】***************************************************************************************
-    api rootProject.ext.dependencies["glide"]
+    implementation  rootProject.ext.dependencies["glide"]
     annotationProcessor rootProject.ext.dependencies["glide-compiler"]
 
 //【Animation】*************************************************************************************
-    api rootProject.ext.dependencies["easing"]
-    api rootProject.ext.dependencies["androidanimations"]
+    implementation  rootProject.ext.dependencies["easing"]
+    implementation  rootProject.ext.dependencies["androidanimations"]
 
 //【Widget】****************************************************************************************
-    api rootProject.ext.dependencies["circleimageview"]
-    api rootProject.ext.dependencies["Android-Bootstrap"]
-    api rootProject.ext.dependencies["kenburnsview"]
-    api(rootProject.ext.dependencies["advrecyclerview"]) {
+    implementation  rootProject.ext.dependencies["circleimageview"]
+    implementation  rootProject.ext.dependencies["Android-Bootstrap"]
+    implementation  rootProject.ext.dependencies["kenburnsview"]
+    implementation (rootProject.ext.dependencies["advrecyclerview"]) {
         transitive = true
     }
 
