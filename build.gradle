@@ -9,7 +9,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.2'
+        classpath 'com.android.tools.build:gradle:3.5.3'
 
         //Jitpack [http://mvnrepository.com/artifact/com.github.dcendents/android-maven-gradle-plugin]
         //[https://github.com/dcendents/android-maven-gradle-plugin#note-on-releases]
